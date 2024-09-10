@@ -13,9 +13,15 @@ content:
     #  - url: https://github.com/riscv/riscv-isa-manual.git
 #branches: antora-refactor
 #start_path: antora
-#asciidoc:
-#  attributes:
+asciidoc:
+  attributes:
 #    page-component-order: '!ROOT, *,'
+  :le: &#8804;
+  :ge: &#8805;
+  :ne: &#8800;
+  :approx: &#8776;
+  :inf: &#8734;
+  :csrname: envcfg
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
