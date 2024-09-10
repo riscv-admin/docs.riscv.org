@@ -1,13 +1,13 @@
 site:
   title: RISC-V ISA Documentation Library Antora Demo Site
   url: https://docs.riscv.org
-  start_page: ROOT::index.adoc
+  start_page: ROOT:index.adoc
 content:
   sources:
   - url: https://github.com/riscv/riscv-isa-manual.git
     branches: antora-refactor
     start_path: antora
-    start_page: unpriv::riscv-unprivileged.adoc
+    start_page: unpriv:riscv-unprivileged.adoc
 
     #  - url: https://github.com/riscv/riscv-isa-manual.git
 #branches: antora-refactor
