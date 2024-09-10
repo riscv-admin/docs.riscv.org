@@ -1,7 +1,6 @@
 site:
   title: RISC-V ISA Documentation Library Antora Demo Site
   url: https://docs.riscv.org
-#  start_page: unpriv::/pages/src/colophon.adoc
   start_page: ROOT::index.adoc
 content:
   sources:
@@ -15,15 +14,8 @@ content:
 #start_path: antora
 asciidoc:
   attributes:
-#    page-component-order: '!ROOT, *,'
-  #:le: &#8804;
-  #:ge: &#8805;
-  #:ne: &#8800;
-  #:approx: &#8776;
-  #:inf: &#8734;
-  #:csrname: envcfg
-  #extensions:
-  #- asciidoctor-kroki
+    page-component-order: '!ROOT, *,'
+ 
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
