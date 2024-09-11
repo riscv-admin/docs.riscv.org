@@ -13,9 +13,9 @@ content:
     #  - url: https://github.com/riscv/riscv-isa-manual.git
 #branches: antora-refactor
 #start_path: antora
-asciidoc:
-  attributes:
-    page-component-order: '!ROOT, *,'
+#asciidoc:
+#  attributes:
+#    page-component-order: '!ROOT, *,'
  
 ui:
   bundle:
