@@ -11,10 +11,10 @@ content:
     #  - url: https://github.com/riscv/riscv-isa-manual.git
 #branches: antora-refactor
 #start_path: antora
-asciidoc:
-  extensions:
-  - asciidoctor-diagram
-  
+#asciidoc:
+#  extensions:
+#  - asciidoctor-diagram
+
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
