@@ -9,7 +9,6 @@ content:
     start_path: /
   - url: https://github.com/riscv/riscv-isa-manual.git
     branches: antora-refactor
-    start_path: /
 #  - url: https://github.com/riscv-admin/policies.git
 #    branches: 6-update-repo-structure-description-for-antora-layout
 asciidoc:
