@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "dependencies": {
       "wavedrom-cli": "^2.6.8",
-      "bytefield-svg": "^1.8.0"
+      "bytefield-svg": "^1.8.0",
+      "asciidoctor-kroki": "^0.18.1"
     }
   }
