@@ -24,7 +24,6 @@ asciidoc:
     csrname: 'envcfg'
     incexample: example$
     incimage: image$
-    incpage: page$
 
 ui:
   bundle:
