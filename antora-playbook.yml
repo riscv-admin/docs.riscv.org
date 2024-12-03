@@ -22,8 +22,8 @@ asciidoc:
     approx: '&#8776;'
     inf: '&#8734;'
     csrname: 'envcfg'
-    #iincexample: example$
-    #incimage: images$
+    incexample: example$
+    incimage: images$
 
 ui:
   bundle:
