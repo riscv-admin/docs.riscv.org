@@ -23,7 +23,7 @@ asciidoc:
     inf: '&#8734;'
     csrname: 'envcfg'
     incexample: example$
-    incimage: image$
+    incimage: 'image$'
 
 ui:
   bundle:
