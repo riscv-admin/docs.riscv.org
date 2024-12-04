@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
+    <link rel="canonical" href="https://docs.riscv.org/Policies/policies/os_hypervisor_requirements.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Policies" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">RISC-V Technical Policies</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../isa/index.html">RISC-V Documentatation Library</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">RISC-V Technical Policies</a></div>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="edit-this-page"><a href="https://github.com/riscv-admin/policies/edit/6-update-repo-structure-description-for-antora-layout/modules/policies/pages/os_hypervisor_requirements.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="os_hypervisor_requirements"><a class="anchor" href="#os_hypervisor_requirements"></a>OS &amp; Hypervisor Requirements for Specification Ratification</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Version:</strong> 0.1<br>
+<strong>One line description:</strong> Provide a reference implementation (as a patchset)
+providing basic enablement for Linux (including KVM) and
+FreeRTOS/Zephyr.<br>
+<strong>Author(s):</strong> Philipp Tomsich<br>
+<strong>Status:</strong> Draft<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Version History:</strong><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 5.5555%;">
+<col style="width: 16.6666%;">
+<col style="width: 55.5555%;">
+<col style="width: 22.2224%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Ver</th>
+<th class="tableblock halign-left valign-top">Date</th>
+<th class="tableblock halign-left valign-top">Details</th>
+<th class="tableblock halign-left valign-top">Name(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021-10-15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converted to policy from emails</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Philipp Tomsich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021-09-24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Original draft</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Philip Tomsich</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_rationale"><a class="anchor" href="#_rationale"></a>Rationale</h3>
+<div class="paragraph">
+<p>This policy provides a reference implementation (as a patchset)
+providing basic enablement for the following (see `Plan Requirements'):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux stack (for applicability &amp; impact on general-purpose software)
+(i.e.: OpenSBI, Bootloader, Kernel (incl. kvm), Program loader, C
+runtime, domain-specific core libraries [e.g. OpenSSL])<br></p>
+</li>
+<li>
+<p>FreeRTOS and/or Zephyr (for applicability &amp; impact on hard real-time
+software)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To allow experimentation and evaluation of proposed extensions, an
+end-to-end test case is required: this will ensure that there are no
+"blind spots" (e.g., an example would be that the overhead of
+vector-context switch in the OS could easily be missed otherwise) in the
+evaluation and that feedback on the applicability/integration for
+established operating systems can be gathered.</p>
+</div>
+<div class="paragraph">
+<p>The implementation is not intended as a "full" or "optimized"
+implementation, but rather as a reference implementation that
+illustrates an expected/envisioned baseline implementation.<br>
+The choice of Linux as an evaluation platform is not intended to prefer
+Linux over *BSD (or any other open or closed source OS), but derives
+from practical considerations: most of the RISC-V software ecosystem has
+already been proven with and integrated with Linux; for this reason (and
+due to the resulting familiarity of our community with it), it offers
+the quickest path to an end-to-end prototype. The availability of soft
+real-time (Xenomai), hypervisors (kvm), and rich list of core libraries
+(e.g. OpenSSL) confirm this choice. Given that hard-realtime aspects can
+neither be demonstrated nor evaluated with Linux, a real-time OS target
+is also needed: the choice of FreeRTOS is based on its minimalist design
+(which we consider to cause the least learning curve and smallest
+possible reference case for implementers).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_policy"><a class="anchor" href="#_policy"></a>Policy<br></h3>
+<div class="paragraph">
+<p><strong>Application Notes</strong><br>
+Application notes for the Plan milestone, Freeze milestone, and
+Approval-milestone follow.<br>
+Note that the general requirement states that reference implementations
+for both a complete Linux stack (i.e. OpenSBI, Bootloader, Kernel, C
+runtime, core libraries) and FreeRTOS need to be completed: this can be
+qualified through an `applicability and impact statement' that needs to
+be presented (by the group developing the extension) and approved (by
+the Software HC) — i.e., the group states what parts of the stack they
+will modify and why only these are required.</p>
+</div>
+<div class="sect3">
+<h4 id="_plan_requirements"><a class="anchor" href="#_plan_requirements"></a>Plan requirements</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>The group responsible for an extension shall create an `applicability
+&amp; impact statement' for the extension, which details the software
+ecosystem impact:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>if and how boot-flow will be impacted or on-boot configuration is
+required<br></p>
+</li>
+<li>
+<p>if and how context-switching will be impacted<br></p>
+</li>
+<li>
+<p>if and how interrupt handling will be impacted<br></p>
+</li>
+<li>
+<p>if and how virtualisation will be impacted<br></p>
+</li>
+<li>
+<p>if and how program startup will be impacted<br></p>
+</li>
+<li>
+<p>if and how the C runtime will be impacted<br></p>
+</li>
+<li>
+<p>if and how domain-specific OS libraries (e.g. OpenSSL) will be
+impacted<br></p>
+</li>
+<li>
+<p>if and how real-time will be impacted<br></p>
+</li>
+<li>
+<p>if and how security will be impacted<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Based on this `applicability and impact statement', the group shall
+provide an explanation of the components of the Linux software stack
+that will be addressed as part of their reference software enablement.
+For impact in the soft-realtime domain, a reference implementation with
+Linux is sufficient; if hard-realtime software is also impacted, a
+reference enablement of FreeRTOS is required either instead-of (if no
+demonstrable impact on a Linux stack exists) or in-addition-to Linux.<br></p>
+</li>
+<li>
+<p>The `applicability &amp; impact statement' and the `enablement plan' has
+been presented to the Software HC (mailing list and/or discussion at a
+HC meeting) and received sign-off from the Software HC.<br></p>
+</li>
+<li>
+<p>The Software HC shall review these planning documents considering the
+impact on the software ecosystem and whether independent evaluation and
+experimentation are possible with the proposed plan.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_freeze_requirements"><a class="anchor" href="#_freeze_requirements"></a>Freeze requirements</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>The proposed patches for the enablement have been sent to the
+communities governing the upstream projects identified in the Plan as
+RFC (request-for-comment) patches, including a reference to the
+documentation about to be sent to public review.<br></p>
+</li>
+<li>
+<p>This submission of RFC patches must:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>follow the processes of each community (e.g., being split into
+individual logical patches instead of being a big-bang patch to enable
+an effective review and foster good community relations),<br></p>
+</li>
+<li>
+<p>CC the submission to the software mailing list<br></p>
+</li>
+<li>
+<p>include a cover letter explaining the purpose of the extension,
+request a community review, and reference the frozen documentation</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ratification_ready_requirements"><a class="anchor" href="#_ratification_ready_requirements"></a>Ratification-ready requirements</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Feedback from the upstream communities (e.g. Linux, KVM, OpenSSL,
+etc.) has been received (if not: it is the TGs responsibility to follow
+up!) and any comments have been treated as public review comments (and,
+consequently, been addressed)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transition_to_start_using_policy"><a class="anchor" href="#_transition_to_start_using_policy"></a>Transition to start using policy<br></h3>
+<div class="paragraph">
+<p>Immediate</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

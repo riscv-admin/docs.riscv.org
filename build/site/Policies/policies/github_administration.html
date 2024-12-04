@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
+    <link rel="canonical" href="https://docs.riscv.org/Policies/policies/github_administration.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Policies" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">RISC-V Technical Policies</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../isa/index.html">RISC-V Documentatation Library</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">RISC-V Technical Policies</a></div>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="edit-this-page"><a href="https://github.com/riscv-admin/policies/edit/6-update-repo-structure-description-for-antora-layout/modules/policies/pages/github_administration.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="github_administration"><a class="anchor" href="#github_administration"></a>GitHub Repo Structure &amp; Administration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Version:</strong> 1.2<br>
+<strong>One line description:</strong> This policy governs use of RISC-V’s GitHub
+organization.<br>
+<strong>Author(s):</strong> Stephano Cetola, Arun Thomas<br>
+<strong>Status:</strong> Approved<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Version History:</strong><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 5.5555%;">
+<col style="width: 16.6666%;">
+<col style="width: 55.5555%;">
+<col style="width: 22.2224%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Ver</th>
+<th class="tableblock halign-left valign-top">Date</th>
+<th class="tableblock halign-left valign-top">Details</th>
+<th class="tableblock halign-left valign-top">Name(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Change escalation path to occur through CTO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jeff Scheel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2022-01-13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment acceptance and updates for clarity. Add version history.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jeff Scheel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2020-10-23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Original draft</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stephano Cetola, Arun Thomas</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_rationale"><a class="anchor" href="#_rationale"></a>Rationale</h3>
+<div class="paragraph">
+<p>This document will cover the use of GitHub repositories for RISC-V. The
+goal is to work on specifications in a unified way and to promote
+collaboration and an "upstream first" mentality for all software and
+firmware development.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_policy"><a class="anchor" href="#_policy"></a>Policy</h3>
+<div class="sect3">
+<h4 id="_general_repo_guidelines"><a class="anchor" href="#_general_repo_guidelines"></a>General Repo Guidelines</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>All RISC-V repositories will be created by RISC-V Staff. To request a
+new repo, send an email to <a href="mailto:help@riscv.org">help@riscv.org</a> with information about the
+project such as the expected contents, i.e. meeting documents,
+specification, code, etc.<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The TPMs will create the repo with standard files such as a
+README.md, a LICENSE (always on open source license per RISC-V
+guidelines), and other files based on the project type. For example, the
+<a href="https://github.com/riscv/docs-spec-template/">docs-spec-template</a> (riscv
+template repo) is used for specifications and
+<a href="https://github.com/riscv-admin/template-group-admin">template-group-admin</a>
+(riscv-admin template repo) for groups.<br></p>
+</li>
+<li>
+<p>The repo location may be one of several RISC-V GitHub organization
+based on the content. See the
+<a href="https://wiki.riscv.org/display/TECH/GitHub+Repo+Map">RISC-V TECH wiki
+GitHub Repo Map page</a>.<br></p>
+</li>
+<li>
+<p>The repo Administrators will default to Chair and Vice-chair of the
+group. This enables the group’s leadership to assign additional roles as
+needed for administrators and maintainers. However, leadership should
+only grant special privileges to contributors who are RISC-V members.
+Membership verification can be addressed through RISC-V Staff and
+<a href="mailto:help@riscv.org">help@riscv.org</a>.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>All artifacts included in the repo are provided under the repo LICENSE
+file. As such, no proprietary code is allowed in a RISC-V GitHub
+organization repo.<br></p>
+</li>
+<li>
+<p>We try to avoid code binary files, however if it is necessary, code
+binaries must be accompanied by their source code and that code must be
+licensed by an <a href="https://opensource.org/licenses">OSI approved</a> license.<br></p>
+</li>
+<li>
+<p>Every repository should be public. Private repos require approval of a
+ISA Committee (IC) or Horizontal Committee (HC).<br></p>
+</li>
+<li>
+<p>The best practices for the repo README file:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Describes what the purpose of the project is from an end user
+perspective. If there are numerous use cases, give some examples. Think
+about this as describing how this repo fits into the RISC-V ecosystem to
+a person who does not already have a working knowledge of the project.<br></p>
+</li>
+<li>
+<p>Defines acronyms on first use.<br></p>
+</li>
+<li>
+<p>Links to documentation in the repo if available.<br></p>
+</li>
+<li>
+<p>Provides a contact email (contact <a href="mailto:help@riscv.org">help@riscv.org</a> if you need an alias
+setup).<br></p>
+</li>
+<li>
+<p>If applicable, provides brief build instructions or usage examples of
+how to get something meaningful out of the repo. This might be as simple
+as a script for building the PDF of a specification or a list of
+requirements for building a binary.<br></p>
+</li>
+<li>
+<p>For specification repos, provide insight into the current state of
+the document and directions on how to obtain it.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Every repository must contain a LICENSE file. It should:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Be CC-BY-4.0 License for RISCV specifications<br></p>
+</li>
+<li>
+<p>Use a permissive license for software/firmware. Apache 2.0 or BSD
+2-clause are preferred and an <a href="https://opensource.org/licenses">OSI
+approved</a> license is required as specified by the RISC-V International
+License page.<br></p>
+</li>
+<li>
+<p>Follow the license of the upstream repository for code which has an
+upstream repository (e.g. GCC, LLVM, OpenJDK, etc.)<br></p>
+</li>
+<li>
+<p>Be licensed by Apache 2.0 or BSD 2-clause for example code within a
+specification.<br></p>
+</li>
+<li>
+<p>When possible, use <a href="https://spdx.dev/">SPDX headers</a>.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Every repository should detail the contribution process, either in a
+CONTRIBUTING file or the README. This information should:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For RISC-V specifications: State that one must be a member to
+contribute and provide a pointer to the RISC-V
+<a href="https://riscv.org/membership/">Membership webpage</a>.<br></p>
+</li>
+<li>
+<p>Describe the patch submission and code review process, i.e. whether
+GitHub Pull Requests, Issues, mailing lists, or any other tools or test
+(lint scripts) are used and in what order.<br></p>
+</li>
+<li>
+<p>Articulate whether a
+<a href="https://en.wikipedia.org/wiki/Contributor_License_Agreement">Contributor
+License Agreement</a> (CLA) or
+<a href="https://en.wikipedia.org/wiki/Developer_Certificate_of_Origin">Developer
+Certification of Origin</a> (DCO) are required.<br></p>
+</li>
+<li>
+<p>Reference coding style guidelines used by the community.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Every repository should contain a list of the maintainers, either in
+the README or a MAINTAINERS file.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>List at least two maintainers for the repository. For specifications
+this is the chair and the co-chair of the task group. For
+non-specification repositories there should be at least 2 maintainers
+listed who have admin (push) rights to the repository. Even graduated
+groups or extensions need two maintainers who have time and are
+committed to respond.<br></p>
+</li>
+<li>
+<p>Maintainers must make sure issues have a timely response or
+delegation upon submission (preferably within a couple working days) and
+continue to make progress at regular intervals in a timely fashion,
+preferable within 1-2 working days.<br></p>
+</li>
+<li>
+<p>This can be done in the README or in a separate file.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_risc_v_administrative_repos"><a class="anchor" href="#_risc_v_administrative_repos"></a>RISC-V Administrative Repos</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Every Task Group must store their charter in a GitHub Repository<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>If there are multiple repositories for the Task Group they can choose
+the appropriate one themselves or create one specifically for the
+charter, meeting minutes, and general discussions.<br></p>
+</li>
+<li>
+<p>The charter can be part of a README document or simply its own
+file.<br></p>
+</li>
+<li>
+<p>Once there is a list (perhaps on the wiki) of all the charters, it is
+the responsibility of the Task Group chair to keep their charter link up
+to date. This document will be amended with a link to all the charters
+once available.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Every Task Group, SIG, and Committee must store meeting minutes in a
+GitHub repo</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Please store minutes by date</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_risc_v_specifications_repos"><a class="anchor" href="#_risc_v_specifications_repos"></a>RISC-V Specifications Repos</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Each ISA specification repo must contain an errata folder.<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The folder must contain text files which detail the errata and
+include the date the errata was first documented.<br></p>
+</li>
+<li>
+<p>If any errata are resolved in a future commit, do not remove the
+errata. Mark it as fixed and give the SHA of the commit where the errata
+was addressed.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Upon ratification:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A git tag should be created whose name is the version number of the
+release.<br></p>
+</li>
+<li>
+<p>A GitHub release should be created with the version number of the
+ratified document. It must contain the source code in tar.gz or zip
+format of that release and the compiled PDF document.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>For specifications, the only users allowed push rights to the
+repository are the Chair and Co-Chair of the Task Group.<br></p>
+</li>
+<li>
+<p>Issues should be tracked using GitHub’s issue tracker.<br></p>
+</li>
+<li>
+<p>Code must be committed using a pull request unless the code is pushed
+directly by the Chair or Co-Chair and is their own work.<br></p>
+</li>
+<li>
+<p>A nightly build should be run using a GitHub action and the PDF
+artifact and (tar.gz or zip) source code be made publicly available.
+Nightly builds need only be run if the repo changed.<br></p>
+</li>
+<li>
+<p>All commits should use the
+<a href="https://en.wikipedia.org/wiki/Developer_Certificate_of_Origin">Developer
+Certification of Origin</a> (DCO) signoff process when commiting code (see
+<a href="https://git-scm.com/docs/git-commit">git-commit -s</a>).</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_software_and_firmware_repos"><a class="anchor" href="#_software_and_firmware_repos"></a>Software and Firmware Repos</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>We prefer to do work in upstream repositories rather than development
+forks if possible.<br></p>
+</li>
+<li>
+<p>We prefer that all software developed by RISC-V International member
+organizations which is meant to be open source be open as early as
+possible in the development lifecycle. This reduces duplication of
+efforts and allows for a more open and collaborative software
+ecosystem.<br></p>
+</li>
+<li>
+<p>Corporate policies will often require that work be done internally
+before changes are approved for publication in open source repositories.
+If this is the case, please work with the Software Horizontal Committee
+(HC) to ensure that duplication of efforts is minimized or completely
+avoided if possible.<br></p>
+</li>
+<li>
+<p>Forking Upstream for Development (Staging Upstream Repositories)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Early software work for spec or ecosystem enablement can be done as a
+fork under RISC-V, but these forks must be approved by the Software
+HC.<br></p>
+</li>
+<li>
+<p>Approved forks must have a working branch for each feature / bug fix.
+No work should be done on the main repository branch.<br></p>
+</li>
+<li>
+<p>Approved forks must follow the development model of the upstream
+repository. Generally, these upstream repos will have a CONTRIBUTING
+file or documentation on how to properly upstreamed code.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>As an example, do not squash 50 commits from different authors into
+1 giant commit if that upstream repo works off small incremental
+changes.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exception_handling"><a class="anchor" href="#_exception_handling"></a>Exception Handling</h3>
+<div class="paragraph">
+<p>The CTO is the escalation path for all policy issues, with the authority to resolve them or, if necessary, escalate further to the TSC or the BOD.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

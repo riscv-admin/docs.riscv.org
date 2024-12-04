@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
+    <link rel="canonical" href="https://docs.riscv.org/Policies/policies/platforms.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Policies" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">RISC-V Technical Policies</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../isa/index.html">RISC-V Documentatation Library</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">RISC-V Technical Policies</a></div>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="edit-this-page"><a href="https://github.com/riscv-admin/policies/edit/6-update-repo-structure-description-for-antora-layout/modules/policies/pages/platforms.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="platforms"><a class="anchor" href="#platforms"></a>Platforms</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This policy is out-of-date but will not be updated until 2023.
+It is left here for historical reasons.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Version:</strong> 1.0<br>
+<strong>One line description:</strong> Rules for platforms’ specifications<br>
+<strong>Author(s):</strong> Philipp Tomsich<br>
+<strong>Status:</strong> Approved<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Version History:</strong><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 44.4444%;">
+<col style="width: 22.2224%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Ver</th>
+<th class="tableblock halign-left valign-top">Date</th>
+<th class="tableblock halign-left valign-top">Details</th>
+<th class="tableblock halign-left valign-top">Name(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021-06-14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Approved version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Philipp Tomsich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0-draft-5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021-06-14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Relax/reword requirement for having separate
+tables clarifying HW and SW requirements.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Philipp Tomsich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0-draft-4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021-06-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Collected changes from review by the joint
+Platforms HSC and Software HC leadership teams. Relax bijective
+requirement on extensions being true supersets.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Philipp Tomsich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0-draft-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021-05-13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Major rework, reflecting the following changes
+Platforms Naming Compatibility Testing Explicit requirements for
+software and hardware</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Philipp Tomsich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0-draft-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021-04-29</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Partial update with results from leadership
+discussions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Philipp Tomsich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0-draft-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021-03-21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Draft version for review by the committee
+leadership.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Philipp Tomsich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021-03-15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initial public release.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Philipp Tomsich</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_rationale"><a class="anchor" href="#_rationale"></a>Rationale</h3>
+<div class="paragraph">
+<p>This document summarizes the policies and procedures adopted for RISC-V
+Platforms.</p>
+</div>
+<div class="paragraph">
+<p>A RISC-V Platform specifies a common, reusable runtime environment that
+operating systems and applications can target to improve portability and
+reuse. A RISC-V Platform provides an interoperability assurance for
+compatible software (i.e, software that fulfills all requirements of a
+RISC-V Platform) when run on hardware devices that are also compatible
+with the same RISC-V Platform.</p>
+</div>
+<div class="paragraph">
+<p>All RISC-V Platforms are developed and released by the Platforms
+Horizontal Subcommittee, operating under the auspices of the Software
+Horizontal Committee.</p>
+</div>
+<div class="sect3">
+<h4 id="_intended_audience"><a class="anchor" href="#_intended_audience"></a>Intended audience</h4>
+<div class="paragraph">
+<p>This policy document targets the following audiences:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Contributors, Members, and Leadership of the Platforms Horizontal
+Subcommittee<br></p>
+</li>
+<li>
+<p>RISC-V technical leadership and program management<br></p>
+</li>
+<li>
+<p>Architects and Integrators of software and hardware solutions for the
+RISC-V ecosystem</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_how_to_read_this_document"><a class="anchor" href="#_how_to_read_this_document"></a>How to read this document</h4>
+<div class="paragraph">
+<p>This policy interleaves Rationale and Policy.<br>
+For easier readability, the policy elements are <strong>highlighted in bold
+type</strong>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="platforms-policy"><a class="anchor" href="#platforms-policy"></a>Policy</h3>
+<div class="paragraph">
+<p>A solid foundation for software development and interoperability is
+required to support the growth of the software ecosystem for RISC-V.
+From a user perspective, binary operating systems distributions (such as
+the various Linux distributions) should be easily movable between
+different hardware.</p>
+</div>
+<div class="paragraph">
+<p>This offers benefits to software developers, who can target an
+interoperable, common platform with their source code and deliver base
+functionality quickly (while retaining the ability to provide optimized
+and value-added functionality after probing their runtime environment).</p>
+</div>
+<div class="paragraph">
+<p>To achieve interoperability, common Platforms are defined that specify:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>features and capabilities that software can expect to be provided by
+its environment and<br></p>
+</li>
+<li>
+<p>features and capabilities all compliant software must correctly
+configure and operate.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Both hardware and software are expected to claim compatibility towards a
+given Platform: such a compatibility claim indicates interoperability
+for any combination of compatible hardware and software.</p>
+</div>
+<div class="sect3">
+<h4 id="_scope"><a class="anchor" href="#_scope"></a>Scope</h4>
+<div class="paragraph">
+<p>The focus of the platform standards is software-centric. However, both
+software and hardware will be affected by the requirements put forth in
+these specifications: both soft- and hardware will need to claim
+compatibility against these specifications to ensure interoperability
+between soft- and hardware products.</p>
+</div>
+<div class="paragraph">
+<p><strong>The Platform governs how the software can use the platform, not the
+implementation details of the underlying hardware platform</strong>.
+Consequently, a Platform shall avoid performance requirements or whether
+mechanisms have to be implemented in hardware (i.e. if they can be
+emulated through trap-and-emulate).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_specification_coverage"><a class="anchor" href="#_specification_coverage"></a>Specification coverage</h4>
+<div class="paragraph">
+<p><strong>The Platforms released must cover at least the following runtime
+environments:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>The "OS-A Platform" specifies a Platform for rich operating systems
+that target application processors</strong>. It is expected to be augmented with
+industry-specific Platform extensions for "servers", "mobile",
+"edge computing", "machine-learning" and "automotive".<br></p>
+</li>
+<li>
+<p><strong>The "M Platform" provides a Platform for bare-metal applications
+and small operating systems on microcontrollers.</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Other runtime environments can be added to by the Platforms HSC based on
+the processes outlined in the section "Platform lifecycle."</p>
+</div>
+<div class="paragraph">
+<p><strong>Each Platform consists of:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>A base platform</strong><br></p>
+</li>
+<li>
+<p><strong>extensions specifications that specify groups of application-specific
+requirements</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>A base specification and the associated extensions are released and
+versioned as a single document.</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Extensions must have broad applicability covering the requirements of
+entire market segments or industries</strong> (e.g., "mobile," "automotive,"
+"server"). Extensions that cover a niche market (or would serve as a
+marketing tool to individual market participants only) do not justify
+the resource expenditure for standardization and maintaining
+requirements and a compatibility test suite.</p>
+</div>
+<div class="paragraph">
+<p><strong>An overlap of requirements between extensions is acceptable and is
+desirable wherever it simplifies the compatibility claim for products.</strong>
+E.g., from a user perspective, it will be easier to understand if
+products are compliant "<em>with the mobile and automotive extensions</em>"
+(both mobile and automotive include virtualization features) rather than
+“<em>with the virtualization, mobile and automotive extensions.”</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_naming_and_versioning"><a class="anchor" href="#_naming_and_versioning"></a>Naming and Versioning</h4>
+<div class="paragraph">
+<p><strong>The full name of each platform shall be constructed as follows:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>It is prefixed by "RISC-V".</strong><br></p>
+</li>
+<li>
+<p><strong>It is postfixed by its year and a dot-separated revision number (the
+original issue does not have a revision).</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Applying this rule, the following examples result:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A full release of a platform will be "RISC-V OS-A Platform 2022".<br></p>
+</li>
+<li>
+<p>The third reissue/revision of the same platform will be "RISC-V OS-A
+Platform 2022.3".</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Only official Platforms released by RISC-V International can use the
+"RISC-V" prefix.</strong></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_machine_readable_identification_and_experimental_versions"><a class="anchor" href="#_machine_readable_identification_and_experimental_versions"></a>Machine-readable identification and experimental versions</h4>
+<div class="paragraph">
+<p><strong>For machine-identifiable purposes, we use an URI-encoded name, where
+the scheme is prefixed as `riscv-platform' for official/standardized
+platforms and `x-platform' for experimental versions:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>riscv-platform://http://riscv.org/platform/OS-A/2022.3[riscv.org/platform/OS-A/2022.3]</strong><br></p>
+</li>
+<li>
+<p><strong>riscv-platform://riscv.org/platform/OS-A/2022.3/#server-extension</strong><br></p>
+</li>
+<li>
+<p><strong>x-platform://http://semiconductor-company.example.org/embrace-and-extend/007[semiconductor-company.example.org/embrace-and-extend/007]</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Third parties cannot use the `riscv-platform' scheme</strong> (just like they
+cannot use `RISC-V' as part of their platform name)*.</p>
+</div>
+<div class="paragraph">
+<p><strong>Replacing the `riscv-platform' or `x-platform' in the URI with `https'
+shall result in a valid URL that hosts the specification and ancillary
+documentation.</strong></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_claiming_compatibility"><a class="anchor" href="#_claiming_compatibility"></a>Claiming Compatibility</h4>
+<div class="paragraph">
+<p>Products implementing a RISC-V Platform shall claim compatibility with a
+Platform and any applicable extensions that the product implements.</p>
+</div>
+<div class="paragraph">
+<p>The rules for compatibility testing are designed to ensure a surjective
+compatibility mapping, but not to enforce a bijective compatibility
+between platforms and software: software targeting the base Platform
+must also execute in the presence of any extensions to this Platform
+(but will not support the additional features introduced by the
+extension), while software targeting a specific extension may require
+this extension to be present (i.e. it is not required to run on the base
+Platform).</p>
+</div>
+<div class="paragraph">
+<p><strong>A Platform (i.e. hardware/runtime) product compatibility claim can only
+be made if a product satisfies the following:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>all requirements of the respective base Platform; and</strong><br></p>
+</li>
+<li>
+<p><strong>all requirements of each extension the product claims compatibility
+with.</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>No Platform (i.e. hardware/runtime) product shall claim compatibility
+with an extension if it is not compatible with the respective base
+specification.</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>A Software product claiming compatibility with a Platform (and
+extensions) must satisfy:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>all requirements of the Platform and of all Extensions that it claims
+compatibility with.</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>These two requirements translate to the following compatibility
+relationship:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Any software that works on the base-platform, will also work in the
+presence of extensions (i.e. extensions are "true" extensions for
+software-compatibility).</strong><br></p>
+</li>
+<li>
+<p><strong>Any software that requires an extension, may not be compatible in the
+absence of the extension.</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Any compatibility claim must identify the Platforms including their
+version number.</p>
+</div>
+<div class="paragraph">
+<p>For the self-certification of compatibility, corresponding Platform
+Compatibility Tests (PCT) shall be developed and published. Refer to the
+Platform Compatibility Testing Policy for details.</p>
+</div>
+<div class="paragraph">
+<p>In order to declare that you are platform compatible (e.g. RISC-V OS-A
+Platform 2022 compatible) and use the RISC-V Platform Compatible logo,
+you must pass the compatibility tests (including the profile
+compatibility tests for the profile included in the platform spec).
+After passing the PCT, please follow the steps at the following RISC-V
+website <a href="http://www.riscv.org/TBD">www.riscv.org/TBD</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h4>
+<div class="paragraph">
+<p><strong>Platforms consist of:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Requirements (normative), made up of one or more:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Mandatory subclauses</strong><br></p>
+</li>
+<li>
+<p><strong>Deprecated subclauses</strong> (see below for the meaning of Deprecated)<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Rationales (informative)</strong><br></p>
+</li>
+<li>
+<p><strong>Application notes (informative)</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A requirement may be made up of multiple subclauses that are combined
+either as "any of" ("or"), or "all of" ("and"). This affects
+compatible soft- and hardware as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the software must support "<em>A or B</em>," then hardware must
+provide "<em>A and B.</em>"<br></p>
+</li>
+<li>
+<p>If the software must support "<em>A and B</em>," then hardware must
+provide "<em>A or B</em>."</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>An example of subclauses and of joining subclauses is:</p>
+</div>
+<div class="paragraph">
+<p><em>[Requirement 1]</em><br>
+<em>Compatible software for the OS-A Platform must support ALL OF the
+following:</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>[Requirement 1, subclause 1: DEPRECATED]</em><br>
+<em>All interrupts in the system are managed by an interrupt controller
+compatible with the PLIC specification.</em><br></p>
+</li>
+<li>
+<p><em>[Requirement 1, subclause 2]</em><br>
+<em>All interrupts in the system are managed by an interrupt controller
+compatible with the AIA specification.</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Every element shall have the following annotations:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>A unique number</strong> (which is not reused, even if requirements are
+removed in subsequent versions)<strong>.</strong> Having a unique identifier is
+critical to trace requirements in Platform Compatibility tests, in
+discussions on Errata, or to reference Rationals and Application notes
+back to Requirements.<br></p>
+</li>
+<li>
+<p><strong>Subclauses are numbered hierarchically within each requirement.</strong><br></p>
+</li>
+<li>
+<p><strong>Rationales and application notes must reference the corresponding
+requirement or subclause</strong>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_deprecation_of_requirements"><a class="anchor" href="#_deprecation_of_requirements"></a>Deprecation of requirements</h4>
+<div class="paragraph">
+<p>Platforms address both <em>forward compatibility</em> and <em>backward
+compatibility:</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Forward compatibility:</em> Products compliant with the current version
+of a platform specification are interoperable with products compliant
+with future versions of the platform specification.<br></p>
+</li>
+<li>
+<p><em>Backward compatibility:</em> Products compliant with future versions of a
+platform specification should also support earlier versions.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Forward compatibility</em> defines requirements on how the specifications
+manage required features. Removing a required feature will break
+<em>forward compatibility</em>; hence specifications shall not remove features
+without prior warning.</p>
+</div>
+<div class="paragraph">
+<p><strong>The following deprecation policy applies for requirements:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>MANDATORY subclauses have to be retained for at least one full
+release cycle of the specification.</strong> E.g., a MANDATORY requirement from
+a 2022 Platform cannot be removed from the 2024 Platform, but can be
+made DEPRECATED in the 2024 Platform.<br></p>
+</li>
+<li>
+<p><strong>DEPRECATED subclauses can be dropped from the next full release of
+the specification.</strong> Note that a DEPRECATED subclause only signals the
+intent of dropping the requirement, but does not imply a commitment to
+drop it based on any specific schedule (e.g., delays in the
+specification of alternate mechanisms may affect the ability to drop a
+requirement).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Dropping a requirement from the specification does not require future
+products to drop the respective feature, as long as the feature is not
+incompatible with any new requirements.</strong></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_no_non_obvious_requirements"><a class="anchor" href="#_no_non_obvious_requirements"></a>No non-obvious requirements</h4>
+<div class="paragraph">
+<p>Platforms will frequently reference third-party documents,
+specifications and standards. This introduces the risk of affecting
+non-obvious requirements for Platform compatibility, if those external
+documents do not follow the same documentation conventions or—in
+turn—use references to other documents.</p>
+</div>
+<div class="paragraph">
+<p><strong>The Platforms shall add clarifying language to avoid non-obvious
+requirements resulting from third-party specifications. If necessary,
+the list of mandatory requirements introduced through any document
+reference must be repeated in the Platform specification.</strong></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_platforms_release_cycle_and_versioning"><a class="anchor" href="#_platforms_release_cycle_and_versioning"></a>Platforms release cycle and versioning</h3>
+<div class="paragraph">
+<p><strong>Major versions of platform specifications are published in a bi-annual
+cadence for even years.</strong> While no major revisions of the platform
+specifications will be published in odd years, additional extensions can
+be added in these years and amendments are made to bring the Platforms
+up to date with new Profiles.</p>
+</div>
+<div class="paragraph">
+<p>Amendments and new extensions are published as-needed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_platforms_lifecycle"><a class="anchor" href="#_platforms_lifecycle"></a>Platforms Lifecycle</h3>
+<div class="sect3">
+<h4 id="_inception"><a class="anchor" href="#_inception"></a>Inception</h4>
+<div class="paragraph">
+<p><strong>A new platform specification or an extension can be proposed to the
+Platform HSC by:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>The community at large</strong><br></p>
+</li>
+<li>
+<p><strong>The Software Horizontal Committee, the TSC, or the CTO</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Any new Platform must target a market segment where interoperability is
+desired, and the industry has sufficient demand to ensure that multiple
+implementations (both hardware and software) are expected.</strong> Platform
+specifications that are of fringe benefit or would serve only as a
+marketing tool for implementers of specific solutions are not to be
+considered.</p>
+</div>
+<div class="paragraph">
+<p><strong>Community proposals are advanced through an inquiry process within the
+Platform HSC to clearly define the scope, use cases, and affected hard-
+and software products.</strong> Following this inquiry process, the Platform HSC
+submits the proposal—including a schedule to release—to the Software
+Horizontal Committee for resource and schedule approval.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_preparatory_stage"><a class="anchor" href="#_preparatory_stage"></a>Preparatory stage</h4>
+<div class="paragraph">
+<p>If resources and schedules are approved, the Platform HSC drafts a
+specification document. After completion, it is submitted to the
+Software HC for review and approval.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_publication_stage"><a class="anchor" href="#_publication_stage"></a>Publication stage</h4>
+<div class="paragraph">
+<p>After approval by the Software HC, it is published and enters into
+immediate effect.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_retirement_of_platforms"><a class="anchor" href="#_retirement_of_platforms"></a>Retirement of Platforms</h3>
+<div class="paragraph">
+<p>Corrections are not issued to update information that has become
+outdated since publication.<br>
+The corrections are mentioned in the Front Matter of the corrected
+version.<br>
+<strong>In general, a correction will not be issued for a publication that is
+older than three years.</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exceptions"><a class="anchor" href="#_exceptions"></a>Exceptions</h3>
+<div class="paragraph">
+<p>Implementations (both hardware and software) may decide not to be
+compatible with any Platform, as long as no misleading compatibility
+claim is made:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Products may not claim compatibility against any of the Platforms for
+which they do not fulfill all requirements and pass the Platform
+Compatibility test.</strong><br></p>
+</li>
+<li>
+<p><strong>Products may extend on the functionality of the platform’s
+specifications and provide additional functionality, as long as they
+remain compatible</strong> (i.e., they may not implement incompatible features
+unless these are disabled by default).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

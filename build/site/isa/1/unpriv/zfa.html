@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
+    <link rel="canonical" href="https://docs.riscv.org/isa/1/unpriv/zfa.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="isa" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">ISA Specifications</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="colophon.html">Preface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rv32.html">RV32I Base Integer Instruction Set, Version 2.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rv64.html">RV64I Base Integer Instruction Set, Version 2.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zicsr.html">"Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="counters.html">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zihintntl.html">"Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zihintpause.html">"Zihintpause" Extension for Pause Hint, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zawrs.html">"Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zacas.html">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zabha.html">"Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rvwmo.html">RVWMO Memory Consistency Model, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bfloat16.html">"BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="unpriv-cfi.html">Control-flow Integrity (CFI)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="extending.html">Extending RISC-V</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="naming.html">ISA Extension Naming Conventions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="history.html">History and Acknowledgments</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="vector-examples.html">Appendix C: Vector Assembly Code Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="calling-convention.html">Appendix D: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Volume II: RISC-V Privileged ISA Specification</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/priv-intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/priv-history.html">History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/bibliography.html">Bibliography</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ISA Specifications</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">ISA Specifications</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../riscv-library/0.1/index.html">RISC-V Documentation Library</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../riscv-library/0.1/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../riscv-library/0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">ISA Specifications</a></li>
+    <li>Volume I: RISC-V Unprivileged ISA Specification</li>
+    <li><a href="zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/riscv/riscv-isa-manual/edit/antora-refactor/modules/unpriv/pages/zfa.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="zfa"><a class="anchor" href="#zfa"></a>"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chapter describes the Zfa standard extension, which adds
+instructions for immediate loads, IEEE 754-2019 minimum and maximum
+operations, round-to-integer operations, and quiet floating-point
+comparisons. For RV32D, the Zfa extension also adds instructions to
+transfer double-precision floating-point values to and from integer
+registers, and for RV64Q, it adds analogous instructions for
+quad-precision floating-point values. The Zfa extension depends on the F
+extension.</p>
+</div>
+<div class="sect2">
+<h3 id="_load_immediate_instructions"><a class="anchor" href="#_load_immediate_instructions"></a>Load-Immediate Instructions</h3>
+<div class="paragraph">
+<p>The FLI.S instruction loads one of 32 single-precision floating-point
+constants, encoded in the <em>rs1</em> field, into floating-point register
+<em>rd</em>. The correspondence of <em>rs1</em> field values and single-precision
+floating-point values is shown in <a href="#tab:flis">Table 37</a>. FLI.S is encoded
+like FMV.W.X, but with <em>rs2</em>=1.</p>
+</div>
+<table id="tab:flis" class="tableblock frame-all grid-all fit-content center">
+<caption class="title">Table 1. Immediate values loaded by the FLI.S instruction.</caption>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-right valign-top"><em>rs1</em></th>
+<th class="tableblock halign-right valign-top">Value</th>
+<th class="tableblock halign-center valign-top">Sign</th>
+<th class="tableblock halign-center valign-top">Exponent</th>
+<th class="tableblock halign-center valign-top">Significand</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">\(-1.0\)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>1</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111111</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock"><em>Minimum positive normal</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>00000001</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">\(1.0 \times 2^{-16}\)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01101111</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">\(1.0 \times 2^{-15}\)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01110000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">\(1.0 \times 2^{-8}\)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01110111</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">\(1.0 \times 2^{-7}\)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">0.0625 (\(2^{-4}\))</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111011</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">0.125 (\(2^{-3}\))</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111100</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">0.25</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111101</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">0.3125</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111101</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>010&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">0.375</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111101</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">0.4375</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111101</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>110&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">0.5</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111110</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">13</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">0.625</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111110</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>010&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">0.75</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111110</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">0.875</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111110</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>110&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">1.0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111111</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">17</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">1.25</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111111</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>010&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">1.5</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111111</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">19</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">1.75</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111111</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>110&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">2.0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">2.5</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>010&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000001</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000010</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">25</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000011</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">26</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">128 (\(2^7\))</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000110</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">27</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">256 (\(2^8\))</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000111</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">\(2^{15}\)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10001110</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">29</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">\(2^{16}\)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>10001111</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">\(+\infty\)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>11111111</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock"><em>Canonical NaN</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>11111111</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100&#8230;&#8203;000</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The preferred assembly syntax for entries 1, 30, and 31 is <code>min</code>, <code>inf</code>,
+and <code>nan</code>, respectively. For entries 0 through 29 (including entry 1),
+the assembler will accept decimal constants in C-like syntax.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The set of 32 constants was chosen by examining floating-point
+libraries, including the C standard math library, and to optimize
+fixed-point to floating-point conversion.</p>
+</div>
+<div class="paragraph">
+<p>Entries 8-22 follow a regular encoding pattern. No entry sets mantissa
+bits other than the two most significant ones.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If the D extension is implemented, FLI.D performs the analogous
+operation, but loads a double-precision value into floating-point
+register <em>rd</em>. Note that entry 1 (corresponding to the minimum positive
+normal value) has a numerically different value for double-precision
+than for single-precision. FLI.D is encoded like FLI.S, but with
+<em>fmt</em>=D.</p>
+</div>
+<div class="paragraph">
+<p>If the Q extension is implemented, FLI.Q performs the analogous
+operation, but loads a quad-precision value into floating-point register
+<em>rd</em>. Note that entry 1 (corresponding to the minimum positive normal
+value) has a numerically different value for quad-precision. FLI.Q is
+encoded like FLI.S, but with <em>fmt</em>=Q.</p>
+</div>
+<div class="paragraph">
+<p>If the Zfh or Zvfh extension is implemented, FLI.H performs the
+analogous operation, but loads a half-precision floating-point value
+into register <em>rd</em>. Note that entry 1 (corresponding to the minimum
+positive normal value) has a numerically different value for
+half-precision. Furthermore, since \(2^{16}\) is not
+representable in half-precision floating-point, entry 29 in the table
+instead loads positive infinity—i.e., it is redundant with entry 30.
+FLI.H is encoded like FLI.S, but with <em>fmt</em>=H.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Additionally, since \(2^{-16}\) and \(2^{-15}\) are subnormal in half-precision, entry 1 is numerically greater than entries 2 and 3 for FLI.H.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The FLI.<em>fmt</em> instructions never set any floating-point exception flags.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_minimum_and_maximum_instructions"><a class="anchor" href="#_minimum_and_maximum_instructions"></a>Minimum and Maximum Instructions</h3>
+<div class="paragraph">
+<p>The FMINM.S and FMAXM.S instructions are defined like the FMIN.S and
+FMAX.S instructions, except that if either input is NaN, the result is
+the canonical NaN.</p>
+</div>
+<div class="paragraph">
+<p>If the D extension is implemented, FMINM.D and FMAXM.D instructions are
+analogously defined to operate on double-precision numbers.</p>
+</div>
+<div class="paragraph">
+<p>If the Zfh extension is implemented, FMINM.H and FMAXM.H instructions
+are analogously defined to operate on half-precision numbers.</p>
+</div>
+<div class="paragraph">
+<p>If the Q extension is implemented, FMINM.Q and FMAXM.Q instructions are
+analogously defined to operate on quad-precision numbers.</p>
+</div>
+<div class="paragraph">
+<p>These instructions are encoded like their FMIN and FMAX counterparts,
+but with instruction bit 13 set to 1.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>These instructions implement the IEEE 754-2019 minimum and maximum
+operations.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_round_to_integer_instructions"><a class="anchor" href="#_round_to_integer_instructions"></a>Round-to-Integer Instructions</h3>
+<div class="paragraph">
+<p>The FROUND.S instruction rounds the single-precision floating-point
+number in floating-point register <em>rs1</em> to an integer, according to the
+rounding mode specified in the instruction&#8217;s <em>rm</em> field. It then writes
+that integer, represented as a single-precision floating-point number,
+to floating-point register <em>rd</em>. Zero and infinite inputs are copied to
+<em>rd</em> unmodified. Signaling NaN inputs cause the invalid operation
+exception flag to be set; no other exception flags are set. FROUND.S is
+encoded like FCVT.S.D, but with <em>rs2</em>=4.</p>
+</div>
+<div class="paragraph">
+<p>The FROUNDNX.S instruction is defined similarly, but it also sets the
+inexact exception flag if the input differs from the rounded result and
+is not NaN. FROUNDNX.S is encoded like FCVT.S.D, but with <em>rs2</em>=5.</p>
+</div>
+<div class="paragraph">
+<p>If the D extension is implemented, FROUND.D and FROUNDNX.D instructions
+are analogously defined to operate on double-precision numbers. They are
+encoded like FCVT.D.S, but with <em>rs2</em>=4 and 5, respectively,</p>
+</div>
+<div class="paragraph">
+<p>If the Zfh extension is implemented, FROUND.H and FROUNDNX.H
+instructions are analogously defined to operate on half-precision
+numbers. They are encoded like FCVT.H.S, but with <em>rs2</em>=4 and 5,
+respectively,</p>
+</div>
+<div class="paragraph">
+<p>If the Q extension is implemented, FROUND.Q and FROUNDNX.Q instructions
+are analogously defined to operate on quad-precision numbers. They are
+encoded like FCVT.Q.S, but with <em>rs2</em>=4 and 5, respectively,</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The FROUNDNX.<em>fmt</em> instructions implement the IEEE 754-2019
+roundToIntegralExact operation, and the FROUND.<em>fmt</em> instructions
+implement the other operations in the roundToIntegral family.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modular_convert_to_integer_instruction"><a class="anchor" href="#_modular_convert_to_integer_instruction"></a>Modular Convert-to-Integer Instruction</h3>
+<div class="paragraph">
+<p>The FCVTMOD.W.D instruction is defined similarly to the FCVT.W.D
+instruction, with the following differences. FCVTMOD.W.D always rounds
+towards zero. Bits 31:0 are taken from the rounded, unbounded two&#8217;s
+complement result, then sign-extended to XLEN bits and written to
+integer register <em>rd</em>. \(\pm\infty\) and NaN are converted to
+zero.</p>
+</div>
+<div class="paragraph">
+<p>Floating-point exception flags are raised the same as they would be for
+FCVT.W.D with the same input operand.</p>
+</div>
+<div class="paragraph">
+<p>This instruction is only provided if the D extension is implemented. It
+is encoded like FCVT.W.D, but with the rs2 field set to 8 and the <em>rm</em>
+field set to 1 (RTZ). Other <em>rm</em> values are <em>reserved</em>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The assembly syntax requires the RTZ rounding mode to be explicitly
+specified, i.e., <code>fcvtmod.w.d rd, rs1, rtz</code>.</p>
+</div>
+<div class="paragraph">
+<p>The FCVTMOD.W.D instruction was added principally to accelerate the
+processing of JavaScript Numbers. Numbers are double-precision
+values, but some operators implicitly truncate them to signed integers
+mod \(2^{32}\).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_move_instructions"><a class="anchor" href="#_move_instructions"></a>Move Instructions</h3>
+<div class="paragraph">
+<p>For RV32 only, if the D extension is implemented, the FMVH.X.D
+instruction moves bits 63:32 of floating-point register <em>rs1</em> into
+integer register <em>rd</em>. It is encoded in the OP-FP major opcode with
+<em>funct3</em>=0, <em>rs2</em>=1, and <em>funct7</em>=1110001.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>FMVH.X.D is used in conjunction with the existing FMV.X.W instruction to
+move a double-precision floating-point number to a pair of x-registers.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For RV32 only, if the D extension is implemented, the FMVP.D.X
+instruction moves a double-precision number from a pair of integer
+registers into a floating-point register. Integer registers <em>rs1</em> and
+<em>rs2</em> supply bits 31:0 and 63:32, respectively; the result is written to
+floating-point register <em>rd</em>. FMVP.D.X is encoded in the OP-FP major
+opcode with <em>funct3</em>=0 and <em>funct7</em>=1011001.</p>
+</div>
+<div class="paragraph">
+<p>For RV64 only, if the Q extension is implemented, the FMVH.X.Q
+instruction moves bits 127:64 of floating-point register <em>rs1</em> into
+integer register <em>rd</em>. It is encoded in the OP-FP major opcode with
+<em>funct3</em>=0, <em>rs2</em>=1, and <em>funct7</em>=1110011.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>FMVH.X.Q is used in conjunction with the existing FMV.X.D instruction to
+move a quad-precision floating-point number to a pair of x-registers.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For RV64 only, if the Q extension is implemented, the FMVP.Q.X
+instruction moves a double-precision number from a pair of integer
+registers into a floating-point register. Integer registers <em>rs1</em> and
+<em>rs2</em> supply bits 63:0 and 127:64, respectively; the result is written
+to floating-point register <em>rd</em>. FMVP.Q.X is encoded in the OP-FP major
+opcode with <em>funct3</em>=0 and <em>funct7</em>=1011011.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_comparison_instructions"><a class="anchor" href="#_comparison_instructions"></a>Comparison Instructions</h3>
+<div class="paragraph">
+<p>The FLEQ.S and FLTQ.S instructions are defined like the FLE.S and FLT.S
+instructions, except that quiet NaN inputs do not cause the invalid
+operation exception flag to be set.</p>
+</div>
+<div class="paragraph">
+<p>If the D extension is implemented, FLEQ.D and FLTQ.D instructions are
+analogously defined to operate on double-precision numbers.</p>
+</div>
+<div class="paragraph">
+<p>If the Zfh extension is implemented, FLEQ.H and FLTQ.H instructions are
+analogously defined to operate on half-precision numbers.</p>
+</div>
+<div class="paragraph">
+<p>If the Q extension is implemented, FLEQ.Q and FLTQ.Q instructions are
+analogously defined to operate on quad-precision numbers.</p>
+</div>
+<div class="paragraph">
+<p>These instructions are encoded like their FLE and FLT counterparts, but
+with instruction bit 14 set to 1.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>We do not expect analogous comparison instructions will be added to the
+vector ISA, since they can be reasonably efficiently emulated using
+masking.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

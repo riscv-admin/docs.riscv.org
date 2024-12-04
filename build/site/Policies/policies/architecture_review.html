@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
+    <link rel="canonical" href="https://docs.riscv.org/Policies/policies/architecture_review.html">
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="Policies" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">RISC-V Technical Policies</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../isa/index.html">RISC-V Documentatation Library</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">RISC-V Technical Policies</a></div>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="edit-this-page"><a href="https://github.com/riscv-admin/policies/edit/6-update-repo-structure-description-for-antora-layout/modules/policies/pages/architecture_review.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="architecture_review"><a class="anchor" href="#architecture_review"></a>Architecture Review</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Version:</strong> 1.2<br>
+<strong>One line description:</strong> This policy cover the opcode encoding, mnemonics, and CSR<br>
+<strong>Author(s):</strong> Greg Favor, Krste Asanović<br>
+<strong>Status:</strong> Approved<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Version History:</strong><br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 5.5555%;">
+<col style="width: 16.6666%;">
+<col style="width: 55.5555%;">
+<col style="width: 22.2224%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Ver</th>
+<th class="tableblock halign-left valign-top">Date</th>
+<th class="tableblock halign-left valign-top">Details</th>
+<th class="tableblock halign-left valign-top">Name(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Change escalation path to occur through CTO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Greg Favor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021-10-20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update email for reviews to be submitted</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stephano Cetola</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021-05-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Policy approved by TSC - 10 approve 0 abstain 0 object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stephano Cetola</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_rationale"><a class="anchor" href="#_rationale"></a>Rationale</h3>
+<div class="paragraph">
+<p>We need to produce robust extensions that are consistent with the ratified RISC-V specifications and RISC-V overall strategy.</p>
+</div>
+<div class="paragraph">
+<p>We also need to coordinate assignments of opcode encodings, mnemonics,
+CSRs, etc so we have a consistent set of conventions across extensions,
+handle different profile targets, and manage encoding resources.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_policy"><a class="anchor" href="#_policy"></a>Policy</h3>
+<div class="paragraph">
+<p>There was a previous policy that covered some of the same areas as this
+policy and this policy fully supersedes any older policy covering the
+same topics.</p>
+</div>
+<div class="paragraph">
+<p>The Architecture Review policy and process will be managed and performed
+by the Unprivileged and Privileged ISA committees (ICs). This will be
+structured in a way to enable parallel work by several key architecture
+people. Responsiveness as well as sufficient thoroughness are both
+goals.</p>
+</div>
+<div class="paragraph">
+<p>There are four pieces to this process:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Architecture review of Unpriv extensions by the Unpriv IC<br></p>
+</li>
+<li>
+<p>Architecture review of Priv extensions by the Priv IC<br></p>
+</li>
+<li>
+<p>Opcode assignment review<br></p>
+</li>
+<li>
+<p>CSR assignment review</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_process_details"><a class="anchor" href="#_process_details"></a>Process details</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>The four ISA committee chairs and their delegates, will work together
+to accomplish this policy.<br></p>
+</li>
+<li>
+<p>Architecture reviews will examine the architectural consistency,
+cost/benefit justifications, and specifics of an extension as being
+appropriate for standardization by RISC-V (e.g. are there questionable
+details, potentially unjustified features, or architectural choices
+inconsistent with the overall RISC-V architecture). This doesn’t
+supplant the need for Task groups (TGs) to do their full diligence as
+part of developing a proposed architecture extension. The more
+thoroughly a TG does its work and documents, the what and why, the more
+smoothly the review process will go and it will help the overall
+extension development process produce quality RISC-V architecture
+extensions.<br></p>
+</li>
+<li>
+<p>The chairs will delegate who will drive CSR assignment review (as
+technically the most appropriate people to do this knowledgeably and
+holistically).<br></p>
+</li>
+<li>
+<p>Opcode assignment review will be handled more dynamically and jointly
+between the IC chairs and their delegates.<br></p>
+</li>
+<li>
+<p>The DoD sign-offs for the ICs will be contingent on completing this
+policy for each extension.<br></p>
+</li>
+<li>
+<p>The definition of done (DoD) checklist deliverables concerning early
+opcode assignments, etc. will be conducted in accordance with this
+policy and must be completed in time for the appropriate DoD
+milestone.<br></p>
+</li>
+<li>
+<p>The <a href="mailto:tech-arch-review@lists.riscv.org%20">tech-arch-review</a> email
+list is the one portal for submissions from TGs of arch extensions to be
+reviewed. This also includes submissions for preliminary reviews of
+specific key issues or questions. An updated version of the submission
+status spreadsheet will have tracking/status columns for the above four
+pieces. (The intent is to try and provide opcode and CSR assignment
+feedback, when possible, more quickly and ahead of complete arch review
+feedback.). The queue will be reviewed by one of the chairs of the ICs
+at every chairs meeting and rolled up to the BOD monthly for the high
+priority extensions.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ar_review_during_the_specification_development_lifecycle"><a class="anchor" href="#_ar_review_during_the_specification_development_lifecycle"></a>AR Review During the Specification Development Lifecycle</h4>
+<div class="paragraph">
+<p>In the process of developing the RISC-V Specification, Architecture
+Review (AR) serves a pivotal function. This review can occur at various
+stages: Planning, Development, Freeze, and Ratification-Ready.</p>
+</div>
+<div class="paragraph">
+<p>During the Planning and Development phases, AR functions primarily as a
+consultative activity, offering requested guidance on possible architectural
+choices and suggestions for improvement. However, the Architecture Review
+conducted during the Freeze stage is particularly important and mandatory, as
+it determines whether the specification is genuinely prepared to advance or if
+modifications and enhancements are needed. Lastly, AR is required during the
+Ratification-Ready phase if the specification text has undergone any significant
+changes (i.e. past simple typo corrections, formatting corrections, and very
+simple clarifications).</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exception_handling"><a class="anchor" href="#_exception_handling"></a>Exception handling</h3>
+<div class="paragraph">
+<p>All exception requests should be forwarded to the ISA committees. It is
+unlikely any will be granted.</p>
+</div>
+<div class="paragraph">
+<p>Any escalation should occur to the CTO who may choose to resolve the
+issue, or escalate to the TSC or the CEO or the BOD.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transition_to_start_using_policy"><a class="anchor" href="#_transition_to_start_using_policy"></a>Transition to start using policy</h3>
+<div class="paragraph">
+<p>Effective immediately. This will be the acting policy while awaiting
+approval (possibly with modifications before approval). Any extension
+that was part way through the process with the previous policy should
+contact the ISA chairs to determine how to proceed.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

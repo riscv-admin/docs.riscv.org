@@ -16,6 +16,7 @@ asciidoc:
   - asciidoctor-kroki
   - asciidoctor-bibtex
   #- asciidoctor-mathematical
+
   attributes:
     le: '&#8804;'
     ge: '&#8805;'
@@ -25,6 +26,10 @@ asciidoc:
     csrname: 'envcfg'
     incexample: example$
     incimage: image$
+
+antora:
+  extensions:
+  - '@antora/pdf-extension'
 
 ui:
   bundle:
