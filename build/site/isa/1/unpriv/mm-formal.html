@@ -760,9 +760,15 @@ operation) with the release-RCpc or release-RCsc annotation.</p>
 <div class="paragraph">
 <p>Model states: A model state consists of a shared memory and a tuple of hart states.</p>
 </div>
-<div class="imageblock center kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/ditaa/svg/eNrT1oUDbQUQ0EbwuWoUFDwSi0oUDBQUahT09PSApEJIUWJyKpDPpY1PJ5D7qG0iWPhR22QFGEASQ9aPDsA2g0FwRmJRaopCbmpuflElRKgGr04AO8stKw==?shadows=false&separation=false" alt="Diagram">
+<pre>+----------+     +---------+
+|  Hart 0  | ... |  Trace  |
++----------+     +---------+
+   ↑     ↓         ↑     ↓
++--------------------------+
+|       Shared memory      |
++--------------------------+</pre>
 </div>
 </div>
 <div class="paragraph">

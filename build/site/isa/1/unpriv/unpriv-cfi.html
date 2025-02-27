@@ -610,9 +610,13 @@ match the expected landing pad label in bits 31:12 of the <code>x7</code> regist
 <p>If a software-check exception is not caused then the <code>ELP</code> is updated to
 <code>NO_LP_EXPECTED</code>.</p>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UlAw11HIS8xNtVJQzy9Izk9JVddRSCwpKbJSdwz1DHBWr9VBUmsKV1uUAldnAAIo6owM4Op8AnxAUrE6Csn5eWmZ6VbVOYl5qUA1hjoKGcUFicmpVoYGRia1tQBRmyyZ" alt="svg">
+<pre>{reg: [
+  {bits:  7, name: 'opcode', attr:'AUIPC'},
+  {bits:  5, name: 'rd', attr:'00000'},
+  {bits: 20, name: 'LPL'},
+], config:{lanes: 1, hspace:1024}}</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -813,14 +817,29 @@ UXLEN or SXLEN may never be 32, then the bit 2 is also read-only zero.</p>
 followed by a store of the value in the link register to memory at the new top
 of the shadow stack.</p>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UlAw11HIS8xNtVJQzy9Izk9JVddRSCwpKbJSD44MDnH1Va_VQVJsCldclAJTGK1uAALqsSgqjeEq00rzkkuMEaoNMdQimVpsiN9YZKVGqEpBOoEMQyADVQ_Ch4ZAuw0NkawIDg4IDfZQqAAKwdmmYO2xOgrJ-XlpmelW1TmJealAcwx1FDKKCxKTU60MDYxMamsBbrJcxg==" alt="svg">
+<pre>{reg: [
+  {bits:  7, name: 'opcode', attr:'SYSTEM'},
+  {bits:  5, name: 'rd', attr:['00000']},
+  {bits:  3, name: 'funct3', attr:['100']},
+  {bits:  5, name: 'rs1', attr:['00000']},
+  {bits:  5, name: 'rs2', attr:['00001', '00101']},
+  {bits:  7, name: '1100111', attr:['SSPUSH x1','SSPUSH x5']},
+], config:{lanes: 1, hspace:1024}}</pre>
 </div>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UlAw0lHIS8xNtVJQzy9Q11FILCkpslJ3NlSv1UFSZApXZAACqJKGcEk0XcZwibxoYyvDWJjx0SBT1GNxGILTdANcphsYGiKMdtYLDg4IDfZQqDAEWxGro5Ccn5eWmW5VnZOYlwrUCTQxo7ggMTnVytDAyKS2FgCfIUxG" alt="svg">
+<pre>{reg: [
+  {bits:  2, name: 'op', attr:'C1'},
+  {bits:  5, name: '00000'},
+  {bits:  1, name: '1'},
+  {bits:  3, name: 'n[3:1]', attr:['000']},
+  {bits:  1, name: '0'},
+  {bits:  1, name: '0'},
+  {bits:  3, name: '011', attr:['C.SSPUSH x1']},
+], config:{lanes: 1, hspace:1024}}</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -859,14 +878,28 @@ shadow stack completes successfully.</p>
 current top of the shadow stack followed by an increment of the <code>ssp</code> by
 <code>XLEN/8</code>.</p>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNpljE8LgjAYh-99ive2yw6-mgS7RhBEJKxLiIc1pwm1iS4IxO_eZuUfGowfLzzP0zWqZJCuALprZVsGsKGgxUMxIKaWJleEgrC2YYRf-Hl3JD2dwfEIN7kDP2RKAv8I_W62UKJRKZ5a2ujXTwn-sbN8ixPoqzjk0e1CwXBU0PXcR7-Ty3lySrb7A7x8YbrioZNRkEYXVcm6u9DKBync2lpIxTAI133_BoauVIY=" alt="svg">
+<pre>{reg: [
+  {bits:  7, name: 'opcode', attr:'SYSTEM'},
+  {bits:  5, name: 'rd',  attr:['00000','00000']},
+  {bits:  3, name: 'funct3', attr:['100']},
+  {bits:  5, name: 'rs1', attr:['00001','00101']},
+  {bits: 12, name: '110011011100', attr:['SSPOPCHK x1','SSPOPCHK x5']},
+], config:{lanes: 1, hspace:1024}}</pre>
 </div>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UlAw0lHIS8xNtVJQzy9Q11FILCkpslJ3NlSv1UFSZApXZAACqJKGcEk0XcZwibxoYyvDWJjx0eoGhgbqsTgMwWm6AS7TDQwNEUY76wUHB_gHOHt4K1SYgi2J1VFIzs9Ly0y3qs5JzEsF6gWamVFckJicamVoYGRSWwsANQRM0A==" alt="svg">
+<pre>{reg: [
+  {bits:  2, name: 'op', attr:'C1'},
+  {bits:  5, name: '00000'},
+  {bits:  1, name: '1'},
+  {bits:  3, name: 'n[3:1]', attr:['010']},
+  {bits:  1, name: '0'},
+  {bits:  1, name: '0'},
+  {bits:  3, name: '011', attr:['C.SSPOPCHK x5']},
+], config:{lanes: 1, hspace:1024}}</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1063,9 +1096,15 @@ and thus may be used to transiently forward the data from such stores to
 <p>The <code>SSRDP</code> instruction is provided to move the contents of <code>ssp</code> to a destination
 register.</p>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UlAw11HIS8xNtVJQzy9Izk9JVddRSCwpKbJSD44MDnH1Va_VQVJsCldclAJTGK2eUlyiHouizhiuLq00L7nEGKHW0MAATS3CTAMQQLHQ0AguaQjUCcSGIBphXHBwkEsA2MBYHYXk_Ly0zHSr6pzEvFSQZh2FjOKCxORUK0MDI5PaWgDtTkgz" alt="svg">
+<pre>{reg: [
+  {bits:  7, name: 'opcode', attr:'SYSTEM'},
+  {bits:  5, name: 'rd', attr:['dst']},
+  {bits:  3, name: 'funct3', attr:['100']},
+  {bits:  5, name: '00000'},
+  {bits: 12, name: '110011011100', attr:['SSRDP']},
+], config:{lanes: 1, hspace:1024}}</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1184,9 +1223,18 @@ back_cfi_not_active:
 </div>
 <div class="sect3">
 <h4 id="SSAMOSWAP"><a class="anchor" href="#SSAMOSWAP"></a>Atomic Swap from a Shadow Stack Location</h4>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNp10LEKwyAUBdC9X_E2FymatBTcAl1LCxkyhAxWTRpINFU7hfx7baGmGZzk4eF6n7NVHYN6BzDfe-8YwAmD5qNigMwkjFQIA_feMlRcrmjBf_IYpZVRSeX8luWRtS8tfP6jNSKUhCEcFDWpZEdjNJfSJhu4LDpnxZbRlQ2pG_5MRYeWhK6lyzJ8RFkVt331Kb-O5-8SDQZhdNt3bB64ViEqvPFwExeKUZIdluUNQsVqNA==" alt="svg">
+<pre>{reg: [
+  {bits:  7, name: 'opcode', attr:'AMO'},
+  {bits:  5, name: 'rd', attr:'dest'},
+  {bits:  3, name: 'funct3', attr:['010', '011']},
+  {bits:  5, name: 'rs1', attr:'addr'},
+  {bits:  5, name: 'rs2', attr:'src'},
+  {bits:  1, name: 'rl'},
+  {bits:  1, name: 'aq'},
+  {bits:  5, name: '01001', attr:['SSAMOSWAP.W', 'SSAMOSWAP.D']},
+], config:{lanes: 1, hspace:1024}}</pre>
 </div>
 </div>
 <div class="paragraph">

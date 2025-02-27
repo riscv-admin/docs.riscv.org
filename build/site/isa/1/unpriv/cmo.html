@@ -1019,9 +1019,15 @@ Zicbom and Zicbop extensions is expected to be defined in future extensions.</em
 following standard transformation is defined for cache-block management
 instructions and cache-block zero instructions:</p>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UlDPL0jOT0lVr9VByJrCZQ0qDBSQZYwR-tJK85JLjHHrQ5YwNNJBWJdalFiSmZ8H0hlbCwBLtSyU" alt="svg">
+<pre>{reg:[
+	{ bits: 7,  name: 'opcode'},
+	{ bits: 5,  name: 0x0 },
+	{ bits: 3,  name: 'funct3'},
+	{ bits: 5,  name: 0x0},
+	{ bits: 12, name: 'operation'},
+]}</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1121,7 +1127,7 @@ mechanism.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p><em>The CMO extensions rely on state in envcfg CSRs that will be defined in a
+<p><em>The CMO extensions rely on state in {csrname} CSRs that will be defined in a
 future update to the privileged architecture. If this CSR update is not
 ratified, the CMO extension will define its own CSRs.</em></p>
 </div>
@@ -1135,28 +1141,28 @@ ratified, the CMO extension will define its own CSRs.</em></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>menvcfg</code></p>
+<p><code>m{csrname}</code></p>
 </li>
 <li>
-<p><code>senvcfg</code></p>
+<p><code>s{csrname}</code></p>
 </li>
 <li>
-<p><code>henvcfg</code></p>
+<p><code>h{csrname}</code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The <code>senvcfg</code> register is used by all supervisor modes, including VS-mode. A
-hypervisor is responsible for saving and restoring <code>senvcfg</code> on guest context
-switches. The <code>henvcfg</code> register is only present if the H-extension is
+<p>The <code>s{csrname}</code> register is used by all supervisor modes, including VS-mode. A
+hypervisor is responsible for saving and restoring <code>s{csrname}</code> on guest context
+switches. The <code>h{csrname}</code> register is only present if the H-extension is
 implemented and enabled.</p>
 </div>
 <div class="paragraph">
-<p>Each <code>xenvcfg</code> register (where <code>x</code> is <code>m</code>, <code>s</code>, or <code>h</code>) has the following
+<p>Each <code>x{csrname}</code> register (where <code>x</code> is <code>m</code>, <code>s</code>, or <code>h</code>) has the following
 generic format:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Generic Format for xenvcfg CSRs</caption>
+<caption class="title">Table 1. Generic Format for x{csrname} CSRs</caption>
 <colgroup>
 <col style="width: 10%;">
 <col style="width: 10%;">
@@ -1245,35 +1251,35 @@ exception</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The xenvcfg registers control CBO instruction execution based on the current
+<p>The x{csrname} registers control CBO instruction execution based on the current
 privilege mode and the state of the appropriate CSRs, as detailed below.</p>
 </div>
 <div class="paragraph">
 <p>A <code>CBO.INVAL</code> instruction executes or raises either an illegal instruction
 exception or a virtual instruction exception based on the state of the
-<code>xenvcfg.CBIE</code> fields:</p>
+<code>x{csrname}.CBIE</code> fields:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal instruction exceptions
-if (((priv_mode != M) &amp;&amp; (menvcfg.CBIE == 00)) ||
-    ((priv_mode == U) &amp;&amp; (senvcfg.CBIE == 00)))
+if (((priv_mode != M) &amp;&amp; (m{csrname}.CBIE == 00)) ||
+    ((priv_mode == U) &amp;&amp; (s{csrname}.CBIE == 00)))
 {
   &lt;raise illegal instruction exception&gt;
 }
 // virtual instruction exceptions
-else if (((priv_mode == VS) &amp;&amp; (henvcfg.CBIE == 00)) ||
-         ((priv_mode == VU) &amp;&amp; ((henvcfg.CBIE == 00) || (senvcfg.CBIE == 00))))
+else if (((priv_mode == VS) &amp;&amp; (h{csrname}.CBIE == 00)) ||
+         ((priv_mode == VU) &amp;&amp; ((h{csrname}.CBIE == 00) || (s{csrname}.CBIE == 00))))
 {
   &lt;raise virtual instruction exception&gt;
 }
 // execute instruction
 else
 {
-  if (((priv_mode != M) &amp;&amp; (menvcfg.CBIE == 01)) ||
-      ((priv_mode == U) &amp;&amp; (senvcfg.CBIE == 01)) ||
-      ((priv_mode == VS) &amp;&amp; (henvcfg.CBIE == 01)) ||
-      ((priv_mode == VU) &amp;&amp; ((henvcfg.CBIE == 01) || (senvcfg.CBIE == 01))))
+  if (((priv_mode != M) &amp;&amp; (m{csrname}.CBIE == 01)) ||
+      ((priv_mode == U) &amp;&amp; (s{csrname}.CBIE == 01)) ||
+      ((priv_mode == VS) &amp;&amp; (h{csrname}.CBIE == 01)) ||
+      ((priv_mode == VU) &amp;&amp; ((h{csrname}.CBIE == 01) || (s{csrname}.CBIE == 01))))
   {
     &lt;execute CBO.INVAL and perform flush operation&gt;
   }
@@ -1312,19 +1318,19 @@ either traps or performs a flush operation in a lower privileged level.</em></p>
 <div class="paragraph">
 <p>A <code>CBO.CLEAN</code> or <code>CBO.FLUSH</code> instruction executes or raises an illegal
 instruction or virtual instruction exception based on the state of the
-<code>xenvcfg.CBCFE</code> bits:</p>
+<code>x{csrname}.CBCFE</code> bits:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal instruction exceptions
-if (((priv_mode != M) &amp;&amp; !menvcfg.CBCFE) ||
-    ((priv_mode == U) &amp;&amp; !senvcfg.CBCFE))
+if (((priv_mode != M) &amp;&amp; !m{csrname}.CBCFE) ||
+    ((priv_mode == U) &amp;&amp; !s{csrname}.CBCFE))
 {
   &lt;raise illegal instruction exception&gt;
 }
 // virtual instruction exceptions
-else if (((priv_mode == VS) &amp;&amp; !henvcfg.CBCFE) ||
-         ((priv_mode == VU) &amp;&amp; !(henvcfg.CBCFE &amp;&amp; senvcfg.CBCFE)))
+else if (((priv_mode == VS) &amp;&amp; !h{csrname}.CBCFE) ||
+         ((priv_mode == VU) &amp;&amp; !(h{csrname}.CBCFE &amp;&amp; s{csrname}.CBCFE)))
 {
   &lt;raise virtual instruction exception&gt;
 }
@@ -1337,19 +1343,19 @@ else
 </div>
 <div class="paragraph">
 <p>Finally, a <code>CBO.ZERO</code> instruction executes or raises an illegal instruction or
-virtual instruction exception based on the state of the <code>xenvcfg.CBZE</code> bits:</p>
+virtual instruction exception based on the state of the <code>x{csrname}.CBZE</code> bits:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal instruction exceptions
-if (((priv_mode != M) &amp;&amp; !menvcfg.CBZE) ||
-    ((priv_mode == U) &amp;&amp; !senvcfg.CBZE))
+if (((priv_mode != M) &amp;&amp; !m{csrname}.CBZE) ||
+    ((priv_mode == U) &amp;&amp; !s{csrname}.CBZE))
 {
   &lt;raise illegal instruction exception&gt;
 }
 // virtual instruction exceptions
-else if (((priv_mode == VS) &amp;&amp; !henvcfg.CBZE) ||
-         ((priv_mode == VU) &amp;&amp; !(henvcfg.CBZE &amp;&amp; senvcfg.CBZE)))
+else if (((priv_mode == VS) &amp;&amp; !h{csrname}.CBZE) ||
+         ((priv_mode == VU) &amp;&amp; !(h{csrname}.CBZE &amp;&amp; s{csrname}.CBZE)))
 {
   &lt;raise virtual instruction exception&gt;
 }
@@ -1361,7 +1367,7 @@ else
 </div>
 </div>
 <div class="paragraph">
-<p>Each <code>xenvcfg</code> register is WARL; however, software should determine the legal
+<p>Each <code>x{csrname}</code> register is WARL; however, software should determine the legal
 values from the execution environment discovery mechanism.</p>
 </div>
 </div>
@@ -1630,9 +1636,15 @@ field is also interpreted as imm[4:0] like a store instruction.</em></p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhoY6iAbq-fs4-roB9EQWwsA-Ck8QQ==" alt="svg">
+<pre>{reg:[
+	{ bits: 7,  name: 0xF,   attr: ['MISC-MEM'] },
+	{ bits: 5,  name: 0x0 },
+	{ bits: 3,  name: 0x2,   attr: ['CBO'] },
+	{ bits: 5,  name: 'rs1', attr: ['base'] },
+	{ bits: 12, name: 0x001, attr: ['CBO.CLEAN'] },
+]}</pre>
 </div>
 </div>
 <div class="dlist">
@@ -1690,9 +1702,15 @@ copies in the set of coherent caches.</em></p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhoY6SAbq-fmExrsAdEQWwsA-Zo8YQ==" alt="svg">
+<pre>{reg:[
+	{ bits: 7,  name: 0xF,   attr: ['MISC-MEM'] },
+	{ bits: 5,  name: 0x0 },
+	{ bits: 3,  name: 0x2,   attr: ['CBO'] },
+	{ bits: 5,  name: 'rs1', attr: ['base'] },
+	{ bits: 12, name: 0x002, attr: ['CBO.FLUSH'] },
+]}</pre>
 </div>
 </div>
 <div class="dlist">
@@ -1729,9 +1747,15 @@ agent executing the instruction.</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhoY6CAbq-fpF-boA9EQWwsA-Rw8Vw==" alt="svg">
+<pre>{reg:[
+	{ bits: 7,  name: 0xF,   attr: ['MISC-MEM'] },
+	{ bits: 5,  name: 0x0 },
+	{ bits: 3,  name: 0x2,   attr: ['CBO'] },
+	{ bits: 5,  name: 'rs1', attr: ['base'] },
+	{ bits: 12, name: 0x000, attr: ['CBO.INVAL'] },
+]}</pre>
 </div>
 </div>
 <div class="dlist">
@@ -1791,9 +1815,15 @@ invalidate operation.</em></p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhqY6CAbqxflGgQ1O7YWAL3BPCE=" alt="svg">
+<pre>{reg:[
+	{ bits: 7,  name: 0xF,   attr: ['MISC-MEM'] },
+	{ bits: 5,  name: 0x0 },
+	{ bits: 3,  name: 0x2,   attr: ['CBO'] },
+	{ bits: 5,  name: 'rs1', attr: ['base'] },
+	{ bits: 12, name: 0x004, attr: ['CBO.ZERO'] },
+]}</pre>
 </div>
 </div>
 <div class="dlist">
@@ -1831,9 +1861,16 @@ instruction fetch in the near future</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCoMDQGciAgsaSkyEohWt0_QNfT11c9VqFWB6HHFEmPAVwLXE9-Wlpxakm0iZVBLJpGYySNZpga_YM8cdqkXlRsqK6DpiEpsTiVNLcFBLm6uYY4e-ih2wQMB6hFmbm50YaGVqaxIOvQ_AQRB-uMrQUAaxJX-g==" alt="svg">
+<pre>{reg:[
+	{ bits: 7,  name: 0x13,        attr: ['OP-IMM'] },
+	{ bits: 5,  name: 0x0,         attr: ['offset[4:0]'] },
+	{ bits: 3,  name: 0x6,         attr: ['ORI'] },
+	{ bits: 5,  name: 'rs1',       attr: ['base'] },
+	{ bits: 5,  name: 0x0,         attr: ['PREFETCH.I'] },
+	{ bits: 7, name: 'imm[11:5]',  attr: ['offset[11:5]'] },
+]}</pre>
 </div>
 </div>
 <div class="dlist">
@@ -1890,9 +1927,16 @@ read in the near future</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCoMDQGciAgsaSkyEohWt0_QNfT11c9VqFWB6HHFEmPAVwLXE9-Wlpxakm0iZVBLJpGYySNZpga_YM8cdqkXlRsqK6DpiEpsTgVj9sMMa0ICHJ1cw1x9tALQtMHDAeoRZm5udGGhlamsSDr0PwEEQfrjK0FAG3MWAQ=" alt="svg">
+<pre>{reg:[
+	{ bits: 7,  name: 0x13,        attr: ['OP-IMM'] },
+	{ bits: 5,  name: 0x0,         attr: ['offset[4:0]'] },
+	{ bits: 3,  name: 0x6,         attr: ['ORI'] },
+	{ bits: 5,  name: 'rs1',       attr: ['base'] },
+	{ bits: 5,  name: 0x1,         attr: ['PREFETCH.R'] },
+	{ bits: 7, name: 'imm[11:5]',  attr: ['offset[11:5]'] },
+]}</pre>
 </div>
 </div>
 <div class="dlist">
@@ -1949,9 +1993,16 @@ write in the near future</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCoMDQGciAgsaSkyEohWt0_QNfT11c9VqFWB6HHFEmPAVwLXE9-Wlpxakm0iZVBLJpGYySNZpga_YM8cdqkXlRsqK6DpiEpsTgVj9uMMa0ICHJ1cw1x9tALR9MHDAeoRZm5udGGhlamsSDr0PwEEQfrjK0FAG_ZWAs=" alt="svg">
+<pre>{reg:[
+	{ bits: 7,  name: 0x13,        attr: ['OP-IMM'] },
+	{ bits: 5,  name: 0x0,         attr: ['offset[4:0]'] },
+	{ bits: 3,  name: 0x6,         attr: ['ORI'] },
+	{ bits: 5,  name: 'rs1',       attr: ['base'] },
+	{ bits: 5,  name: 0x3,         attr: ['PREFETCH.W'] },
+	{ bits: 7, name: 'imm[11:5]',  attr: ['offset[11:5]'] },
+]}</pre>
 </div>
 </div>
 <div class="dlist">

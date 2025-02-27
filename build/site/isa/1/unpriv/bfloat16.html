@@ -407,9 +407,13 @@ but they are the ones we considered most while writing it.</p>
 <dt class="hdlist1">BF16 bits</dt>
 </dl>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDXUchLzE21UlBPK0pMVq_VgUlYwCVSKwrykSQM4RLBINHYWgActxjr" alt="svg">
+<pre>{reg:[
+{bits: 7, name: 'frac'},
+{bits: 8, name: 'expo'},
+{bits: 1, name: 'S'},
+]}</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1026,9 +1030,17 @@ a vector widening BF16 mul-add instruction that accumulates into FP32.</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDXUchLzE21UlA3NDA0MDA0VNdRSCwpKbJSiFb3D9B1C1CPrdWBKTaFKy5KUUcIGyOEc9Wxqi42xCoOstEAycKkNEMzvWJkG42QnIekMAO7q1DNU09LLisB2RtbCwCtokXf" alt="svg">
+<pre>{reg:[
+{bits: 7, name: '1010011', attr: ['OP-FP']},
+{bits: 5, name: 'rd'},
+{bits: 3, name: 'rm'},
+{bits: 5, name: 'rs1'},
+{bits: 5, name: '01000', attr: ['bf16.s']},
+{bits: 2, name: '10', attr: ['h']},
+{bits: 5, name: '01000', attr: 'fcvt'},
+]}</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1085,9 +1097,17 @@ floating-point-to-floating-point conversion instructions.</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDXUchLzE21UlA3NDA0MDA0VNdRSCwpKbJSiFb3D9B1C1CPrdWBKTaFKy5KUUcIGyOEc9Wxqi42xCoOss8AycKkNEMzZPuMkFQiKSvG7iaQ-xHK1NOSy0pAtsbWAgAfjEVJ" alt="svg">
+<pre>{reg:[
+{bits: 7, name: '1010011', attr: ['OP-FP']},
+{bits: 5, name: 'rd'},
+{bits: 3, name: 'rm'},
+{bits: 5, name: 'rs1'},
+{bits: 5, name: '00110', attr: ['bf16']},
+{bits: 2, name: '00', attr: ['s']},
+{bits: 5, name: '01000', attr: 'fcvt'},
+]}</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1161,9 +1181,17 @@ least significant 16 bits are written with 0s.</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDXUchLzE21UlA3NABCQ0N1HYXEkpIiq2h1_wDdMPXYWh2YUlO40rIUdYSwMVzYwABFt1sYDu1AW5BVlqXlJZeVJKUZmuGwrdgIyTpDhHgukrAZwhWGQHcYIIwPcwv1cwyKNAAbHlsLACdVShA=" alt="svg">
+<pre>{reg:[
+{bits: 7, name: '1010111', attr:['OP-V']},
+{bits: 5, name: 'vd'},
+{bits: 3, name: '001', attr:['OPFVV']},
+{bits: 5, name: '11101', attr:['vfncvtbf16']},
+{bits: 5, name: 'vs2'},
+{bits: 1, name: 'vm'},
+{bits: 6, name: '010010', attr:['VFUNARY0']},
+]}</pre>
 </div>
 </div>
 <div class="dlist">
@@ -1247,9 +1275,17 @@ However, here the SEW-width format is limited to BF16.</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDXUchLzE21UlA3NABCQ0N1HYXEkpIiq2h1_wDdMPXYWh2YUlO40rIUdYSwMVzYwABFt1sYDu1Aa5BVlqWVJ5eVJKUZmuGwrdgIyTpDhHgukrAZkulAdxggjA9zC_VzDIo0ABseWwsAKqRKGA==" alt="svg">
+<pre>{reg:[
+{bits: 7, name: '1010111', attr:['OP-V']},
+{bits: 5, name: 'vd'},
+{bits: 3, name: '001', attr:['OPFVV']},
+{bits: 5, name: '01101', attr:['vfwcvtbf16']},
+{bits: 5, name: 'vs2'},
+{bits: 1, name: 'vm'},
+{bits: 6, name: '010010', attr:['VFUNARY0']},
+]}</pre>
 </div>
 </div>
 <div class="dlist">
@@ -1350,9 +1386,17 @@ vfwmaccbf16.vf vd, rs1, vs2, vm<br></p>
 <dt class="hdlist1">Encoding (Vector-Vector)</dt>
 </dl>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDXUchLzE21UlA3NABCQ0N1HYXEkpIiq2h1_wDdMPXYWh2YUlO40rIUdYSwMVzYwABFt1sYLu3FhurYxY2QxA0R4rlIwmYIBxuCHIywsSytPDcxOTkpzdAMbG9sLQCWMkTn" alt="svg">
+<pre>{reg:[
+{bits: 7, name: '1010111', attr:['OP-V']},
+{bits: 5, name: 'vd'},
+{bits: 3, name: '001', attr:['OPFVV']},
+{bits: 5, name: 'vs1'},
+{bits: 5, name: 'vs2'},
+{bits: 1, name: 'vm'},
+{bits: 6, name: '111011', attr:['vfwmaccbf16']},
+]}</pre>
 </div>
 </div>
 <div class="dlist">
@@ -1360,9 +1404,17 @@ vfwmaccbf16.vf vd, rs1, vs2, vm<br></p>
 <dt class="hdlist1">Encoding (Vector-Scalar)</dt>
 </dl>
 </div>
-<div class="imageblock kroki">
+<div class="literalblock">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDXUchLzE21UlA3NABCQ0N1HYXEkpIiq2h1_wDdMPXYWh2YUlO40rIUdYSwMbIJyLrdwtyway8qNlTHamyxEZK4IUI8F0nYDGGdIcjBCBvL0spzE5OTk9IMzcD2xtYCAI0fRNQ=" alt="svg">
+<pre>{reg:[
+{bits: 7, name: '1010111', attr:['OP-V']},
+{bits: 5, name: 'vd'},
+{bits: 3, name: '101', attr:['OPFVF']},
+{bits: 5, name: 'rs1'},
+{bits: 5, name: 'vs2'},
+{bits: 1, name: 'vm'},
+{bits: 6, name: '111011', attr:['vfwmaccbf16']},
+]}</pre>
 </div>
 </div>
 <div class="dlist">

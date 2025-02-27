@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 #gem 'asciidoctor'
-gem 'asciidoctor-bibtex', :git => 'git@github.com:Leon0402/asciidoctor-bibtex.git'
+gem 'asciidoctor-bibtex'
 #gem 'asciidoctor-diagram'
 #gem 'mathematical'
 #gem 'asciidoctor-mathematical'
