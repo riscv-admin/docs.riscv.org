@@ -40,3 +40,4 @@ ui:
     #url: https://github.com/mulesoft/docs-site-ui/releases/download/prod-627/ui-bundle.zip
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+  supplemental_files: ./supplimental-ui
