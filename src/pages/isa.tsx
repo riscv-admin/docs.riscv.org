@@ -6,7 +6,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 
-import styles from './index.module.css';
+import styles from './isa.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -48,7 +48,7 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout>    
-    <iframe src="/site/isa/1/index.html" scrolling="no" title="Description" style={{height: '100vh', width: '100vw'}} />
+    <iframe src="/site/isa/1/index.html"  title="Description" style={{height: '90vh', width: '100vw'}} />
     </Layout>
   );
 }

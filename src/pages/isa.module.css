@@ -21,3 +21,15 @@
   align-items: center;
   justify-content: center;
 }
+
+/*
+  Hide the footer
+*/
+
+footer.footer{
+  display: none !important;
+}
+
+footer {
+  display: none !important;
+}
