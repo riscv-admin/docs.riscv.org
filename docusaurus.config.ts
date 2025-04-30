@@ -136,6 +136,16 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} RISC-V International`,
     },
 
+    plugins: [
+      [ 
+        // For more options see https://github.com/praveenn77/docusaurus-lunr-search?tab=readme-ov-file#options-available
+        require.resolve('docusaurus-lunr-search'), 
+        {
+        languages: ['en'] // language codes
+        }
+      ]
+    ],
+
 
     prism: {
       theme: prismThemes.github,
