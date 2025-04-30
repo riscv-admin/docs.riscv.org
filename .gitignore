@@ -1,3 +1,6 @@
 antora/build
 antora/node_modules/
 .DS_Store
+.docusaurus
+build
+node_modules
