@@ -91,6 +91,11 @@ const config: Config = {
         },
       ],
     },
+    announcementBar: {
+      id: 'announcement-bar',
+      isCloseable: true,
+      content:'congratulations, you found the RISC-V Developer Portal! 🎉',
+    },
     footer: {
       style: 'dark',
       links: [
