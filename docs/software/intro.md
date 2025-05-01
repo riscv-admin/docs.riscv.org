@@ -1,5 +1,6 @@
 ---
 id: intro
-title: Software Developers
+title: Get Started
 ---
 
+ipsum lorum hocus pocus for software developers
