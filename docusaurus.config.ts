@@ -81,6 +81,34 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Tutorial',
+          to:"/docs/hardware/intro",
+        },
+        {
+          label:'Developers',
+          position:'left',
+          items:[
+            {
+              type: 'doc',
+              docId: 'spec/intro',
+              label: 'Specification Developers',
+              // docsPluginId: 'tool1',
+              to:"/docs/spec/intro",
+            },
+            {
+              type: 'doc',
+              docId: 'hardware/intro',
+              label: 'Hardware Developers',
+              // docsPluginId: 'tool1',
+              to:"/docs/hardware/intro",
+            },
+            {
+              type: 'doc',
+              docId: 'software/intro',
+              label: 'Software Developers',
+              // docsPluginId: 'tool1',
+              to:"/docs/software/intro",
+            },
+          ]
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {to: 'https://riscv.org/community/calendar/', label: 'Events', position: 'left'},
