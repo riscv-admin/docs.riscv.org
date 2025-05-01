@@ -2,6 +2,7 @@ import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
 type FeatureItem = {
   title: string;
@@ -11,38 +12,43 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Spec Developers',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    button:'Start Reading',
+    link: '/docs/isa/get_started.html',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        For those contributing to the ISA or another specification. Those who want to contribute 
+        or use spec.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Hardware Developers',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    button:'Start Building',
+    link: '/docs/hardware/get_started.html',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        For those enabling SoC's and other hardware DevKits. 
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Software Developers',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    button:'Start compiling',
+    link: '/docs/software/get_started.html',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        For those cross compiling for RISC-V hardware, building to the latest specification 
+        profile, or building application software that needs to use RISC-V hardware.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg,button,link, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -50,6 +56,13 @@ function Feature({title, Svg, description}: FeatureItem) {
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
+        <div className={styles.buttons}>
+          <Link
+            className="button button--secondary button--lg"
+            to={link}>
+            {button}
+          </Link>
+        </div>
         <p>{description}</p>
       </div>
     </div>
@@ -60,6 +73,11 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className="row ">
+          <div className="col text--center">
+            <Heading as="h1">Get Started</Heading>
+          </div>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
