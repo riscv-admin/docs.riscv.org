@@ -30,9 +30,23 @@ const sidebars: SidebarsConfig = {
       ],
     },
     {
-      type:'link',
+      type:'category',
       label:'Reference Documentation',
-      href:'/isa',
+      items:[
+        {
+          type:"link",
+          label:"Volume 1: Priv",
+          href:"/isa",
+          
+        },
+        {
+          type:"link",
+          label:"Volume 2: Un-Priv",
+          href:"/isa",
+          
+        },
+
+      ],
     }
   ],
 

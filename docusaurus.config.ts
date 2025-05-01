@@ -110,12 +110,15 @@ const config: Config = {
             },
           ]
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {to: 'https://riscv.org/community/calendar/', label: 'Events', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
+          label: 'Blog',
+          to: '/blog',  
+          position: 'left'
+        },
+        {
+          label: 'Events', 
+          href: 'https://riscv.org/community/calendar/', 
+          position: 'left'
         },
       ],
     },
