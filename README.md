@@ -17,6 +17,18 @@ npx antora --fetch antora-playbook.yml
 
 ### Local Development
 
+
+To run the site with search run the following 2 commands:
+
+```shell
+npm run docusaurus build
+npm run docusaurus serve
+```
+
+NOTE: if you do not do this and instead just use `npm start` then the search bards will not build. 
+
+
+
 ```shell
 yarn start
 ```
