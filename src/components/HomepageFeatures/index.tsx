@@ -15,7 +15,7 @@ const FeatureList: FeatureItem[] = [
     title: 'Spec Developers',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     button:'Start Reading',
-    link: '/docs/spec/get_started.html',
+    link: '/docs/spec/intro',
     description: (
       <>
         For those contributing to the ISA or another specification. Those who want to contribute 
@@ -27,7 +27,7 @@ const FeatureList: FeatureItem[] = [
     title: 'Hardware Developers',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     button:'Start Building',
-    link: '/docs/hardware/get_started.html',
+    link: '/docs/hardware/intro',
     description: (
       <>
         For those enabling SoC's and other hardware DevKits. 
@@ -38,7 +38,7 @@ const FeatureList: FeatureItem[] = [
     title: 'Software Developers',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     button:'Start compiling',
-    link: '/docs/software/get_started.html',
+    link: '/docs/software/intro',
     description: (
       <>
         For those cross compiling for RISC-V hardware, building to the latest specification 
