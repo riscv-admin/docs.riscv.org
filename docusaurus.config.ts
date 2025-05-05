@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'RISC-V Developer Portal',
-  tagline: 'RISC-V: The Open Source ISA',
+  tagline: 'RISC-V: The Open Standard ISA',
   favicon: 'img/favicon.ico',
   staticDirectories: ['antora/build/', 'static'],
 
@@ -75,7 +75,41 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {to: '/isa', label: 'ISA', position: 'left'},
+        // {to: '/isa', label: 'Specifications', position: 'left'},
+        {
+          label:'Specifications',
+          position:'left',
+          items:[
+            {
+              type: 'doc',
+              docId: 'spec/intro',
+              label: 'ISA',
+              // docsPluginId: 'tool1',
+              to:"/docs/spec/intro",
+            },
+            {
+              type: 'doc',
+              docId: 'hardware/intro',
+              label: 'Profiles',
+              // docsPluginId: 'tool1',
+              to:"/docs/hardware/intro",
+            },
+            {
+              type: 'doc',
+              docId: 'software/intro',
+              label: 'Non-ISA',
+              // docsPluginId: 'tool1',
+              to:"/docs/software/intro",
+            },
+            {
+              type: 'doc',
+              docId: 'software/intro',
+              label: 'In Development',
+              // docsPluginId: 'tool1',
+              to:"/docs/software/intro",
+            },
+          ]
+        },
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
@@ -175,6 +209,9 @@ const config: Config = {
 
     plugins: [
       [ 
+        // '@aldridged/docusaurus-plugin-lunr'
+
+
         // For more options see https://github.com/praveenn77/docusaurus-lunr-search?tab=readme-ov-file#options-available
         require.resolve('docusaurus-lunr-search'), 
         {
