@@ -99,7 +99,6 @@ export function LayoutISA(props: Props): ReactNode {
 }
 
 
-const {isa_url} = {siteConfig.baseUrl}+"/site/isa/1/index.html";
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (

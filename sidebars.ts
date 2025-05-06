@@ -36,13 +36,13 @@ const sidebars: SidebarsConfig = {
         {
           type:"link",
           label:"Volume 1: Priv",
-          href:"{siteConfig.baseUrl}/isa",
+          href:"/isa",
           
         },
         {
           type:"link",
           label:"Volume 2: Un-Priv",
-          href:"{siteConfig.baseUrl}/isa",
+          href:"/isa",
           
         },
 
