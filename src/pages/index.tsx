@@ -34,7 +34,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description={`${siteConfig.description}`}
+      description={`${siteConfig.customFields.description}`}
       >
       <HomepageHeader />
       <main>

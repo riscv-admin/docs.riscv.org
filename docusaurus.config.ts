@@ -9,7 +9,6 @@ const config: Config = {
   tagline: 'RISC-V: The Open Standard ISA',
   favicon: 'img/favicon.ico',
   staticDirectories: ['antora/build/', 'static'],
-  description: "All the developer resources for the RISC-V ecosystem.",
 
   // Set the production url of your site here
   url: 'https://docs.riscv.org',
@@ -25,6 +24,10 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  customFields:{
+    description: "All the developer resources for the RISC-V ecosystem.",
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
