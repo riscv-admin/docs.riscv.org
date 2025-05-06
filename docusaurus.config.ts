@@ -168,7 +168,7 @@ const config: Config = {
     announcementBar: {
       id: 'announcement-bar',
       isCloseable: true,
-      content:'congratulations, you found the RISC-V Developer Portal! 🎉',
+      content:'congratulations, you found the RISC-V Developer Portal! 🎉 . This site is under active development and not meant for public consumption yet.',
     },
     footer: {
       style: 'dark',
@@ -177,7 +177,7 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Example',
               to: '/docs/spec/intro',
             },
           ],
