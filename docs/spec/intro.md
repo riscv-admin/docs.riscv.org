@@ -1,6 +1,6 @@
 ---
 id: intro
-title: Ipsum Lorum
+title: Specification Overview
 ---
 
 # Specification Developers
