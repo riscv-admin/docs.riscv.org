@@ -102,7 +102,7 @@ export function LayoutISA(props: Props): ReactNode {
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <LayoutISA>    
+    <LayoutISA>
     <iframe 
       src={`${siteConfig.baseUrl}/site/isa/1/index.html`}  
       title="Description" 

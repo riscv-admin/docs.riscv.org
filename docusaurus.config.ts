@@ -9,6 +9,7 @@ const config: Config = {
   tagline: 'RISC-V: The Open Standard ISA',
   favicon: 'img/favicon.ico',
   staticDirectories: ['antora/build/', 'static'],
+  description: "All the developer resources for the RISC-V ecosystem."
 
   // Set the production url of your site here
   url: 'https://docs.riscv.org',
