@@ -119,8 +119,8 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
-          to:"/docs/hardware/intro",
+          label: 'Example',
+          to:"/docs/example/intro",
         },
         {
           label:'Developers',
@@ -216,9 +216,12 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} RISC-V International`,
     },
 
-    plugins: [[require.resolve("docusaurus-lunr-search"), {
-      enableHighlight: true
-    }]],
+    plugins: [
+      [require.resolve("docusaurus-lunr-search"), {
+        enableHighlight: true
+      }],
+      "./canvas.loader"
+    ],
 
     prism: {
       theme: prismThemes.github,
