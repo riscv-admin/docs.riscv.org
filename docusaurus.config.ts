@@ -165,6 +165,11 @@ const config: Config = {
         },
       ],
     },
+    docs:{
+      sidebar:{
+        hideable: true,
+      },
+    },
     announcementBar: {
       id: 'announcement-bar',
       isCloseable: true,
@@ -220,6 +225,7 @@ const config: Config = {
       [require.resolve("docusaurus-lunr-search"), {
         enableHighlight: true
       }],
+      ['docusaurus-plugin-sass'],
     ],
 
     prism: {
