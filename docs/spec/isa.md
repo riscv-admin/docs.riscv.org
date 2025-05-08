@@ -1,6 +1,11 @@
 ---
-id: non-isa
-title: RISC-V Non-ISA Specifications
+id: isa
+title: ISA Specification
+description: description goes here
+link:
+	type: link
+	href: "/isa"
+
 ---
 
 todo

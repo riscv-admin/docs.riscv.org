@@ -1,5 +1,6 @@
 ---
 title: Capacity and Bandwidth QoS Register Interface
+description: ~60 character description
 id: qos
 ---
 
@@ -17,3 +18,13 @@ Register interface for bandwidth allocation in controllers such as interconnect 
 controllers.
 
 Register interface for bandwidth usage monitoring.
+
+<button class="center">
+<a href="../../pdf/riscv-trace-spec.pdf" download="filename.pdf">Download {frontMatter.title}</a>
+</button>
+
+
+
+<object data="../../../pdf/riscv-trace-spec.pdf" type="application/pdf" width="130%" height="900px">
+    <p>PDF not displaying correct? <a href="../../pdf/riscv-abi.pdf">Download it instead.</a></p>
+</object>
