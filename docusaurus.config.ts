@@ -220,7 +220,6 @@ const config: Config = {
       [require.resolve("docusaurus-lunr-search"), {
         enableHighlight: true
       }],
-      "./canvas.loader"
     ],
 
     prism: {
