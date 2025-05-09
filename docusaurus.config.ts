@@ -94,17 +94,17 @@ const config: Config = {
             },
             {
               type: 'doc',
-              docId: 'hardware/intro',
+              docId: 'spec/profiles',
               label: 'Profiles',
               // docsPluginId: 'tool1',
-              to:"/docs/hardware/intro",
+              to:"/docs/spec/profiles",
             },
             {
-              type: 'doc',
-              docId: 'software/intro',
+              
+              // href: '/docs/category/non-isa-specifications',
               label: 'Non-ISA',
               // docsPluginId: 'tool1',
-              to:"/docs/software/intro",
+              to:"/docs/category/non-isa-specifications",
             },
             {
               type: 'doc',
