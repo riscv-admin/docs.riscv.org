@@ -222,9 +222,6 @@ const config: Config = {
     },
 
     plugins: [
-      [require.resolve("docusaurus-lunr-search"), {
-        enableHighlight: true
-      }],
       ['docusaurus-plugin-sass'],
     ],
 

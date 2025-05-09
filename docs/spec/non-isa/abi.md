@@ -1,6 +1,7 @@
 ---
 title: ABI Specification
 id: abi
+hide_table_of_contents: true
 ---
 
 Provides the processor-specific application binary interface document for RISC-V.
@@ -11,6 +12,6 @@ Provides the processor-specific application binary interface document for RISC-V
 
 
 
-<object data="../../../pdf/riscv-abi.pdf" type="application/pdf" width="130%" height="900px">
+<object data="../../../pdf/riscv-abi.pdf" type="application/pdf" width="100%" height="900px">
     <p>PDF not displaying correct? <a href="../../pdf/riscv-abi.pdf">Download it instead.</a></p>
 </object>

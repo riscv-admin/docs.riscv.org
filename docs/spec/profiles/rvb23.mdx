@@ -1,0 +1,24 @@
+---
+title: RVB23 Profile
+id: rvb23
+hide_table_of_contents: true
+customProps:
+  pdf: "pdf/rva23-profile.pdf"
+---
+import siteConfig from '@site/docusaurus.config'; 
+
+Provides the processor-specific application binary interface document for RISC-V.
+
+<Columns>
+    <Column>
+        <button class="button button--secondary button--block">
+        <a href={`${siteConfig.baseUrl}${frontMatter.customProps.pdf}`} download={frontMatter.title}>Download {frontMatter.title}</a>
+        </button>
+    </Column>
+</Columns>
+
+---
+
+<object data={`${siteConfig.baseUrl}${frontMatter.customProps.pdf}`} type="application/pdf" width="100%" height="900px">
+    <p>PDF not displaying correct? <a href={`${siteConfig.baseUrl}${frontMatter.customProps.pdf}`}>Download it instead.</a></p>
+</object>
