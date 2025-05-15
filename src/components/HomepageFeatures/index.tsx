@@ -27,7 +27,7 @@ const FeatureList: FeatureItem[] = [
     title: 'Hardware Developers',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     button:'Start Building',
-    link: '/docs/hardware/intro',
+    link: '/docs/hardware/overview',
     description: (
       <>
         For those enabling SoC's and other hardware DevKits. 
@@ -38,7 +38,7 @@ const FeatureList: FeatureItem[] = [
     title: 'Software Developers',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     button:'Start compiling',
-    link: '/docs/software/intro',
+    link: '/docs/software/overview',
     description: (
       <>
         For those cross compiling for RISC-V hardware, building to the latest specification 
