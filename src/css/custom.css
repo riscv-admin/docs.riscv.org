@@ -32,3 +32,13 @@
 .hidden {
 display: none !important;
 }
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  min-height: 200px;
+}
