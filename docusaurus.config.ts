@@ -87,7 +87,7 @@ const config: Config = {
           items:[
             {
               type: 'doc',
-              docId: 'spec/intro',
+              docId: 'spec/isa',
               label: 'ISA',
               // docsPluginId: 'tool1',
               to:"/docs/spec/intro",
@@ -103,15 +103,9 @@ const config: Config = {
               
               // href: '/docs/category/non-isa-specifications',
               label: 'Non-ISA',
+              docId: 'spec/non-isa',
               // docsPluginId: 'tool1',
-              to:"/docs/category/non-isa-specifications",
-            },
-            {
-              type: 'doc',
-              docId: 'software/intro',
-              label: 'In Development',
-              // docsPluginId: 'tool1',
-              to:"/docs/software/intro",
+              to:"/docs/spec/non-isa",
             },
           ]
         },
@@ -128,17 +122,17 @@ const config: Config = {
             },
             {
               type: 'doc',
-              docId: 'hardware/intro',
+              docId: 'hardware/overview',
               label: 'Hardware Developers',
               // docsPluginId: 'tool1',
-              to:"/docs/hardware/intro",
+              to:"/docs/hardware/overview",
             },
             {
               type: 'doc',
-              docId: 'software/intro',
+              docId: 'software/overview',
               label: 'Software Developers',
               // docsPluginId: 'tool1',
-              to:"/docs/software/intro",
+              to:"/docs/software/overview",
             },
           ]
         },
