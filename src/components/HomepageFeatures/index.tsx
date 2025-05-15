@@ -18,8 +18,7 @@ const FeatureList: FeatureItem[] = [
     link: '/docs/spec/intro',
     description: (
       <>
-        For those contributing to the ISA or another specification. Those who want to contribute 
-        or use spec.
+        For those contributing to the ISA or another specification. 
       </>
     ),
   },
@@ -41,8 +40,7 @@ const FeatureList: FeatureItem[] = [
     link: '/docs/software/overview',
     description: (
       <>
-        For those cross compiling for RISC-V hardware, building to the latest specification 
-        profile, or building application software that needs to use RISC-V hardware.
+        For System and Application Developers who compile.
       </>
     ),
   },
@@ -56,6 +54,7 @@ function Feature({title, Svg,button,link, description}: FeatureItem) {
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
+        <p>{description}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -63,7 +62,6 @@ function Feature({title, Svg,button,link, description}: FeatureItem) {
             {button}
           </Link>
         </div>
-        <p>{description}</p>
       </div>
     </div>
   );
