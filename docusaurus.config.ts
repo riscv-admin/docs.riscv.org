@@ -116,13 +116,6 @@ const config: Config = {
           ]
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Example',
-          to:"/docs/example/intro",
-        },
-        {
           label:'Developers',
           position:'left',
           items:[
