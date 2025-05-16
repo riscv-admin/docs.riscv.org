@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
+    <link rel="canonical" href="https://docs.riscv.org/isa/1/unpriv/rv64.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="isa" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">ISA Specifications</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="colophon.html">Preface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rv32.html">RV32I Base Integer Instruction Set, Version 2.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="rv64.html">RV64I Base Integer Instruction Set, Version 2.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zicsr.html">"Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="counters.html">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zihintntl.html">"Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zihintpause.html">"Zihintpause" Extension for Pause Hint, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zawrs.html">"Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zacas.html">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zabha.html">"Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rvwmo.html">RVWMO Memory Consistency Model, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bfloat16.html">"BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="unpriv-cfi.html">Control-flow Integrity (CFI)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="extending.html">Extending RISC-V</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="naming.html">ISA Extension Naming Conventions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="history.html">History and Acknowledgments</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="vector-examples.html">Appendix C: Vector Assembly Code Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="calling-convention.html">Appendix D: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Volume II: RISC-V Privileged ISA Specification</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/priv-intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/priv-history.html">History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../priv/bibliography.html">Bibliography</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ISA Specifications</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">ISA Specifications</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../../riscv-library/0.1/index.html">RISC-V Documentation Library</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../riscv-library/0.1/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../riscv-library/0.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">ISA Specifications</a></li>
+    <li>Volume I: RISC-V Unprivileged ISA Specification</li>
+    <li><a href="rv64.html">RV64I Base Integer Instruction Set, Version 2.1</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/riscv/riscv-isa-manual/edit/antora-refactor/modules/unpriv/pages/rv64.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="rv64"><a class="anchor" href="#rv64"></a>RV64I Base Integer Instruction Set, Version 2.1</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chapter describes the RV64I base integer instruction set, which
+builds upon the RV32I variant described in <a href="#rv32">[rv32]</a>.
+This chapter presents only the differences with RV32I, so should be read
+in conjunction with the earlier chapter.</p>
+</div>
+<div class="sect2">
+<h3 id="_register_state"><a class="anchor" href="#_register_state"></a>Register State</h3>
+<div class="paragraph">
+<p>RV64I widens the integer registers and supported user address space to
+64 bits (XLEN=64 in <a href="#gprs">[gprs]</a>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_integer_computational_instructions"><a class="anchor" href="#_integer_computational_instructions"></a>Integer Computational Instructions</h3>
+<div class="paragraph">
+<p>Most integer computational instructions operate on XLEN-bit values.
+Additional instruction variants are provided to manipulate 32-bit values
+in RV64I, indicated by a 'W' suffix to the opcode. These "*W"
+instructions ignore the upper 32 bits of their inputs and always produce
+32-bit signed values, sign-extending them to 64 bits, i.e. bits XLEN-1
+through 31 are equal.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The compiler and calling convention maintain an invariant that all
+32-bit values are held in a sign-extended format in 64-bit registers.
+Even 32-bit unsigned integers extend bit 31 into bits 63 through 32.
+Consequently, conversion between unsigned and signed 32-bit integers is
+a no-op, as is conversion from a signed 32-bit integer to a signed
+64-bit integer. Existing 64-bit wide SLTU and unsigned branch compares
+still operate correctly on unsigned 32-bit integers under this
+invariant. Similarly, existing 64-bit wide logical operations on 32-bit
+sign-extended integers preserve the sign-extension property. A few new
+instructions (ADD[I]W/SUBW/SxxW) are required for addition and shifts to
+ensure reasonable performance for 32-bit values.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>
+</p>
+</div>
+<div class="sect3">
+<h4 id="_integer_register_immediate_instructions"><a class="anchor" href="#_integer_register_immediate_instructions"></a>Integer Register-Immediate Instructions</h4>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp1zb0KgzAUBeDdp7hbFgONIkK2gouDtFsHyZAmacngD8ntJHn3JlRrHTqee8_HWZx5cugzgOVu0XOoc4BRDoYDmWY1aUPiAUAiutgjdYzkcqVt19GyICLkO6126vSH_dIqUW08HlW5q8drVFiucmMpk3PTtLf_a5595w5r3qkjYkW-ITsMPWP8JGJxQ6xIqqXxZ7SVaNaGCJkIb_byULA=" alt="svg">
+</div>
+</div>
+<div id="rv64i-base-int" class="paragraph">
+<p>ADDIW is an RV64I instruction that adds the sign-extended 12-bit
+immediate to register <em>rs1</em> and produces the proper sign extension of a
+32-bit result in <em>rd</em>. Overflows are ignored and the result is the low
+32 bits of the result sign-extended to 64 bits. Note, ADDIW <em>rd, rs1, 0</em>
+writes the sign extension of the lower 32 bits of register <em>rs1</em> into
+register <em>rd</em> (assembler pseudoinstruction SEXT.W).</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp9jjEPgjAQhXd-xW1dMKEhlKSbIwlEoyPpgFCVoUDaOhH-u7QGa1Hs8t673n15o-Q3CmUAMF5arSikIUBXCU4B9UPdNxzNA4BKaznvoXSO6HDcZUXx07EpdKzEsWTz4nyyEnPXcKW_1KPEjnJ9dLWO_UYmonOeZ1ZPi-6z7S4Kv8t4XZSsV-IhiEO0QpQJjZjhLAhij-6V0MvXdvrHxZgSs-9xI_tWDlvHpoBNTyW6d-4=" alt="svg">
+</div>
+</div>
+<div id="rv64i-slli" class="paragraph">
+<p>Shifts by a constant are encoded as a specialization of the I-type
+format using the same instruction opcode as RV32I. The operand to be
+shifted is in <em>rs1</em>, and the shift amount is encoded in the lower 6 bits
+of the I-immediate field for RV64I. The right shift type is encoded in
+bit 30. SLLI is a logical left shift (zeros are shifted into the lower
+bits); SRLI is a logical right shift (zeros are shifted into the upper
+bits); and SRAI is an arithmetic right shift (the original sign bit is
+copied into the vacated upper bits).
+
+
+
+</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp9jzEPgjAUhHd-xdu6QEJFIOnmSALR6OBAOiCgMhRMqRPhv0sxUB4GO_Tdtb0v106WDwapBdDdKtUyCG2AOhMlA9K88qYoyXAAkCklh3ckHCw5npwoSRxv98fw3jZQ30Bl8QUuob6OFmWrfiaieIZyf9e58nA1bckljqPrKM6zOAxis05L5z6oTivz1dhCVEKke-ZyzcGIZybUdLXtEJcabupz_EHdlLiLDSUD3IhSFuj8FA7GyLhWio6K9xbvP3HniEY=" alt="svg">
+</div>
+</div>
+<div id="rv64i-slliw" class="paragraph">
+<p>SLLIW, SRLIW, and SRAIW are RV64I-only instructions that are analogously
+defined but operate on 32-bit values and sign-extend their 32-bit
+results to 64 bits. SLLIW, SRLIW, and SRAIW encodings with
+<em>imm[5] &#8800; 0</em> are reserved.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Previously, SLLIW, SRLIW, and SRAIW with <em>imm[5] &#8800; 0</em>
+were defined to cause illegal-instruction exceptions, whereas now they
+are marked as reserved. This is a backwards-compatible change.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKAEFiSUkRUKG6OZCv7hPqCaIcQz0DnNVja3UQ2k0R2otSoFqRtZuC9KWkFpfAaRTtRgY6MO2ZubnRxoZWhkaxQKUw7UYGIH2hukDJ1JTMxJJUhBJsorG1XLG1AEuvPl0=" alt="svg">
+</div>
+</div>
+<div id="rv64_lui-auipc" class="paragraph">
+<p>LUI (load upper immediate) uses the same opcode as RV32I. LUI places the
+32-bit U-immediate into register <em>rd</em>, filling in the lowest 12 bits
+with zeros. The 32-bit result is sign-extended to 64 bits.
+</p>
+</div>
+<div class="paragraph">
+<p>AUIPC (add upper immediate to <code>pc</code>) uses the same opcode as RV32I. AUIPC
+is used to build <code>pc</code>-relative addresses and uses the U-type format.
+AUIPC forms a 32-bit offset from the U-immediate, filling in the lowest
+12 bits with zeros, sign-extends the result to 64 bits, adds it to the
+address of the AUIPC instruction, then places the result in register
+<em>rd</em>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Note that the set of address offsets that can be formed by pairing LUI
+with LD, AUIPC with JALR, etc. in RV64I is
+[\({-}2^{31}{-}2^{11}\), \(2^{31}{-}2^{11}{-}1\)].</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_integer_register_register_operations"><a class="anchor" href="#_integer_register_register_operations"></a>Integer Register-Register Operations</h4>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56v4ByKSusREWRmytDsJQU4ShRSkQA5ENNQVpS0ktLiFIo5hqjDA1rTQvucQY1akgrnqwj49-cJAPmBnkCKIcXVzCoTLhICkIJ9QJxHEMx-3uYkO4w1HcXVyUbEiQxm2qEU5TjQjSKKaao4WGOZaIM4AAMNMQwTTAyoQqiK3liq0FAEiaiuc=" alt="svg">
+</div>
+</div>
+<div id="int_reg-reg" class="paragraph">
+<p>ADDW and SUBW are RV64I-only instructions that are defined analogously
+to ADD and SUB but operate on 32-bit values and produce signed 32-bit
+results. Overflows are ignored, and the low 32-bits of the result is
+sign-extended to 64-bits and written to the destination register.
+
+</p>
+</div>
+<div class="paragraph">
+<p>SLL, SRL, and SRA perform logical left, logical right, and arithmetic
+right shifts on the value in register <em>rs1</em> by the shift amount held in
+register <em>rs2</em>. In RV64I, only the low 6 bits of <em>rs2</em> are considered
+for the shift amount.</p>
+</div>
+<div class="paragraph">
+<p>SLLW, SRLW, and SRAW are RV64I-only instructions that are analogously
+defined but operate on 32-bit values and sign-extend their 32-bit
+results to 64 bits. The shift amount is given by <em>rs2[4:0]</em>.
+
+
+</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_load_and_store_instructions"><a class="anchor" href="#_load_and_store_instructions"></a>Load and Store Instructions</h3>
+<div class="paragraph">
+<p>RV64I extends the address space to 64 bits. The execution environment
+will define what portions of the address space are legal to access.</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp1zbEKwyAQgOG9T3Gbi0NNCAG3QsdCHyA4mHi2DsYSL3QIefcqNJgUup3n93PLhA8J3Qlg6R1FCS0HGLVHCSy8hmCQpQWAJpqSY216stv9cmVq5aVqSjWZRDbeZG4w0pHXhdt5HKjeJXlmb2fo-f9EFL83eh3x6EXFN--874SQZ7WrRJWzYG1E-n7mXK0fUTJNBw==" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCSWlBQBlambA3nqwSH-Qa7qsbU6CF2mCF2ZubnRJlYGsUCVMF2mIF35aWnFqSUQKRS9xgi9aaV5ySXGSDpBbPXyzJSSDJz2FRUboluVlFicike9Ebr64qJkVOXAQEDyjaGhlSmyd8yRvAORA2mOrQUAK0Fd7w==" alt="svg">
+</div>
+</div>
+<div id="load_store" class="paragraph">
+<p>The LD instruction loads a 64-bit value from memory into register <em>rd</em>
+for RV64I.
+</p>
+</div>
+<div class="paragraph">
+<p>The LW instruction loads a 32-bit value from memory and sign-extends
+this to 64 bits before storing it in register <em>rd</em> for RV64I. The LWU
+instruction, on the other hand, zero-extends the 32-bit value from
+memory for RV64I. LH and LHU are defined analogously for 16-bit values,
+as are LB and LBU for 8-bit values. The SD, SW, SH, and SB instructions
+store 64-bit, 32-bit, 16-bit, and 8-bit values from the low bits of
+register <em>rs2</em> to memory respectively.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="rv64i-hints"><a class="anchor" href="#rv64i-hints"></a>HINT Instructions</h3>
+<div class="paragraph">
+<p>All instructions that are microarchitectural HINTs in RV32I (see
+<a href="#rv32">[rv32]</a>) are also HINTs in RV64I.
+The additional computational instructions in RV64I expand both the
+standard and custom HINT encoding spaces.
+</p>
+</div>
+<div class="paragraph">
+<p><a href="#rv64i-h">RV64I HINT instructions.</a> lists all RV64I HINT code points. 91% of the
+HINT space is reserved for standard HINTs, but none are presently
+defined. The remainder of the HINT space is designated for custom HINTs;
+no standard HINTs will ever be defined in this subspace.</p>
+</div>
+<table id="rv64i-h" class="tableblock frame-all grid-all stretch center">
+<caption class="title">Table 1. RV64I HINT instructions.</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Instruction</th>
+<th class="tableblock halign-left valign-top">Constraints</th>
+<th class="tableblock halign-center valign-top">Code Points</th>
+<th class="tableblock halign-left valign-top">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LUI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{20}\)</p></td>
+<td class="tableblock halign-left valign-middle" rowspan="9"><p class="tableblock"><em>Designated for future standard use</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AUIPC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{20}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ADDI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em>, and either <em>rs1</em>≠<em>x0</em> or <em>imm</em>≠0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{17}-1\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ANDI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{17}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ORI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{17}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XORI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{17}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ADDIW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{17}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ADD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em>, <em>rs1</em>≠<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}-32\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ADD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em>, <em>rs1</em>=<em>x0</em>, <em>rs2</em>≠<em>x2</em>-<em>x5</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">28</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ADD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em>, <em>rs1</em>=<em>x0</em>, <em>rs2</em>=<em>x2</em>-<em>x5</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(<em>rs2</em>=<em>x2</em>) NTL.P1<br>
+ (<em>rs2</em>=<em>x3</em>) NTL.PALL<br>
+ (<em>rs2</em>=<em>x4</em>) NTL.S1<br>
+ (<em>rs2</em>=<em>x5</em>) NTL.ALL</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SUB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+<td class="tableblock halign-left valign-middle" rowspan="16"><p class="tableblock"><em>Designated for future standard use</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AND</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XOR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SLL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SRL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SRA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ADDW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SUBW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SLLW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SRLW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SRAW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FENCE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em>, <em>rs1</em>≠<em>x0</em>,<em>fm</em>=0, and either <em>pred</em>=0 or <em>succ</em>=0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}-63\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FENCE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>≠<em>x0</em>, <em>rs1</em>=<em>x0</em>, <em>fm</em>=0, and either <em>pred</em>=0 or <em>succ</em>=0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}-63\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FENCE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>rs1</em>=<em>x0</em>, <em>fm</em>=0, <em>pred</em>=0, <em>succ</em>≠0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">15</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FENCE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>pred</em>=0 or <em>succ</em>=0, <em>pred</em>≠W, <em>succ</em> =0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">15</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FENCE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>rs1</em>=<em>x0</em>, <em>fm</em>=0, <em>pred</em>=W, <em>succ</em>=0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PAUSE</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SLTI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{17}\)</p></td>
+<td class="tableblock halign-left valign-middle" rowspan="10"><p class="tableblock"><em>Designated for custom use</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SLTIU</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{17}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SLLI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{11}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SRLI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{11}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SRAI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{11}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SLLIW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SRLIW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SRAIW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SLT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SLTU</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">\(2^{10}\)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="hidden">
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>
