@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <link rel="canonical" href="https://docs.riscv.org/isa/1/unpriv/zabha.html">
     <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -12,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
+      <a class="navbar-item" href="../../..">RISC-V ISA Documentation Library Antora Demo Site</a>
       <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
@@ -333,18 +332,9 @@ extension depends upon the Zaamo standard extension.</p>
 instructions. If Zacas extension is also implemented, Zabha further provides the
 <code>AMOCAS.[B|H]</code> instructions.</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg: [
-  {bits:  7, name: 'opcode', attr:['AMO','AMO','AMO','AMO','AMO','AMO','AMO','AMO']},
-  {bits:  5, name: 'rd', attr:['dest','dest','dest','dest','dest','dest','dest','dest']},
-  {bits:  3, name: 'funct3', attr:['width=0/1','width=0/1','width=0/1','width=0/1','width=0/1','width=0/1','width=0/1','width=0/1']},
-  {bits:  5, name: 'rs1', attr:['addr','addr','addr','addr','addr','addr','addr','addr']},
-  {bits:  5, name: 'rs2', attr:['src','src','src','src','src','src','src','src']},
-  {bits:  1, name: 'rl'},
-  {bits:  1, name: 'aq', attr:['ordering','ordering','ordering','ordering','ordering','ordering','ordering','ordering']},
-  {bits:  5, name: 'funct5', attr:['AMOSWAP.B/H','AMOADD.B/H','AMOAND.B/H','AMOOR.B/H','AMOXOR.B/H','AMOMAX[U].B/H','AMOMIN[U].B/H','AMOCAS.B/H']},
-], config:{lanes: 1, hspace:1024}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqtkk2LwjAQhu_7K-aWS1itrgiBPWS3Bz34wYoolB5iEtuCpppE9lD6340KJj0UKniZmZfMPJlJptIyI5B8AFS7whoCMMag2FESQOWJl0IiDMxaTRJEZwuEO9u0xgF19KRq4YlCGuvSX3RN8vBJ3l8Ut0NP_y-Ezb_7vcgVvj9unc9EvgUmhHZVL7p29MCjjeYuv6ttIiOPPKCWE3b2d5VaSF2ozMHeGLaNef_HUWPvVhu6_PzpTR67ReM4EPNALP58vA3FjG6TdRro6byhf-nqLm49pRh4qfZFRqoDU9I1514lNyfGJYn6g6-6vgLfAO_i" alt="zabha-ext-wavedrom-reg">
 </div>
 </div>
 <div class="paragraph">

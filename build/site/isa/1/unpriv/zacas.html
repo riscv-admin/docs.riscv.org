@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <link rel="canonical" href="https://docs.riscv.org/isa/1/unpriv/zacas.html">
     <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -12,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
+      <a class="navbar-item" href="../../..">RISC-V ISA Documentation Library Antora Demo Site</a>
       <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
@@ -312,18 +311,9 @@ avoidance.</p>
 </div>
 <div class="sect2">
 <h3 id="_worddoublewordquadword_cas_amocas_wdq_instructions"><a class="anchor" href="#_worddoublewordquadword_cas_amocas_wdq_instructions"></a>Word/Doubleword/Quadword CAS (AMOCAS.W/D/Q) Instructions</h3>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg: [
-  {bits:  7, name: 'opcode', attr:'AMO'},
-  {bits:  5, name: 'rd', attr:'dest'},
-  {bits:  3, name: 'funct3', attr:['010', '011', '100']},
-  {bits:  5, name: 'rs1', attr:'addr'},
-  {bits:  5, name: 'rs2', attr:'src'},
-  {bits:  1, name: 'rl'},
-  {bits:  1, name: 'aq'},
-  {bits:  5, name: '00101', attr:['AMOCAS.W', 'AMOCAS.D', 'AMOCAS.Q']},
-], config:{lanes: 1, hspace:1024}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNp1kDEPgjAQhXd_xW1dGtOCxqQbkdUY4-BAGGpbkAQLtnUi_HeL0QJDp3uX-3Lv3Q1G1QyKDcBwb5xlAAcMmj8VA9T1opMKYeDOGYay0xmNeEHuA2lkoKSybo2lAaveWrj0jxaIUOIbX-hUKCGojBlYGhy4lCYaxCaBs0asMTpjbWzCX7HVxKelc3b_jWN23d6m5D-dL_Tle0qJQXS6amo2tFwrv9A7PWzPhWKUJLtx_AC2F2wY" alt="svg">
 </div>
 </div>
 <div class="paragraph">

@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <link rel="canonical" href="https://docs.riscv.org/isa/1/priv/hypervisor.html">
     <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -12,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
+      <a class="navbar-item" href="../../..">RISC-V ISA Documentation Library Antora Demo Site</a>
       <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
@@ -1039,27 +1038,11 @@ as shown in <a href="#henvcfg">Hypervisor environment configuration register (<c
 certain characteristics of the execution environment when virtualization
 mode V=1.</p>
 </div>
-<div id="henvcfg" class="literalblock">
-<div class="title">Hypervisor environment configuration register (<code>henvcfg</code>).</div>
+<div id="henvcfg" class="imageblock kroki">
 <div class="content">
-<pre>{reg: [
-  {bits:  1, name: 'FIOM'},
-  {bits:  1, name: 'WPRI'},
-  {bits:  1, name: 'LPE'},
-  {bits:  1, name: 'SSE'},
-  {bits:  2, name: 'CBIE'},
-  {bits:  1, name: 'CBCFE'},
-  {bits:  1, name: 'CBZE'},
-  {bits: 24, name: 'WPRI'},
-  {bits:  2, name: 'PMM'},
-  {bits: 25, name: 'WPRI'},
-  {bits:  1, name: 'DTE'},
-  {bits:  1, name: 'WPRI'},
-  {bits:  1, name: 'ADUE'},
-  {bits:  1, name: 'PBMTE'},
-  {bits:  1, name: 'STCE'},
-], config:{lanes: 4, hspace:1024}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UlAw1FHIS8xNtVJQd_P091Wv1cEqFx4Q5IlLzifAFZdUcDCalBFcytnJE6c2ZydnNzySUahyRiZ4nImwMMAX1XdGpkT5ziXElZxAcXQJxakvwMkXt6HBIc5guVgdheT8vLTMdKvqnMS8VKAioDczigsSk1OtDA2MTGprAc6Lfow=?id=henvcfg" alt="Hypervisor environment configuration register (`henvcfg`).">
 </div>
+<div class="title">Figure 1. Hypervisor environment configuration register (<code>henvcfg</code>).</div>
 </div>
 <div class="paragraph">
 <p>If bit FIOM (Fence of I/O implies Memory) is set to one in <code>henvcfg</code>,
@@ -1525,59 +1508,17 @@ in <a href="#vsstatusreg-rv32">Virtual supervisor status (<code>vsstatus</code>)
 <code>vsstatus</code> substitutes for the usual <code>sstatus</code>, so instructions that
 normally read or modify <code>sstatus</code> actually access <code>vsstatus</code> instead.</p>
 </div>
-<div id="vsstatusreg-rv32" class="literalblock">
-<div class="title">Virtual supervisor status (<code>vsstatus</code>) register when VSXLEN=32.</div>
+<div id="vsstatusreg-rv32" class="imageblock kroki">
 <div class="content">
-<pre>{reg: [
-  {bits:  1, name: 'WPRI'},
-  {bits:  1, name: 'SIE'},
-  {bits:  3, name: 'WPRI'},
-  {bits:  1, name: 'SPIE'},
-  {bits:  1, name: 'UBE'},
-  {bits:  1, name: 'WPRI'},
-  {bits:  1, name: 'SPP'},
-  {bits:  2, name: 'VS[1:0]'},
-  {bits:  2, name: 'WPRI'},
-  {bits:  2, name: 'FS[1:0]'},
-  {bits:  2, name: 'XS[1:0]'},
-  {bits:  1, name: 'WPRI'},
-  {bits:  1, name: 'SUM'},
-  {bits:  1, name: 'MXR'},
-  {bits:  3, name: 'WPRI'},
-  {bits:  1, name: 'SPELP'},
-  {bits:  1, name: 'SDT'},
-  {bits:  6, name: 'WPRI'},
-  {bits:  1, name: 'SD'},
-], config:{lanes: 2, hspace:1024}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UlAw1FHIS8xNtVJQDw8I8lSv1cEqF-zpiiplTJy2AHR9CLlQJ5xS-I0MQJUygkuFBUcbWhnE4pLGNBUh54ZfawQ2aSLdG-qLS8o3Ioi8QHX1CcAp6RKCKmVGnJkuIJlYHYXk_Ly0zHSr6pzEvFSgEmAQZBQXJCanWhkaGJnU1gIAFTeeWw==?id=vsstatusreg-rv32" alt="Virtual supervisor status (`vsstatus`) register when VSXLEN=32.">
 </div>
+<div class="title">Figure 2. Virtual supervisor status (<code>vsstatus</code>) register when VSXLEN=32.</div>
 </div>
-<div id="vsstatusreg" class="literalblock">
-<div class="title">Virtual supervisor status (<code>vsstatus</code>) register when VSXLEN=64.</div>
+<div id="vsstatusreg" class="imageblock kroki">
 <div class="content">
-<pre>{reg: [
-  {bits:  1, name: 'WPRI'},
-  {bits:  1, name: 'SIE'},
-  {bits:  3, name: 'WPRI'},
-  {bits:  1, name: 'SPIE'},
-  {bits:  1, name: 'UBE'},
-  {bits:  1, name: 'WPRI'},
-  {bits:  1, name: 'SPP'},
-  {bits:  2, name: 'VS[1:0]'},
-  {bits:  2, name: 'WPRI'},
-  {bits:  2, name: 'FS[1:0]'},
-  {bits:  2, name: 'XS[1:0]'},
-  {bits:  1, name: 'WPRI'},
-  {bits:  1, name: 'SUM'},
-  {bits:  1, name: 'MXR'},
-  {bits:  3, name: 'WPRI'},
-  {bits:  1, name: 'SPELP'},
-  {bits:  1, name: 'SDT'},
-  {bits:  7, name: 'WPRI'},
-  {bits:  2, name: 'UXL[1:0]'},
-  {bits: 29, name: 'WPRI'},
-  {bits:  1, name: 'SD'},
-], config:{lanes: 4, hspace:1024}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UlAw1FHIS8xNtVJQDw8I8lSv1cEqF-zpiiplTJy2AHR9CLlQJ5xS-I0MQJUygkuFBUcbWhnE4pLGNBUh54ZfawQ2aSLdG-qLS8o3Ioi8QHX1CcAp6RKCKmVOlP9DI3wwfWhkSZx7XEAysToKyfl5aZnpVtU5iXmpQCUmOgoZxQWJyalWhgZGJrW1AMn4rsc=?id=vsstatusreg" alt="Virtual supervisor status (`vsstatus`) register when VSXLEN=64.">
 </div>
+<div class="title">Figure 3. Virtual supervisor status (<code>vsstatus</code>) register when VSXLEN=64.</div>
 </div>
 <div class="paragraph">
 <p>The UXL field controls the effective XLEN for VU-mode, which may differ

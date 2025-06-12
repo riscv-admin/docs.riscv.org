@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <link rel="canonical" href="https://docs.riscv.org/isa/1/unpriv/zicond.html">
     <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -12,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
+      <a class="navbar-item" href="../../..">RISC-V ISA Documentation Library Antora Demo Site</a>
       <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
@@ -427,16 +426,9 @@ Using these instructions, branchless sequences can be implemented (typically in 
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x5, attr: ['CZERO.EQZ']},
-    { bits:  5, name: 'rs1', attr: ['value'] },
-    { bits:  5, name: 'rs2', attr: ['condition'] },
-    { bits:  7, name: 0x7, attr: ['CZERO'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJNMEQY5R7kG-eu5Bkapx-IxrthQHaGlLDGnNBW_9cVGSOqT8_NSMksy8_Ow6EHynjmaoyCqY2sBYZZM-g==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -481,16 +473,9 @@ Furthermore, if the Zkt extension is implemented, this instruction&#8217;s timin
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x7, attr: ['CZERO.NEZ']},
-    { bits:  5, name: 'rs1', attr: ['value'] },
-    { bits:  5, name: 'rs2', attr: ['condition'] },
-    { bits:  7, name: 0x7, attr: ['CZERO'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJPMEQY5R7kG-ev5uUapx-IxrthQHaGlLDGnNBW_9cVGSOqT8_NSMksy8_Ow6DHH7SiI6thaAGEoTPk=" alt="svg">
 </div>
 </div>
 <div class="dlist">

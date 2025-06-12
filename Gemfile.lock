@@ -12,6 +12,10 @@ GEM
       citeproc-ruby (~> 1)
       csl-styles (~> 1)
       latex-decode (~> 0.2)
+    asciidoctor-mathematical (0.3.5)
+      asciidoctor (~> 2.0)
+      asciimath (~> 2.0)
+      mathematical (~> 1.6.0)
     asciidoctor-pdf (2.3.19)
       asciidoctor (~> 2.0)
       concurrent-ruby (~> 1.1)
@@ -23,6 +27,7 @@ GEM
       prawn-templates (~> 0.1.0)
       treetop (~> 1.6.0)
       ttfunk (~> 1.7.0)
+    asciimath (2.0.6)
     bibtex-ruby (6.1.0)
       latex-decode (~> 0.0)
       racc (~> 1.7)
@@ -41,6 +46,8 @@ GEM
       addressable
     hashery (2.1.2)
     latex-decode (0.4.0)
+    mathematical (1.6.20)
+      ruby-enum (>= 0.4, < 2.0)
     matrix (0.4.2)
     namae (1.2.0)
       racc (~> 1.7)
@@ -71,6 +78,7 @@ GEM
     racc (1.8.1)
     rexml (3.3.9)
     rouge (4.5.1)
+    ruby-enum (1.0.0)
     ruby-rc4 (0.1.5)
     treetop (1.6.12)
       polyglot (~> 0.3)
@@ -93,7 +101,9 @@ PLATFORMS
 
 DEPENDENCIES
   asciidoctor-bibtex
+  asciidoctor-mathematical
   asciidoctor-pdf
+  mathematical
   rouge
 
 BUNDLED WITH

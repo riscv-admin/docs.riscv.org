@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <link rel="canonical" href="https://docs.riscv.org/isa/1/unpriv/zc.html">
     <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -12,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
+      <a class="navbar-item" href="../../..">RISC-V ISA Documentation Library Antora Demo Site</a>
       <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
@@ -1200,16 +1199,9 @@ Zcmt is primarily targeted at embedded class CPUs due to implementation complexi
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x0, attr: ['C0'] },
-    { bits:  3, name: 'rd\'' },
-    { bits:  2, name: 'uimm[0|1]' },
-    { bits:  3, name: 'rs1\'' },
-    { bits:  3, name: 0x0 },
-    { bits:  3, name: 0x4, attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwoDHYXEkpIiK4VodWcD9ViFWh1UpcYwpepFKTHq6hjycKPUSzNzc6MNagxj1fEZUmyIzRRjJAfhkzRBuNYt1M85xBji4lid5Py8tMx0q2qwFkOz2loA-1BDeQ==" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -1277,17 +1269,9 @@ X(rdc) = EXTZ(mem[X(rs1c)+EXTZ(uimm)][7..0]);</code></pre>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x0, attr: ['C0'] },
-    { bits:  3, name: 'rd\'' },
-    { bits:  1, name: 'uimm[1]' },
-    { bits:  1, name: 0x0 },
-    { bits:  3, name: 'rs1\'' },
-    { bits:  3, name: 0x1 },
-    { bits:  3, name: 0x4, attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwoDHYXEkpIiK4VodWcD9ViFWh1UpcYwpepFKTHq6hjyhnD50szc3GjDWDxKgLbhM7_YEJsFxgjdhvgkTRAecQv1cw4xhngmVic5Py8tM92qGqzF0Ky2FgAU1Eo3" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -1355,17 +1339,9 @@ X(rdc) = EXTZ(load_mem[X(rs1c)+EXTZ(uimm)][15..0]);</code></pre>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x0, attr: ['C0'] },
-    { bits:  3, name: 'rd\'' },
-    { bits:  1, name: 'uimm[1]' },
-    { bits:  1, name: 0x1 },
-    { bits:  3, name: 'rs1\'' },
-    { bits:  3, name: 0x1 },
-    { bits:  3, name: 0x4, attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwoDHYXEkpIiK4VodWcD9ViFWh1UpcYwpepFKTHq6hjyhnD50szc3GjDWDxKDCoM8ZlfbIjNAmOidBtUmCA84hbq5xxiDPFMrE5yfl5aZrpVNViLoVltLQAVWUo4" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -1433,16 +1409,9 @@ X(rdc) = EXTS(load_mem[X(rs1c)+EXTZ(uimm)][15..0]);</code></pre>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x0, attr: ['C0'] },
-    { bits:  3, name: 'rs2\'' },
-    { bits:  2, name: 'uimm[0|1]' },
-    { bits:  3, name: 'rs1\'' },
-    { bits:  3, name: 0x2 },
-    { bits:  3, name: 0x4, attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwoDHYXEkpIiK4VodWcD9ViFWh1UpcYwpepFxUYx6uoYCuBmqZdm5uZGG9QYxqrjNcUQmynGCBcZ4ZM0QTjXLdTPOcQY4uRYneT8vLTMdKtqsBZDs9paADxFQ7w=" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -1510,17 +1479,9 @@ mem[X(rs1c)+EXTZ(uimm)][7..0] = X(rs2c)</code></pre>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x0, attr: ['C0'] },
-    { bits:  3, name: 'rs2\'' },
-    { bits:  1, name: 'uimm[1]' },
-    { bits:  1, name: '0' },
-    { bits:  3, name: 'rs1\'' },
-    { bits:  3, name: 0x3 },
-    { bits:  3, name: 0x4, attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwoDHYXEkpIiK4VodWcD9ViFWh1UpcYwpepFxUYx6uoYCgzhCkozc3OjDWPxKTFQx2uBITYLjBGONcYnaYLwiVuon3OIMcQ3sTrJ-XlpmelW1WAthma1tQAteUog" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -1588,16 +1549,9 @@ mem[X(rs1c)+EXTZ(uimm)][15..0] = X(rs2c)</code></pre>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x1, attr: ['C1'] },
-    { bits:  3, name: 0x0, attr: ['C.ZEXT.B'] },
-    { bits:  2, name: 0x3, attr: ['FUNCT2'] },
-    { bits:  3, name: 'rd\'/rs1\'', attr: ['SRCDST'] },
-    { bits:  3, name: 0x7 },
-    { bits:  3, name: 0x4, attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwpDHYXEkpIiK4VodWdD9ViFWh1UpcYIpQZISvWiXCNC9JywaEAy2xihwS3UzznECJ_56kUpMer6RcWGMerqCH3BQc4uwSH43WWOT9IEzQ3GELNidZLz89Iy062qwVoMzWprAYDkUWE=" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -1677,16 +1631,9 @@ the bits more significant than 7.</p>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x1, attr: ['C1'] },
-    { bits:  3, name: 0x1, attr: ['C.SEXT.B'] },
-    { bits:  2, name: 0x3, attr: ['FUNCT2'] },
-    { bits:  3, name: 'rd\'/rs1\'', attr: ['SRCDST'] },
-    { bits:  3, name: 0x7 },
-    { bits:  3, name: 0x4, attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwpDHYXEkpIiK4VodWdD9ViFWh1UpcbYleoFu0aE6Dlh0YBktjFCg1uon3OIET7z1YtSYtT1i4oNY9TVEfqCg5xdgkPwu8scn6QJmhuMIWbF6iTn56VlpltVg7UYmtXWAgB8BVFb" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -1756,16 +1703,9 @@ The SAIL module variable for <em>rd'/rs1'</em> is called <em>rsdc</em>.
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x1, attr: ['C1'] },
-    { bits:  3, name: 0x2, attr: ['C.ZEXT.H'] },
-    { bits:  2, name: 0x3, attr: ['FUNCT2'] },
-    { bits:  3, name: 'rd\'/rs1\'', attr: ['SRCDST'] },
-    { bits:  3, name: 0x7 },
-    { bits:  3, name: 0x4, attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwpDHYXEkpIiK4VodWdD9ViFWh1UpcYIpUZISvWiXCNC9DywaEAy2xihwS3UzznECJ_56kUpMer6RcWGMerqCH3BQc4uwSH43WWOT9IEzQ3GELNidZLz89Iy062qwVoMzWprAYdwUWk=" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -1837,16 +1777,9 @@ the bits more significant than 15.</p>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x1, attr: ['C1'] },
-    { bits:  3, name: 0x3, attr: ['C.SEXT.H'] },
-    { bits:  2, name: 0x3, attr: ['FUNCT2'] },
-    { bits:  3, name: 'rd\'/rs1\'', attr: ['SRCDST'] },
-    { bits:  3, name: 0x7 },
-    { bits:  3, name: 0x4, attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwpDHYXEkpIiK4VodWdD9ViFWh1UpcYIpcZISvWCXSNC9DywaDDCqsEt1M85xAif-epFKTHq-kXFhjHq6gh9wUHOLsEh-N1ljk_SBM0NxhCzYnWS8_PSMtOtqsFaDM1qawGCkVFj" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -1918,16 +1851,9 @@ in the halfword (i.e., bit 15) to all of the more-significant bits.</p>
 <div class="paragraph">
 <p>Encoding (RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x1, attr: ['C1'] },
-    { bits:  3, name: 0x4, attr: ['C.ZEXT.W'] },
-    { bits:  2, name: 0x3, attr: ['FUNCT2'] },
-    { bits:  3, name: 'rd\'/rs1\'', attr: ['SRCDST'] },
-    { bits:  3, name: 0x7 },
-    { bits:  3, name: 0x4, attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwpDHYXEkpIiK4VodWdD9ViFWh1UpcYIpSZISvWiXCNC9MKxaEAy2xihwS3UzznECJ_56kUpMer6RcWGMerqCH3BQc4uwSH43WVOpKPBbjCGmBWrk5yfl5aZblUN1mJoVlsLAJUxUXo=" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -2007,16 +1933,9 @@ the bits more significant than 31.</p>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x1, attr: ['C1'] },
-    { bits:  3, name: 0x5, attr: ['C.NOT'] },
-    { bits:  2, name: 0x3, attr: ['FUNCT2'] },
-    { bits:  3, name: 'rd\'/rs1\'', attr: ['SRCDST'] },
-    { bits:  3, name: 0x7 },
-    { bits:  3, name: 0x4, attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwpDHYXEkpIiK4VodWdD9ViFWh1UpcYIpaZISvX8_EOwqEYy2Bih2i3UzznECJ_h6kUpMer6RcWGMerqCH3BQc4uwSH4HWWOT9IEzQ3GELNidZLz89Iy062qwVoMzWprAZjvUJw=" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -2094,16 +2013,9 @@ the bits more significant than 31.</p>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x1, attr: ['C1'] },
-    { bits:  3, name: 'rs2\'', attr: ['SRC2']  },
-    { bits:  2, name: 0x2, attr: ['FUNCT2'] },
-    { bits:  3, name: 'rd\'/rs1\'', attr: ['SRCDST'] },
-    { bits:  3, name: 0x7 },
-    { bits:  3, name: 0x4, attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwpDHYXEkpIiK4VodWdD9ViFWh1UpcYwpepFxUYx6uoI5cFBzkZADRg6kAw3Qqh2C_VzDjHCb0FKjLp-UbEhui0uwSH49BlUmOOTNEFzgzHErFid5Py8tMx0q2qwFkOz2loAsYpRfg==" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -2693,15 +2605,9 @@ addi sp, sp, 64;</code></pre>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x2,             attr: ['C2'] },
-    { bits:  2, name: 'spimm\[5:4\]',  attr: [] },
-    { bits:  4, name: 'rlist',         attr: [] },
-    { bits:  5, name: 0x18,            attr: [] },
-    { bits:  3, name: 0x5,             attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwogExkklpQUWSlEqzsbqccq1Org0KZeXJCZmxsTbWplEhOrrgPXhqnFBK6lKCezuERdB90mTC2mCMcZWuhgcRymFmOEFlPs_nEL9XMOMYb4KVYnOT8vLTPdqhqs3dCsthYABcpLyw==" alt="svg">
 </div>
 </div>
 <div class="admonitionblock note">
@@ -2926,15 +2832,9 @@ sp-=stack_adj;</code></pre>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x2,             attr: ['C2'] },
-    { bits:  2, name: 'spimm\[5:4\]',  attr: [] },
-    { bits:  4, name: 'rlist',         attr: [] },
-    { bits:  5, name: 0x1a,            attr: [] },
-    { bits:  3, name: 0x5,             attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwogExkklpQUWSlEqzsbqccq1Org0KZeXJCZmxsTbWplEhOrrgPXhqnFBK6lKCezuERdB90mTC2mCMcZJupgcRymFmOEFlPs_nEL9XMOMYb4KVYnOT8vLTPdqhqs3dCsthYAFnJL9A==" alt="svg">
 </div>
 </div>
 <div class="admonitionblock note">
@@ -3158,15 +3058,9 @@ sp+=stack_adj;</code></pre>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x2,             attr: ['C2'] },
-    { bits:  2, name: 'spimm\[5:4\]',  attr: [] },
-    { bits:  4, name: 'rlist',         attr: [] },
-    { bits:  5, name: 0x1c,            attr: [] },
-    { bits:  3, name: 0x5,             attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwogExkklpQUWSlEqzsbqccq1Org0KZeXJCZmxsTbWplEhOrrgPXhqnFBK6lKCezuERdB90mTC2mCMcZJutgcRymFmOEFlPs_nEL9XMOMYb4KVYnOT8vLTPdqhqs3dCsthYAF0JL9g==" alt="svg">
 </div>
 </div>
 <div class="admonitionblock note">
@@ -3401,15 +3295,9 @@ asm("ret");</code></pre>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x2,             attr: ['C2'] },
-    { bits:  2, name: 'spimm\[5:4\]',  attr: [] },
-    { bits:  4, name: 'rlist',         attr: [] },
-    { bits:  5, name: 0x1e,            attr: [] },
-    { bits:  3, name: 0x5,             attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwogExkklpQUWSlEqzsbqccq1Org0KZeXJCZmxsTbWplEhOrrgPXhqnFBK6lKCezuERdB90mTC2mCMcZpupgcRymFmOEFlPs_nEL9XMOMYb4KVYnOT8vLTPdqhqs3dCsthYAGBJL-A==" alt="svg">
 </div>
 </div>
 <div class="admonitionblock note">
@@ -3632,16 +3520,9 @@ asm("ret");</code></pre>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x2,      attr: ['C2'] },
-    { bits:  3, name: 'r2s\'',  attr: [] },
-    { bits:  2, name: 0x1,      attr: [] },
-    { bits:  3, name: 'r1s\'',  attr: [] },
-    { bits:  3, name: 0x3,      attr: [] },
-    { bits:  3, name: 0x5,      attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwogEwwSS0qKrBSi1Z2N1GMVanVQ1RvD1KsXGRXHqKvrwNVjqkUy2xDVbLzmGhIy1xhhrjHR5hpUmKL5zy3UzznEGOLHWJ3k_Ly0zHSrarA-Q7PaWgCJ4VAk" alt="svg">
 </div>
 </div>
 <div class="admonitionblock note">
@@ -3735,16 +3616,9 @@ X[xreg2] = X[11];</code></pre>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x2,      attr: ['C2'] },
-    { bits:  3, name: 'r2s\'',  attr: [] },
-    { bits:  2, name: 0x3,      attr: [] },
-    { bits:  3, name: 'r1s\'',  attr: [] },
-    { bits:  3, name: 0x3,      attr: [] },
-    { bits:  3, name: 0x5,      attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwogEwwSS0qKrBSi1Z2N1GMVanVQ1RvD1KsXGRXHqKvrwNVjqkUy2xjVbLzmGhIy15gccw0qTNH85xbq5xxiDPFjrE5yfl5aZrpVNVifoVltLQCLR1Am" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -3908,23 +3782,17 @@ if the tables have not been updated in memory since the last <em>fence.i</em>.</
 <div class="paragraph">
 <p>Format (RV32):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  6, name: 'mode',  attr: ['6'] },
-    { bits: 26, name: 'base[XLEN-1:6] (WARL)',  attr: ['XLEN-6'] },
-],config:{bits:32}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFMx2FvMTcVCsF9dz8lFR1HQWFxJKSIiuFaHUz9ViFWh0U1UYI1UmJxanRET6ufrqGVmaxChrhjkE-msjawXJQM2J1kvPz0jLTrarB5hgb1dYCAKdmJ7Y=" alt="svg">
 </div>
 </div>
 <div class="paragraph">
 <p>Format (RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  6, name: 'mode',  attr: ['6'] },
-    { bits: 58, name: 'base[XLEN-1:6] (WARL)',  attr: ['XLEN-6'] },
-],config:{bits:64}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFMx2FvMTcVCsF9dz8lFR1HQWFxJKSIiuFaHUz9ViFWh0U1aYWcNVJicWp0RE-rn66hlZmsQoa4Y5BPprI2sFyUDNidZLz89Iy062qweaYmdTWAgCo7SfA" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -4014,14 +3882,9 @@ attempt to program different modes and read back the values to see which are ava
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x2,      attr: ['C2'] },
-    { bits:  8, name: 'index',  attr: [] },
-    { bits:  3, name: 0x0,      attr: [] },
-    { bits:  3, name: 0x5,      attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwogEwwSS0qKrBSi1Z2N1GMVanVQ1VvA1Ktn5qWkVqjrwNVjqjVGmG2AajZetaZo7nAL9XMOMYa4JVYnOT8vLTPdqhqsz9CsthYAtQo5yw==" alt="svg">
 </div>
 </div>
 <div class="admonitionblock note">
@@ -4122,14 +3985,9 @@ j target_address[XLEN-1:0]&amp;~0x1;</code></pre>
 <div class="paragraph">
 <p>Encoding (RV32, RV64):</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  2, name: 0x2,      attr: ['C2'] },
-    { bits:  8, name: 'index',  attr: [] },
-    { bits:  3, name: 0x0,      attr: [] },
-    { bits:  3, name: 0x5,      attr: ['FUNCT3'] },
-],config:{bits:16}}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFIx2FvMTcVCsFgwogEwwSS0qKrBSi1Z2N1GMVanVQ1VvA1Ktn5qWkVqjrwNVjqjVGmG2AajZetaZo7nAL9XMOMYa4JVYnOT8vLTPdqhqsz9CsthYAtQo5yw==" alt="svg">
 </div>
 </div>
 <div class="admonitionblock note">

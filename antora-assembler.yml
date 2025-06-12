@@ -12,4 +12,10 @@ asciidoc:
     :bibtex-format: asciidoc
     :bibtex-throw: false
 build:
-  command: bundle exec asciidoctor-pdf --trace -r asciidoctor-bibtex asciidoctor-kroki
+  command: bundle exec asciidoctor-pdf --trace
+
+converters:
+  - name: pdf
+    backend: pdf
+    file_extension: .pdf
+    command: asciidoctor-pdf

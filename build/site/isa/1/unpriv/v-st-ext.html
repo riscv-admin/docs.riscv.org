@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <link rel="canonical" href="https://docs.riscv.org/isa/1/unpriv/v-st-ext.html">
     <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -12,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
+      <a class="navbar-item" href="../../..">RISC-V ISA Documentation Library Antora Demo Site</a>
       <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
@@ -4067,37 +4066,17 @@ that raise exceptions partway through loading a structure.
 <div class="paragraph">
 <p>Format for Vector Load Whole Register Instructions under LOAD-FP major opcode</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg: [
-  {bits: 7, name: 0x07, attr: 'VL*R*'},
-  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
-  {bits: 3, name: 'width'},
-  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
-  {bits: 5, name: 8, attr: 'lumop'},
-  {bits: 1, name: 1, attr: 'vm'},
-  {bits: 2, name: 0x10000, attr: 'mop'},
-  {bits: 1, name: 'mew'},
-  {bits: 3, name: 'nf'},
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNp1kLEKwjAQhnef4rZA6dBURckzODm4iENKUg00SUnOVil9d9OhiYX2poP_-z-4G5x8MrjvAIZKoWdwysFwLRkUnyLsHNExILdLds3ImCfuOHOkEyRyQnpUhqOyBmwNjeVTiN82gOV_fR_rvRL42lA7T5O74l4CF8JJ76P0sFo8x1Lz1rZd2OkM0Qh1ekGU6QW0CBO5TRXRsifr55l6Ch7jD_LDapw=" alt="svg">
 </div>
 </div>
 <div class="paragraph">
 <p>Format for Vector Store Whole Register Instructions under STORE-FP major opcode</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg: [
-  {bits: 7, name: 0x27, attr: 'VS*R*'},
-  {bits: 5, name: 'vs3', attr: 'store data', type: 2},
-  {bits: 3, name: 0x1000},
-  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
-  {bits: 5, name: 8, attr: 'sumop'},
-  {bits: 1, name: 1, attr: 'vm'},
-  {bits: 2, name: 0x100, attr: 'mop'},
-  {bits: 1, name: 0x100, attr: 'mew'},
-  {bits: 3, name: 'nf'},
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNp1j7EKwjAQhnef4raD0iFJFSWPoeAiDimJ4pC25GJVSt_dODQxErfj7vs__pucuUo4rQCm9uZJwraGTlkjgT1FmJX3TgIeD9W-wrlO3GbhcKQGI0i-dwa08irs_GsIgPiONUnPGWNloyOejK0iA0prZ4iic10M7lKNu-2HrC9fIB6h0WaEyKpF6q_oBzMPLD6K3eVzOM9vTERpsw==" alt="svg">
 </div>
 </div>
 <div class="paragraph">

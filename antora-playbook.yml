@@ -1,6 +1,6 @@
 site:
   title: RISC-V ISA Documentation Library Antora Demo Site
-  url: https://docs.riscv.org
+  #url: https://docs.riscv.org
   start_page: riscv-library::index.adoc
 content:
   sources:
@@ -9,15 +9,21 @@ content:
     start_path: /
   - url: https://github.com/riscv/riscv-isa-manual.git
     branches: antora-refactor
-  - url: https://github.com/riscv-admin/riscv-getting-started-guide.git
-    branches: kersten-patch-1
+#  - url: https://github.com/riscv/docs-dev-guide
+#    branches: main
+  #- url: https://github.com/riscv-admin/riscv-getting-started-guide.git
+  #  branches: kersten-patch-1
 #  - url: https://github.com/riscv-admin/policies.git
 #    branches: 6-update-repo-structure-description-for-antora-layout
+#runtime:
 #asciidoc:
-  #extensions:
-  #- asciidoctor-kroki
- #- asciidoctor-bibtex
-  #- asciidoctor-mathematical
+#  assembler:
+#    extensions:
+#      - require: '@antora/pdf-extension'
+asciidoc:
+ extensions:
+ - asciidoctor-kroki
+# - asciidoctor-mathematical
 
   #attributes:
   #  le: '&#8804;'
@@ -29,10 +35,11 @@ content:
   #  incexample: example$
   #  incimage: image$
 
-#antora:
-  #extensions:
-  #- '@antora/pdf-extension'
+antora:
+   extensions:
+   - '@antora/pdf-extension'
   #- '@antora/asciidoctor-bibtex'
+
 
 ui:
   bundle:

@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <link rel="canonical" href="https://docs.riscv.org/isa/1/unpriv/b-st-ext.html">
     <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -12,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
+      <a class="navbar-item" href="../../..">RISC-V ISA Documentation Library Antora Demo Site</a>
       <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
@@ -1616,16 +1615,9 @@ latency does not depend on the (secret) data being operated on.</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x3b, attr: ['OP-32'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x0, attr: ['ADD.UW'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x04, attr: ['ADD.UW'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwrjJB2FxJKSIiuFaHX_AF1jI_VYhVodVOWmMOXqRSnqGLLGCMMMEGY5urjohYbjN6zYUB2vtBGmNJLLDUyw2xZbCwDULkBz" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1688,16 +1680,9 @@ X(rd) = base + index;</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x7, attr: ['ANDN']},
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x20, attr: ['ANDN'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJPMEQY5-rn4qcfiManYUB2fRcVGmNJIbjYyQLcKpDq2FgDwqj6T" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1762,16 +1747,9 @@ X(rd) = base + index;</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['BCLR'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x24, attr: ['BCLR/BEXT'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJMMEQY5OfsE4Teq2FAdr7QRpjSSo41MUO3Sd3KNCIFYGFsLAFuJQBc=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1833,16 +1811,9 @@ X(rd) = X(rs1) &amp; ~(1 &lt;&lt; index)</code></pre>
 <dt class="hdlist1">Encoding (RV32)</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['BCLRI'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'shamt' },
-    { bits:  7, name: 0x24, attr: ['BCLRI'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxkimIQxzcvYJ8sRvVrGhOh7p4ozE3BJMBUhuNzLBal1sLQA86EFb" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1850,16 +1821,9 @@ X(rd) = X(rs1) &amp; ~(1 &lt;&lt; index)</code></pre>
 <dt class="hdlist1">Encoding (RV64)</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['BCLRI'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  6, name: 'shamt' },
-    { bits:  6, name: 0x12, attr: ['BCLRI'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxkimIQxzcvYJ8sRvVrEhpmFmcOnijMTcEjwKgLYZYbUuthYAPMBBWA==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1922,16 +1886,9 @@ X(rd) = X(rs1) &amp; ~(1 &lt;&lt; index)</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x5, attr: ['BEXT'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x24, attr: ['BCLR/BEXT'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJNMEQY5uUaE4Deq2FAdr7QRpjSSo41MkOxy9gnSR1gYWwsAZVlAKw==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1993,16 +1950,9 @@ X(rd) = (X(rs1) &gt;&gt; index) &amp; 1;</code></pre>
 <dt class="hdlist1">Encoding (RV32)</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x5, attr: ['BEXTI'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'shamt' },
-    { bits:  7, name: 0x24, attr: ['BEXTI/BCLRI'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxgjTTBGGOblGhHjiN6vYUB2PdHFGYm4JpgIktxuZoFmn7-TsEwS1NLYWANVQQxo=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2010,16 +1960,9 @@ X(rd) = (X(rs1) &gt;&gt; index) &amp; 1;</code></pre>
 <dt class="hdlist1">Encoding (RV64)</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x5, attr: ['BEXTI'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  6, name: 'shamt' },
-    { bits:  6, name: 0x12, attr: ['BEXTI/BCLRI'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxgjTTBGGOblGhHjiN6vYENMwM7h0cUZibgkeBUC3G6FZp-_k7BMEtTS2FgDVFkMX" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2082,16 +2025,9 @@ X(rd) = (X(rs1) &gt;&gt; index) &amp; 1;</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['BINV'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x34, attr: ['BINV'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJMMEQY5efqF4Teq2FAdr7QRpjSyo02w2RVbCwAkLD7O" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2153,16 +2089,9 @@ X(rd) = X(rs1) ^ (1 &lt;&lt; index)</code></pre>
 <dt class="hdlist1">Encoding (RV32)</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['BINV'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'shamt' },
-    { bits:  7, name: 0x34, attr: ['BINVI'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxkimIQxz8vQLw29UsaE6HunijMTcEkwFSE43NkG1zRNiXWwtAP-BQSs=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2170,16 +2099,9 @@ X(rd) = X(rs1) ^ (1 &lt;&lt; index)</code></pre>
 <dt class="hdlist1">Encoding (RV64)</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['BINV'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  6, name: 'shamt' },
-    { bits:  6, name: 0x1a, attr: ['BINVI'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxkimIQxz8vQLw29UsSGmWWZw6eKMxNwSPAqAliWi2uYJsS62FgADt0FW" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2242,16 +2164,9 @@ X(rd) = X(rs1) ^ (1 &lt;&lt; index)</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['BSET'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x14, attr: ['BSET'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJMMEQY5BbuG4Deq2FAdr7QRpjSSow1NsNkVWwsAI5Q-yg==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2313,16 +2228,9 @@ X(rd) = X(rs1) | (1 &lt;&lt; index)</code></pre>
 <dt class="hdlist1">Encoding (RV32)</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['BSETI'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'shamt' },
-    { bits:  7, name: 0x14, attr: ['BSETI'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxkimIQxzCnYN8cRvVrGhOh7p4ozE3BJMBchuN8FqXWwtAEKiQXA=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2330,16 +2238,9 @@ X(rd) = X(rs1) | (1 &lt;&lt; index)</code></pre>
 <dt class="hdlist1">Encoding (RV64)</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['BSETI'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  6, name: 'shamt' },
-    { bits:  6, name: 0x0a, attr: ['BSETI'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxkimIQxzCnYN8cRvVrEhpmFmcOnijMTcEjwKDCoMErFaF1sLAEbiQZw=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2402,16 +2303,9 @@ X(rd) = X(rs1) | (1 &lt;&lt; index)</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['CLMUL'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x5, attr: ['MINMAX/CLMUL'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJMMEQY5-_iG-uA3q9hQHa-0EaY0kqtNEXb5evr5OkboI1kZWwsALVtBMQ==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2486,16 +2380,9 @@ X[rd] = output</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x3, attr: ['CLMULH'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x5, attr: ['MINMAX/CLMUL'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGSCYhDHL28Q318cBvWLGhOl5pI0xpJGebIizz9fTzdYzQB9sJsTK2FgByDEF7" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2570,16 +2457,9 @@ X[rd] = output</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x2, attr: ['CLMULR'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x5, attr: ['MINMAX/CLMUL'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJOMEAY5-_iG-gThN6zYUB2vtBGmNJKzTRGW-Xr6-TpG6IPthFgZWwsAdlhBhA==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2668,16 +2548,9 @@ a <strong>clmul</strong>, then bit-reversing the output.</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['CLZ']  },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 0x0, attr: ['CLZ'] },
-    { bits:  7, name: 0x30, attr: ['CLZ']  },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxkimIQxz9okCmoTPqGJDddzSBhUG6Gahq0XyhbEBNotjawF2EENP" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2746,16 +2619,9 @@ X[rd] = (xlen - 1) - HighestSetBit(rs);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x1b, attr: ['OP-IMM-32'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['CLZW'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 0x0, attr: ['CLZW'] },
-    { bits:  7, name: 0x30, attr: ['CLZW'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwrDJB2FxJKSIiuFaHX_AF1PX19dYyP1WIVaHVQtpjAt6kUp6hiyxkgGIsxz9okKx29UsaE6bmmDCgOCZiH5xBir6thaAKPzRNU=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2825,16 +2691,9 @@ X[rd] = 31 - HighestSetBit(rs);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['CPOP'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 0x2, attr: ['CPOP'] },
-    { bits:  7, name: 0x30, attr: ['CPOP'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxkimIQxzDvAPwG9UsaE6bmmDCiOCZiF5w9gAm-rYWgDRL0Ps" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2919,16 +2778,9 @@ The GCC builtin function <code>__builtin_popcountl (unsigned long x)</code> for 
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x1b, attr: ['OP-IMM-32'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['CPOPW'] },
-    { bits:  5, name: 'rs' },
-    { bits:  5, name: 0x2, attr: ['CPOPW'] },
-    { bits:  7, name: 0x30, attr: ['CPOPW'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwrDJB2FxJKSIiuFaHX_AF1PX19dYyP1WIVaHVQtpjAt6kUp6hiyxkgGIsxzDvAPCMdvVrE6blmDCiPCZiF5xdgAq_LYWgA6DUWB" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2994,16 +2846,9 @@ X[rd] = bitcount</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['CTZ/CTZW'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 0x1, attr: ['CTZ/CTZW'] },
-    { bits:  7, name: 0x30, attr: ['CTZ/CTZW'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxkimIQxzDonSB-Jw_MYVG6rjlibWPCTvGBvg0hFbCwAzYkeN" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -3073,16 +2918,9 @@ X[rd] = LowestSetBit(rs);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x1b, attr: ['OP-IMM-32'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['CTZ/CTZW'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 0x1, attr: ['CTZ/CTZW'] },
-    { bits:  7, name: 0x30, attr: ['CTZ/CTZW'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwrDJB2FxJKSIiuFaHX_AF1PX19dYyP1WIVaHVQtpjAt6kUp6hiyxkgGIsxzDonSB-Jw_MYVG6rjlibWPCQfGRvg0hFbCwAFCUhO" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -3151,16 +2989,9 @@ X[rd] = LowestSetBit32(rs);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x6, attr: ['MAX']},
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x05, attr: ['MINMAX/CLMUL'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJPMEAb5Okaox-IxqNhQHZ89xUaY0khONjBFssnTD2iZvrOPb6gPxPGxtQC0TkCv" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -3246,16 +3077,9 @@ implementations that are so optimized can fuse them together.</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x7, attr: ['MAXU']},
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x05, attr: ['MINMAX/CLMUL'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJPMEQb5OkaEqsfiManYUB2fRcVGmNJIbjYwRbLK0w9om76zj2-oD8T1sbUA_itBBQ==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -3322,16 +3146,9 @@ X(rd) = result;</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x4, attr: ['MIN']},
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x05, attr: ['MINMAX/CLMUL'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJNMEAb5evqpx-IxqNhQHZ89xUaY0khONjBFscnXMULf2cc31Afi-NhaALJMQKs=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -3398,16 +3215,9 @@ X(rd) = result;</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x5, attr: ['MINU']},
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x05, attr: ['MINMAX/CLMUL'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJNMEQb5evqFqsfiManYUB2fRcVGmNJIbjZAtcrXMULf2cc31Afi-thaAPwlQQE=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -3474,15 +3284,9 @@ X(rd) = result;</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x5 },
-    { bits:  5, name: 'rs' },
-    { bits: 12, name: 0x287 }
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxgjTTPFpLcbQamiE0GpkYa5QyxVbCwA9Ti6i" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -3552,16 +3356,9 @@ X[rd] = output;</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x6, attr: ['ORN']},
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x20, attr: ['ORN'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJPMkAwK8lOPxWNQsaE6PnuKjTClkZxsZIBmE0hxbC0AfAk-Lg==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -3626,16 +3423,9 @@ X[rd] = output;</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    {bits:  7, name: 0x33, attr: ['OP'] },
-    {bits: 5, name: 'rd'},
-    {bits: 3, name: 0x4, attr:['PACK']},
-    {bits: 5, name: 'rs1'},
-    {bits: 5, name: 'rs2'},
-    {bits: 7, name: 0x4, attr:['PACK']},
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCC6qTMkmIrBQVzHYW8xNxUKwWDCmNjHYXEkpIiK4Vodf8A9ViFWh1kpaYwlepFKeqoUsYIQ0ygZkSrBzg6e6vH4jSj2FAdt5wRmpw5XgtiawGQOzw-" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -3715,16 +3505,9 @@ extensions are implemented).
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    {bits:  7, name: 0x33, attr: ['OP'] },
-    {bits: 5, name: 'rd'},
-    {bits: 3, name: 0x7, attr: ['PACKH']},
-    {bits: 5, name: 'rs1'},
-    {bits: 5, name: 'rs2'},
-    {bits: 7, name: 0x4, attr: ['PACKH']},
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCC6qTMkmIrBQVzHYW8xNxUKwWDCmNjHYXEkpIiK4Vodf8A9ViFWh1kpaYwlepFKeqoUsYIQ8wRZgQ4Ont7qMfiNKXYUB23nBGaHJI7TbBZEVsLAHJEPRE=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -3788,17 +3571,9 @@ X(rd) = EXTZ(hi_half @ lo_half);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-{bits: 2, name: 0x3},
-{bits: 5, name: 0xe},
-{bits: 5, name: 'rd'},
-{bits: 3, name: 0x4},
-{bits: 5, name: 'rs1'},
-{bits: 5, name: 'rs2'},
-{bits: 7, name: 0x4},
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDSUchLzE21UjCoMK7VgYmaIkRTsYiqF6WoI4SNEYpNsCouNlTHLm6EJG6OakpsLQD79DK3" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -3880,15 +3655,9 @@ extensions are implemented).
 <dt class="hdlist1">Encoding (RV32)</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x5 },
-    { bits:  5, name: 'rs' },
-    { bits: 12, name: 0x698 }
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxgjTTPFpLcbQamiE0GpmaaFQyxVbCwA9ey6o" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -3896,15 +3665,9 @@ extensions are implemented).
 <dt class="hdlist1">Encoding (RV64)</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x5 },
-    { bits:  5, name: 'rs' },
-    { bits: 12, name: 0x6b8 }
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxgjTTPFpLcbQamiE0GqWZKFQyxVbCwA-mi7R" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4011,15 +3774,9 @@ XLEN-32 and XLEN-16, respectively.</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x5 },
-    { bits:  5, name: 'rs' },
-    { bits: 12, name: 0x687 }
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxgjTTPFpLcbQamiE0GpmYa5QyxVbCwA9bi6m" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4083,16 +3840,9 @@ X(rd) = result;</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['ROL']},
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x30, attr: ['ROL'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJMMEQYF-fuox-IxqNhQHZ89xUaY0shONkCzCaQ4thYAeK4-Jg==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4162,16 +3912,9 @@ X(rd) = result;</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x3b, attr: ['OP-32'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['ROLW']},
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x30, attr: ['ROLW'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwrjJB2FxJKSIiuFaHX_AF1jI_VYhVodVOWmMOXqRSnqGLLGCMMMEWYF-fuEq8fiManYUB2fRcVGmNLIzjZAtwqkOrYWALitP5U=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4240,16 +3983,9 @@ X(rd) = EXTS(result[31..0]);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x5, attr: ['ROR']},
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x30, attr: ['ROR'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJNMEQYF-Qepx-IxqNhQHZ89xUaY0shONkCzCaQ4thYAfZY-Ng==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4319,16 +4055,9 @@ X(rd) = result;</code></pre>
 <dt class="hdlist1">Encoding (RV32)</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x5, attr: ['RORI']},
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'shamt' },
-    { bits:  7, name: 0x30, attr: ['RORI'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxgjTTBGGBfkHearH4jGp2FAdj0XFGYm5JZgKkFxubIBuGUh1bC0AlmlA3A==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4336,16 +4065,9 @@ X(rd) = result;</code></pre>
 <dt class="hdlist1">Encoding (RV64)</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x5, attr: ['RORI']},
-    { bits:  5, name: 'rs1' },
-    { bits:  6, name: 'shamt' },
-    { bits:  6, name: 0x18, attr: ['RORI'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxgjTTBGGBfkHearH4jGp2BDTKDO4dHFGYm4JHgVAl1ugWwZSHVsLAJcSQOI=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4416,16 +4138,9 @@ X(rd) = result;</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x1b, attr: ['OP-IMM-32'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x5, attr: ['RORIW']},
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'shamt' },
-    { bits:  7, name: 0x30, attr: ['RORIW'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwrDJB2FxJKSIiuFaHX_AF1PX19dYyP1WIVaHVQtpjAt6kUp6hiyxggDTRHmBfkHeYarx-IxqthQHY9NxRmJuSWYCpBcb2yAYRtIeWwtAOJuQks=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4496,16 +4211,9 @@ X(rd) = EXTS(result[31..0]);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x3b, attr: ['OP-32'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x5, attr: ['RORW']},
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x30, attr: ['RORW'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwrjJB2FxJKSIiuFaHX_AF1jI_VYhVodVOWmMOXqRSnqGLLGCMNMEWYF-QeFq8fiManYUB2fRcVGmNLIzjZAtwqkOrYWAL2vP6U=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4574,16 +4282,9 @@ X(rd) = EXTS(result);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['SEXT.B/SEXT.H'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 0x04, attr: ['SEXT.B'] },
-    { bits:  7, name: 0x30 },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxkimIQwLdo0I0XPSB1Me-M0sNlTHLW1QYWCCbioW45C8ZGwAko2tBQDDf0Jy" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4643,16 +4344,9 @@ X(rd) = EXTS(result);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x13, attr: ['OP-IMM'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['SEXT.B/SEXT.H'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 0x05, attr: ['SEXT.H'] },
-    { bits:  7, name: 0x30 },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpDYx2FxJKSIiuFaHX_AF1PX1_1WIVaHVT1pjD16kUp6hiyxkimIQwLdo0I0XPSB1Me-M0sNlTHLW1QYWCKZio245C8ZGwAko2tBQDEoEJ5" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4712,16 +4406,9 @@ X(rd) = EXTS(result);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x2, attr: ['SH1ADD'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x10, attr: ['SH1ADD'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJOMEAYFexg6urjgN6zYUB2vtBGmNJKzDQ2w2xZbCwARYj-V" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4781,16 +4468,9 @@ X(rd) = EXTS(result);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x3b, attr: ['OP-32'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x2, attr: ['SH1ADD.UW'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x10, attr: ['SH1ADD.UW']  },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwrjJB2FxJKSIiuFaHX_AF1jI_VYhVodVOWmMOXqRSnqGLLGCMOMEGYFexg6urjohYbjN6_YUB2vtBGmNJLjDQ2wWwjSE1sLAJ_xQio=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4854,16 +4534,9 @@ X(rd) = base + (index &lt;&lt; 1);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x4, attr: ['SH2ADD'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x10, attr: ['SH2ADD'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJNMEAYFexg5urjgN6zYUB2vtBGmNJKzDQ2w2xZbCwAS9j-Z" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4923,16 +4596,9 @@ X(rd) = base + (index &lt;&lt; 1);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x3b, attr: ['OP-32'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x4, attr: ['SH2ADD.UW'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x10, attr: ['SH2ADD.UW'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwrjJB2FxJKSIiuFaHX_AF1jI_VYhVodVOWmMOXqRSnqGLLGCMNMEGYFexg5urjohYbjN6_YUB2vtBGmNJLjDQ1wWhhbCwBgXUIO" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -4997,16 +4663,9 @@ X(rd) = base + (index &lt;&lt; 2);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x6, attr: ['SH3ADD'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x10, attr: ['SH3ADD'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJPMEAYFexg7urjgN6zYUB2vtBGmNJKzDQ2w2xZbCwAUij-d" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -5066,16 +4725,9 @@ X(rd) = base + (index &lt;&lt; 2);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x3b, attr: ['OP-32'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x6, attr: ['SH3ADD.UW'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x10, attr: ['SH3ADD.UW'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwrjJB2FxJKSIiuFaHX_AF1jI_VYhVodVOWmMOXqRSnqGLLGCMPMEGYFexg7urjohYbjN6_YUB2vtBGmNJLjDQ1wWhhbCwBiBkIS" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -5138,16 +4790,9 @@ X(rd) = base + (index &lt;&lt; 3);</code></pre>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x1b, attr: ['OP-IMM-32'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x1, attr: ['SLLI.UW'] },
-    { bits:  5, name: 'rs1' },
-    { bits:  6, name: 'shamt' },
-    { bits:  6, name: 0x02, attr: ['SLLI.UW'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwrDJB2FxJKSIiuFaHX_AF1PX19dYyP1WIVaHVQtpjAt6kUp6hiyxkgGIswL9vHx1AsNx29asSGmcWZw6eKMxNwSPAoMKgyMcFgYWwsAFpdDXA==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -5223,16 +4868,9 @@ the destination register, respectively.</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-{bits: 7, name: 0x13, attr: ['OP-IMM']},
-{bits: 5, name: 'rd'},
-{bits: 3, name: 0x5},
-{bits: 5, name: 'rs1'},
-{bits: 5, name: 0xf},
-{bits: 7, name: 0x4},
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDXUchLzE21UjCoMDTWUUgsKSmyUohW9w_Q9fT1VY-t1YEpNIUpVC9KUUcIGyP0m2JVXGyojkXcoCINIYrkBhOgaGwtAL-yMOo=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -5316,16 +4954,9 @@ directly.</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x4, attr: ['XNOR']},
-    { bits:  5, name: 'rs1' },
-    { bits:  5, name: 'rs2' },
-    { bits:  7, name: 0x20, attr: ['XNOR'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJNMEAZF-PkHqcfiManYUB2fRcVGmNJIbjYyQLcKpDq2FgACYT7c" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -5390,17 +5021,9 @@ directly.</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-{bits: 2, name: 0x3},
-{bits: 5, name: 0xc},
-{bits: 5, name: 'rd'},
-{bits: 3, name: 0x4},
-{bits: 5, name: 'rs1'},
-{bits: 5, name: 'rs2'},
-{bits: 7, name: 0x14},
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDSUchLzE21UjCoMK7VgYmaIkSTsYiqF6WoI4SNEYpNsCouNlTHLm6EJG6OMMUQZExsLQAtXDLm" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -5476,17 +5099,9 @@ function clause execute ( XPERM8 (rs2,rs1,rd)) = {
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-{bits: 2, name: 0x3},
-{bits: 5, name: 0xc},
-{bits: 5, name: 'rd'},
-{bits: 3, name: 0x2},
-{bits: 5, name: 'rs1'},
-{bits: 5, name: 'rs2'},
-{bits: 7, name: 0x14},
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDSUchLzE21UjCoMK7VgYmaIkSTsYiqF6WoI4SNEYqNsCouNlTHLm6EJG6OMMXQBCgcWwsALMIy5A==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -5562,16 +5177,9 @@ function clause execute ( XPERM4 (rs2,rs1,rd)) = {
 <dt class="hdlist1">Encoding (RV32)</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x33, attr: ['OP'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x4, attr: ['ZEXT.H']},
-    { bits:  5, name: 'rs' },
-    { bits:  5, name: 0x00 },
-    { bits:  7, name: 0x04 },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwpjYx2FxJKSIiuFaHX_APVYhVodVLWmMLXqRSnqGLLGCJNMEAZFuUaE6Hmox-Ixq1gdt00GFQYGGLJIbjYwAcnG1gIAMkM6HA==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -5579,16 +5187,9 @@ function clause execute ( XPERM4 (rs2,rs1,rd)) = {
 <dt class="hdlist1">Encoding (RV64)</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-    { bits:  7, name: 0x3b, attr: ['OP-32'] },
-    { bits:  5, name: 'rd' },
-    { bits:  3, name: 0x4, attr: ['ZEXT.H']},
-    { bits:  5, name: 'rs' },
-    { bits:  5, name: 0x00 },
-    { bits:  7, name: 0x04 },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUgCCaoWkzJJiKwUFcx2FvMTcVCsFgwrjJB2FxJKSIiuFaHX_AF1jI_VYhVodVOWmMOXqRSnqGLLGCMNMEGZFuUaE6Hmox-Ixq1gdt00GFQYGGLJIzjYwAcnG1gIA34o63Q==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -5664,16 +5265,9 @@ bits of the destination register, respectivley.</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-{bits: 7, name: 0x13, attr: ['OP-IMM']},
-{bits: 5, name: 'rd'},
-{bits: 3, name: 0x1},
-{bits: 5, name: 'rs1'},
-{bits: 5, name: 0xf},
-{bits: 7, name: 0x4},
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDXUchLzE21UjCoMDTWUUgsKSmyUohW9w_Q9fT1VY-t1YEpNIUpVC9KUUcIGyPpx6q42FAdi7hBRRpCFMkNJkDR2FoAvoow5g==" alt="svg">
 </div>
 </div>
 <div class="dlist">

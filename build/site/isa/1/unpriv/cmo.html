@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <link rel="canonical" href="https://docs.riscv.org/isa/1/unpriv/cmo.html">
     <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../../_/css/site.css">
   </head>
@@ -12,7 +11,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
+      <a class="navbar-item" href="../../..">RISC-V ISA Documentation Library Antora Demo Site</a>
       <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
@@ -1019,15 +1018,9 @@ Zicbom and Zicbop extensions is expected to be defined in future extensions.</em
 following standard transformation is defined for cache-block management
 instructions and cache-block zero instructions:</p>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-	{ bits: 7,  name: 'opcode'},
-	{ bits: 5,  name: 0x0 },
-	{ bits: 3,  name: 'funct3'},
-	{ bits: 5,  name: 0x0},
-	{ bits: 12, name: 'operation'},
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UlDPL0jOT0lVr9VByJrCZQ0qDBSQZYwR-tJK85JLjHHrQ5YwNNJBWJdalFiSmZ8H0hlbCwBLtSyU" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -1636,15 +1629,9 @@ field is also interpreted as imm[4:0] like a store instruction.</em></p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-	{ bits: 7,  name: 0xF,   attr: ['MISC-MEM'] },
-	{ bits: 5,  name: 0x0 },
-	{ bits: 3,  name: 0x2,   attr: ['CBO'] },
-	{ bits: 5,  name: 'rs1', attr: ['base'] },
-	{ bits: 12, name: 0x001, attr: ['CBO.CLEAN'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhoY6iAbq-fs4-roB9EQWwsA-Ck8QQ==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1702,15 +1689,9 @@ copies in the set of coherent caches.</em></p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-	{ bits: 7,  name: 0xF,   attr: ['MISC-MEM'] },
-	{ bits: 5,  name: 0x0 },
-	{ bits: 3,  name: 0x2,   attr: ['CBO'] },
-	{ bits: 5,  name: 'rs1', attr: ['base'] },
-	{ bits: 12, name: 0x002, attr: ['CBO.FLUSH'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhoY6SAbq-fmExrsAdEQWwsA-Zo8YQ==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1747,15 +1728,9 @@ agent executing the instruction.</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-	{ bits: 7,  name: 0xF,   attr: ['MISC-MEM'] },
-	{ bits: 5,  name: 0x0 },
-	{ bits: 3,  name: 0x2,   attr: ['CBO'] },
-	{ bits: 5,  name: 'rs1', attr: ['base'] },
-	{ bits: 12, name: 0x000, attr: ['CBO.INVAL'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhoY6CAbq-fpF-boA9EQWwsA-Rw8Vw==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1815,15 +1790,9 @@ invalidate operation.</em></p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-	{ bits: 7,  name: 0xF,   attr: ['MISC-MEM'] },
-	{ bits: 5,  name: 0x0 },
-	{ bits: 3,  name: 0x2,   attr: ['CBO'] },
-	{ bits: 5,  name: 'rs1', attr: ['base'] },
-	{ bits: 12, name: 0x004, attr: ['CBO.ZERO'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhqY6CAbqxflGgQ1O7YWAL3BPCE=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1861,16 +1830,9 @@ instruction fetch in the near future</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-	{ bits: 7,  name: 0x13,        attr: ['OP-IMM'] },
-	{ bits: 5,  name: 0x0,         attr: ['offset[4:0]'] },
-	{ bits: 3,  name: 0x6,         attr: ['ORI'] },
-	{ bits: 5,  name: 'rs1',       attr: ['base'] },
-	{ bits: 5,  name: 0x0,         attr: ['PREFETCH.I'] },
-	{ bits: 7, name: 'imm[11:5]',  attr: ['offset[11:5]'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCoMDQGciAgsaSkyEohWt0_QNfT11c9VqFWB6HHFEmPAVwLXE9-Wlpxakm0iZVBLJpGYySNZpga_YM8cdqkXlRsqK6DpiEpsTiVNLcFBLm6uYY4e-ih2wQMB6hFmbm50YaGVqaxIOvQ_AQRB-uMrQUAaxJX-g==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1927,16 +1889,9 @@ read in the near future</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-	{ bits: 7,  name: 0x13,        attr: ['OP-IMM'] },
-	{ bits: 5,  name: 0x0,         attr: ['offset[4:0]'] },
-	{ bits: 3,  name: 0x6,         attr: ['ORI'] },
-	{ bits: 5,  name: 'rs1',       attr: ['base'] },
-	{ bits: 5,  name: 0x1,         attr: ['PREFETCH.R'] },
-	{ bits: 7, name: 'imm[11:5]',  attr: ['offset[11:5]'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCoMDQGciAgsaSkyEohWt0_QNfT11c9VqFWB6HHFEmPAVwLXE9-Wlpxakm0iZVBLJpGYySNZpga_YM8cdqkXlRsqK6DpiEpsTgVj9sMMa0ICHJ1cw1x9tALQtMHDAeoRZm5udGGhlamsSDr0PwEEQfrjK0FAG3MWAQ=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1993,16 +1948,9 @@ write in the near future</p>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
-<div class="literalblock">
+<div class="imageblock kroki">
 <div class="content">
-<pre>{reg:[
-	{ bits: 7,  name: 0x13,        attr: ['OP-IMM'] },
-	{ bits: 5,  name: 0x0,         attr: ['offset[4:0]'] },
-	{ bits: 3,  name: 0x6,         attr: ['ORI'] },
-	{ bits: 5,  name: 'rs1',       attr: ['base'] },
-	{ bits: 5,  name: 0x3,         attr: ['PREFETCH.W'] },
-	{ bits: 7, name: 'imm[11:5]',  attr: ['offset[11:5]'] },
-]}</pre>
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCoMDQGciAgsaSkyEohWt0_QNfT11c9VqFWB6HHFEmPAVwLXE9-Wlpxakm0iZVBLJpGYySNZpga_YM8cdqkXlRsqK6DpiEpsTgVj9uMMa0ICHJ1cw1x9tALR9MHDAeoRZm5udGGhlamsSDr0PwEEQfrjK0FAG_ZWAs=" alt="svg">
 </div>
 </div>
 <div class="dlist">
