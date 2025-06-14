@@ -150,6 +150,7 @@ const config: Config = {
           type: 'search',
           position:'right',
         },
+
       ],
     },
     docs:{
@@ -208,10 +209,68 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} RISC-V International`,
     },
 
-    plugins: [
-      ['docusaurus-plugin-sass'],
-    ],
+    // plugins: [
+    //   [
+    //     "@cmfcmf/docusaurus-search-local",
+    //     {
+    //       // Options here
+    //       indexDocs: true,
+    //       indexBlog: true,
+    //       indexPages: true,
 
+    //     },
+    //   ],
+    // ],
+    // themes: [
+    //   [
+    //     require.resolve("@easyops-cn/docusaurus-search-local"),
+    //     /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+    //     ({
+    //       indexDocs: true,
+    //       indexBlog: false,
+    //       indexPages: true,
+    //       docsRouteBasePath: ["knowledge", "contributing"],
+    //       hashed: true,
+    //       docsDir: ["docs", "contributing"],
+    //       highlightSearchTermsOnTargetPage: true,
+    //     }),
+    //   ],
+    // ],
+    algolia: {
+      // The application ID provided by Algolia
+      appId: 'MGVPU7BN22',
+
+      // Public API key: it is safe to commit it
+      apiKey: 'ef9c7ba70e519af1a95f10289726cd53',
+
+      indexName: 'crawler_riscv.org',
+
+      // Optional: see doc section below
+      contextualSearch: false,
+
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      externalUrlRegex: 'riscv\\.org|domain\\.com',
+
+      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      replaceSearchResultPathname: {
+        from: '/docs/', // or as RegExp: /\/docs\//
+        to: '/',
+      },
+
+      // Optional: Algolia search parameters
+      searchParameters: {
+        facetFilters:[],
+        facets:[],
+      },
+
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: 'search',
+
+      // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+      insights: true,
+
+      //... other Algolia params
+    },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
