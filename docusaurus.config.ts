@@ -243,13 +243,13 @@ const config: Config = {
       // Public API key: it is safe to commit it
       apiKey: 'ef9c7ba70e519af1a95f10289726cd53',
 
-      indexName: 'crawler_riscv.org',
+      indexName: 'crawler_all',
 
       // Optional: see doc section below
       contextualSearch: false,
 
       // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-      externalUrlRegex: 'riscv\\.org|domain\\.com',
+      externalUrlRegex: 'riscv\\.org|lf-riscv\\.atlassian\\.net',
 
       // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
       replaceSearchResultPathname: {
