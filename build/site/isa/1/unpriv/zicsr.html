@@ -56,6 +56,13 @@
     <h3 class="title"><a href="../index.html">ISA Specifications</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">RISC-V ISA Documentation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
@@ -253,10 +260,10 @@
       </ul>
     </li>
     <li class="component">
-      <div class="title"><a href="../../../riscv-library/0.1/index.html">RISC-V Documentation Library</a></div>
+      <div class="title"><a href="../../../riscv-library/1/index.html">RISC-V Documentation Library</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../riscv-library/0.1/index.html">0.1</a>
+          <a href="../../../riscv-library/1/index.html">1</a>
         </li>
       </ul>
     </li>
@@ -268,7 +275,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../riscv-library/0.1/index.html" class="home-link"></a>
+  <a href="../../../riscv-library/1/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">ISA Specifications</a></li>
@@ -306,7 +313,7 @@ for floating-point status.</p>
 <div class="paragraph">
 <p>The counters and timers are no longer considered mandatory parts of the
 standard base ISAs, and so the CSR instructions required to access them
-have been moved out of <a href="#rv32">[rv32]</a> into this separate
+have been moved out of <a href="rv32.html" class="xref page">rv32.adoc</a> into this separate
 chapter.</p>
 </div>
 </td>
@@ -321,8 +328,10 @@ CSR specifier is encoded in the 12-bit <em>csr</em> field of the instruction
 held in bits 31-20. The immediate forms use a 5-bit zero-extended
 immediate encoded in the <em>rs1</em> field.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved directive in zicsr.adoc - include::{incimage}wavedrom/csr-instr.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVddRSCwpKQIqUjcHstWDI4NDXH3JYMUq1Oog7DFF2FOUAlQFAjB7TEG6UlKLS4imUc02RpidVpqXXGKM5AcQW905OCgoHMYIhjGc4VKecDk4y9kTjweKDSE-QPFAcX5pUXIqLlZpZm5utImVQSweDqqFhkY6MAuTi4tQLTQ0QpiuDwsZanFjdUDuiK0FABQLnLQ=" alt="svg">
+</div>
 </div>
 <div class="paragraph">
 <p>The CSRRW (Atomic Read/Write CSR) instruction atomically swaps values in

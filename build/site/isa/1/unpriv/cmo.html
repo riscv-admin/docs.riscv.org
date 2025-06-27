@@ -56,6 +56,13 @@
     <h3 class="title"><a href="../index.html">ISA Specifications</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">RISC-V ISA Documentation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
@@ -253,10 +260,10 @@
       </ul>
     </li>
     <li class="component">
-      <div class="title"><a href="../../../riscv-library/0.1/index.html">RISC-V Documentation Library</a></div>
+      <div class="title"><a href="../../../riscv-library/1/index.html">RISC-V Documentation Library</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../riscv-library/0.1/index.html">0.1</a>
+          <a href="../../../riscv-library/1/index.html">1</a>
         </li>
       </ul>
     </li>
@@ -268,7 +275,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../../riscv-library/0.1/index.html" class="home-link"></a>
+  <a href="../../../riscv-library/1/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">ISA Specifications</a></li>
@@ -1120,7 +1127,7 @@ mechanism.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p><em>The CMO extensions rely on state in {csrname} CSRs that will be defined in a
+<p><em>The CMO extensions rely on state in envcfg CSRs that will be defined in a
 future update to the privileged architecture. If this CSR update is not
 ratified, the CMO extension will define its own CSRs.</em></p>
 </div>
@@ -1134,28 +1141,28 @@ ratified, the CMO extension will define its own CSRs.</em></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>m{csrname}</code></p>
+<p><code>menvcfg</code></p>
 </li>
 <li>
-<p><code>s{csrname}</code></p>
+<p><code>senvcfg</code></p>
 </li>
 <li>
-<p><code>h{csrname}</code></p>
+<p><code>henvcfg</code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The <code>s{csrname}</code> register is used by all supervisor modes, including VS-mode. A
-hypervisor is responsible for saving and restoring <code>s{csrname}</code> on guest context
-switches. The <code>h{csrname}</code> register is only present if the H-extension is
+<p>The <code>senvcfg</code> register is used by all supervisor modes, including VS-mode. A
+hypervisor is responsible for saving and restoring <code>senvcfg</code> on guest context
+switches. The <code>henvcfg</code> register is only present if the H-extension is
 implemented and enabled.</p>
 </div>
 <div class="paragraph">
-<p>Each <code>x{csrname}</code> register (where <code>x</code> is <code>m</code>, <code>s</code>, or <code>h</code>) has the following
+<p>Each <code>xenvcfg</code> register (where <code>x</code> is <code>m</code>, <code>s</code>, or <code>h</code>) has the following
 generic format:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Generic Format for x{csrname} CSRs</caption>
+<caption class="title">Table 1. Generic Format for xenvcfg CSRs</caption>
 <colgroup>
 <col style="width: 10%;">
 <col style="width: 10%;">
@@ -1244,35 +1251,35 @@ exception</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The x{csrname} registers control CBO instruction execution based on the current
+<p>The xenvcfg registers control CBO instruction execution based on the current
 privilege mode and the state of the appropriate CSRs, as detailed below.</p>
 </div>
 <div class="paragraph">
 <p>A <code>CBO.INVAL</code> instruction executes or raises either an illegal instruction
 exception or a virtual instruction exception based on the state of the
-<code>x{csrname}.CBIE</code> fields:</p>
+<code>xenvcfg.CBIE</code> fields:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal instruction exceptions
-if (((priv_mode != M) &amp;&amp; (m{csrname}.CBIE == 00)) ||
-    ((priv_mode == U) &amp;&amp; (s{csrname}.CBIE == 00)))
+if (((priv_mode != M) &amp;&amp; (menvcfg.CBIE == 00)) ||
+    ((priv_mode == U) &amp;&amp; (senvcfg.CBIE == 00)))
 {
   &lt;raise illegal instruction exception&gt;
 }
 // virtual instruction exceptions
-else if (((priv_mode == VS) &amp;&amp; (h{csrname}.CBIE == 00)) ||
-         ((priv_mode == VU) &amp;&amp; ((h{csrname}.CBIE == 00) || (s{csrname}.CBIE == 00))))
+else if (((priv_mode == VS) &amp;&amp; (henvcfg.CBIE == 00)) ||
+         ((priv_mode == VU) &amp;&amp; ((henvcfg.CBIE == 00) || (senvcfg.CBIE == 00))))
 {
   &lt;raise virtual instruction exception&gt;
 }
 // execute instruction
 else
 {
-  if (((priv_mode != M) &amp;&amp; (m{csrname}.CBIE == 01)) ||
-      ((priv_mode == U) &amp;&amp; (s{csrname}.CBIE == 01)) ||
-      ((priv_mode == VS) &amp;&amp; (h{csrname}.CBIE == 01)) ||
-      ((priv_mode == VU) &amp;&amp; ((h{csrname}.CBIE == 01) || (s{csrname}.CBIE == 01))))
+  if (((priv_mode != M) &amp;&amp; (menvcfg.CBIE == 01)) ||
+      ((priv_mode == U) &amp;&amp; (senvcfg.CBIE == 01)) ||
+      ((priv_mode == VS) &amp;&amp; (henvcfg.CBIE == 01)) ||
+      ((priv_mode == VU) &amp;&amp; ((henvcfg.CBIE == 01) || (senvcfg.CBIE == 01))))
   {
     &lt;execute CBO.INVAL and perform flush operation&gt;
   }
@@ -1311,19 +1318,19 @@ either traps or performs a flush operation in a lower privileged level.</em></p>
 <div class="paragraph">
 <p>A <code>CBO.CLEAN</code> or <code>CBO.FLUSH</code> instruction executes or raises an illegal
 instruction or virtual instruction exception based on the state of the
-<code>x{csrname}.CBCFE</code> bits:</p>
+<code>xenvcfg.CBCFE</code> bits:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal instruction exceptions
-if (((priv_mode != M) &amp;&amp; !m{csrname}.CBCFE) ||
-    ((priv_mode == U) &amp;&amp; !s{csrname}.CBCFE))
+if (((priv_mode != M) &amp;&amp; !menvcfg.CBCFE) ||
+    ((priv_mode == U) &amp;&amp; !senvcfg.CBCFE))
 {
   &lt;raise illegal instruction exception&gt;
 }
 // virtual instruction exceptions
-else if (((priv_mode == VS) &amp;&amp; !h{csrname}.CBCFE) ||
-         ((priv_mode == VU) &amp;&amp; !(h{csrname}.CBCFE &amp;&amp; s{csrname}.CBCFE)))
+else if (((priv_mode == VS) &amp;&amp; !henvcfg.CBCFE) ||
+         ((priv_mode == VU) &amp;&amp; !(henvcfg.CBCFE &amp;&amp; senvcfg.CBCFE)))
 {
   &lt;raise virtual instruction exception&gt;
 }
@@ -1336,19 +1343,19 @@ else
 </div>
 <div class="paragraph">
 <p>Finally, a <code>CBO.ZERO</code> instruction executes or raises an illegal instruction or
-virtual instruction exception based on the state of the <code>x{csrname}.CBZE</code> bits:</p>
+virtual instruction exception based on the state of the <code>xenvcfg.CBZE</code> bits:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal instruction exceptions
-if (((priv_mode != M) &amp;&amp; !m{csrname}.CBZE) ||
-    ((priv_mode == U) &amp;&amp; !s{csrname}.CBZE))
+if (((priv_mode != M) &amp;&amp; !menvcfg.CBZE) ||
+    ((priv_mode == U) &amp;&amp; !senvcfg.CBZE))
 {
   &lt;raise illegal instruction exception&gt;
 }
 // virtual instruction exceptions
-else if (((priv_mode == VS) &amp;&amp; !h{csrname}.CBZE) ||
-         ((priv_mode == VU) &amp;&amp; !(h{csrname}.CBZE &amp;&amp; s{csrname}.CBZE)))
+else if (((priv_mode == VS) &amp;&amp; !henvcfg.CBZE) ||
+         ((priv_mode == VU) &amp;&amp; !(henvcfg.CBZE &amp;&amp; senvcfg.CBZE)))
 {
   &lt;raise virtual instruction exception&gt;
 }
@@ -1360,7 +1367,7 @@ else
 </div>
 </div>
 <div class="paragraph">
-<p>Each <code>x{csrname}</code> register is WARL; however, software should determine the legal
+<p>Each <code>xenvcfg</code> register is WARL; however, software should determine the legal
 values from the execution environment discovery mechanism.</p>
 </div>
 </div>
