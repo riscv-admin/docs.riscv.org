@@ -12,7 +12,7 @@ asciidoc:
     :bibtex-format: asciidoc
     :bibtex-throw: false
 build:
-  command: bundle exec asciidoctor-pdf --trace
+  command: bundle exec asciidoctor-pdf -r asciidoctor-kroki --trace --sourcemap
 
 converters:
   - name: pdf

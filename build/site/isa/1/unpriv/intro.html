@@ -73,13 +73,13 @@
     <a class="nav-link" href="intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rv32.html">RV32I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link" href="rv32.html">RV32I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rv64.html">RV64I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link" href="rv32.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
@@ -615,13 +615,13 @@ base ISAs. Each base integer instruction set is characterized by the
 width of the integer registers and the corresponding size of the address
 space and by the number of integer registers. There are two primary base
 integer variants, RV32I and RV64I, described in
-<a href="rv32.html" class="xref page">rv32.adoc</a> and <a href="rv64.html" class="xref page">rv64.adoc</a>, which provide 32-bit
+<a href="rv32.html" class="xref page">RV32I Base Integer Instruction Set</a> and <a href="rv64.html" class="xref page">RV64I Base Integer Instruction Set</a>, which provide 32-bit
 or 64-bit address spaces respectively. We use the term XLEN to refer to
 the width of an integer register in bits (either 32 or 64).
-<a href="rv32e.html" class="xref page">rv32e.adoc</a> describes the RV32E and RV64E subset variants of the
+<a href="rv32e.html" class="xref page">RV32E and RV64E Base Integer Instruction Sets</a> describes the RV32E and RV64E subset variants of the
 RV32I or RV64I base instruction sets respectively, which have been added to support small
 microcontrollers, and which have half the number of integer registers.
-<a href="rv128.html" class="xref page">rv128.adoc</a> sketches a future RV128I variant of the
+<a href="rv128.html" class="xref page">RV128I Base Integer Instruction Set</a> sketches a future RV128I variant of the
 base integer instruction set supporting a flat 128-bit address space
 (XLEN=128). The base integer instruction sets use a two&#8217;s-complement
 representation for signed integer values.</p>
@@ -737,10 +737,10 @@ extensions. Non-standard extensions are either custom extensions, that
 use only custom encodings, or <em>non-conforming</em> extensions, that use any
 standard or reserved encoding. Instruction-set extensions are generally
 shared but may provide slightly different functionality depending on the
-base ISA. <a href="extending.html" class="xref page">extending.adoc</a> describes various ways
+base ISA. <a href="extending.html" class="xref page">Extending RISC-V</a> describes various ways
 of extending the RISC-V ISA. We have also developed a naming convention
 for RISC-V base instructions and instruction-set extensions, described
-in detail in <a href="naming.html" class="xref page">naming.adoc</a>.</p>
+in detail in <a href="naming.html" class="xref page">ISA Extension Naming Conventions</a>.</p>
 </div>
 <div class="paragraph">
 <p>To support more general software development, a set of standard
@@ -862,7 +862,7 @@ and avoid reading main memory for instruction fetches ever again. To
 ensure that certain implicit reads are ordered only after writes to the
 same memory locations, software must execute specific fence or
 cache-control instructions defined for this purpose (such as the FENCE.I
-instruction defined in <a href="zifencei.html" class="xref page">zifencei.adoc</a>).
+instruction defined in <a href="zifencei.html" class="xref page">"Zifencei" Extension for Instruction-Fetch Fence</a>).
 </p>
 </div>
 <div class="paragraph">
@@ -1033,7 +1033,7 @@ storing in the cache to preserve illegal-instruction exception behavior.</p>
 the 32-bit instruction word, we leave more space available for
 non-standard and custom extensions. In particular, the base RV32I ISA
 uses less than 1/8 of the encoding space in the 32-bit instruction word.
-As described in <a href="extending.html" class="xref page">extending.adoc</a>, an implementation that does not require support
+As described in <a href="extending.html" class="xref page">Extending RISC-V</a>, an implementation that does not require support
 for the standard compressed instruction extension can map 3 additional non-conforming
 30-bit instruction spaces into the 32-bit fixed-width format, while preserving
 support for standard &#8805;32-bit instruction-set

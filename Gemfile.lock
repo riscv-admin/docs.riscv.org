@@ -12,6 +12,8 @@ GEM
       citeproc-ruby (~> 1)
       csl-styles (~> 1)
       latex-decode (~> 0.2)
+    asciidoctor-kroki (0.10.0)
+      asciidoctor (~> 2.0)
     asciidoctor-mathematical (0.3.5)
       asciidoctor (~> 2.0)
       asciimath (~> 2.0)
@@ -101,6 +103,7 @@ PLATFORMS
 
 DEPENDENCIES
   asciidoctor-bibtex
+  asciidoctor-kroki
   asciidoctor-mathematical
   asciidoctor-pdf
   mathematical

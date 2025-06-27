@@ -7,8 +7,10 @@ content:
   - url: https://github.com/riscv/riscv-library.git
     branches: main
     start_path: /
+    start_page: index.adoc
   - url: https://github.com/riscv/riscv-isa-manual.git
     branches: antora-refactor
+    start_page: ROOT::index.adoc
 #  - url: https://github.com/riscv/docs-dev-guide
 #    branches: main
   #- url: https://github.com/riscv-admin/riscv-getting-started-guide.git
@@ -32,7 +34,7 @@ asciidoc:
     inf: '&#8734;'
     csrname: 'envcfg'
     incexample: example$
-    incimage: image$
+    incimage: ../images/
 
 antora:
    extensions:
