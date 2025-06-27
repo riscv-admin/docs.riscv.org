@@ -5,12 +5,25 @@ asciidoc:
     allow-uri-read: ''
     kroki-fetch-diagram: ~
     source-highlighter: rouge
-    pdf-theme: ./pdf-theme.yml
+    mathematical-format: svg
+    mathematical-inline: true
+    pdf-theme: ./docs-resources/themes/riscv-pdf.yml
+    pdf-fontsdir: ./docs-resources/fonts
+    :title-logo-image: image:risc-v_logo.png["RISC-V International Logo",pdfwidth=3.25in,align=center]
     :bibtex-file: src/resources/riscv-spec.bib
     :bibtex-order: alphabetical
     :bibtex-style: apa
     :bibtex-format: asciidoc
     :bibtex-throw: false
+    :stem: latexmath
+    :sectnums:
+    :sectnumlevels: 5
+    :toc: left
+    :toclevels: 5
+    :company: RISC-V
+    :url-riscv: https://riscv.org
+    :doctype: book
+    :icons: font
 build:
   command: bundle exec asciidoctor-pdf -r asciidoctor-kroki --trace --sourcemap
 
