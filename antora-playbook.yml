@@ -1,6 +1,5 @@
 site:
   title: RISC-V ISA Documentation Specifications riscv-library::index.adoc
-  version: ~
     #url: https://docs.riscv.org
   start_page: riscv-library::index.adoc
 content:
