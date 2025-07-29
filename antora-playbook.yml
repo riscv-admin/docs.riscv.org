@@ -28,6 +28,10 @@ asciidoc:
   - asciidoctor-kroki
 # - asciidoctor-mathematical
   attributes:
+    experimental: ''
+    idprefix: ''
+    idseparator: '-'
+    page-pagination: ''
     le: '&#8804;'
     ge: '&#8805;'
     ne: '&#8800;'
@@ -40,6 +44,7 @@ asciidoc:
 antora:
    extensions:
    - '@antora/pdf-extension'
+   - asciidoctor-kroki
   #- '@antora/asciidoctor-bibtex'
 
 runtime:
