@@ -39,7 +39,7 @@ asciidoc:
     inf: '&#8734;'
     csrname: 'envcfg'
     incexample: example$
-    incimage: images
+    incimage: ../images/
 
 # NOTE: The following attributes are used by the PDF theme
     base_font_size_small: 9pt
