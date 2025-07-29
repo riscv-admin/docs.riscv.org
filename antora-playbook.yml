@@ -1,6 +1,7 @@
 site:
-  title: RISC-V ISA Documentation Library Antora Demo Site
-  #url: https://docs.riscv.org
+  title: RISC-V ISA Documentation Specifications riscv-library::index.adoc
+  version: ~
+    #url: https://docs.riscv.org
   start_page: riscv-library::index.adoc
 content:
   sources:
@@ -39,8 +40,19 @@ asciidoc:
     inf: '&#8734;'
     csrname: 'envcfg'
     incexample: example$
-    incimage: ../images/
+#    incimage: ../images/
 
+# NOTE: The following attributes are used by the PDF theme
+    base_font_size_small: 9pt
+    base_font_size_medium: 10pt
+    base_font_size_large: 11pt
+    base_line_height_length: 1.2em
+    horizontal_rhythm: 1.5em
+    footer_recto_right_content: '{document-title} | © RISC-V International'
+    footer_recto_columns: '<50% =0% >50%'
+    toc_indent: $horizontal_rhythm
+    toc_line_height: 1.4
+    toc_dot_leader_content: .
 antora:
    extensions:
    - '@antora/pdf-extension'
