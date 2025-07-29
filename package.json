@@ -3,8 +3,9 @@
     "version": "0.0.1",
     "dependencies": {
         "@antora/pdf-extension": "^1.0.0-alpha.11",
-        "asciidoctor-kroki": "^0.18.1",
-        "asciidoctor-opal-runtime": "^1.0.0",
+        "antora": "^3.1.0",
+        "asciidoctor-kroki": "^0.16.0",
+        "asciidoctor.js": "^1.5.9",
         "bytefield-svg": "^1.8.0",
         "wavedrom-cli": "^3.2.0"
     }

@@ -7,11 +7,11 @@ content:
   - url: https://github.com/riscv/riscv-library.git
     branches: main
     start_path: /
-    start_page: index.adoc
+    #start_page: index.adoc
   - url: https://github.com/riscv/riscv-isa-manual.git
     branches: antora-refactor
     #start_page: ROOT::index.adoc
-    start_path: src
+    start_path: /
 #  - url: https://github.com/riscv/docs-dev-guide
 #    branches: main
   #- url: https://github.com/riscv-admin/riscv-getting-started-guide.git
@@ -44,7 +44,7 @@ asciidoc:
 antora:
    extensions:
    - '@antora/pdf-extension'
-   - asciidoctor-kroki
+  # - asciidoctor-kroki
   #- '@antora/asciidoctor-bibtex'
 
 runtime:
