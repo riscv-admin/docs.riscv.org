@@ -41,6 +41,8 @@ antora:
    - '@antora/pdf-extension'
   #- '@antora/asciidoctor-bibtex'
 
+runtime:
+  fetch: true
 
 ui:
   bundle:
