@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
+    <title>Untitled :: RISC-V ISA Documentation Specifications riscv-library::index.adoc</title>
     <link rel="prev" href="smcntrpmf.html">
     <link rel="next" href="smcdeleg.html">
     <meta name="generator" content="Antora 3.1.10">
@@ -578,18 +578,22 @@ in <code>mtvec</code> as the RNMI exception trap handler.
 <p>This extension adds additional M-mode CSRs to enable a resumable
 non-maskable interrupt (RNMI).</p>
 </div>
-<div class="paragraph">
-<div class="title">Resumable NMI scratch register <code>mnscratch</code></div>
-<p>Unresolved directive in rnmi.adoc - include::{incimage}bytefield/mnscratch.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/bytefield/svg/eNq1UEFqwzAQvOcVg04WReA4PvnenpKeCyGHtSPFprJkJLVJW_T3yliGpj0XFsSOZmdnpzhLRSE4j2bSNBgc8_vVKGuCUDQO-gPs8IDthCfSuqXulWH59cOnRFXHE98USQjOXkUvh0sfUJe4A-ksnVAGZtAZ11IFMZK7pG27ciXPw3_Q1t6kF1NSSGLYVTPs6Co6q99Gk9V98pyXV_W9QTSaWqk9CiffE1PiyEoG9k91eNk_Povt3Jx45JvsNl2BIshbABuN7xyFrmdr0GuUPAF-onR8FfmPwUX0Nx0rF01r3RJCjPwb18yGKg==" alt="Resumable NMI scratch register `mnscratch`">
+</div>
+<div class="title">Figure 1. Resumable NMI scratch register <code>mnscratch</code></div>
 </div>
 <div class="paragraph">
 <p>The <code>mnscratch</code> CSR holds an MXLEN-bit read-write register which enables
 the NMI trap handler to save and restore the context that was
 interrupted.</p>
 </div>
-<div class="paragraph">
-<div class="title">Resumable NMI program counter <code>mnepc</code>.</div>
-<p>Unresolved directive in rnmi.adoc - include::{incimage}bytefield/mnepc.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/bytefield/svg/eNq1kcFOwzAMhu97CiunVihS200ceuMAp40DF5CmHdzW3SrSpEo8OkB9d1KWSoyBNA5IkaL8duzPv6OKamS2DvJOYaNhHe73vDaaZY1to15BrK4g7eAOlSqwfBZwjLrmjSBbDJt4FvlCYE0vd9RsdwyLBE5ErMjKWoNuVNAV1SxbtFvfbZ5MyePnM7UwB3Ky8xV8MZhno2yxl6VR-1aH6s4zh-bZ4hQQcoUFKQeRpRefSbAWiQDxT2f1tLy9l-n42MRDPAu0fgqImA4MotXUlSAmlycfYy-4DjWk15CPmRJ1uTMWBOnKm14YGwZl001PudeWFDJVo8Js2p8io9vn-jDE53DR483DMhaBrT9aKgqjqu97_53XMVq-hPhz4X8Z5RT56LWYOObZl5Y-8wOgmuQW" alt="Resumable NMI program counter `mnepc`.">
+</div>
+<div class="title">Figure 2. Resumable NMI program counter <code>mnepc</code>.</div>
 </div>
 <div class="paragraph">
 <p>The <code>mnepc</code> CSR is an MXLEN-bit read-write register which on entry to
@@ -615,9 +619,11 @@ addresses. Prior to writing <code>mnepc</code>, implementations may convert an
 invalid address into some other invalid address that <code>mnepc</code> is capable
 of holding.</p>
 </div>
-<div class="paragraph">
-<div class="title">Resumable NMI cause <code>mncause</code>.</div>
-<p>Unresolved directive in rnmi.adoc - include::{incimage}bytefield/mncause.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/bytefield/svg/eNqtUsFqwzAMvfcrhE8Jw9CkOYzexuhg0O6wywalBydR2jDHNra6div59zlt0jVtBxsMDMbPetKTnoIcC0FkHYyNFKWCeXvvxoVWxAtRlfID2OwGIgMPQspUZG8MDr-u_ESIk3oRDgKfCKze8BWWyxVBMoQeKHK0vFCgStniEgvilbBLX2007IIb8gWa6i06bnwGnwxGcQNbseGZlutKtdmd19wWj5O-QBhLkaJ0EFh895EIczZkwP7xzF6nkyceX0JR81iEdThoRftmgD0qQmvXhphX7YxQkNThSUBAuCVgk22Ghkqt4F7nyDpXurmHHTnyLTYMLlS20hYYqtyblGrbDoa06Z58rSxKQZg3CJGurv007lzi9TWRwcvd8zQ8itscPGCplvn5ovws2JGw9BvJ-w35Sy99zSz6nvhJtbOgo3W7sz3aE-PbPvMLEB4E9A==" alt="Resumable NMI cause `mncause`.">
+</div>
+<div class="title">Figure 3. Resumable NMI cause <code>mncause</code>.</div>
 </div>
 <div class="paragraph">
 <p>The <code>mncause</code> CSR holds the reason for the NMI.
@@ -630,9 +636,11 @@ specified in the Smdbltrp extension, bit MXLEN-1 is set to 0 and the
 least-significant bits are set to the cause code corresponding to the
 exception that precipitated the double trap.</p>
 </div>
-<div class="paragraph">
-<div class="title">Resumable NMI status register <code>mnstatus</code>.</div>
-<p>Unresolved directive in rnmi.adoc - include::{incimage}bytefield/mnstatus.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/bytefield/svg/eNrdVF1LwzAUffdXXPLUIoF-qbNvPkwQtjF8UEF8SNdbV8ySkkTnB_vvpq6L1m1uExERUnpzcnLuuTchXo4FM0ZpSCvOSgHXzf8lLaQwtGCTkj8B6e9DWMEp4zxjozsC81VdPiNEyezG3_OsECg5pWMsb8cGkgBaIMtR0UKAKHmDcywMnTB1a7PFwYJcb15CM_mImlZWwYpBfFDDik3pSPL7iWjUtfXcJI-StkFIOcuQa_AUPlgmwjUJCJD5iOa_2H6JAw9ddOSijouOXRQ2OmH4DtWCYezmbvSvet0BfSPe-DN_r6nCVgeewUcD5Bw1qgfMyaL_2jxxBFIaxsvR57b7lqUrJqAz85e1-oPh8F3n85YI0ppGmRiNpQKCwiZNM6maThpZLab0XijkzGBeI8bIyaqV-jiX8dkqZ97lyXnPd96m80MjmeR5u8RgvV9tmDIEtrD8dqV2qWWl52-eTLzmZLq94TZKwQalXVwFm11d_Pv78sevS9LSIoP-WZe4in44z8dEzcsUu2SdD51qF1g_lwuV9aTQkeLfJX3hKd7NePQdpVcAuFnC" alt="Resumable NMI status register `mnstatus`.">
+</div>
+<div class="title">Figure 4. Resumable NMI status register <code>mnstatus</code>.</div>
 </div>
 <div class="paragraph">
 <p>The <code>mnstatus</code> CSR holds a two-bit field, MNPP, which on entry to the
