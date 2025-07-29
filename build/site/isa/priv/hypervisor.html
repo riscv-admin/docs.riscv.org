@@ -4,16 +4,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <link rel="canonical" href="https://docs.riscv.org/isa/priv/hypervisor.html">
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="smcdeleg.html">
+    <link rel="next" href="priv-cfi.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
     <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
+
+    <meta name="antora-ui-version" content="v0.4.16"> 
+    <meta name="version" content="">
+    <meta name="component" content="isa">
+    <meta name="latest-version" content="false">
+    <link rel="icon" href="../../_/favicon.ico" type="image/x-icon">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
-      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <a class="navbar-item" href="https://spring.io">
+        <img
+          id="springlogo"
+          class="block"
+          src="../../_/img/spring-logo.svg"
+          alt="Spring"
+        />
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
@@ -21,186 +45,369 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="#">Home</a>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Products</a>
+          <a class="navbar-link" href="#">Why Spring</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Product A</a>
-            <a class="navbar-item" href="#">Product B</a>
-            <a class="navbar-item" href="#">Product C</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/why-spring"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/microservices"
+            >Microservices</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/reactive"
+            >Reactive</a>
+            <a class="navbar-item" href="https://spring.io/event-driven">Event
+              Driven</a>
+            <a class="navbar-item" href="https://spring.io/cloud">Cloud</a>
+            <a class="navbar-item" href="https://spring.io/web-applications">Web
+              Applications</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/serverless"
+            >Serverless</a>
+            <a class="navbar-item" href="https://spring.io/batch">Batch</a>
           </div>
         </div>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Services</a>
+          <a class="navbar-link" href="#">Learn</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Service A</a>
-            <a class="navbar-item" href="#">Service B</a>
-            <a class="navbar-item" href="#">Service C</a>
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/quickstart"
+            >Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
           </div>
         </div>
-        <div class="navbar-item">
-          <span class="control">
-            <a class="button is-primary" href="#">Download</a>
-          </span>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px">
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-boot"
+            >Spring Boot</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-framework"
+            >Spring Framework</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud"
+            >Spring Cloud</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud-dataflow"
+            >Spring Cloud Data Flow</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-data"
+            >Spring Data</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-integration"
+            >Spring Integration</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-batch"
+            >Spring Batch</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-security"
+            >Spring Security</a>
+            <a
+              class="navbar-item navbar-item-special"
+              href="https://spring.io/projects"
+            >View all projects</a>
+            <li class="navbar-item navbar-item-special-3">DEVELOPMENT TOOLS</li>
+            <a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+            <a
+              class="navbar-item navbar-item-special-2"
+              href="https://start.spring.io"
+            >Spring Initializr
+              <svg
+                class="external-link-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+              ><polyline
+                  points="15 10.94 15 15 1 15 1 1 5.06 1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><polyline
+                  points="8.93 1 15 1 15 7.07"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><line
+                  x1="15"
+                  y1="1"
+                  x2="8"
+                  y2="8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></line></svg></a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.academy/courses"
+            >Courses</a>
+            <a
+              class="navbar-item"
+              href="https://spring.academy/learning-path"
+            >Get Certified</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg">
+            <a class="navbar-item" href="https://spring.io/solutions">Overview</a>
+            <a class="navbar-item" href="https://spring.io/support">Spring Runtime</a>
+            <a class="navbar-item" href="https://spring.io/consulting">Spring Consulting</a>
+            <a class="navbar-item" href="https://spring.academy/teams">Spring Academy For Teams</a>
+            <a class="navbar-item" href="https://spring.io/security">Security Advisories</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/community"
+            >Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
         </div>
       </div>
     </div>
+    <label class="theme-toggler">
+      <input
+        type="checkbox"
+        type="checkbox"
+        id="switch-theme-checkbox"
+        name="switch-theme-checkbox"
+      />
+      <span class="icon"><svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="moon"
+          class="svg-inline--fa fa-moon moon"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        ><path
+            fill="currentColor"
+            d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+          ></path>
+        </svg>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="sun"
+          class="svg-inline--fa fa-sun sun"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        ><path
+            fill="currentColor"
+            d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+          ></path>
+        </svg></span>
+      <span class="text">light</span>
+    </label>
   </nav>
 </header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
 <div class="body">
 <div class="nav-container" data-component="isa" data-version="">
   <aside class="nav">
     <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
-  <nav class="nav-menu">
-    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="../index.html">ISA Specifications</a></h3>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../isa/index.html">RISC-V Documentation Library</a>
-  </li>
-</ul>
-  </li>
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">ISA Specifications</span>
+  <span class="version">default</span>
+  <button class="browse-version" id="browse-version">
+    <svg
+      height="24px"
+      id="Layer_1"
+      style="enable-background:new 0 0 512 512;"
+      version="1.1"
+      viewBox="0 0 512 512"
+      width="24px"
+      xml:space="preserve"
+    ><g><path
+          d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"
+        ></path><path
+          d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"
+        ></path><path
+          d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"
+        ></path></g></svg>
+  </button>
+  </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/colophon.html">Preface</a>
+    <a class="nav-link"  href="../unpriv/colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/intro.html">Introduction</a>
+    <a class="nav-link"  href="../unpriv/intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/rv32.html">RV32I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="../unpriv/rv32.html">RV32I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/rv64.html">RV64I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="../unpriv/rv32.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="../unpriv/rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/zicsr.html">"Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/zicsr.html">"Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/counters.html">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/counters.html">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/zihintntl.html">"Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/zihintntl.html">"Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/zihintpause.html">"Zihintpause" Extension for Pause Hint, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/zihintpause.html">"Zihintpause" Extension for Pause Hint, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+    <a class="nav-link"  href="../unpriv/zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a>
+    <a class="nav-link"  href="../unpriv/a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/zawrs.html">"Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+    <a class="nav-link"  href="../unpriv/zawrs.html">"Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/zacas.html">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+    <a class="nav-link"  href="../unpriv/zacas.html">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/zabha.html">"Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/zabha.html">"Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/rvwmo.html">RVWMO Memory Consistency Model, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/rvwmo.html">RVWMO Memory Consistency Model, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+    <a class="nav-link"  href="../unpriv/cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="../unpriv/f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="../unpriv/d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="../unpriv/q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/bfloat16.html">"BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/bfloat16.html">"BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+    <a class="nav-link"  href="../unpriv/zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
+    <a class="nav-link"  href="../unpriv/b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/j-st-ext.html">"J" Extension for Dynamically Translated Languages, Version 0.0</a>
+    <a class="nav-link"  href="../unpriv/p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
+    <a class="nav-link"  href="../unpriv/v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+    <a class="nav-link"  href="../unpriv/vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/unpriv-cfi.html">Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/unpriv-cfi.html">Control-flow Integrity (CFI)</a>
+    <a class="nav-link"  href="../unpriv/rv-32-64g.html">RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/rv-32-64g.html">RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="../unpriv/extending.html">Extending RISC-V</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/extending.html">Extending RISC-V</a>
+    <a class="nav-link"  href="../unpriv/naming.html">ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/naming.html">ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="../unpriv/history.html">History and Acknowledgments</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/history.html">History and Acknowledgments</a>
+    <a class="nav-link"  href="../unpriv/mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="../unpriv/mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
+    <a class="nav-link"  href="../unpriv/vector-examples.html">Appendix C: Vector Assembly Code Examples</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/vector-examples.html">Appendix C: Vector Assembly Code Examples</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../unpriv/calling-convention.html">Appendix D: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="../unpriv/calling-convention.html">Appendix D: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -209,114 +416,114 @@
     <span class="nav-text">Volume II: RISC-V Privileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="priv-preface.html">Preface</a>
+    <a class="nav-link"  href="priv-intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="priv-intro.html">Introduction</a>
+    <a class="nav-link"  href="priv-csrs.html">Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="priv-csrs.html">Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="machine.html">Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="machine.html">Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="smepmp.html">"Smepmp" Extension for PMP Enhancements for memory access and execution prevention in Machine mode, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="smdbltrp.html">"Smdbltrp" Double Trap Extension, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="supervisor.html">Supervisor-Level ISA, Version 1.13</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="priv-cfi.html">Control-flow Integrity(CFI)</a>
+    <a class="nav-link"  href="priv-cfi.html">Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="ssdbltrp.html">"Ssdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#zpm.adoc">Pointer Masking Extensions, Version 1.0.0</a>
+    <a class="nav-link"  href="priv-history.html">History</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="priv-history.html">History</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="bibliography.html">Bibliography</a>
+    <a class="nav-link"  href="bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
 </ul>
-  </nav>
-</div>
-<div class="nav-panel-explore" data-panel="explore">
-  <div class="context">
-    <span class="title">ISA Specifications</span>
-    <span class="version"></span>
-  </div>
-  <ul class="components">
-    <li class="component is-current">
-      <div class="title"><a href="../index.html">ISA Specifications</a></div>
-    </li>
-    <li class="component">
-      <div class="title"><a href="../../riscv-library/0.1/index.html">RISC-V Documentation Library</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../riscv-library/0.1/index.html">0.1</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
     </div>
+    <div class="nav-resize"></div>
   </aside>
 </div>
-<main class="article">
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
 <div class="toolbar" role="navigation">
-<button class="nav-toggle"></button>
-  <a href="../../riscv-library/0.1/index.html" class="home-link"></a>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">ISA Specifications</a></li>
-    <li>Volume II: RISC-V Privileged ISA Specification</li>
-    <li><a href="hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a></li>
-  </ul>
-</nav>
-<div class="edit-this-page"><a href="https://github.com/riscv/riscv-isa-manual/edit/antora-refactor/modules/priv/pages/hypervisor.adoc">Edit this Page</a></div>
+  <button id="nav-toggle-1" class="nav-toggle"></button>
 </div>
   <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
-  <div class="toc-menu"></div>
+<aside class="sidebar">
+  <div class="content">
+    <div
+      class="toc"
+      data-title=""
+      data-levels="2"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="https://github.com/riscv/riscv-isa-manual/edit/antora-refactor/modules/priv/pages/hypervisor.adoc">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Edit this Page
+        </a>
+              <a href="https://github.com/riscv/riscv-isa-manual" title="Source Repository">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512px" height="512px" fill="none">
+    <path d="M23.6188 12.9999L19.8886 2.82896C19.7371 2.4083 19.122 2.4083 18.9705 2.82896L16.494 9.99994H7.50604L5.02956 2.82896C4.87803 2.4083 4.26295 2.4083 4.11142 2.82896L0.381247 12.9999C0.276408 13.289 0.404366 13.6112 0.678 13.7651L11.5243 19.6958C11.8256 19.8611 12.1744 19.8611 12.4757 19.6958L23.322 13.7651C23.5956 13.6112 23.7236 13.289 23.6188 12.9999Z" fill="#E24329"/>
+    <path d="M12.0001 19.1956L16.4941 9.99996H7.5061L12.0001 19.1956Z" fill="#FCA326"/>
+    <path d="M12.0001 19.1955L7.5061 9.99988H3.24121L12.0001 19.1955Z" fill="#E24329"/>
+    <path d="M3.24121 9.99988L0.381226 12.9998C0.276388 13.2889 0.404345 13.6111 0.678 13.765L12.0001 19.1955L3.24121 9.99988Z" fill="#FCA326"/>
+    <path d="M12.0001 19.1955L16.4941 9.99988H20.7589L12.0001 19.1955Z" fill="#E24329"/>
+    <path d="M20.7589 9.99988L23.6188 12.9998C23.7237 13.2889 23.5957 13.6111 23.322 13.765L12.0001 19.1955L20.7589 9.99988Z" fill="#FCA326"/>
+    <path d="M16.494 9.99988H20.7589L18.9705 2.82894C18.819 2.40828 18.2039 2.40828 18.0524 2.82894L16.494 9.99988Z" fill="#E24329"/>
+    <path d="M7.50603 9.99988H3.24121L4.11141 2.82894C4.26294 2.40828 4.87802 2.40828 5.02955 2.82894L7.50603 9.99988Z" fill="#E24329"/>
+  </svg>
+  Source Repository
+</a>
+    </div>
+  </div>
 </aside>
 <article class="doc">
-<div class="sect1">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">ISA Specifications</a></li>
+      <li>Volume II: RISC-V Privileged ISA Specification</li>
+      <li><a href="hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a></li>
+    </ul>
+  </nav>
+</div><div class="sect1">
 <h2 id="hypervisor"><a class="anchor" href="#hypervisor"></a>"H" Extension for Hypervisor Support, Version 1.0</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -380,7 +587,7 @@ Hypervisors can support nested virtualization analogously.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_privilege_modes"><a class="anchor" href="#_privilege_modes"></a>Privilege Modes</h3>
+<h3 id="privilege-modes"><a class="anchor" href="#privilege-modes"></a>Privilege Modes</h3>
 <div class="paragraph">
 <p>The current <em>virtualization mode</em>, denoted V, indicates whether the hart
 is currently executing in a guest. When V=1, the hart is either in
@@ -468,7 +675,7 @@ is adopted.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_hypervisor_and_virtual_supervisor_csrs"><a class="anchor" href="#_hypervisor_and_virtual_supervisor_csrs"></a>Hypervisor and Virtual Supervisor CSRs</h3>
+<h3 id="hypervisor-and-virtual-supervisor-csrs"><a class="anchor" href="#hypervisor-and-virtual-supervisor-csrs"></a>Hypervisor and Virtual Supervisor CSRs</h3>
 <div class="paragraph">
 <p>An OS or hypervisor running in HS-mode uses the supervisor CSRs to
 interact with the exception, interrupt, and address-translation
@@ -686,7 +893,7 @@ same endianness as HS-mode.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_hypervisor_trap_delegation_hedeleg_and_hideleg_registers"><a class="anchor" href="#_hypervisor_trap_delegation_hedeleg_and_hideleg_registers"></a>Hypervisor Trap Delegation (<code>hedeleg</code> and <code>hideleg</code>) Registers</h4>
+<h4 id="hypervisor-trap-delegation-hedeleg-and-hideleg-registers"><a class="anchor" href="#hypervisor-trap-delegation-hedeleg-and-hideleg-registers"></a>Hypervisor Trap Delegation (<code>hedeleg</code> and <code>hideleg</code>) Registers</h4>
 <div class="paragraph">
 <p>Register <code>hedeleg</code> is a 64-bit read/write register, formatted as shown in
 <a href="#hedelegreg">Hypervisor exception delegation register (<code>hedeleg</code>).</a>.
@@ -988,7 +1195,7 @@ is an alias (writable) of the same bit in <code>hvip</code>.</p>
 <div class="paragraph">
 <p>Multiple simultaneous interrupts destined for HS-mode are handled in the
 following decreasing priority order: SEI, SSI, STI, SGEI, VSEI, VSSI,
-VSTI.</p>
+VSTI, LCOFI.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1168,9 +1375,7 @@ If Svadu is not implemented, ADUE is read-only zero.</p>
 <p>The definitions of the CBCFE and CBIE fields are furnished by the Zicbom extension.</p>
 </div>
 <div class="paragraph">
-<p>The definition of the PMM field will be furnished by the forthcoming
-Ssnpm extension. Its allocation within <code>henvcfg</code> may change prior to the
-ratification of that extension.</p>
+<p>The definition of the PMM field is furnished by the Ssnpm extension.</p>
 </div>
 <div class="paragraph">
 <p>The Zicfilp extension adds the <code>LPE</code> field in <code>henvcfg</code>. When the <code>LPE</code> field
@@ -1227,7 +1432,7 @@ XLEN=64.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_hypervisor_counter_enable_hcounteren_register"><a class="anchor" href="#_hypervisor_counter_enable_hcounteren_register"></a>Hypervisor Counter-Enable (<code>hcounteren</code>) Register</h4>
+<h4 id="hypervisor-counter-enable-hcounteren-register"><a class="anchor" href="#hypervisor-counter-enable-hcounteren-register"></a>Hypervisor Counter-Enable (<code>hcounteren</code>) Register</h4>
 <div class="paragraph">
 <p>The counter-enable register <code>hcounteren</code> is a 32-bit register that
 controls the availability of the hardware performance monitoring
@@ -1256,7 +1461,7 @@ an exception when V=1. Hence, they are effectively <strong>WARL</strong> fields.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_hypervisor_time_delta_htimedelta_register"><a class="anchor" href="#_hypervisor_time_delta_htimedelta_register"></a>Hypervisor Time Delta (<code>htimedelta</code>) Register</h4>
+<h4 id="hypervisor-time-delta-htimedelta-register"><a class="anchor" href="#hypervisor-time-delta-htimedelta-register"></a>Hypervisor Time Delta (<code>htimedelta</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>htimedelta</code> CSR is a 64-bit read/write register that contains the delta
 between the value of the <code>time</code> CSR and the value returned in VS-mode or
@@ -1295,7 +1500,7 @@ must be implemented.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_hypervisor_trap_value_htval_register"><a class="anchor" href="#_hypervisor_trap_value_htval_register"></a>Hypervisor Trap Value (<code>htval</code>) Register</h4>
+<h4 id="hypervisor-trap-value-htval-register"><a class="anchor" href="#hypervisor-trap-value-htval-register"></a>Hypervisor Trap Value (<code>htval</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>htval</code> register is an HSXLEN-bit read/write register formatted as
 shown in <a href="#htvalreg">Hypervisor trap value register (<code>htval</code>).</a>. When a trap is taken into
@@ -1383,7 +1588,7 @@ confirm the stored value.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_hypervisor_trap_instruction_htinst_register"><a class="anchor" href="#_hypervisor_trap_instruction_htinst_register"></a>Hypervisor Trap Instruction (<code>htinst</code>) Register</h4>
+<h4 id="hypervisor-trap-instruction-htinst-register"><a class="anchor" href="#hypervisor-trap-instruction-htinst-register"></a>Hypervisor Trap Instruction (<code>htinst</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>htinst</code> register is an HSXLEN-bit read/write register formatted as
 shown in <a href="#htinstreg">Hypervisor trap instruction (<code>htinst</code>) register.</a>. When a trap is taken into
@@ -1673,7 +1878,7 @@ double trap (See <a href="#supv-double-trap">[supv-double-trap]</a>) in VS-mode.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_virtual_supervisor_interrupt_vsip_and_vsie_registers"><a class="anchor" href="#_virtual_supervisor_interrupt_vsip_and_vsie_registers"></a>Virtual Supervisor Interrupt (<code>vsip</code> and <code>vsie</code>) Registers</h4>
+<h4 id="virtual-supervisor-interrupt-vsip-and-vsie-registers"><a class="anchor" href="#virtual-supervisor-interrupt-vsip-and-vsie-registers"></a>Virtual Supervisor Interrupt (<code>vsip</code> and <code>vsie</code>) Registers</h4>
 <div class="paragraph">
 <p>The <code>vsip</code> and <code>vsie</code> registers are VSXLEN-bit read/write registers that
 are VS-mode’s versions of supervisor CSRs <code>sip</code> and <code>sie</code>, formatted as
@@ -1739,7 +1944,7 @@ read-only zeros. Else, <code>vsip</code>.SSIP and <code>vsie</code>.SSIE are ali
 </div>
 </div>
 <div class="sect3">
-<h4 id="_virtual_supervisor_trap_vector_base_address_vstvec_register"><a class="anchor" href="#_virtual_supervisor_trap_vector_base_address_vstvec_register"></a>Virtual Supervisor Trap Vector Base Address (<code>vstvec</code>) Register</h4>
+<h4 id="virtual-supervisor-trap-vector-base-address-vstvec-register"><a class="anchor" href="#virtual-supervisor-trap-vector-base-address-vstvec-register"></a>Virtual Supervisor Trap Vector Base Address (<code>vstvec</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>vstvec</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>stvec</code>, formatted as shown in
@@ -1756,7 +1961,7 @@ affect the behavior of the machine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_virtual_supervisor_scratch_vsscratch_register"><a class="anchor" href="#_virtual_supervisor_scratch_vsscratch_register"></a>Virtual Supervisor Scratch (<code>vsscratch</code>) Register</h4>
+<h4 id="virtual-supervisor-scratch-vsscratch-register"><a class="anchor" href="#virtual-supervisor-scratch-vsscratch-register"></a>Virtual Supervisor Scratch (<code>vsscratch</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>vsscratch</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>sscratch</code>, formatted as shown
@@ -1773,7 +1978,7 @@ of <code>vsscratch</code> never directly affect the behavior of the machine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_virtual_supervisor_exception_program_counter_vsepc_register"><a class="anchor" href="#_virtual_supervisor_exception_program_counter_vsepc_register"></a>Virtual Supervisor Exception Program Counter (<code>vsepc</code>) Register</h4>
+<h4 id="virtual-supervisor-exception-program-counter-vsepc-register"><a class="anchor" href="#virtual-supervisor-exception-program-counter-vsepc-register"></a>Virtual Supervisor Exception Program Counter (<code>vsepc</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>vsepc</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>sepc</code>, formatted as shown in
@@ -1794,7 +1999,7 @@ that <code>sepc</code> can hold.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_virtual_supervisor_cause_vscause_register"><a class="anchor" href="#_virtual_supervisor_cause_vscause_register"></a>Virtual Supervisor Cause (<code>vscause</code>) Register</h4>
+<h4 id="virtual-supervisor-cause-vscause-register"><a class="anchor" href="#virtual-supervisor-cause-vscause-register"></a>Virtual Supervisor Cause (<code>vscause</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>vscause</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>scause</code>, formatted as shown in
@@ -1815,7 +2020,7 @@ values that <code>scause</code> can hold.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_virtual_supervisor_trap_value_vstval_register"><a class="anchor" href="#_virtual_supervisor_trap_value_vstval_register"></a>Virtual Supervisor Trap Value (<code>vstval</code>) Register</h4>
+<h4 id="virtual-supervisor-trap-value-vstval-register"><a class="anchor" href="#virtual-supervisor-trap-value-vstval-register"></a>Virtual Supervisor Trap Value (<code>vstval</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>vstval</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>stval</code>, formatted as shown in
@@ -1836,7 +2041,7 @@ that <code>stval</code> can hold.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_virtual_supervisor_address_translation_and_protection_vsatp_register"><a class="anchor" href="#_virtual_supervisor_address_translation_and_protection_vsatp_register"></a>Virtual Supervisor Address Translation and Protection (<code>vsatp</code>) Register</h4>
+<h4 id="virtual-supervisor-address-translation-and-protection-vsatp-register"><a class="anchor" href="#virtual-supervisor-address-translation-and-protection-vsatp-register"></a>Virtual Supervisor Address Translation and Protection (<code>vsatp</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>vsatp</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>satp</code>, formatted as shown in
@@ -1897,13 +2102,13 @@ though</em> V=1.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_hypervisor_instructions"><a class="anchor" href="#_hypervisor_instructions"></a>Hypervisor Instructions</h3>
+<h3 id="hypervisor-instructions"><a class="anchor" href="#hypervisor-instructions"></a>Hypervisor Instructions</h3>
 <div class="paragraph">
 <p>The hypervisor extension adds virtual-machine load and store
 instructions and two privileged fence instructions.</p>
 </div>
 <div class="sect3">
-<h4 id="_hypervisor_virtual_machine_load_and_store_instructions"><a class="anchor" href="#_hypervisor_virtual_machine_load_and_store_instructions"></a>Hypervisor Virtual-Machine Load and Store Instructions</h4>
+<h4 id="hypervisor-virtual-machine-load-and-store-instructions"><a class="anchor" href="#hypervisor-virtual-machine-load-and-store-instructions"></a>Hypervisor Virtual-Machine Load and Store Instructions</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNp1kc8LgjAcxe_9FbvtMqwUGXgPDAoi0wrxYNssD2lsiw7i_94mzNzC03v78XlvfNdxdo9AvgCgu9VSRAAj0JRPFgHYvkhLGUSglJKrOxBDBJNrctrs1ea_K3r0iwnHGE4nEaGKoExIjRld2WQwktW7ITKY0MrDw3GbDa2OmWsXa6e-pJRrzNJZ2nfoPC00FO-yi1bBic1i-_XYGZ_ivE9N5cOEeHG6PKfDKjFHOrBAgLRNVavPMXPx-_4LFKB5Bw==" alt="svg">
@@ -2146,14 +2351,14 @@ when <code>mstatus</code>.TVM=1 also causes an illegal-instruction exception.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="_machine_level_csrs"><a class="anchor" href="#_machine_level_csrs"></a>Machine-Level CSRs</h3>
+<h3 id="machine-level-csrs"><a class="anchor" href="#machine-level-csrs"></a>Machine-Level CSRs</h3>
 <div class="paragraph">
 <p>The hypervisor extension augments or modifies machine CSRs <code>mstatus</code>,
 <code>mstatush</code>, <code>mideleg</code>, <code>mip</code>, and <code>mie</code>, and adds CSRs <code>mtval2</code> and
 <code>mtinst</code>.</p>
 </div>
 <div class="sect3">
-<h4 id="_machine_status_mstatus_and_mstatush_registers"><a class="anchor" href="#_machine_status_mstatus_and_mstatush_registers"></a>Machine Status (<code>mstatus</code> and <code>mstatush</code>) Registers</h4>
+<h4 id="machine-status-mstatus-and-mstatush-registers"><a class="anchor" href="#machine-status-mstatus-and-mstatush-registers"></a>Machine Status (<code>mstatus</code> and <code>mstatush</code>) Registers</h4>
 <div class="paragraph">
 <p>The hypervisor extension adds two fields, MPV and GVA, to the
 machine-level <code>mstatus</code> or <code>mstatush</code> CSR, and modifies the behavior of
@@ -2321,7 +2526,7 @@ but is not a superset of <code>vsstatus</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_interrupt_delegation_mideleg_register"><a class="anchor" href="#_machine_interrupt_delegation_mideleg_register"></a>Machine Interrupt Delegation (<code>mideleg</code>) Register</h4>
+<h4 id="machine-interrupt-delegation-mideleg-register"><a class="anchor" href="#machine-interrupt-delegation-mideleg-register"></a>Machine Interrupt Delegation (<code>mideleg</code>) Register</h4>
 <div class="paragraph">
 <p>When the hypervisor extension is implemented, bits 10, 6, and 2 of
 <code>mideleg</code> (corresponding to the standard VS-level interrupts) are each
@@ -2337,7 +2542,7 @@ past M-mode to HS-mode.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_interrupt_mip_and_mie_registers"><a class="anchor" href="#_machine_interrupt_mip_and_mie_registers"></a>Machine Interrupt (<code>mip</code> and <code>mie</code>) Registers</h4>
+<h4 id="machine-interrupt-mip-and-mie-registers"><a class="anchor" href="#machine-interrupt-mip-and-mie-registers"></a>Machine Interrupt (<code>mip</code> and <code>mie</code>) Registers</h4>
 <div class="paragraph">
 <p>The hypervisor extension gives registers <code>mip</code> and <code>mie</code> additional
 active bits for the hypervisor-added interrupts. <a href="#hypervisor-mipreg-standard">Standard portion (bits 15:0) of <code>mip</code>.</a> and <a href="#hypervisor-miereg-standard">Standard portion (bits 15:0) of <code>mie</code>.</a> show the
@@ -2363,7 +2568,7 @@ bits in hypervisor CSR <code>hip</code>, while SGEIE, VSEIE, VSTIE, and VSSIE in
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_second_trap_value_mtval2_register"><a class="anchor" href="#_machine_second_trap_value_mtval2_register"></a>Machine Second Trap Value (<code>mtval2</code>) Register</h4>
+<h4 id="machine-second-trap-value-mtval2-register"><a class="anchor" href="#machine-second-trap-value-mtval2-register"></a>Machine Second Trap Value (<code>mtval2</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>mtval2</code> register is an MXLEN-bit read/write register formatted as
 shown in <a href="#mtval2reg">Machine second trap value register (<code>mtval2</code>).</a>. When a trap is taken into
@@ -2408,7 +2613,7 @@ the <code>mtval2</code> CSR.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_trap_instruction_mtinst_register"><a class="anchor" href="#_machine_trap_instruction_mtinst_register"></a>Machine Trap Instruction (<code>mtinst</code>) Register</h4>
+<h4 id="machine-trap-instruction-mtinst-register"><a class="anchor" href="#machine-trap-instruction-mtinst-register"></a>Machine Trap Instruction (<code>mtinst</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>mtinst</code> register is an MXLEN-bit read/write register formatted as
 shown in <a href="#mtinstreg">Machine trap instruction (<code>mtinst</code>) register.</a>. When a trap is taken into
@@ -2640,7 +2845,7 @@ whether this usage will ever become common, we chose not to preclude it.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_guest_page_faults"><a class="anchor" href="#_guest_page_faults"></a>Guest-Page Faults</h4>
+<h4 id="guest-page-faults"><a class="anchor" href="#guest-page-faults"></a>Guest-Page Faults</h4>
 <div class="paragraph">
 <p>Guest-page-fault traps may be delegated from M-mode to HS-mode under the
 control of CSR <code>medeleg</code>, but cannot be delegated to other privilege
@@ -2742,7 +2947,7 @@ value, obviating the need to execute an HFENCE.VVMA instruction.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_traps"><a class="anchor" href="#_traps"></a>Traps</h3>
+<h3 id="traps"><a class="anchor" href="#traps"></a>Traps</h3>
 <div class="sect3">
 <h4 id="sec:hcauses"><a class="anchor" href="#sec:hcauses"></a>Trap Cause Codes</h4>
 <div class="paragraph">
@@ -3159,7 +3364,7 @@ indicates which exception is taken and reported in <code>mcause</code> or <code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_trap_entry"><a class="anchor" href="#_trap_entry"></a>Trap Entry</h4>
+<h4 id="trap-entry"><a class="anchor" href="#trap-entry"></a>Trap Entry</h4>
 <div class="paragraph">
 <p>When a trap occurs in HS-mode or U-mode, it goes to M-mode, unless
 delegated by <code>medeleg</code> or <code>mideleg</code>, in which case it goes to HS-mode.
@@ -3758,7 +3963,7 @@ instruction.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_trap_return"><a class="anchor" href="#_trap_return"></a>Trap Return</h4>
+<h4 id="trap-return"><a class="anchor" href="#trap-return"></a>Trap Return</h4>
 <div class="paragraph">
 <p>The MRET instruction is used to return from a trap taken into M-mode.
 MRET first determines what the new privilege mode will be according to
@@ -3793,15 +3998,65 @@ to 0. When executed in VS-mode, <code>vsstatus.SDT</code> is set to 0.</p>
 </div>
 </div>
 </div>
-</article>
-  </div>
+<nav class="pagination">
+  <span class="prev"><a href="smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a></span>
+  <span class="next"><a href="priv-cfi.html">Control-flow Integrity(CFI)</a></span>
+</nav>
+</article>  </div>
 </main>
+<div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <main class="modal__content" id="modal-versions-content">
+              <button data-micromodal-close class="modal-versions-close">
+                <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left">
+                  <ul class="nav-versions">
+                    <li class="component is-current">
+                      <a class="title" href="../index.html">ISA Specifications</a>
+                      <ul class="versions">
+                        <li class="version is-current is-latest">
+                          <a href="../index.html">
+                            default<span class="current">current</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="component">
+                      <a class="title" href="../../riscv-library/1/index.html">RISC-V Documentation Library</a>
+                      <ul class="versions">
+                        <li class="version is-latest">
+                          <a href="../../riscv-library/1/index.html">
+                            1<span class="current">current</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-right">
+                                  </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
 </div>
 <footer class="footer">
-  <p>This page was built using the Antora default UI.</p>
-  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+<p>
+  This page was built using a customized version of the
+  <a href="https://github.com/spring-io/antora-ui-spring" target="_blank">Antora Spring UI</a>.
+</p>
+<p>
+  The source code for this UI is licensed under the terms of the Mozilla Public License Version 2.0.
+</p>
 </footer>
-<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script src="../../_/js/vendor/import.js"></script>
+<script src="../../_/js/site.js"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
+<script async src="../../_/js/vendor/spring-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
   </body>
 </html>

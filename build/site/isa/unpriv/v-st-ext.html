@@ -4,16 +4,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <link rel="canonical" href="https://docs.riscv.org/isa/unpriv/v-st-ext.html">
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="p-st-ext.html">
+    <link rel="next" href="scalar-crypto.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
     <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
+
+    <meta name="antora-ui-version" content="v0.4.16"> 
+    <meta name="version" content="">
+    <meta name="component" content="isa">
+    <meta name="latest-version" content="false">
+    <link rel="icon" href="../../_/favicon.ico" type="image/x-icon">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
-      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <a class="navbar-item" href="https://spring.io">
+        <img
+          id="springlogo"
+          class="block"
+          src="../../_/img/spring-logo.svg"
+          alt="Spring"
+        />
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
@@ -21,186 +45,369 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="#">Home</a>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Products</a>
+          <a class="navbar-link" href="#">Why Spring</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Product A</a>
-            <a class="navbar-item" href="#">Product B</a>
-            <a class="navbar-item" href="#">Product C</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/why-spring"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/microservices"
+            >Microservices</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/reactive"
+            >Reactive</a>
+            <a class="navbar-item" href="https://spring.io/event-driven">Event
+              Driven</a>
+            <a class="navbar-item" href="https://spring.io/cloud">Cloud</a>
+            <a class="navbar-item" href="https://spring.io/web-applications">Web
+              Applications</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/serverless"
+            >Serverless</a>
+            <a class="navbar-item" href="https://spring.io/batch">Batch</a>
           </div>
         </div>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Services</a>
+          <a class="navbar-link" href="#">Learn</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Service A</a>
-            <a class="navbar-item" href="#">Service B</a>
-            <a class="navbar-item" href="#">Service C</a>
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/quickstart"
+            >Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
           </div>
         </div>
-        <div class="navbar-item">
-          <span class="control">
-            <a class="button is-primary" href="#">Download</a>
-          </span>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px">
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-boot"
+            >Spring Boot</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-framework"
+            >Spring Framework</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud"
+            >Spring Cloud</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud-dataflow"
+            >Spring Cloud Data Flow</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-data"
+            >Spring Data</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-integration"
+            >Spring Integration</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-batch"
+            >Spring Batch</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-security"
+            >Spring Security</a>
+            <a
+              class="navbar-item navbar-item-special"
+              href="https://spring.io/projects"
+            >View all projects</a>
+            <li class="navbar-item navbar-item-special-3">DEVELOPMENT TOOLS</li>
+            <a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+            <a
+              class="navbar-item navbar-item-special-2"
+              href="https://start.spring.io"
+            >Spring Initializr
+              <svg
+                class="external-link-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+              ><polyline
+                  points="15 10.94 15 15 1 15 1 1 5.06 1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><polyline
+                  points="8.93 1 15 1 15 7.07"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><line
+                  x1="15"
+                  y1="1"
+                  x2="8"
+                  y2="8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></line></svg></a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.academy/courses"
+            >Courses</a>
+            <a
+              class="navbar-item"
+              href="https://spring.academy/learning-path"
+            >Get Certified</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg">
+            <a class="navbar-item" href="https://spring.io/solutions">Overview</a>
+            <a class="navbar-item" href="https://spring.io/support">Spring Runtime</a>
+            <a class="navbar-item" href="https://spring.io/consulting">Spring Consulting</a>
+            <a class="navbar-item" href="https://spring.academy/teams">Spring Academy For Teams</a>
+            <a class="navbar-item" href="https://spring.io/security">Security Advisories</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/community"
+            >Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
         </div>
       </div>
     </div>
+    <label class="theme-toggler">
+      <input
+        type="checkbox"
+        type="checkbox"
+        id="switch-theme-checkbox"
+        name="switch-theme-checkbox"
+      />
+      <span class="icon"><svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="moon"
+          class="svg-inline--fa fa-moon moon"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        ><path
+            fill="currentColor"
+            d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+          ></path>
+        </svg>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="sun"
+          class="svg-inline--fa fa-sun sun"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        ><path
+            fill="currentColor"
+            d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+          ></path>
+        </svg></span>
+      <span class="text">light</span>
+    </label>
   </nav>
 </header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
 <div class="body">
 <div class="nav-container" data-component="isa" data-version="">
   <aside class="nav">
     <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
-  <nav class="nav-menu">
-    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="../index.html">ISA Specifications</a></h3>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../isa/index.html">RISC-V Documentation Library</a>
-  </li>
-</ul>
-  </li>
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">ISA Specifications</span>
+  <span class="version">default</span>
+  <button class="browse-version" id="browse-version">
+    <svg
+      height="24px"
+      id="Layer_1"
+      style="enable-background:new 0 0 512 512;"
+      version="1.1"
+      viewBox="0 0 512 512"
+      width="24px"
+      xml:space="preserve"
+    ><g><path
+          d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"
+        ></path><path
+          d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"
+        ></path><path
+          d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"
+        ></path></g></svg>
+  </button>
+  </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="colophon.html">Preface</a>
+    <a class="nav-link"  href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="intro.html">Introduction</a>
+    <a class="nav-link"  href="intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rv32.html">RV32I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="rv32.html">RV32I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+    <a class="nav-link"  href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rv64.html">RV64I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="rv32.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+    <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zicsr.html">"Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">"Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="counters.html">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+    <a class="nav-link"  href="counters.html">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zihintntl.html">"Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+    <a class="nav-link"  href="zihintntl.html">"Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zihintpause.html">"Zihintpause" Extension for Pause Hint, Version 2.0</a>
+    <a class="nav-link"  href="zihintpause.html">"Zihintpause" Extension for Pause Hint, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a>
+    <a class="nav-link"  href="zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+    <a class="nav-link"  href="zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a>
+    <a class="nav-link"  href="m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a>
+    <a class="nav-link"  href="a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zawrs.html">"Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+    <a class="nav-link"  href="zawrs.html">"Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zacas.html">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+    <a class="nav-link"  href="zacas.html">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zabha.html">"Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
+    <a class="nav-link"  href="zabha.html">"Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rvwmo.html">RVWMO Memory Consistency Model, Version 2.0</a>
+    <a class="nav-link"  href="rvwmo.html">RVWMO Memory Consistency Model, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a>
+    <a class="nav-link"  href="ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+    <a class="nav-link"  href="cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="bfloat16.html">"BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="bfloat16.html">"BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+    <a class="nav-link"  href="zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+    <a class="nav-link"  href="zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a>
+    <a class="nav-link"  href="c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+    <a class="nav-link"  href="zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
+    <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="j-st-ext.html">"J" Extension for Dynamically Translated Languages, Version 0.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
+    <a class="nav-link"  href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
+    <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+    <a class="nav-link"  href="scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="unpriv-cfi.html">Control-flow Integrity (CFI)</a>
+    <a class="nav-link"  href="unpriv-cfi.html">Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="extending.html">Extending RISC-V</a>
+    <a class="nav-link"  href="extending.html">Extending RISC-V</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="naming.html">ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="history.html">History and Acknowledgments</a>
+    <a class="nav-link"  href="history.html">History and Acknowledgments</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
+    <a class="nav-link"  href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="vector-examples.html">Appendix C: Vector Assembly Code Examples</a>
+    <a class="nav-link"  href="vector-examples.html">Appendix C: Vector Assembly Code Examples</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="calling-convention.html">Appendix D: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="calling-convention.html">Appendix D: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -209,114 +416,114 @@
     <span class="nav-text">Volume II: RISC-V Privileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-preface.html">Preface</a>
+    <a class="nav-link"  href="../priv/priv-intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-intro.html">Introduction</a>
+    <a class="nav-link"  href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smepmp.html">"Smepmp" Extension for PMP Enhancements for memory access and execution prevention in Machine mode, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smdbltrp.html">"Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/priv-history.html">History</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/supervisor.html">Supervisor-Level ISA, Version 1.13</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/ssdbltrp.html">"Ssdbltrp" Double Trap Extension, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#zpm.adoc">Pointer Masking Extensions, Version 1.0.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-history.html">History</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/bibliography.html">Bibliography</a>
+    <a class="nav-link"  href="../priv/bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
 </ul>
-  </nav>
-</div>
-<div class="nav-panel-explore" data-panel="explore">
-  <div class="context">
-    <span class="title">ISA Specifications</span>
-    <span class="version"></span>
-  </div>
-  <ul class="components">
-    <li class="component is-current">
-      <div class="title"><a href="../index.html">ISA Specifications</a></div>
-    </li>
-    <li class="component">
-      <div class="title"><a href="../../riscv-library/0.1/index.html">RISC-V Documentation Library</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../riscv-library/0.1/index.html">0.1</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
     </div>
+    <div class="nav-resize"></div>
   </aside>
 </div>
-<main class="article">
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
 <div class="toolbar" role="navigation">
-<button class="nav-toggle"></button>
-  <a href="../../riscv-library/0.1/index.html" class="home-link"></a>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">ISA Specifications</a></li>
-    <li>Volume I: RISC-V Unprivileged ISA Specification</li>
-    <li><a href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a></li>
-  </ul>
-</nav>
-<div class="edit-this-page"><a href="https://github.com/riscv/riscv-isa-manual/edit/antora-refactor/modules/unpriv/pages/v-st-ext.adoc">Edit this Page</a></div>
+  <button id="nav-toggle-1" class="nav-toggle"></button>
 </div>
   <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
-  <div class="toc-menu"></div>
+<aside class="sidebar">
+  <div class="content">
+    <div
+      class="toc"
+      data-title=""
+      data-levels="2"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="https://github.com/riscv/riscv-isa-manual/edit/antora-refactor/modules/unpriv/pages/v-st-ext.adoc">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Edit this Page
+        </a>
+              <a href="https://github.com/riscv/riscv-isa-manual" title="Source Repository">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512px" height="512px" fill="none">
+    <path d="M23.6188 12.9999L19.8886 2.82896C19.7371 2.4083 19.122 2.4083 18.9705 2.82896L16.494 9.99994H7.50604L5.02956 2.82896C4.87803 2.4083 4.26295 2.4083 4.11142 2.82896L0.381247 12.9999C0.276408 13.289 0.404366 13.6112 0.678 13.7651L11.5243 19.6958C11.8256 19.8611 12.1744 19.8611 12.4757 19.6958L23.322 13.7651C23.5956 13.6112 23.7236 13.289 23.6188 12.9999Z" fill="#E24329"/>
+    <path d="M12.0001 19.1956L16.4941 9.99996H7.5061L12.0001 19.1956Z" fill="#FCA326"/>
+    <path d="M12.0001 19.1955L7.5061 9.99988H3.24121L12.0001 19.1955Z" fill="#E24329"/>
+    <path d="M3.24121 9.99988L0.381226 12.9998C0.276388 13.2889 0.404345 13.6111 0.678 13.765L12.0001 19.1955L3.24121 9.99988Z" fill="#FCA326"/>
+    <path d="M12.0001 19.1955L16.4941 9.99988H20.7589L12.0001 19.1955Z" fill="#E24329"/>
+    <path d="M20.7589 9.99988L23.6188 12.9998C23.7237 13.2889 23.5957 13.6111 23.322 13.765L12.0001 19.1955L20.7589 9.99988Z" fill="#FCA326"/>
+    <path d="M16.494 9.99988H20.7589L18.9705 2.82894C18.819 2.40828 18.2039 2.40828 18.0524 2.82894L16.494 9.99988Z" fill="#E24329"/>
+    <path d="M7.50603 9.99988H3.24121L4.11141 2.82894C4.26294 2.40828 4.87802 2.40828 5.02955 2.82894L7.50603 9.99988Z" fill="#E24329"/>
+  </svg>
+  Source Repository
+</a>
+    </div>
+  </div>
 </aside>
 <article class="doc">
-<div class="sect1">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">ISA Specifications</a></li>
+      <li>Volume I: RISC-V Unprivileged ISA Specification</li>
+      <li><a href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a></li>
+    </ul>
+  </nav>
+</div><div class="sect1">
 <h2 id="vector"><a class="anchor" href="#vector"></a>"V" Standard Extension for Vector Operations, Version 1.0</h2>
 <div class="sectionbody">
 <div class="admonitionblock note">
@@ -337,7 +544,7 @@ domains.</em></p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h3>
+<h3 id="introduction"><a class="anchor" href="#introduction"></a>Introduction</h3>
 <div class="paragraph">
 <p>This spec includes the complete set of currently frozen vector
 instructions.  Other instructions that have been considered during
@@ -349,18 +556,18 @@ supported by each extension.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_implementation_defined_constant_parameters"><a class="anchor" href="#_implementation_defined_constant_parameters"></a>Implementation-defined Constant Parameters</h3>
+<h3 id="implementation-defined-constant-parameters"><a class="anchor" href="#implementation-defined-constant-parameters"></a>Implementation-defined Constant Parameters</h3>
 <div class="paragraph">
 <p>Each hart supporting a vector extension defines two parameters:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The maximum size in bits of a vector element that any operation can produce or consume, <em>ELEN</em> {ge} 8, which
+<p>The maximum size in bits of a vector element that any operation can produce or consume, <em>ELEN</em> &#8805; 8, which
 must be a power of 2.</p>
 </li>
 <li>
-<p>The number of bits in a single vector register, <em>VLEN</em> {ge} ELEN, which must be a power of 2, and must be no greater than 2<sup>16</sup>.</p>
+<p>The number of bits in a single vector register, <em>VLEN</em> &#8805; ELEN, which must be a power of 2, and must be no greater than 2<sup>16</sup>.</p>
 </li>
 </ol>
 </div>
@@ -434,7 +641,7 @@ VLEN or ELEN parameters.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vector_extension_programmers_model"><a class="anchor" href="#_vector_extension_programmers_model"></a>Vector Extension Programmer&#8217;s Model</h3>
+<h3 id="vector-extension-programmers-model"><a class="anchor" href="#vector-extension-programmers-model"></a>Vector Extension Programmer&#8217;s Model</h3>
 <div class="paragraph">
 <p>The vector extension adds 32 vector registers, and seven unprivileged
 CSRs (<code>vstart</code>, <code>vxsat</code>, <code>vxrm</code>, <code>vcsr</code>, <code>vtype</code>, <code>vl</code>, <code>vlenb</code>) to a
@@ -515,7 +722,7 @@ for future vector CSRs, some of which may be mirrored into <code>vcsr</code>.
 </table>
 </div>
 <div class="sect3">
-<h4 id="_vector_registers"><a class="anchor" href="#_vector_registers"></a>Vector Registers</h4>
+<h4 id="vector-registers"><a class="anchor" href="#vector-registers"></a>Vector Registers</h4>
 <div class="paragraph">
 <p>The vector extension adds 32 architectural vector registers,
 <code>v0</code>-<code>v31</code> to the base scalar RISC-V ISA.</p>
@@ -525,7 +732,7 @@ for future vector CSRs, some of which may be mirrored into <code>vcsr</code>.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_context_status_in_mstatus"><a class="anchor" href="#_vector_context_status_in_mstatus"></a>Vector Context Status in <code>mstatus</code></h4>
+<h4 id="vector-context-status-in-mstatus"><a class="anchor" href="#vector-context-status-in-mstatus"></a>Vector Context Status in <code>mstatus</code></h4>
 <div class="paragraph">
 <p>A vector context status field, <code>VS</code>, is added to <code>mstatus[10:9]</code> and shadowed
 in <code>sstatus[10:9]</code>.  It is defined analogously to the floating-point context
@@ -581,7 +788,7 @@ with writable <code>misa.V</code>.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_context_status_in_vsstatus"><a class="anchor" href="#_vector_context_status_in_vsstatus"></a>Vector Context Status in <code>vsstatus</code></h4>
+<h4 id="vector-context-status-in-vsstatus"><a class="anchor" href="#vector-context-status-in-vsstatus"></a>Vector Context Status in <code>vsstatus</code></h4>
 <div class="paragraph">
 <p>When the hypervisor extension is present, a vector context status field, <code>VS</code>,
 is added to <code>vsstatus[10:9]</code>.
@@ -613,7 +820,7 @@ the <code>vsstatus.VS</code> field may exist even if <code>misa.V</code> is clea
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_type_vtype_register"><a class="anchor" href="#_vector_type_vtype_register"></a>Vector Type (<code>vtype</code>) Register</h4>
+<h4 id="vector-type-vtype-register"><a class="anchor" href="#vector-type-vtype-register"></a>Vector Type (<code>vtype</code>) Register</h4>
 <div class="paragraph">
 <p>The read-only XLEN-wide <em>vector</em> <em>type</em> CSR, <code>vtype</code> provides the
 default type used to interpret the contents of the vector register
@@ -759,7 +966,7 @@ encoding.
 </table>
 </div>
 <div class="sect4">
-<h5 id="_vector_selected_element_width_vsew20"><a class="anchor" href="#_vector_selected_element_width_vsew20"></a>Vector Selected Element Width (<code>vsew[2:0]</code>)</h5>
+<h5 id="vector-selected-element-width-vsew20"><a class="anchor" href="#vector-selected-element-width-vsew20"></a>Vector Selected Element Width (<code>vsew[2:0]</code>)</h5>
 <div class="paragraph">
 <p>The value in <code>vsew</code> sets the dynamic <em>selected</em> <em>element</em> <em>width</em>
 (SEW).  By default, a vector register is viewed as being divided into
@@ -883,7 +1090,7 @@ can mandate the minimum SEW at each LMUL setting.
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_register_grouping_vlmul20"><a class="anchor" href="#_vector_register_grouping_vlmul20"></a>Vector Register Grouping (<code>vlmul[2:0]</code>)</h5>
+<h5 id="vector-register-grouping"><a class="anchor" href="#vector-register-grouping"></a>Vector Register Grouping (<code>vlmul[2:0]</code>)</h5>
 <div class="paragraph">
 <p>Multiple vector registers can be grouped together, so that a single
 vector instruction can operate on multiple vector registers.  The term
@@ -951,7 +1158,7 @@ register-resident vectors.
 narrowest supported type to occupy a fraction of a vector register
 corresponding to the ratio of the narrowest supported type&#8217;s width to
 that of the largest supported type&#8217;s width.  In general, the
-requirement is to support LMUL {ge} SEW<sub>MIN</sub>/ELEN, where SEW<sub>MIN</sub> is
+requirement is to support LMUL &#8805; SEW<sub>MIN</sub>/ELEN, where SEW<sub>MIN</sub> is
 the narrowest supported SEW value and ELEN is the widest supported SEW
 value.  In the standard extensions, SEW<sub>MIN</sub>=8.  For
 standard vector extensions with ELEN=32, fractional LMULs of 1/2 and
@@ -1356,7 +1563,7 @@ flags, it was decided to always require them in future assembly code.
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_type_illegal_vill"><a class="anchor" href="#_vector_type_illegal_vill"></a>Vector Type Illegal (<code>vill</code>)</h5>
+<h5 id="vector-type-illegal-vill"><a class="anchor" href="#vector-type-illegal-vill"></a>Vector Type Illegal (<code>vill</code>)</h5>
 <div class="paragraph">
 <p>The <code>vill</code> bit is used to encode that a previous <code>vset{i}vl{i}</code>
 instruction attempted to write an unsupported value to <code>vtype</code>.</p>
@@ -1398,7 +1605,7 @@ zero.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_length_vl_register"><a class="anchor" href="#_vector_length_vl_register"></a>Vector Length (<code>vl</code>) Register</h4>
+<h4 id="vector-length-vl-register"><a class="anchor" href="#vector-length-vl-register"></a>Vector Length (<code>vl</code>) Register</h4>
 <div class="paragraph">
 <p>The <em>XLEN</em>-bit-wide read-only <code>vl</code> CSR can only be updated by the
 <code>vset{i}vl{i}</code> instructions, and the <em>fault-only-first</em> vector load
@@ -1427,7 +1634,7 @@ SEW=8 would need at least six bits in <code>vl</code> to hold the values 0-32
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_byte_length_vlenb_register"><a class="anchor" href="#_vector_byte_length_vlenb_register"></a>Vector Byte Length (<code>vlenb</code>) Register</h4>
+<h4 id="vector-byte-length-vlenb-register"><a class="anchor" href="#vector-byte-length-vlenb-register"></a>Vector Byte Length (<code>vlenb</code>) Register</h4>
 <div class="paragraph">
 <p>The <em>XLEN</em>-bit-wide read-only CSR <code>vlenb</code> holds the value VLEN/8,
 i.e., the vector register length in bytes.</p>
@@ -1461,7 +1668,7 @@ settings which require them to be saved and restored.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_start_index_vstart_register"><a class="anchor" href="#_vector_start_index_vstart_register"></a>Vector Start Index (<code>vstart</code>) Register</h4>
+<h4 id="vector-start-index-vstart-register"><a class="anchor" href="#vector-start-index-vstart-register"></a>Vector Start Index (<code>vstart</code>) Register</h4>
 <div class="paragraph">
 <p>The <em>XLEN</em>-bit-wide read-write <code>vstart</code> CSR specifies the index of the
 first element to be executed by a vector instruction, as described in
@@ -1596,7 +1803,7 @@ locations.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_fixed_point_rounding_mode_vxrm_register"><a class="anchor" href="#_vector_fixed_point_rounding_mode_vxrm_register"></a>Vector Fixed-Point Rounding Mode (<code>vxrm</code>) Register</h4>
+<h4 id="vector-fixed-point-rounding-mode-vxrm-register"><a class="anchor" href="#vector-fixed-point-rounding-mode-vxrm-register"></a>Vector Fixed-Point Rounding Mode (<code>vxrm</code>) Register</h4>
 <div class="paragraph">
 <p>The vector fixed-point rounding-mode register holds a two-bit
 read-write rounding-mode field in the least-significant bits
@@ -1658,7 +1865,7 @@ mode as specified in the following table.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rne</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">round-to-nearest-even</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>v[d-1] &amp; (v[d-2:0]{ne}0 | v[d])</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>v[d-1] &amp; (v[d-2:0]&#8800;0 | v[d])</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
@@ -1672,7 +1879,7 @@ mode as specified in the following table.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rod</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">round-to-odd (OR bits into LSB, aka "jam")</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>!v[d] &amp; v[d-1:0]{ne}0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>!v[d] &amp; v[d-1:0]&#8800;0</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -1690,7 +1897,7 @@ roundoff_signed(v, d) = (signed(v) &gt;&gt; d) + r</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_fixed_point_saturation_flag_vxsat"><a class="anchor" href="#_vector_fixed_point_saturation_flag_vxsat"></a>Vector Fixed-Point Saturation Flag (<code>vxsat</code>)</h4>
+<h4 id="vector-fixed-point-saturation-flag-vxsat"><a class="anchor" href="#vector-fixed-point-saturation-flag-vxsat"></a>Vector Fixed-Point Saturation Flag (<code>vxsat</code>)</h4>
 <div class="paragraph">
 <p>The <code>vxsat</code> CSR has a single read-write least-significant bit
 (<code>vxsat[0]</code>) that indicates if a fixed-point instruction has had to
@@ -1702,7 +1909,7 @@ Bits <code>vxsat[XLEN-1:1]</code> should be written as zeros.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_control_and_status_vcsr_register"><a class="anchor" href="#_vector_control_and_status_vcsr_register"></a>Vector Control and Status (<code>vcsr</code>) Register</h4>
+<h4 id="vector-control-and-status-vcsr-register"><a class="anchor" href="#vector-control-and-status-vcsr-register"></a>Vector Control and Status (<code>vcsr</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>vxrm</code> and <code>vxsat</code> separate CSRs can also be accessed via fields
 in the <em>XLEN</em>-bit-wide vector control and status CSR, <code>vcsr</code>.</p>
@@ -1741,7 +1948,7 @@ in the <em>XLEN</em>-bit-wide vector control and status CSR, <code>vcsr</code>.<
 </table>
 </div>
 <div class="sect3">
-<h4 id="_state_of_vector_extension_at_reset"><a class="anchor" href="#_state_of_vector_extension_at_reset"></a>State of Vector Extension at Reset</h4>
+<h4 id="state-of-vector-extension-at-reset"><a class="anchor" href="#state-of-vector-extension-at-reset"></a>State of Vector Extension at Reset</h4>
 <div class="paragraph">
 <p>The vector extension must have a consistent state at reset.  In
 particular, <code>vtype</code> and <code>vl</code> must have values that can be read and
@@ -1783,7 +1990,7 @@ reset explicitly in software before use.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_mapping_of_vector_elements_to_vector_register_state"><a class="anchor" href="#_mapping_of_vector_elements_to_vector_register_state"></a>Mapping of Vector Elements to Vector Register State</h3>
+<h3 id="mapping-of-vector-elements-to-vector-register-state"><a class="anchor" href="#mapping-of-vector-elements-to-vector-register-state"></a>Mapping of Vector Elements to Vector Register State</h3>
 <div class="paragraph">
 <p>The following diagrams illustrate how different width elements are
 packed into the bytes of a vector register depending on the current
@@ -1815,7 +2022,7 @@ different EEW.
 </table>
 </div>
 <div class="sect3">
-<h4 id="_mapping_for_lmul_1"><a class="anchor" href="#_mapping_for_lmul_1"></a>Mapping for LMUL = 1</h4>
+<h4 id="mapping-for-lmul-1"><a class="anchor" href="#mapping-for-lmul-1"></a>Mapping for LMUL = 1</h4>
 <div class="paragraph">
 <p>When LMUL=1, elements are simply packed in order from the
 least-significant to most-significant bits of the vector register.</p>
@@ -1882,7 +2089,7 @@ least-significant byte of the stored element.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mapping_for_lmul_1_2"><a class="anchor" href="#_mapping_for_lmul_1_2"></a>Mapping for LMUL &lt; 1</h4>
+<h4 id="mapping-for-lmul-1-2"><a class="anchor" href="#mapping-for-lmul-1-2"></a>Mapping for LMUL &lt; 1</h4>
 <div class="paragraph">
 <p>When LMUL &lt; 1, only the first LMUL*VLEN/SEW elements in the vector
 register are used.  The remaining space in the vector register is
@@ -1901,7 +2108,7 @@ treated as part of the tail, and hence must obey the vta setting.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mapping_for_lmul_1_3"><a class="anchor" href="#_mapping_for_lmul_1_3"></a>Mapping for LMUL &gt; 1</h4>
+<h4 id="mapping-for-lmul-1-3"><a class="anchor" href="#mapping-for-lmul-1-3"></a>Mapping for LMUL &gt; 1</h4>
 <div class="paragraph">
 <p>When vector registers are grouped, the elements of the vector register
 group are packed contiguously in element order beginning with the
@@ -2102,7 +2309,7 @@ register, independent of SEW or LMUL.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vector_instruction_formats"><a class="anchor" href="#_vector_instruction_formats"></a>Vector Instruction Formats</h3>
+<h3 id="vector-instruction-formats"><a class="anchor" href="#vector-instruction-formats"></a>Vector Instruction Formats</h3>
 <div class="paragraph">
 <p>The instructions in the vector extension fit under two existing major
 opcodes (LOAD-FP and STORE-FP) and one new major opcode (OP-V).</p>
@@ -2218,7 +2425,7 @@ elements and memory.  Vector arithmetic instructions operate on values
 held in vector register elements.</p>
 </div>
 <div class="sect3">
-<h4 id="_scalar_operands"><a class="anchor" href="#_scalar_operands"></a>Scalar Operands</h4>
+<h4 id="scalar-operands"><a class="anchor" href="#scalar-operands"></a>Scalar Operands</h4>
 <div class="paragraph">
 <p>Scalar operands can be immediates, or taken from the <code>x</code> registers,
 the <code>f</code> registers, or element 0 of a vector register.  Scalar results
@@ -2360,7 +2567,7 @@ instruction is mask- and tail-agnostic, regardless of the setting of the
 </div>
 <div class="paragraph">
 <p>The largest vector register group used by an instruction can not be
-greater than 8 vector registers (i.e., EMUL{le}8), and if a vector
+greater than 8 vector registers (i.e., EMUL&#8804;8), and if a vector
 instruction would require greater than 8 vector registers in a group,
 the instruction encoding is reserved.  For example, a widening
 operation that produces a widened vector register group result when
@@ -2373,7 +2580,7 @@ have EMUL=1.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_masking"><a class="anchor" href="#_vector_masking"></a>Vector Masking</h4>
+<h4 id="vector-masking"><a class="anchor" href="#vector-masking"></a>Vector Masking</h4>
 <div class="paragraph">
 <p>Masking is supported on many vector instructions.  Element operations
 that are masked off (inactive) never generate exceptions.  The
@@ -2574,7 +2781,7 @@ register.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>When <code>vstart</code> {ge} <code>vl</code>, there are no body elements, and no elements
+<p>When <code>vstart</code> &#8805; <code>vl</code>, there are no body elements, and no elements
 are updated in any destination vector register group, including that
 no tail elements are updated with agnostic values.</p>
 </div>
@@ -2594,7 +2801,7 @@ regardless of <code>vstart</code>.
 </div>
 <div class="paragraph">
 <p>Instructions that write an <code>x</code> register or <code>f</code> register
-do so even when <code>vstart</code> {ge} <code>vl</code>, including when <code>vl</code>=0.</p>
+do so even when <code>vstart</code> &#8805; <code>vl</code>, including when <code>vl</code>=0.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2661,7 +2868,7 @@ their arguments, and write the new value of <code>vl</code> into <code>rd</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vtype_encoding"><a class="anchor" href="#_vtype_encoding"></a><code>vtype</code> encoding</h4>
+<h4 id="vtype-encoding"><a class="anchor" href="#vtype-encoding"></a><code>vtype</code> encoding</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDWUchLzE21UlAvy8ktzYk2sjKIVa_VwaqgOLUcU94QIV-SiEsmF1XGCGFoUWpxalFZagounZk5OSCp2FoAIcw3Tg==" alt="svg">
@@ -2733,7 +2940,7 @@ and <code>vsetivli</code>, and in the <code>rs2</code> register for <code>vsetvl
 </div>
 <div class="listingblock">
 <div class="content">
-<pre> Suggested assembler names used for vset{i}vli vtypei immediate
+<pre> Suggested assembler names used for vset\{i}vli vtypei immediate
 
  e8    # SEW=8b
  e16   # SEW=16b
@@ -2759,7 +2966,7 @@ Examples:
 takes a <code>vtype</code> value from <code>rs2</code> and can be used for context restore.</p>
 </div>
 <div class="sect4">
-<h5 id="_unsupported_vtype_values"><a class="anchor" href="#_unsupported_vtype_values"></a>Unsupported <code>vtype</code> Values</h5>
+<h5 id="unsupported-vtype-values"><a class="anchor" href="#unsupported-vtype-values"></a>Unsupported <code>vtype</code> Values</h5>
 <div class="paragraph">
 <p>If the <code>vtype</code> value is not supported by the implementation, then
 the <code>vill</code> bit is set in <code>vtype</code>, the remaining bits in <code>vtype</code> are
@@ -2812,7 +3019,7 @@ traps instead of executing incorrectly on an older implementation.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_avl_encoding"><a class="anchor" href="#_avl_encoding"></a>AVL encoding</h4>
+<h4 id="avl-encoding"><a class="anchor" href="#avl-encoding"></a>AVL encoding</h4>
 <div class="paragraph">
 <p>The new vector
 length setting is based on AVL, which for <code>vsetvli</code> and <code>vsetvl</code> is encoded in the <code>rs1</code> and <code>rd</code>
@@ -2936,13 +3143,13 @@ argument, then set <code>vl</code> obeying the following constraints:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>vl = AVL</code> if <code>AVL {le} VLMAX</code></p>
+<p><code>vl = AVL</code> if <code>AVL &#8804; VLMAX</code></p>
 </li>
 <li>
-<p><code>ceil(AVL / 2) {le} vl {le} VLMAX</code> if <code>AVL &lt; (2 * VLMAX)</code></p>
+<p><code>ceil(AVL / 2) &#8804; vl &#8804; VLMAX</code> if <code>AVL &lt; (2 * VLMAX)</code></p>
 </li>
 <li>
-<p><code>vl = VLMAX</code> if <code>AVL {ge} (2 * VLMAX)</code></p>
+<p><code>vl = VLMAX</code> if <code>AVL &#8805; (2 * VLMAX)</code></p>
 </li>
 <li>
 <p>Deterministic on any given implementation for same input AVL and VLMAX values</p>
@@ -2958,10 +3165,10 @@ argument, then set <code>vl</code> obeying the following constraints:</p>
 <p><code>vl &gt; 0</code> if <code>AVL &gt; 0</code></p>
 </li>
 <li>
-<p><code>vl {le} VLMAX</code></p>
+<p><code>vl &#8804; VLMAX</code></p>
 </li>
 <li>
-<p><code>vl {le} AVL</code></p>
+<p><code>vl &#8804; AVL</code></p>
 </li>
 <li>
 <p>a value read from <code>vl</code> when used as the AVL argument to <code>vset{i}vl{i}</code> results in the same
@@ -2982,7 +3189,7 @@ value in <code>vl</code>, provided the resultant VLMAX equals the value of VLMAX
 <div class="paragraph">
 <p>The <code>vl</code> setting rules are designed to be sufficiently strict to
 preserve <code>vl</code> behavior across register spills and context swaps for
-<code>AVL {le} VLMAX</code>, yet flexible enough to enable implementations to improve
+<code>AVL &#8804; VLMAX</code>, yet flexible enough to enable implementations to improve
 vector lane utilization for <code>AVL &gt; VLMAX</code>.</p>
 </div>
 <div class="paragraph">
@@ -3048,7 +3255,7 @@ All vector loads and stores may
 generate and accept a non-zero <code>vstart</code> value.</p>
 </div>
 <div class="sect3">
-<h4 id="_vector_loadstore_instruction_encoding"><a class="anchor" href="#_vector_loadstore_instruction_encoding"></a>Vector Load/Store Instruction Encoding</h4>
+<h4 id="vector-loadstore-instruction-encoding"><a class="anchor" href="#vector-loadstore-instruction-encoding"></a>Vector Load/Store Instruction Encoding</h4>
 <div class="paragraph">
 <p>Vector loads and stores are encoded within the scalar floating-point
 load and store major opcodes (LOAD-FP/STORE-FP).  The vector load and
@@ -3161,7 +3368,7 @@ SEW/LMUL to specify the data width.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_loadstore_addressing_modes"><a class="anchor" href="#_vector_loadstore_addressing_modes"></a>Vector Load/Store Addressing Modes</h4>
+<h4 id="vector-loadstore-addressing-modes"><a class="anchor" href="#vector-loadstore-addressing-modes"></a>Vector Load/Store Addressing Modes</h4>
 <div class="paragraph">
 <p>The vector extension supports unit-stride, strided, and
 indexed (scatter/gather) addressing modes.  Vector load/store base
@@ -3688,7 +3895,7 @@ currently reserved.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_unit_stride_instructions"><a class="anchor" href="#_vector_unit_stride_instructions"></a>Vector Unit-Stride Instructions</h4>
+<h4 id="vector-unit-stride-instructions"><a class="anchor" href="#vector-unit-stride-instructions"></a>Vector Unit-Stride Instructions</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Vector unit-stride loads and stores
@@ -3776,7 +3983,7 @@ and also reduce the cost of mask spill/fill by reducing need to change
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_strided_instructions"><a class="anchor" href="#_vector_strided_instructions"></a>Vector Strided Instructions</h4>
+<h4 id="vector-strided-instructions"><a class="anchor" href="#vector-strided-instructions"></a>Vector Strided Instructions</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Vector strided loads and stores
@@ -3858,7 +4065,7 @@ address are required, then an ordered indexed operation can be used.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_indexed_instructions"><a class="anchor" href="#_vector_indexed_instructions"></a>Vector Indexed Instructions</h4>
+<h4 id="vector-indexed-instructions"><a class="anchor" href="#vector-indexed-instructions"></a>Vector Indexed Instructions</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Vector indexed loads and stores
@@ -3925,7 +4132,7 @@ retained as an alias during transition to help reduce software churn.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_unit_stride_fault_only_first_loads"><a class="anchor" href="#_unit_stride_fault_only_first_loads"></a>Unit-stride Fault-Only-First Loads</h4>
+<h4 id="unit-stride-fault-only-first-loads"><a class="anchor" href="#unit-stride-fault-only-first-loads"></a>Unit-stride Fault-Only-First Loads</h4>
 <div class="paragraph">
 <p>The unit-stride fault-only-first load instructions are used to
 vectorize loops with data-dependent exit conditions ("while" loops).
@@ -3963,7 +4170,25 @@ vle64ff.v   vd, (rs1), vm  #   64-bit unit-stride fault-only-first load</pre>
 <div class="content">
 <pre>strlen example using unit-stride fault-only-first instruction
 
-Unresolved include directive in modules/unpriv/pages/v-st-ext.adoc - include::example/strlen.s[]</pre>
+# size_t strlen(const char *str)
+# a0 holds *str
+
+strlen:
+    mv a3, a0             # Save start
+loop:
+    vsetvli a1, x0, e8, m8, ta, ma  # Vector of bytes of maximum length
+    vle8ff.v v8, (a3)      # Load bytes
+    csrr a1, vl           # Get bytes read
+    vmseq.vi v0, v8, 0    # Set v0[i] where v8[i] = 0
+    vfirst.m a2, v0       # Find first set bit
+    add a3, a3, a1        # Bump pointer
+    bltz a2, loop         # Not found?
+
+    add a0, a0, a1        # Sum start + bump
+    add a3, a3, a2        # Add index
+    sub a0, a3, a0        # Subtract start address+bump
+
+    ret</pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -4108,7 +4333,7 @@ segment, <em>NFIELDS</em>.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The EMUL setting must be such that EMUL * NFIELDS {le} 8, otherwise
+<p>The EMUL setting must be such that EMUL * NFIELDS &#8804; 8, otherwise
 the instruction encoding is reserved.</p>
 </div>
 <div class="admonitionblock note">
@@ -4170,7 +4395,7 @@ access to a segment, it is implementation-defined whether a subset
 of the faulting segment&#8217;s accesses are performed before the trap is taken.</p>
 </div>
 <div class="sect4">
-<h5 id="_vector_unit_stride_segment_loads_and_stores"><a class="anchor" href="#_vector_unit_stride_segment_loads_and_stores"></a>Vector Unit-Stride Segment Loads and Stores</h5>
+<h5 id="vector-unit-stride-segment-loads-and-stores"><a class="anchor" href="#vector-unit-stride-segment-loads-and-stores"></a>Vector Unit-Stride Segment Loads and Stores</h5>
 <div class="paragraph">
 <p>The vector unit-stride load and store segment instructions move packed
 contiguous segments into multiple destination vector register groups.</p>
@@ -4250,7 +4475,7 @@ at which vector length is trimmed.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_strided_segment_loads_and_stores"><a class="anchor" href="#_vector_strided_segment_loads_and_stores"></a>Vector Strided Segment Loads and Stores</h5>
+<h5 id="vector-strided-segment-loads-and-stores"><a class="anchor" href="#vector-strided-segment-loads-and-stores"></a>Vector Strided Segment Loads and Stores</h5>
 <div class="paragraph">
 <p>Vector strided segment loads and stores move contiguous segments where
 each segment is separated by the byte-stride offset given in the <code>rs2</code>
@@ -4293,7 +4518,7 @@ in memory.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_indexed_segment_loads_and_stores"><a class="anchor" href="#_vector_indexed_segment_loads_and_stores"></a>Vector Indexed Segment Loads and Stores</h5>
+<h5 id="vector-indexed-segment-loads-and-stores"><a class="anchor" href="#vector-indexed-segment-loads-and-stores"></a>Vector Indexed Segment Loads and Stores</h5>
 <div class="paragraph">
 <p>Vector indexed segment loads and stores move contiguous segments where
 each segment is located at an address given by adding the scalar base
@@ -4307,7 +4532,7 @@ with respect to each other.</p>
 <p>The data vector register group has EEW=SEW, EMUL=LMUL, while the index
 vector register group has EEW encoded in the instruction with
 EMUL=(EEW/SEW)*LMUL.
-The EMUL * NFIELDS {le} 8 constraint applies to the data vector register group.</p>
+The EMUL * NFIELDS &#8804; 8 constraint applies to the data vector register group.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4350,7 +4575,7 @@ that raise exceptions partway through loading a structure.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_loadstore_whole_register_instructions"><a class="anchor" href="#_vector_loadstore_whole_register_instructions"></a>Vector Load/Store Whole Register Instructions</h4>
+<h4 id="vector-loadstore-whole-register-instructions"><a class="anchor" href="#vector-loadstore-whole-register-instructions"></a>Vector Load/Store Whole Register Instructions</h4>
 <div class="paragraph">
 <p>Format for Vector Load Whole Register Instructions under LOAD-FP major opcode</p>
 </div>
@@ -4430,8 +4655,8 @@ numbers are placed contiguously in memory.</p>
 <p>The instructions operate with an effective vector length,
 <code>evl</code>=NFIELDS*VLEN/EEW, regardless of current settings in <code>vtype</code> and
 <code>vl</code>.  The usual property that no elements are written if <code>vstart</code>
-{ge} <code>vl</code> does not apply to these instructions.  Instead, no elements
-are written if <code>vstart</code> {ge} <code>evl</code>.</p>
+&#8805; <code>vl</code> does not apply to these instructions.  Instead, no elements
+are written if <code>vstart</code> &#8805; <code>evl</code>.</p>
 </div>
 <div class="paragraph">
 <p>The instructions operate similarly to unmasked unit-stride load and
@@ -4546,7 +4771,7 @@ vsetvli x0, t0, &lt;new type&gt;         # Restore vl (potentially already prese
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vector_memory_alignment_constraints"><a class="anchor" href="#_vector_memory_alignment_constraints"></a>Vector Memory Alignment Constraints</h3>
+<h3 id="vector-memory-alignment-constraints"><a class="anchor" href="#vector-memory-alignment-constraints"></a>Vector Memory Alignment Constraints</h3>
 <div class="paragraph">
 <p>If an element accessed by a vector memory instruction is not naturally
 aligned to the size of the element, either the element is transferred
@@ -4578,7 +4803,7 @@ as scalar misaligned memory accesses.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vector_memory_consistency_model"><a class="anchor" href="#_vector_memory_consistency_model"></a>Vector Memory Consistency Model</h3>
+<h3 id="vector-memory-consistency-model"><a class="anchor" href="#vector-memory-consistency-model"></a>Vector Memory Consistency Model</h3>
 <div class="paragraph">
 <p>Vector memory instructions appear to execute in program order on the
 local hart.</p>
@@ -4647,7 +4872,7 @@ a misspeculation-recovery mechanism.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vector_arithmetic_instruction_formats"><a class="anchor" href="#_vector_arithmetic_instruction_formats"></a>Vector Arithmetic Instruction Formats</h3>
+<h3 id="vector-arithmetic-instruction-formats"><a class="anchor" href="#vector-arithmetic-instruction-formats"></a>Vector Arithmetic Instruction Formats</h3>
 <div class="paragraph">
 <p>The vector arithmetic instructions use a new major opcode (OP-V =
 1010111<sub>2</sub>) which neighbors OP-FP.  The three-bit <code>funct3</code> field is
@@ -4804,7 +5029,7 @@ IEEE-754/2008 standard.  All vector floating-point operations use the
 dynamic rounding mode in the <code>frm</code> register.  Use of the <code>frm</code> field
 when it contains an invalid rounding mode by any vector floating-point
 instruction&#8212;&#8203;even those that do not depend on the rounding mode, or
-when <code>vl</code>=0, or when <code>vstart</code> {ge} <code>vl</code>--is reserved.</p>
+when <code>vl</code>=0, or when <code>vstart</code> &#8805; <code>vl</code>--is reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -5081,7 +5306,7 @@ vnop.wx  vd, vs2, rs1, vm  # integer vector-scalar      vd[i] = vs2[i] op x[rs1]
 otherwise stated, integer operations wrap around on overflow.</p>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_integer_add_and_subtract"><a class="anchor" href="#_vector_single_width_integer_add_and_subtract"></a>Vector Single-Width Integer Add and Subtract</h4>
+<h4 id="vector-single-width-integer-add-and-subtract"><a class="anchor" href="#vector-single-width-integer-add-and-subtract"></a>Vector Single-Width Integer Add and Subtract</h4>
 <div class="paragraph">
 <p>Vector integer add and subtract are provided.  Reverse-subtract
 instructions are also provided for the vector-scalar forms.</p>
@@ -5118,7 +5343,7 @@ assembly pseudoinstruction <code>vneg.v vd,vs</code> = <code>vrsub.vx vd,vs,x0</
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_widening_integer_addsubtract"><a class="anchor" href="#_vector_widening_integer_addsubtract"></a>Vector Widening Integer Add/Subtract</h4>
+<h4 id="vector-widening-integer-addsubtract"><a class="anchor" href="#vector-widening-integer-addsubtract"></a>Vector Widening Integer Add/Subtract</h4>
 <div class="paragraph">
 <p>The widening add/subtract instructions are provided in both signed and
 unsigned variants, depending on whether the narrower source operands
@@ -5168,7 +5393,7 @@ pseudoinstructions <code>vwcvt.x.x.v vd,vs,vm</code> = <code>vwadd.vx vd,vs,x0,v
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_integer_extension"><a class="anchor" href="#_vector_integer_extension"></a>Vector Integer Extension</h4>
+<h4 id="vector-integer-extension"><a class="anchor" href="#vector-integer-extension"></a>Vector Integer Extension</h4>
 <div class="paragraph">
 <p>The vector integer extension instructions zero- or sign-extend a
 source vector integer operand with EEW less than SEW to fill SEW-sized
@@ -5212,7 +5437,7 @@ arithmetic instruction is not available.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_integer_add_with_carry_subtract_with_borrow_instructions"><a class="anchor" href="#_vector_integer_add_with_carry_subtract_with_borrow_instructions"></a>Vector Integer Add-with-Carry / Subtract-with-Borrow Instructions</h4>
+<h4 id="vector-integer-add-with-carry-subtract-with-borrow-instructions"><a class="anchor" href="#vector-integer-add-with-carry-subtract-with-borrow-instructions"></a>Vector Integer Add-with-Carry / Subtract-with-Borrow Instructions</h4>
 <div class="paragraph">
 <p>To support multi-word integer arithmetic, instructions that operate on
 a carry bit are provided.  For each operation (add or subtract), two
@@ -5343,7 +5568,7 @@ operations that overwrite the mask register.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_bitwise_logical_instructions"><a class="anchor" href="#_vector_bitwise_logical_instructions"></a>Vector Bitwise Logical Instructions</h4>
+<h4 id="vector-bitwise-logical-instructions"><a class="anchor" href="#vector-bitwise-logical-instructions"></a>Vector Bitwise Logical Instructions</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Bitwise logical operations.
@@ -5376,7 +5601,7 @@ an assembler pseudoinstruction <code>vnot.v vd,vs,vm</code> = <code>vxor.vi vd,v
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_shift_instructions"><a class="anchor" href="#_vector_single_width_shift_instructions"></a>Vector Single-Width Shift Instructions</h4>
+<h4 id="vector-single-width-shift-instructions"><a class="anchor" href="#vector-single-width-shift-instructions"></a>Vector Single-Width Shift Instructions</h4>
 <div class="paragraph">
 <p>A full set of vector shift instructions are provided, including
 logical shift left (<code>sll</code>), and logical (zero-extending <code>srl</code>) and
@@ -5405,7 +5630,7 @@ vsra.vi vd, vs2, uimm, vm   # vector-immediate</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_narrowing_integer_right_shift_instructions"><a class="anchor" href="#_vector_narrowing_integer_right_shift_instructions"></a>Vector Narrowing Integer Right Shift Instructions</h4>
+<h4 id="vector-narrowing-integer-right-shift-instructions"><a class="anchor" href="#vector-narrowing-integer-right-shift-instructions"></a>Vector Narrowing Integer Right Shift Instructions</h4>
 <div class="paragraph">
 <p>The narrowing right shifts extract a smaller field from a wider
 operand and have both zero-extending (<code>srl</code>) and sign-extending
@@ -5457,7 +5682,7 @@ pseudoinstruction is provided <code>vncvt.x.x.w vd,vs,vm</code> = <code>vnsrl.wx
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_integer_compare_instructions"><a class="anchor" href="#_vector_integer_compare_instructions"></a>Vector Integer Compare Instructions</h4>
+<h4 id="vector-integer-compare-instructions"><a class="anchor" href="#vector-integer-compare-instructions"></a>Vector Integer Compare Instructions</h4>
 <div class="paragraph">
 <p>The following integer compare instructions write 1 to the destination
 mask register element if the comparison evaluates to true, and 0
@@ -5519,20 +5744,20 @@ native machine code.</p>
 <div class="content">
 <pre>Comparison      Assembler Mapping             Assembler Pseudoinstruction
 
-va &lt; vb         vmslt{u}.vv vd, va, vb, vm
-va &lt;= vb        vmsle{u}.vv vd, va, vb, vm
-va &gt; vb         vmslt{u}.vv vd, vb, va, vm    vmsgt{u}.vv vd, va, vb, vm
-va &gt;= vb        vmsle{u}.vv vd, vb, va, vm    vmsge{u}.vv vd, va, vb, vm
+va &lt; vb         vmslt\{u}.vv vd, va, vb, vm
+va &lt;= vb        vmsle\{u}.vv vd, va, vb, vm
+va &gt; vb         vmslt\{u}.vv vd, vb, va, vm    vmsgt\{u}.vv vd, va, vb, vm
+va &gt;= vb        vmsle\{u}.vv vd, vb, va, vm    vmsge\{u}.vv vd, va, vb, vm
 
-va &lt; x          vmslt{u}.vx vd, va, x, vm
-va &lt;= x         vmsle{u}.vx vd, va, x, vm
-va &gt; x          vmsgt{u}.vx vd, va, x, vm
+va &lt; x          vmslt\{u}.vx vd, va, x, vm
+va &lt;= x         vmsle\{u}.vx vd, va, x, vm
+va &gt; x          vmsgt\{u}.vx vd, va, x, vm
 va &gt;= x         see below
 
-va &lt; i          vmsle{u}.vi vd, va, i-1, vm    vmslt{u}.vi vd, va, i, vm
-va &lt;= i         vmsle{u}.vi vd, va, i, vm
-va &gt; i          vmsgt{u}.vi vd, va, i, vm
-va &gt;= i         vmsgt{u}.vi vd, va, i-1, vm    vmsge{u}.vi vd, va, i, vm
+va &lt; i          vmsle\{u}.vi vd, va, i-1, vm    vmslt\{u}.vi vd, va, i, vm
+va &lt;= i         vmsle\{u}.vi vd, va, i, vm
+va &gt; i          vmsgt\{u}.vi vd, va, i, vm
+va &gt;= i         vmsgt\{u}.vi vd, va, i-1, vm    vmsge\{u}.vi vd, va, i, vm
 
 va, vb vector register groups
 x      scalar integer register
@@ -5599,7 +5824,7 @@ instructions.
 </div>
 <div class="paragraph">
 <p>To reduce encoding space, the <code>vmsge{u}.vx</code> form is not directly
-provided, and so the <code>va {ge} x</code> case requires special treatment.</p>
+provided, and so the <code>va &#8805; x</code> case requires special treatment.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -5627,11 +5852,11 @@ known that this will not underflow the representation in <code>x</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Sequences to synthesize `vmsge{u}.vx` instruction
+<pre>Sequences to synthesize `vmsge\{u}.vx` instruction
 
 va &gt;= x,  x &gt; minimum
 
-   addi t0, x, -1; vmsgt{u}.vx vd, va, t0, vm</pre>
+   addi t0, x, -1; vmsgt\{u}.vx vd, va, t0, vm</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5643,23 +5868,23 @@ range of <code>x</code> is unknown.</p>
 <div class="content">
 <pre>unmasked va &gt;= x
 
-  pseudoinstruction: vmsge{u}.vx vd, va, x
-  expansion: vmslt{u}.vx vd, va, x; vmnand.mm vd, vd, vd
+  pseudoinstruction: vmsge\{u}.vx vd, va, x
+  expansion: vmslt\{u}.vx vd, va, x; vmnand.mm vd, vd, vd
 
 masked va &gt;= x, vd != v0
 
-  pseudoinstruction: vmsge{u}.vx vd, va, x, v0.t
-  expansion: vmslt{u}.vx vd, va, x, v0.t; vmxor.mm vd, vd, v0
+  pseudoinstruction: vmsge\{u}.vx vd, va, x, v0.t
+  expansion: vmslt\{u}.vx vd, va, x, v0.t; vmxor.mm vd, vd, v0
 
 masked va &gt;= x, vd == v0
 
-  pseudoinstruction: vmsge{u}.vx vd, va, x, v0.t, vt
-  expansion: vmslt{u}.vx vt, va, x;  vmandn.mm vd, vd, vt
+  pseudoinstruction: vmsge\{u}.vx vd, va, x, v0.t, vt
+  expansion: vmslt\{u}.vx vt, va, x;  vmandn.mm vd, vd, vt
 
 masked va &gt;= x, any vd
 
-  pseudoinstruction: vmsge{u}.vx vd, va, x, v0.t, vt
-  expansion: vmslt{u}.vx vt, va, x;  vmandn.mm vt, v0, vt;  vmandn.mm vd, vd, v0;  vmor.mm vd, vt, vd
+  pseudoinstruction: vmsge\{u}.vx vd, va, x, v0.t, vt
+  expansion: vmslt\{u}.vx vt, va, x;  vmandn.mm vt, v0, vt;  vmandn.mm vd, vd, v0;  vmor.mm vd, vt, vd
 
   The vt argument to the pseudoinstruction must name a temporary vector register that is
   not same as vd and which will be clobbered by the pseudoinstruction</pre>
@@ -5681,7 +5906,7 @@ tail-agnostic policy.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_integer_minmax_instructions"><a class="anchor" href="#_vector_integer_minmax_instructions"></a>Vector Integer Min/Max Instructions</h4>
+<h4 id="vector-integer-minmax-instructions"><a class="anchor" href="#vector-integer-minmax-instructions"></a>Vector Integer Min/Max Instructions</h4>
 <div class="paragraph">
 <p>Signed and unsigned integer minimum and maximum instructions are
 supported.</p>
@@ -5707,7 +5932,7 @@ vmax.vx vd, vs2, rs1, vm   # vector-scalar</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_integer_multiply_instructions"><a class="anchor" href="#_vector_single_width_integer_multiply_instructions"></a>Vector Single-Width Integer Multiply Instructions</h4>
+<h4 id="vector-single-width-integer-multiply-instructions"><a class="anchor" href="#vector-single-width-integer-multiply-instructions"></a>Vector Single-Width Integer Multiply Instructions</h4>
 <div class="paragraph">
 <p>The single-width multiply instructions perform a SEW-bit*SEW-bit
 multiply to generate a 2*SEW-bit product, then return one half of the
@@ -5768,7 +5993,7 @@ cases.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_integer_divide_instructions"><a class="anchor" href="#_vector_integer_divide_instructions"></a>Vector Integer Divide Instructions</h4>
+<h4 id="vector-integer-divide-instructions"><a class="anchor" href="#vector-integer-divide-instructions"></a>Vector Integer Divide Instructions</h4>
 <div class="paragraph">
 <p>The divide and remainder instructions are equivalent to the RISC-V
 standard scalar integer multiply/divides, with the same results for
@@ -5824,7 +6049,7 @@ operation.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_widening_integer_multiply_instructions"><a class="anchor" href="#_vector_widening_integer_multiply_instructions"></a>Vector Widening Integer Multiply Instructions</h4>
+<h4 id="vector-widening-integer-multiply-instructions"><a class="anchor" href="#vector-widening-integer-multiply-instructions"></a>Vector Widening Integer Multiply Instructions</h4>
 <div class="paragraph">
 <p>The widening integer multiply instructions return the full 2*SEW-bit
 product from an SEW-bit*SEW-bit multiply.</p>
@@ -5846,7 +6071,7 @@ vwmulsu.vx vd, vs2, rs1, vm # vector-scalar</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_integer_multiply_add_instructions"><a class="anchor" href="#_vector_single_width_integer_multiply_add_instructions"></a>Vector Single-Width Integer Multiply-Add Instructions</h4>
+<h4 id="vector-single-width-integer-multiply-add-instructions"><a class="anchor" href="#vector-single-width-integer-multiply-add-instructions"></a>Vector Single-Width Integer Multiply-Add Instructions</h4>
 <div class="paragraph">
 <p>The integer multiply-add instructions are destructive and are provided
 in two forms, one that overwrites the addend or minuend
@@ -5892,7 +6117,7 @@ vnmsub.vx vd, rs1, vs2, vm    # vd[i] = -(x[rs1] * vd[i]) + vs2[i]</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_widening_integer_multiply_add_instructions"><a class="anchor" href="#_vector_widening_integer_multiply_add_instructions"></a>Vector Widening Integer Multiply-Add Instructions</h4>
+<h4 id="vector-widening-integer-multiply-add-instructions"><a class="anchor" href="#vector-widening-integer-multiply-add-instructions"></a>Vector Widening Integer Multiply-Add Instructions</h4>
 <div class="paragraph">
 <p>The widening integer multiply-add instructions add the full 2*SEW-bit
 product from a SEW-bit*SEW-bit multiply to a 2*SEW-bit value and
@@ -5919,7 +6144,7 @@ vwmaccus.vx vd, rs1, vs2, vm  # vd[i] = +(unsigned(x[rs1]) * signed(vs2[i])) + v
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_integer_merge_instructions"><a class="anchor" href="#_vector_integer_merge_instructions"></a>Vector Integer Merge Instructions</h4>
+<h4 id="vector-integer-merge-instructions"><a class="anchor" href="#vector-integer-merge-instructions"></a>Vector Integer Merge Instructions</h4>
 <div class="paragraph">
 <p>The vector integer merge instructions combine two source operands
 based on a mask.  Unlike regular arithmetic instructions, the
@@ -5946,7 +6171,7 @@ vmerge.vim vd, vs2, imm, v0  # vd[i] = v0.mask[i] ? imm    : vs2[i]</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_integer_move_instructions"><a class="anchor" href="#_vector_integer_move_instructions"></a>Vector Integer Move Instructions</h4>
+<h4 id="vector-integer-move-instructions"><a class="anchor" href="#vector-integer-move-instructions"></a>Vector Integer Move Instructions</h4>
 <div class="paragraph">
 <p>The vector integer move instructions copy a source operand to a vector
 register group.
@@ -6057,7 +6282,7 @@ to avoid overflow.
 </table>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_saturating_add_and_subtract"><a class="anchor" href="#_vector_single_width_saturating_add_and_subtract"></a>Vector Single-Width Saturating Add and Subtract</h4>
+<h4 id="vector-single-width-saturating-add-and-subtract"><a class="anchor" href="#vector-single-width-saturating-add-and-subtract"></a>Vector Single-Width Saturating Add and Subtract</h4>
 <div class="paragraph">
 <p>Saturating forms of integer add and subtract are provided, for both
 signed and unsigned integers.  If the result would overflow the
@@ -6087,7 +6312,7 @@ vssub.vx vd, vs2, rs1, vm   # vector-scalar</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_averaging_add_and_subtract"><a class="anchor" href="#_vector_single_width_averaging_add_and_subtract"></a>Vector Single-Width Averaging Add and Subtract</h4>
+<h4 id="vector-single-width-averaging-add-and-subtract"><a class="anchor" href="#vector-single-width-averaging-add-and-subtract"></a>Vector Single-Width Averaging Add and Subtract</h4>
 <div class="paragraph">
 <p>The averaging add and subtract instructions right shift the result by
 one bit and round off the result according to the setting in <code>vxrm</code>.
@@ -6133,7 +6358,7 @@ vasub.vx vd, vs2, rs1, vm   # roundoff_signed(vs2[i] - x[rs1], 1)</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_fractional_multiply_with_rounding_and_saturation"><a class="anchor" href="#_vector_single_width_fractional_multiply_with_rounding_and_saturation"></a>Vector Single-Width Fractional Multiply with Rounding and Saturation</h4>
+<h4 id="vector-single-width-fractional-multiply-with-rounding-and-saturation"><a class="anchor" href="#vector-single-width-fractional-multiply-with-rounding-and-saturation"></a>Vector Single-Width Fractional Multiply with Rounding and Saturation</h4>
 <div class="paragraph">
 <p>The signed fractional multiply instruction produces a 2*SEW product of
 the two SEW inputs, then shifts the result right by SEW-1 bits,
@@ -6185,7 +6410,7 @@ simply truncation (<code>rdn</code>).
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_scaling_shift_instructions"><a class="anchor" href="#_vector_single_width_scaling_shift_instructions"></a>Vector Single-Width Scaling Shift Instructions</h4>
+<h4 id="vector-single-width-scaling-shift-instructions"><a class="anchor" href="#vector-single-width-scaling-shift-instructions"></a>Vector Single-Width Scaling Shift Instructions</h4>
 <div class="paragraph">
 <p>These instructions shift the input value right, and round off the
 shifted out bits according to <code>vxrm</code>.  The scaling right shifts have
@@ -6211,7 +6436,7 @@ used to control the shift amount.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_narrowing_fixed_point_clip_instructions"><a class="anchor" href="#_vector_narrowing_fixed_point_clip_instructions"></a>Vector Narrowing Fixed-Point Clip Instructions</h4>
+<h4 id="vector-narrowing-fixed-point-clip-instructions"><a class="anchor" href="#vector-narrowing-fixed-point-clip-instructions"></a>Vector Narrowing Fixed-Point Clip Instructions</h4>
 <div class="paragraph">
 <p>The <code>vnclip</code> instructions are used to pack a fixed-point value into a
 narrower destination.  The instructions support rounding, scaling, and
@@ -6345,7 +6570,7 @@ scalar floating-point instructions with regard to NaNs.</p>
 as described in Section <a href="#sec-arithmetic-encoding">Vector Arithmetic Instruction encoding</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_exception_flags"><a class="anchor" href="#_vector_floating_point_exception_flags"></a>Vector Floating-Point Exception Flags</h4>
+<h4 id="vector-floating-point-exception-flags"><a class="anchor" href="#vector-floating-point-exception-flags"></a>Vector Floating-Point Exception Flags</h4>
 <div class="paragraph">
 <p>A vector floating-point exception at any active floating-point element
 sets the standard FP exception flags in the <code>fflags</code> register.  Inactive
@@ -6353,7 +6578,7 @@ elements do not set FP exception flags.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_floating_point_addsubtract_instructions"><a class="anchor" href="#_vector_single_width_floating_point_addsubtract_instructions"></a>Vector Single-Width Floating-Point Add/Subtract Instructions</h4>
+<h4 id="vector-single-width-floating-point-addsubtract-instructions"><a class="anchor" href="#vector-single-width-floating-point-addsubtract-instructions"></a>Vector Single-Width Floating-Point Add/Subtract Instructions</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Floating-point add
@@ -6368,7 +6593,7 @@ vfrsub.vf vd, vs2, rs1, vm  # Scalar-vector vd[i] = f[rs1] - vs2[i]</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_widening_floating_point_addsubtract_instructions"><a class="anchor" href="#_vector_widening_floating_point_addsubtract_instructions"></a>Vector Widening Floating-Point Add/Subtract Instructions</h4>
+<h4 id="vector-widening-floating-point-addsubtract-instructions"><a class="anchor" href="#vector-widening-floating-point-addsubtract-instructions"></a>Vector Widening Floating-Point Add/Subtract Instructions</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Widening FP add/subtract, 2*SEW = SEW +/- SEW
@@ -6386,7 +6611,7 @@ vfwsub.wf  vd, vs2, rs1, vm  # vector-scalar</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_floating_point_multiplydivide_instructions"><a class="anchor" href="#_vector_single_width_floating_point_multiplydivide_instructions"></a>Vector Single-Width Floating-Point Multiply/Divide Instructions</h4>
+<h4 id="vector-single-width-floating-point-multiplydivide-instructions"><a class="anchor" href="#vector-single-width-floating-point-multiplydivide-instructions"></a>Vector Single-Width Floating-Point Multiply/Divide Instructions</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Floating-point multiply
@@ -6403,7 +6628,7 @@ vfrdiv.vf vd, vs2, rs1, vm  # scalar-vector, vd[i] = f[rs1]/vs2[i]</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_widening_floating_point_multiply"><a class="anchor" href="#_vector_widening_floating_point_multiply"></a>Vector Widening Floating-Point Multiply</h4>
+<h4 id="vector-widening-floating-point-multiply"><a class="anchor" href="#vector-widening-floating-point-multiply"></a>Vector Widening Floating-Point Multiply</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Widening floating-point multiply
@@ -6413,7 +6638,7 @@ vfwmul.vf    vd, vs2, rs1, vm # vector-scalar</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_floating_point_fused_multiply_add_instructions"><a class="anchor" href="#_vector_single_width_floating_point_fused_multiply_add_instructions"></a>Vector Single-Width Floating-Point Fused Multiply-Add Instructions</h4>
+<h4 id="vector-single-width-floating-point-fused-multiply-add-instructions"><a class="anchor" href="#vector-single-width-floating-point-fused-multiply-add-instructions"></a>Vector Single-Width Floating-Point Fused Multiply-Add Instructions</h4>
 <div class="paragraph">
 <p>All four varieties of fused multiply-add are provided, and in two
 destructive forms that overwrite one of the operands, either the
@@ -6471,7 +6696,7 @@ operation with three inputs and separate output.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_widening_floating_point_fused_multiply_add_instructions"><a class="anchor" href="#_vector_widening_floating_point_fused_multiply_add_instructions"></a>Vector Widening Floating-Point Fused Multiply-Add Instructions</h4>
+<h4 id="vector-widening-floating-point-fused-multiply-add-instructions"><a class="anchor" href="#vector-widening-floating-point-fused-multiply-add-instructions"></a>Vector Widening Floating-Point Fused Multiply-Add Instructions</h4>
 <div class="paragraph">
 <p>The widening floating-point fused multiply-add instructions all
 overwrite the wide addend with the result.  The multiplier inputs are
@@ -6498,7 +6723,7 @@ vfwnmsac.vf vd, rs1, vs2, vm   # vd[i] = -(f[rs1] * vs2[i]) + vd[i]</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_square_root_instruction"><a class="anchor" href="#_vector_floating_point_square_root_instruction"></a>Vector Floating-Point Square-Root Instruction</h4>
+<h4 id="vector-floating-point-square-root-instruction"><a class="anchor" href="#vector-floating-point-square-root-instruction"></a>Vector Floating-Point Square-Root Instruction</h4>
 <div class="paragraph">
 <p>This is a unary vector-vector instruction.</p>
 </div>
@@ -6510,7 +6735,7 @@ vfsqrt.v vd, vs2, vm   # Vector-vector square root</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_reciprocal_square_root_estimate_instruction"><a class="anchor" href="#_vector_floating_point_reciprocal_square_root_estimate_instruction"></a>Vector Floating-Point Reciprocal Square-Root Estimate Instruction</h4>
+<h4 id="vector-floating-point-reciprocal-square-root-estimate-instruction"><a class="anchor" href="#vector-floating-point-reciprocal-square-root-estimate-instruction"></a>Vector Floating-Point Reciprocal Square-Root Estimate Instruction</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Floating-point reciprocal square-root estimate to 7 bits.
@@ -6555,7 +6780,7 @@ classes of floating-point inputs:</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-{inf} {le} <em>x</em> &lt; -0.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-{inf} &#8804; <em>x</em> &lt; -0.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">canonical NaN</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NV</p></td>
 </tr>
@@ -7328,7 +7553,7 @@ with greater estimate accuracy.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_reciprocal_estimate_instruction"><a class="anchor" href="#_vector_floating_point_reciprocal_estimate_instruction"></a>Vector Floating-Point Reciprocal Estimate Instruction</h4>
+<h4 id="vector-floating-point-reciprocal-estimate-instruction"><a class="anchor" href="#vector-floating-point-reciprocal-estimate-instruction"></a>Vector Floating-Point Reciprocal Estimate Instruction</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Floating-point reciprocal estimate to 7 bits.
@@ -7381,33 +7606,33 @@ classes of floating-point inputs, where <em>B</em> is the exponent bias:</p>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B+1</sup> &lt; <em>x</em> {le} -2<sup>B</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B+1</sup> &lt; <em>x</em> &#8804; -2<sup>B</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-(B+1)</sup> {ge} <em>y</em> &gt; -2<sup>-B</sup> (subnormal, sig=01&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-(B+1)</sup> &#8805; <em>y</em> &gt; -2<sup>-B</sup> (subnormal, sig=01&#8230;&#8203;)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B</sup> &lt; <em>x</em> {le} -2<sup>B-1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B</sup> &lt; <em>x</em> &#8804; -2<sup>B-1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B</sup> {ge} <em>y</em> &gt; -2<sup>-B+1</sup> (subnormal, sig=1&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B</sup> &#8805; <em>y</em> &gt; -2<sup>-B+1</sup> (subnormal, sig=1&#8230;&#8203;)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B-1</sup> &lt; <em>x</em> {le} -2<sup>-B+1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B-1</sup> &lt; <em>x</em> &#8804; -2<sup>-B+1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B+1</sup> {ge} <em>y</em> &gt; -2<sup>B-1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B+1</sup> &#8805; <em>y</em> &gt; -2<sup>B-1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B+1</sup> &lt; <em>x</em> {le} -2<sup>-B</sup> (subnormal, sig=1&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B+1</sup> &lt; <em>x</em> &#8804; -2<sup>-B</sup> (subnormal, sig=1&#8230;&#8203;)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B-1</sup> {ge} <em>y</em> &gt; -2<sup>B</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B-1</sup> &#8805; <em>y</em> &gt; -2<sup>B</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B</sup> &lt; <em>x</em> {le} -2<sup>-(B+1)</sup> (subnormal, sig=01&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B</sup> &lt; <em>x</em> &#8804; -2<sup>-(B+1)</sup> (subnormal, sig=01&#8230;&#8203;)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B</sup> {ge} <em>y</em> &gt; -2<sup>B+1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B</sup> &#8805; <em>y</em> &gt; -2<sup>B+1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -7447,33 +7672,33 @@ classes of floating-point inputs, where <em>B</em> is the exponent bias:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NX, OF</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-(B+1)</sup> {le} <em>x</em> &lt; 2<sup>-B</sup> (subnormal, sig=01&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-(B+1)</sup> &#8804; <em>x</em> &lt; 2<sup>-B</sup> (subnormal, sig=01&#8230;&#8203;)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B+1</sup> &gt; <em>y</em> {ge} 2<sup>B</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B+1</sup> &gt; <em>y</em> &#8805; 2<sup>B</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B</sup> {le} <em>x</em> &lt; 2<sup>-B+1</sup> (subnormal, sig=1&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B</sup> &#8804; <em>x</em> &lt; 2<sup>-B+1</sup> (subnormal, sig=1&#8230;&#8203;)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B</sup> &gt; <em>y</em> {ge} 2<sup>B-1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B</sup> &gt; <em>y</em> &#8805; 2<sup>B-1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B+1</sup> {le} <em>x</em> &lt; 2<sup>B-1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B+1</sup> &#8804; <em>x</em> &lt; 2<sup>B-1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B-1</sup> &gt; <em>y</em> {ge} 2<sup>-B+1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B-1</sup> &gt; <em>y</em> &#8805; 2<sup>-B+1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B-1</sup> {le} <em>x</em> &lt; 2<sup>B</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B-1</sup> &#8804; <em>x</em> &lt; 2<sup>B</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B+1</sup> &gt; <em>y</em> {ge} 2<sup>-B</sup> (subnormal, sig=1&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B+1</sup> &gt; <em>y</em> &#8805; 2<sup>-B</sup> (subnormal, sig=1&#8230;&#8203;)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B</sup> {le} <em>x</em> &lt; 2<sup>B+1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B</sup> &#8804; <em>x</em> &lt; 2<sup>B+1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B</sup> &gt; <em>y</em> {ge} 2<sup>-(B+1)</sup> (subnormal, sig=01&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B</sup> &gt; <em>y</em> &#8805; 2<sup>-(B+1)</sup> (subnormal, sig=01&#8230;&#8203;)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -8117,7 +8342,7 @@ with greater estimate accuracy.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_minmax_instructions"><a class="anchor" href="#_vector_floating_point_minmax_instructions"></a>Vector Floating-Point MIN/MAX Instructions</h4>
+<h4 id="vector-floating-point-minmax-instructions"><a class="anchor" href="#vector-floating-point-minmax-instructions"></a>Vector Floating-Point MIN/MAX Instructions</h4>
 <div class="paragraph">
 <p>The vector floating-point <code>vfmin</code> and <code>vfmax</code> instructions have the
 same behavior as the corresponding scalar floating-point instructions
@@ -8137,7 +8362,7 @@ vfmax.vf vd, vs2, rs1, vm   # vector-scalar</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_sign_injection_instructions"><a class="anchor" href="#_vector_floating_point_sign_injection_instructions"></a>Vector Floating-Point Sign-Injection Instructions</h4>
+<h4 id="vector-floating-point-sign-injection-instructions"><a class="anchor" href="#vector-floating-point-sign-injection-instructions"></a>Vector Floating-Point Sign-Injection Instructions</h4>
 <div class="paragraph">
 <p>Vector versions of the scalar sign-injection instructions.  The result
 takes all bits except the sign bit from the vector <code>vs2</code> operands.</p>
@@ -8185,7 +8410,7 @@ pseudoinstruction is provided: <code>vfabs.v vd,vs</code> = <code>vfsgnjx.vv vd,
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_compare_instructions"><a class="anchor" href="#_vector_floating_point_compare_instructions"></a>Vector Floating-Point Compare Instructions</h4>
+<h4 id="vector-floating-point-compare-instructions"><a class="anchor" href="#vector-floating-point-compare-instructions"></a>Vector Floating-Point Compare Instructions</h4>
 <div class="paragraph">
 <p>These vector FP compare instructions compare two source operands and
 write the comparison result to a mask register.  The destination mask
@@ -8303,7 +8528,7 @@ element of <code>va</code> contains a quiet NaN and the corresponding element in
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_classify_instruction"><a class="anchor" href="#_vector_floating_point_classify_instruction"></a>Vector Floating-Point Classify Instruction</h4>
+<h4 id="vector-floating-point-classify-instruction"><a class="anchor" href="#vector-floating-point-classify-instruction"></a>Vector Floating-Point Classify Instruction</h4>
 <div class="paragraph">
 <p>This is a unary vector-vector instruction that operates in the same
 way as the scalar classify instruction.</p>
@@ -8322,7 +8547,7 @@ destination elements.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_merge_instruction"><a class="anchor" href="#_vector_floating_point_merge_instruction"></a>Vector Floating-Point Merge Instruction</h4>
+<h4 id="vector-floating-point-merge-instruction"><a class="anchor" href="#vector-floating-point-merge-instruction"></a>Vector Floating-Point Merge Instruction</h4>
 <div class="paragraph">
 <p>A vector-scalar floating-point merge instruction is provided, which
 operates on all body elements from <code>vstart</code> up to the current vector
@@ -8370,7 +8595,7 @@ instruction, but with <code>vm=1</code> and <code>vs2=v0</code>.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_single_width_floating_pointinteger_type_convert_instructions"><a class="anchor" href="#_single_width_floating_pointinteger_type_convert_instructions"></a>Single-Width Floating-Point/Integer Type-Convert Instructions</h4>
+<h4 id="single-width-floating-pointinteger-type-convert-instructions"><a class="anchor" href="#single-width-floating-pointinteger-type-convert-instructions"></a>Single-Width Floating-Point/Integer Type-Convert Instructions</h4>
 <div class="paragraph">
 <p>Conversion operations are provided to convert to and from
 floating-point values and unsigned and signed integers, where both
@@ -8409,7 +8634,7 @@ from floating-point to integer, as is common in languages like C and Java.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_widening_floating_pointinteger_type_convert_instructions"><a class="anchor" href="#_widening_floating_pointinteger_type_convert_instructions"></a>Widening Floating-Point/Integer Type-Convert Instructions</h4>
+<h4 id="widening-floating-pointinteger-type-convert-instructions"><a class="anchor" href="#widening-floating-pointinteger-type-convert-instructions"></a>Widening Floating-Point/Integer Type-Convert Instructions</h4>
 <div class="paragraph">
 <p>A set of conversion instructions is provided to convert between
 narrower integer and floating-point datatypes to a type of twice the
@@ -8476,7 +8701,7 @@ additional exception flags raised.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_narrowing_floating_pointinteger_type_convert_instructions"><a class="anchor" href="#_narrowing_floating_pointinteger_type_convert_instructions"></a>Narrowing Floating-Point/Integer Type-Convert Instructions</h4>
+<h4 id="narrowing-floating-pointinteger-type-convert-instructions"><a class="anchor" href="#narrowing-floating-pointinteger-type-convert-instructions"></a>Narrowing Floating-Point/Integer Type-Convert Instructions</h4>
 <div class="paragraph">
 <p>A set of conversion instructions is provided to convert wider integer
 and floating-point datatypes to a type of half the width.</p>
@@ -8534,7 +8759,7 @@ destination format is converted to the destination format&#8217;s largest finite
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vector_reduction_operations"><a class="anchor" href="#_vector_reduction_operations"></a>Vector Reduction Operations</h3>
+<h3 id="vector-reduction-operations"><a class="anchor" href="#vector-reduction-operations"></a>Vector Reduction Operations</h3>
 <div class="paragraph">
 <p>Vector reduction operations take a vector register group of elements
 and a scalar held in element 0 of a vector register, and perform a
@@ -8680,7 +8905,7 @@ Older assembler mnemonic <code>vfredsum</code> is retained as alias for <code>vf
 </table>
 </div>
 <div class="sect4">
-<h5 id="_vector_ordered_single_width_floating_point_sum_reduction"><a class="anchor" href="#_vector_ordered_single_width_floating_point_sum_reduction"></a>Vector Ordered Single-Width Floating-Point Sum Reduction</h5>
+<h5 id="vector-ordered-single-width-floating-point-sum-reduction"><a class="anchor" href="#vector-ordered-single-width-floating-point-sum-reduction"></a>Vector Ordered Single-Width Floating-Point Sum Reduction</h5>
 <div class="paragraph">
 <p>The <code>vfredosum</code> instruction must sum the floating-point values in
 element order, starting with the scalar in <code>vs1[0]</code>--that is, it
@@ -8731,7 +8956,7 @@ summation loop.
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_unordered_single_width_floating_point_sum_reduction"><a class="anchor" href="#_vector_unordered_single_width_floating_point_sum_reduction"></a>Vector Unordered Single-Width Floating-Point Sum Reduction</h5>
+<h5 id="vector-unordered-single-width-floating-point-sum-reduction"><a class="anchor" href="#vector-unordered-single-width-floating-point-sum-reduction"></a>Vector Unordered Single-Width Floating-Point Sum Reduction</h5>
 <div class="paragraph">
 <p>The unordered sum reduction instruction, <code>vfredusum</code>, provides an
 implementation more freedom in performing the reduction.</p>
@@ -8800,7 +9025,7 @@ The <code>vfredosum</code> instruction is a valid implementation of the
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_single_width_floating_point_max_and_min_reductions"><a class="anchor" href="#_vector_single_width_floating_point_max_and_min_reductions"></a>Vector Single-Width Floating-Point Max and Min Reductions</h5>
+<h5 id="vector-single-width-floating-point-max-and-min-reductions"><a class="anchor" href="#vector-single-width-floating-point-max-and-min-reductions"></a>Vector Single-Width Floating-Point Max and Min Reductions</h5>
 <div class="paragraph">
 <p>The <code>vfredmin</code> and <code>vfredmax</code> instructions reduce the scalar argument in
 <code>vs1[0]</code> and active elements in <code>vs2</code> using the <code>minimumNumber</code> and
@@ -9161,7 +9386,7 @@ use.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_count_population_in_mask_vcpop_m"><a class="anchor" href="#_vector_count_population_in_mask_vcpop_m"></a>Vector count population in mask <code>vcpop.m</code></h4>
+<h4 id="vector-count-population-in-mask-vcpop-m"><a class="anchor" href="#vector-count-population-in-mask-vcpop-m"></a>Vector count population in mask <code>vcpop.m</code></h4>
 <div class="listingblock">
 <div class="content">
 <pre>vcpop.m rd, vs2, vm</pre>
@@ -9211,7 +9436,7 @@ value 0, since no mask elements are active).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vfirst_find_first_set_mask_bit"><a class="anchor" href="#_vfirst_find_first_set_mask_bit"></a><code>vfirst</code> find-first-set mask bit</h4>
+<h4 id="vfirst-find-first-set-mask-bit"><a class="anchor" href="#vfirst-find-first-set-mask-bit"></a><code>vfirst</code> find-first-set mask bit</h4>
 <div class="listingblock">
 <div class="content">
 <pre>vfirst.m rd, vs2, vm</pre>
@@ -9248,7 +9473,7 @@ value -1, since no mask elements are active).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vmsbf_m_set_before_first_mask_bit"><a class="anchor" href="#_vmsbf_m_set_before_first_mask_bit"></a><code>vmsbf.m</code> set-before-first mask bit</h4>
+<h4 id="vmsbf-m-set-before-first-mask-bit"><a class="anchor" href="#vmsbf-m-set-before-first-mask-bit"></a><code>vmsbf.m</code> set-before-first mask bit</h4>
 <div class="listingblock">
 <div class="content">
 <pre>    vmsbf.m vd, vs2, vm
@@ -9298,7 +9523,7 @@ and, if masked, cannot overlap the mask register ('v0').</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vmsif_m_set_including_first_mask_bit"><a class="anchor" href="#_vmsif_m_set_including_first_mask_bit"></a><code>vmsif.m</code> set-including-first mask bit</h4>
+<h4 id="vmsif-m-set-including-first-mask-bit"><a class="anchor" href="#vmsif-m-set-including-first-mask-bit"></a><code>vmsif.m</code> set-including-first mask bit</h4>
 <div class="paragraph">
 <p>The vector mask set-including-first instruction is similar to
 set-before-first, except it also includes the element with a set bit.</p>
@@ -9340,7 +9565,7 @@ and, if masked, cannot overlap the mask register ('v0').</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vmsof_m_set_only_first_mask_bit"><a class="anchor" href="#_vmsof_m_set_only_first_mask_bit"></a><code>vmsof.m</code> set-only-first mask bit</h4>
+<h4 id="vmsof-m-set-only-first-mask-bit"><a class="anchor" href="#vmsof-m-set-only-first-mask-bit"></a><code>vmsof.m</code> set-only-first mask bit</h4>
 <div class="paragraph">
 <p>The vector mask set-only-first instruction is similar to
 set-before-first, except it only sets the first element with a bit
@@ -9383,23 +9608,71 @@ and, if masked, cannot overlap the mask register ('v0').</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_example_using_vector_mask_instructions"><a class="anchor" href="#_example_using_vector_mask_instructions"></a>Example using vector mask instructions</h4>
+<h4 id="example-using-vector-mask-instructions"><a class="anchor" href="#example-using-vector-mask-instructions"></a>Example using vector mask instructions</h4>
 <div class="paragraph">
 <p>The following is an example of vectorizing a data-dependent exit loop.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Unresolved include directive in modules/unpriv/pages/v-st-ext.adoc - include::example/strcpy.s[]</pre>
+<pre>  # char* strcpy(char *dst, const char* src)
+strcpy:
+      mv a2, a0             # Copy dst
+      li t0, -1             # Infinite AVL
+loop:
+    vsetvli x0, t0, e8, m8, ta, ma  # Max length vectors of bytes
+    vle8ff.v v8, (a1)        # Get src bytes
+      csrr t1, vl           # Get number of bytes fetched
+    vmseq.vi v1, v8, 0      # Flag zero bytes
+    vfirst.m a3, v1         # Zero found?
+      add a1, a1, t1        # Bump pointer
+    vmsif.m v0, v1          # Set mask up to and including zero byte.
+    vse8.v v8, (a2), v0.t    # Write out bytes
+      add a2, a2, t1        # Bump pointer
+      bltz a3, loop         # Zero byte not found, so loop
+
+      ret</pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Unresolved include directive in modules/unpriv/pages/v-st-ext.adoc - include::example/strncpy.s[]</pre>
+<pre>  # char* strncpy(char *dst, const char* src, size_t n)
+strncpy:
+      mv a3, a0             # Copy dst
+loop:
+    vsetvli x0, a2, e8, m8, ta, ma   # Vectors of bytes.
+    vle8ff.v v8, (a1)        # Get src bytes
+    vmseq.vi v1, v8, 0      # Flag zero bytes
+      csrr t1, vl           # Get number of bytes fetched
+    vfirst.m a4, v1         # Zero found?
+    vmsbf.m v0, v1          # Set mask up to before zero byte.
+    vse8.v v8, (a3), v0.t    # Write out non-zero bytes
+      bgez a4, zero_tail    # Zero remaining bytes.
+      sub a2, a2, t1        # Decrement count.
+      add a3, a3, t1        # Bump dest pointer
+      add a1, a1, t1        # Bump src pointer
+      bnez a2, loop         # Anymore?
+
+      ret
+
+zero_tail:
+    sub a2, a2, a4          # Subtract count on non-zero bytes.
+    add a3, a3, a4          # Advance past non-zero bytes.
+    vsetvli t1, a2, e8, m8, ta, ma   # Vectors of bytes.
+    vmv.v.i v0, 0           # Splat zero.
+
+zero_loop:
+    vse8.v v0, (a3)          # Store zero.
+      sub a2, a2, t1        # Decrement count.
+      add a3, a3, t1        # Bump pointer
+      vsetvli t1, a2, e8, m8, ta, ma   # Vectors of bytes.
+      bnez a2, zero_loop    # Anymore?
+
+      ret</pre>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_iota_instruction"><a class="anchor" href="#_vector_iota_instruction"></a>Vector Iota Instruction</h4>
+<h4 id="vector-iota-instruction"><a class="anchor" href="#vector-iota-instruction"></a>Vector Iota Instruction</h4>
 <div class="paragraph">
 <p>The <code>viota.m</code> instruction reads a source vector mask register and
 writes to each element of the destination vector register group the
@@ -9497,7 +9770,7 @@ loop:
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_element_index_instruction"><a class="anchor" href="#_vector_element_index_instruction"></a>Vector Element Index Instruction</h4>
+<h4 id="vector-element-index-instruction"><a class="anchor" href="#vector-element-index-instruction"></a>Vector Element Index Instruction</h4>
 <div class="paragraph">
 <p>The <code>vid.v</code> instruction writes each element&#8217;s index to the
 destination vector register group, from 0 to <code>vl</code>-1.</p>
@@ -9542,7 +9815,7 @@ same datapath as <code>viota.m</code> but with an implicit set mask source.
 around within the vector registers.</p>
 </div>
 <div class="sect3">
-<h4 id="_integer_scalar_move_instructions"><a class="anchor" href="#_integer_scalar_move_instructions"></a>Integer Scalar Move Instructions</h4>
+<h4 id="integer-scalar-move-instructions"><a class="anchor" href="#integer-scalar-move-instructions"></a>Integer Scalar Move Instructions</h4>
 <div class="paragraph">
 <p>The integer scalar read/write instructions transfer a single
 value between a scalar <code>x</code> register and element 0 of a vector
@@ -9567,7 +9840,7 @@ ignored.  If SEW &lt; XLEN, the value is sign-extended to XLEN bits.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<code>vmv.x.s</code> performs its operation even if <code>vstart</code> {ge} <code>vl</code> or <code>vl</code>=0.
+<code>vmv.x.s</code> performs its operation even if <code>vstart</code> &#8805; <code>vl</code> or <code>vl</code>=0.
 </td>
 </tr>
 </table>
@@ -9577,7 +9850,7 @@ ignored.  If SEW &lt; XLEN, the value is sign-extended to XLEN bits.</p>
 the destination vector register.  If SEW &lt; XLEN, the least-significant bits
 are copied and the upper XLEN-SEW bits are ignored.  If SEW &gt; XLEN, the value
 is sign-extended to SEW bits.  The other elements in the destination vector
-register ( 0 &lt; index &lt; VLEN/SEW) are treated as tail elements using the current tail agnostic/undisturbed policy.  If <code>vstart</code> {ge} <code>vl</code>, no
+register ( 0 &lt; index &lt; VLEN/SEW) are treated as tail elements using the current tail agnostic/undisturbed policy.  If <code>vstart</code> &#8805; <code>vl</code>, no
 operation is performed and the destination register is not updated.</p>
 </div>
 <div class="admonitionblock note">
@@ -9599,7 +9872,7 @@ and <code>vmv.s.x</code> are reserved.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_floating_point_scalar_move_instructions"><a class="anchor" href="#_floating_point_scalar_move_instructions"></a>Floating-Point Scalar Move Instructions</h4>
+<h4 id="floating-point-scalar-move-instructions"><a class="anchor" href="#floating-point-scalar-move-instructions"></a>Floating-Point Scalar Move Instructions</h4>
 <div class="paragraph">
 <p>The floating-point scalar read/write instructions transfer a single
 value between a scalar <code>f</code> register and element 0 of a vector
@@ -9623,7 +9896,7 @@ register.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<code>vfmv.f.s</code> performs its operation even if <code>vstart</code> {ge} <code>vl</code> or <code>vl</code>=0.
+<code>vfmv.f.s</code> performs its operation even if <code>vstart</code> &#8805; <code>vl</code> or <code>vl</code>=0.
 </td>
 </tr>
 </table>
@@ -9633,7 +9906,7 @@ register.</p>
 to element 0 of the destination vector register.  The other elements
 in the destination vector register ( 0 &lt; index &lt; VLEN/SEW) are treated
 as tail elements using the current tail agnostic/undisturbed policy.
-If <code>vstart</code> {ge} <code>vl</code>, no operation is performed and the destination
+If <code>vstart</code> &#8805; <code>vl</code>, no operation is performed and the destination
 register is not updated.</p>
 </div>
 <div class="admonitionblock note">
@@ -9655,7 +9928,7 @@ and <code>vfmv.s.f</code> are reserved.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_slide_instructions"><a class="anchor" href="#_vector_slide_instructions"></a>Vector Slide Instructions</h4>
+<h4 id="vector-slide-instructions"><a class="anchor" href="#vector-slide-instructions"></a>Vector Slide Instructions</h4>
 <div class="paragraph">
 <p>The slide instructions move elements up and down a vector register
 group.</p>
@@ -9678,7 +9951,7 @@ than other offsets.
 </div>
 <div class="paragraph">
 <p>For all of the <code>vslideup</code>, <code>vslidedown</code>, <code>v[f]slide1up</code>, and
-<code>v[f]slide1down</code> instructions, if <code>vstart</code> {ge} <code>vl</code>, the instruction performs no
+<code>v[f]slide1down</code> instructions, if <code>vstart</code> &#8805; <code>vl</code>, the instruction performs no
 operation and leaves the destination vector register unchanged.</p>
 </div>
 <div class="admonitionblock note">
@@ -9703,7 +9976,7 @@ controlling whether <em>destination</em> element <em>i</em> is written.  The mas
 undisturbed/agnostic policy is followed for inactive elements.</p>
 </div>
 <div class="sect4">
-<h5 id="_vector_slideup_instructions"><a class="anchor" href="#_vector_slideup_instructions"></a>Vector Slideup Instructions</h5>
+<h5 id="vector-slideup-instructions"><a class="anchor" href="#vector-slideup-instructions"></a>Vector Slideup Instructions</h5>
 <div class="listingblock">
 <div class="content">
 <pre>vslideup.vx vd, vs2, rs1, vm        # vd[i+x[rs1]] = vs2[i]
@@ -9751,7 +10024,7 @@ input vectors during execution, and enables restart with non-zero
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_slidedown_instructions"><a class="anchor" href="#_vector_slidedown_instructions"></a>Vector Slidedown Instructions</h5>
+<h5 id="vector-slidedown-instructions"><a class="anchor" href="#vector-slidedown-instructions"></a>Vector Slidedown Instructions</h5>
 <div class="listingblock">
 <div class="content">
 <pre>vslidedown.vx vd, vs2, rs1, vm       # vd[i] = vs2[i+x[rs1]]
@@ -9784,7 +10057,7 @@ vslidedown behavior for destination element i in slide (`vstart` &lt; `vl`)
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_slide1up"><a class="anchor" href="#_vector_slide1up"></a>Vector Slide1up</h5>
+<h5 id="vector-slide1up"><a class="anchor" href="#vector-slide1up"></a>Vector Slide1up</h5>
 <div class="paragraph">
 <p>Variants of slide are provided that only move by one element but which
 also allow a scalar integer value to be inserted at the vacated
@@ -9843,7 +10116,7 @@ but sources its scalar argument from an <code>f</code> register.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_slide1down_instruction"><a class="anchor" href="#_vector_slide1down_instruction"></a>Vector Slide1down Instruction</h5>
+<h5 id="vector-slide1down-instruction"><a class="anchor" href="#vector-slide1down-instruction"></a>Vector Slide1down Instruction</h5>
 <div class="paragraph">
 <p>The <code>vslide1down</code> instruction copies the first <code>vl</code>-1 active elements
 values from index <em>i</em>+1 in the source vector register group to index
@@ -9910,7 +10183,7 @@ but sources its scalar argument from an <code>f</code> register.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_register_gather_instructions"><a class="anchor" href="#_vector_register_gather_instructions"></a>Vector Register Gather Instructions</h4>
+<h4 id="vector-register-gather-instructions"><a class="anchor" href="#vector-register-gather-instructions"></a>Vector Register Gather Instructions</h4>
 <div class="paragraph">
 <p>The vector register gather instructions read elements from a first
 source vector register group at locations given by a second source
@@ -9949,7 +10222,7 @@ SEW &gt; 16.
 </table>
 </div>
 <div class="paragraph">
-<p>If an element index is out of range ( <code>vs1[i]</code> {ge} VLMAX )
+<p>If an element index is out of range ( <code>vs1[i]</code> &#8805; VLMAX )
 then zero is returned for the element value.</p>
 </div>
 <div class="paragraph">
@@ -9986,7 +10259,7 @@ instruction encoding is reserved.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_compress_instruction"><a class="anchor" href="#_vector_compress_instruction"></a>Vector Compress Instruction</h4>
+<h4 id="vector-compress-instruction"><a class="anchor" href="#vector-compress-instruction"></a>Vector Compress Instruction</h4>
 <div class="paragraph">
 <p>The vector compress instruction allows elements selected by a vector
 mask register from a source vector register group to be packed into
@@ -10051,7 +10324,7 @@ element 0.  This does mean elements in destination register after
 </table>
 </div>
 <div class="sect4">
-<h5 id="_synthesizing_vdecompress"><a class="anchor" href="#_synthesizing_vdecompress"></a>Synthesizing <code>vdecompress</code></h5>
+<h5 id="synthesizing-vdecompress"><a class="anchor" href="#synthesizing-vdecompress"></a>Synthesizing <code>vdecompress</code></h5>
 <div class="paragraph">
 <p>There is no inverse <code>vdecompress</code> provided, as this operation can be
 readily synthesized using iota and a masked vrgather:</p>
@@ -10090,7 +10363,7 @@ e q r d c b v a    # v11 destination after vrgather using viota.m under mask</pr
 </div>
 </div>
 <div class="sect3">
-<h4 id="_whole_vector_register_move"><a class="anchor" href="#_whole_vector_register_move"></a>Whole Vector Register Move</h4>
+<h4 id="whole-vector-register-move"><a class="anchor" href="#whole-vector-register-move"></a>Whole Vector Register Move</h4>
 <div class="paragraph">
 <p>The <code>vmv&lt;nr&gt;r.v</code> instructions copy whole vector registers (i.e., all
 VLEN bits) and can copy whole vector register groups.  The <code>nr</code> value
@@ -10106,7 +10379,7 @@ length <code>evl</code>= EMUL * VLEN/SEW.</p>
 </td>
 <td class="content">
 These instructions are intended to aid compilers to shuffle
-vector registers without needing to know or change <code>vl</code> or <code>vtype</code>.
+vector registers without needing to know or change <code>vl</code>.
 </td>
 </tr>
 </table>
@@ -10118,9 +10391,9 @@ vector registers without needing to know or change <code>vl</code> or <code>vtyp
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The usual property that no elements are written if <code>vstart</code> {ge} <code>vl</code>
+The usual property that no elements are written if <code>vstart</code> &#8805; <code>vl</code>
 does not apply to these instructions.
-Instead, no elements are written if <code>vstart</code> {ge} <code>evl</code>.
+Instead, no elements are written if <code>vstart</code> &#8805; <code>evl</code>.
 </td>
 </tr>
 </table>
@@ -10209,7 +10482,7 @@ restrictions.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_exception_handling"><a class="anchor" href="#_exception_handling"></a>Exception Handling</h3>
+<h3 id="exception-handling"><a class="anchor" href="#exception-handling"></a>Exception Handling</h3>
 <div class="paragraph">
 <p>On a trap during a vector instruction (caused by either a synchronous
 exception or an asynchronous interrupt), the existing <code>*epc</code> CSR is
@@ -10238,7 +10511,7 @@ virtual memory.
 </table>
 </div>
 <div class="sect3">
-<h4 id="_precise_vector_traps"><a class="anchor" href="#_precise_vector_traps"></a>Precise vector traps</h4>
+<h4 id="precise-vector-traps"><a class="anchor" href="#precise-vector-traps"></a>Precise vector traps</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -10298,7 +10571,7 @@ guaranteed for the element or segment reported by <code>vstart</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_imprecise_vector_traps"><a class="anchor" href="#_imprecise_vector_traps"></a>Imprecise vector traps</h4>
+<h4 id="imprecise-vector-traps"><a class="anchor" href="#imprecise-vector-traps"></a>Imprecise vector traps</h4>
 <div class="paragraph">
 <p>Imprecise vector traps are traps that are not precise.  In particular,
 instructions newer than <code>*epc</code> may have committed results, and
@@ -10331,7 +10604,7 @@ traps caused by synchronous vector exceptions.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_selectable_preciseimprecise_traps"><a class="anchor" href="#_selectable_preciseimprecise_traps"></a>Selectable precise/imprecise traps</h4>
+<h4 id="selectable-preciseimprecise-traps"><a class="anchor" href="#selectable-preciseimprecise-traps"></a>Selectable precise/imprecise traps</h4>
 <div class="paragraph">
 <p>Some profiles may choose to provide a privileged mode bit to select
 between precise and imprecise vector traps.  Imprecise mode would run
@@ -10345,7 +10618,7 @@ same errors as in imprecise mode.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_swappable_traps"><a class="anchor" href="#_swappable_traps"></a>Swappable traps</h4>
+<h4 id="swappable-traps"><a class="anchor" href="#swappable-traps"></a>Swappable traps</h4>
 <div class="paragraph">
 <p>Another trap mode can support swappable state in the vector unit,
 where on a trap, special instructions can save and restore the vector
@@ -10387,7 +10660,7 @@ additional vector extensions in various domains, including
 cryptography and machine learning.</p>
 </div>
 <div class="sect3">
-<h4 id="_zvl_minimum_vector_length_standard_extensions"><a class="anchor" href="#_zvl_minimum_vector_length_standard_extensions"></a>Zvl*: Minimum Vector Length Standard Extensions</h4>
+<h4 id="zvl-minimum-vector-length-standard-extensions"><a class="anchor" href="#zvl-minimum-vector-length-standard-extensions"></a>Zvl*: Minimum Vector Length Standard Extensions</h4>
 <div class="paragraph">
 <p>All standard vector extensions have a minimum required VLEN as
 described below.  A set of vector length extensions are provided to
@@ -10502,7 +10775,7 @@ capabilities.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_zve_vector_extensions_for_embedded_processors"><a class="anchor" href="#_zve_vector_extensions_for_embedded_processors"></a>Zve*: Vector Extensions for Embedded Processors</h4>
+<h4 id="zve-vector-extensions-for-embedded-processors"><a class="anchor" href="#zve-vector-extensions-for-embedded-processors"></a>Zve*: Vector Extensions for Embedded Processors</h4>
 <div class="paragraph">
 <p>The following five standard extensions are defined to provide varying
 degrees of vector support and are intended for use with embedded
@@ -10674,7 +10947,7 @@ from FP32 to FP64.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_v_vector_extension_for_application_processors"><a class="anchor" href="#_v_vector_extension_for_application_processors"></a>V: Vector Extension for Application Processors</h4>
+<h4 id="v-vector-extension-for-application-processors"><a class="anchor" href="#v-vector-extension-for-application-processors"></a>V: Vector Extension for Application Processors</h4>
 <div class="paragraph">
 <p>The single-letter V extension is intended for use in application
 processor profiles.</p>
@@ -10769,7 +11042,7 @@ as is RV64GCV_Zve64f_Zve32x_Zvl128b.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_zvfhmin_vector_extension_for_minimal_half_precision_floating_point"><a class="anchor" href="#_zvfhmin_vector_extension_for_minimal_half_precision_floating_point"></a>Zvfhmin: Vector Extension for Minimal Half-Precision Floating-Point</h4>
+<h4 id="zvfhmin-vector-extension-for-minimal-half-precision-floating-point"><a class="anchor" href="#zvfhmin-vector-extension-for-minimal-half-precision-floating-point"></a>Zvfhmin: Vector Extension for Minimal Half-Precision Floating-Point</h4>
 <div class="paragraph">
 <p>The Zvfhmin extension provides minimal support for vectors of IEEE 754-2008
 binary16 values, adding conversions to and from binary32.
@@ -10783,7 +11056,7 @@ format.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_zvfh_vector_extension_for_half_precision_floating_point"><a class="anchor" href="#_zvfh_vector_extension_for_half_precision_floating_point"></a>Zvfh: Vector Extension for Half-Precision Floating-Point</h4>
+<h4 id="zvfh-vector-extension-for-half-precision-floating-point"><a class="anchor" href="#zvfh-vector-extension-for-half-precision-floating-point"></a>Zvfh: Vector Extension for Half-Precision Floating-Point</h4>
 <div class="paragraph">
 <p>The Zvfh extension provides support for vectors of IEEE 754-2008
 binary16 values.
@@ -10839,7 +11112,7 @@ instruction set design for vector instructions that operate on element
 groups.</p>
 </div>
 <div class="sect3">
-<h4 id="_element_group_size"><a class="anchor" href="#_element_group_size"></a>Element Group Size</h4>
+<h4 id="element-group-size"><a class="anchor" href="#element-group-size"></a>Element Group Size</h4>
 <div class="paragraph">
 <p>The <em>element</em> <em>group</em> <em>size</em> (EGS) is the number of elements in one
 group, and must be a power-of-two (POT).</p>
@@ -10901,7 +11174,7 @@ size of 2 and SHA-256 requires an element group size of 4).
 </div>
 </div>
 <div class="sect3">
-<h4 id="_setting_vl"><a class="anchor" href="#_setting_vl"></a>Setting <code>vl</code></h4>
+<h4 id="setting-vl"><a class="anchor" href="#setting-vl"></a>Setting <code>vl</code></h4>
 <div class="paragraph">
 <p>Each source and destination operand to a vector instruction might be
 defined as either a single element group or a vector of element
@@ -10988,7 +11261,7 @@ instructions to ensure legal length values for all operands.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_determining_eew"><a class="anchor" href="#_determining_eew"></a>Determining EEW</h4>
+<h4 id="determining-eew"><a class="anchor" href="#determining-eew"></a>Determining EEW</h4>
 <div class="paragraph">
 <p>The <code>vtype</code> SEW can be used to indicate or calculate the effective
 element size (EEW) of one or more operands of an element group
@@ -11021,7 +11294,7 @@ the individual elements in the vector.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_determining_emul"><a class="anchor" href="#_determining_emul"></a>Determining EMUL</h4>
+<h4 id="determining-emul"><a class="anchor" href="#determining-emul"></a>Determining EMUL</h4>
 <div class="paragraph">
 <p>The <code>vtype</code> LMUL setting can be used to indicate or calculate the
 effective length multiplier (EMUL) for one or more operands.  Element
@@ -11038,7 +11311,7 @@ different element group size, different EMUL, and/or different EEW.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_element_group_width"><a class="anchor" href="#_element_group_width"></a>Element Group Width</h4>
+<h4 id="element-group-width"><a class="anchor" href="#element-group-width"></a>Element Group Width</h4>
 <div class="paragraph">
 <p>The <em>element</em> <em>group</em> <em>width</em> (EGW) is the number of bits in the
 element group as a whole.
@@ -11082,7 +11355,7 @@ functional unit at the same time.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_masking"><a class="anchor" href="#_masking"></a>Masking</h4>
+<h4 id="masking"><a class="anchor" href="#masking"></a>Masking</h4>
 <div class="paragraph">
 <p>No ratified extensions include masked element-group instructions.
 Future extensions might extend the element-group scheme to support
@@ -11093,7 +11366,7 @@ the mask element group is set).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vector_instruction_listing"><a class="anchor" href="#_vector_instruction_listing"></a>Vector Instruction Listing</h3>
+<h3 id="vector-instruction-listing"><a class="anchor" href="#vector-instruction-listing"></a>Vector Instruction Listing</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 7.6923%;">
@@ -12598,15 +12871,65 @@ the mask element group is set).</p>
 </div>
 </div>
 </div>
-</article>
-  </div>
+<nav class="pagination">
+  <span class="prev"><a href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a></span>
+  <span class="next"><a href="scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a></span>
+</nav>
+</article>  </div>
 </main>
+<div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <main class="modal__content" id="modal-versions-content">
+              <button data-micromodal-close class="modal-versions-close">
+                <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left">
+                  <ul class="nav-versions">
+                    <li class="component is-current">
+                      <a class="title" href="../index.html">ISA Specifications</a>
+                      <ul class="versions">
+                        <li class="version is-current is-latest">
+                          <a href="../index.html">
+                            default<span class="current">current</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="component">
+                      <a class="title" href="../../riscv-library/1/index.html">RISC-V Documentation Library</a>
+                      <ul class="versions">
+                        <li class="version is-latest">
+                          <a href="../../riscv-library/1/index.html">
+                            1<span class="current">current</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-right">
+                                  </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
 </div>
 <footer class="footer">
-  <p>This page was built using the Antora default UI.</p>
-  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+<p>
+  This page was built using a customized version of the
+  <a href="https://github.com/spring-io/antora-ui-spring" target="_blank">Antora Spring UI</a>.
+</p>
+<p>
+  The source code for this UI is licensed under the terms of the Mozilla Public License Version 2.0.
+</p>
 </footer>
-<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script src="../../_/js/vendor/import.js"></script>
+<script src="../../_/js/site.js"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
+<script async src="../../_/js/vendor/spring-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
   </body>
 </html>

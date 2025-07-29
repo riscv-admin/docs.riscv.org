@@ -4,16 +4,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <link rel="canonical" href="https://docs.riscv.org/isa/unpriv/rv32.html">
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="intro.html">
+    <link rel="next" href="rv32e.html">
+    <meta name="generator" content="Antora 3.1.10">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
     <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
+
+    <meta name="antora-ui-version" content="v0.4.16"> 
+    <meta name="version" content="">
+    <meta name="component" content="isa">
+    <meta name="latest-version" content="false">
+    <link rel="icon" href="../../_/favicon.ico" type="image/x-icon">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://docs.riscv.org">RISC-V ISA Documentation Library Antora Demo Site</a>
-      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+      <a class="navbar-item" href="https://spring.io">
+        <img
+          id="springlogo"
+          class="block"
+          src="../../_/img/spring-logo.svg"
+          alt="Spring"
+        />
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
@@ -21,186 +45,369 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="#">Home</a>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Products</a>
+          <a class="navbar-link" href="#">Why Spring</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Product A</a>
-            <a class="navbar-item" href="#">Product B</a>
-            <a class="navbar-item" href="#">Product C</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/why-spring"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/microservices"
+            >Microservices</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/reactive"
+            >Reactive</a>
+            <a class="navbar-item" href="https://spring.io/event-driven">Event
+              Driven</a>
+            <a class="navbar-item" href="https://spring.io/cloud">Cloud</a>
+            <a class="navbar-item" href="https://spring.io/web-applications">Web
+              Applications</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/serverless"
+            >Serverless</a>
+            <a class="navbar-item" href="https://spring.io/batch">Batch</a>
           </div>
         </div>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Services</a>
+          <a class="navbar-link" href="#">Learn</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Service A</a>
-            <a class="navbar-item" href="#">Service B</a>
-            <a class="navbar-item" href="#">Service C</a>
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/quickstart"
+            >Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
           </div>
         </div>
-        <div class="navbar-item">
-          <span class="control">
-            <a class="button is-primary" href="#">Download</a>
-          </span>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px">
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-boot"
+            >Spring Boot</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-framework"
+            >Spring Framework</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud"
+            >Spring Cloud</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud-dataflow"
+            >Spring Cloud Data Flow</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-data"
+            >Spring Data</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-integration"
+            >Spring Integration</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-batch"
+            >Spring Batch</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-security"
+            >Spring Security</a>
+            <a
+              class="navbar-item navbar-item-special"
+              href="https://spring.io/projects"
+            >View all projects</a>
+            <li class="navbar-item navbar-item-special-3">DEVELOPMENT TOOLS</li>
+            <a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+            <a
+              class="navbar-item navbar-item-special-2"
+              href="https://start.spring.io"
+            >Spring Initializr
+              <svg
+                class="external-link-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+              ><polyline
+                  points="15 10.94 15 15 1 15 1 1 5.06 1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><polyline
+                  points="8.93 1 15 1 15 7.07"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><line
+                  x1="15"
+                  y1="1"
+                  x2="8"
+                  y2="8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></line></svg></a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.academy/courses"
+            >Courses</a>
+            <a
+              class="navbar-item"
+              href="https://spring.academy/learning-path"
+            >Get Certified</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg">
+            <a class="navbar-item" href="https://spring.io/solutions">Overview</a>
+            <a class="navbar-item" href="https://spring.io/support">Spring Runtime</a>
+            <a class="navbar-item" href="https://spring.io/consulting">Spring Consulting</a>
+            <a class="navbar-item" href="https://spring.academy/teams">Spring Academy For Teams</a>
+            <a class="navbar-item" href="https://spring.io/security">Security Advisories</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/community"
+            >Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
         </div>
       </div>
     </div>
+    <label class="theme-toggler">
+      <input
+        type="checkbox"
+        type="checkbox"
+        id="switch-theme-checkbox"
+        name="switch-theme-checkbox"
+      />
+      <span class="icon"><svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="moon"
+          class="svg-inline--fa fa-moon moon"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        ><path
+            fill="currentColor"
+            d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+          ></path>
+        </svg>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="sun"
+          class="svg-inline--fa fa-sun sun"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        ><path
+            fill="currentColor"
+            d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+          ></path>
+        </svg></span>
+      <span class="text">light</span>
+    </label>
   </nav>
 </header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
 <div class="body">
 <div class="nav-container" data-component="isa" data-version="">
   <aside class="nav">
     <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
-  <nav class="nav-menu">
-    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="../index.html">ISA Specifications</a></h3>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../isa/index.html">RISC-V Documentation Library</a>
-  </li>
-</ul>
-  </li>
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">ISA Specifications</span>
+  <span class="version">default</span>
+  <button class="browse-version" id="browse-version">
+    <svg
+      height="24px"
+      id="Layer_1"
+      style="enable-background:new 0 0 512 512;"
+      version="1.1"
+      viewBox="0 0 512 512"
+      width="24px"
+      xml:space="preserve"
+    ><g><path
+          d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"
+        ></path><path
+          d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"
+        ></path><path
+          d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"
+        ></path></g></svg>
+  </button>
+  </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="colophon.html">Preface</a>
+    <a class="nav-link"  href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="intro.html">Introduction</a>
+    <a class="nav-link"  href="intro.html">Introduction</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="rv32.html">RV32I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="rv32.html">RV32I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+    <a class="nav-link"  href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link"  href="rv32.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rv64.html">RV64I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">"Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zicsr.html">"Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="counters.html">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="counters.html">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+    <a class="nav-link"  href="zihintntl.html">"Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zihintntl.html">"Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+    <a class="nav-link"  href="zihintpause.html">"Zihintpause" Extension for Pause Hint, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zihintpause.html">"Zihintpause" Extension for Pause Hint, Version 2.0</a>
+    <a class="nav-link"  href="zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a>
+    <a class="nav-link"  href="zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+    <a class="nav-link"  href="m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a>
+    <a class="nav-link"  href="a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a>
+    <a class="nav-link"  href="zawrs.html">"Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zawrs.html">"Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+    <a class="nav-link"  href="zacas.html">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zacas.html">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+    <a class="nav-link"  href="zabha.html">"Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zabha.html">"Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
+    <a class="nav-link"  href="rvwmo.html">RVWMO Memory Consistency Model, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rvwmo.html">RVWMO Memory Consistency Model, Version 2.0</a>
+    <a class="nav-link"  href="ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a>
+    <a class="nav-link"  href="cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+    <a class="nav-link"  href="f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="bfloat16.html">"BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="bfloat16.html">"BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+    <a class="nav-link"  href="zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+    <a class="nav-link"  href="c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+    <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
+    <a class="nav-link"  href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="j-st-ext.html">"J" Extension for Dynamically Translated Languages, Version 0.0</a>
+    <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
+    <a class="nav-link"  href="scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+    <a class="nav-link"  href="unpriv-cfi.html">Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="unpriv-cfi.html">Control-flow Integrity (CFI)</a>
+    <a class="nav-link"  href="extending.html">Extending RISC-V</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="extending.html">Extending RISC-V</a>
+    <a class="nav-link"  href="history.html">History and Acknowledgments</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="naming.html">ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="history.html">History and Acknowledgments</a>
+    <a class="nav-link"  href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="vector-examples.html">Appendix C: Vector Assembly Code Examples</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="vector-examples.html">Appendix C: Vector Assembly Code Examples</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="calling-convention.html">Appendix D: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="calling-convention.html">Appendix D: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -209,114 +416,114 @@
     <span class="nav-text">Volume II: RISC-V Privileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-preface.html">Preface</a>
+    <a class="nav-link"  href="../priv/priv-intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-intro.html">Introduction</a>
+    <a class="nav-link"  href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smepmp.html">"Smepmp" Extension for PMP Enhancements for memory access and execution prevention in Machine mode, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smdbltrp.html">"Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/priv-history.html">History</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/supervisor.html">Supervisor-Level ISA, Version 1.13</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/ssdbltrp.html">"Ssdbltrp" Double Trap Extension, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#zpm.adoc">Pointer Masking Extensions, Version 1.0.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-history.html">History</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/bibliography.html">Bibliography</a>
+    <a class="nav-link"  href="../priv/bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
 </ul>
-  </nav>
-</div>
-<div class="nav-panel-explore" data-panel="explore">
-  <div class="context">
-    <span class="title">ISA Specifications</span>
-    <span class="version"></span>
-  </div>
-  <ul class="components">
-    <li class="component is-current">
-      <div class="title"><a href="../index.html">ISA Specifications</a></div>
-    </li>
-    <li class="component">
-      <div class="title"><a href="../../riscv-library/0.1/index.html">RISC-V Documentation Library</a></div>
-      <ul class="versions">
-        <li class="version is-latest">
-          <a href="../../riscv-library/0.1/index.html">0.1</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
     </div>
+    <div class="nav-resize"></div>
   </aside>
 </div>
-<main class="article">
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
 <div class="toolbar" role="navigation">
-<button class="nav-toggle"></button>
-  <a href="../../riscv-library/0.1/index.html" class="home-link"></a>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">ISA Specifications</a></li>
-    <li>Volume I: RISC-V Unprivileged ISA Specification</li>
-    <li><a href="rv32.html">RV32I Base Integer Instruction Set, Version 2.1</a></li>
-  </ul>
-</nav>
-<div class="edit-this-page"><a href="https://github.com/riscv/riscv-isa-manual/edit/antora-refactor/modules/unpriv/pages/rv32.adoc">Edit this Page</a></div>
+  <button id="nav-toggle-1" class="nav-toggle"></button>
 </div>
   <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
-  <div class="toc-menu"></div>
+<aside class="sidebar">
+  <div class="content">
+    <div
+      class="toc"
+      data-title=""
+      data-levels="2"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="https://github.com/riscv/riscv-isa-manual/edit/antora-refactor/modules/unpriv/pages/rv32.adoc">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Edit this Page
+        </a>
+              <a href="https://github.com/riscv/riscv-isa-manual" title="Source Repository">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512px" height="512px" fill="none">
+    <path d="M23.6188 12.9999L19.8886 2.82896C19.7371 2.4083 19.122 2.4083 18.9705 2.82896L16.494 9.99994H7.50604L5.02956 2.82896C4.87803 2.4083 4.26295 2.4083 4.11142 2.82896L0.381247 12.9999C0.276408 13.289 0.404366 13.6112 0.678 13.7651L11.5243 19.6958C11.8256 19.8611 12.1744 19.8611 12.4757 19.6958L23.322 13.7651C23.5956 13.6112 23.7236 13.289 23.6188 12.9999Z" fill="#E24329"/>
+    <path d="M12.0001 19.1956L16.4941 9.99996H7.5061L12.0001 19.1956Z" fill="#FCA326"/>
+    <path d="M12.0001 19.1955L7.5061 9.99988H3.24121L12.0001 19.1955Z" fill="#E24329"/>
+    <path d="M3.24121 9.99988L0.381226 12.9998C0.276388 13.2889 0.404345 13.6111 0.678 13.765L12.0001 19.1955L3.24121 9.99988Z" fill="#FCA326"/>
+    <path d="M12.0001 19.1955L16.4941 9.99988H20.7589L12.0001 19.1955Z" fill="#E24329"/>
+    <path d="M20.7589 9.99988L23.6188 12.9998C23.7237 13.2889 23.5957 13.6111 23.322 13.765L12.0001 19.1955L20.7589 9.99988Z" fill="#FCA326"/>
+    <path d="M16.494 9.99988H20.7589L18.9705 2.82894C18.819 2.40828 18.2039 2.40828 18.0524 2.82894L16.494 9.99988Z" fill="#E24329"/>
+    <path d="M7.50603 9.99988H3.24121L4.11141 2.82894C4.26294 2.40828 4.87802 2.40828 5.02955 2.82894L7.50603 9.99988Z" fill="#E24329"/>
+  </svg>
+  Source Repository
+</a>
+    </div>
+  </div>
 </aside>
 <article class="doc">
-<div class="sect1">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">ISA Specifications</a></li>
+      <li>Volume I: RISC-V Unprivileged ISA Specification</li>
+      <li><a href="rv32.html">RV32I Base Integer Instruction Set</a></li>
+    </ul>
+  </nav>
+</div><div class="sect1">
 <h2 id="rv32"><a class="anchor" href="#rv32"></a>RV32I Base Integer Instruction Set, Version 2.1</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -385,7 +592,7 @@ Assembly Programmer&#8217;s Manual cite:[riscv-asm-manual].</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_programmers_model_for_base_integer_isa"><a class="anchor" href="#_programmers_model_for_base_integer_isa"></a>Programmers' Model for Base Integer ISA</h3>
+<h3 id="programmers-model-for-base-integer-isa"><a class="anchor" href="#programmers-model-for-base-integer-isa"></a>Programmers' Model for Base Integer ISA</h3>
 <div class="paragraph">
 <p><a href="#gprs">RISC-V base unprivileged integer register state.</a> shows the unprivileged state for the base
 integer ISA. For RV32I, the 32 <code>x</code> registers are each 32 bits wide,
@@ -578,7 +785,7 @@ much larger register space (either flat or hierarchical) if desired.</p>
 <div class="paragraph">
 <p>For resource-constrained embedded applications, we have defined the
 RV32E subset, which only has 16 registers
-(<a href="#rv32e">[rv32e]</a>).</p>
+(<a href="rv32e.html" class="xref page">rv32e.adoc</a>).</p>
 </div>
 </td>
 </tr>
@@ -586,7 +793,7 @@ RV32E subset, which only has 16 registers
 </div>
 </div>
 <div class="sect2">
-<h3 id="_base_instruction_formats"><a class="anchor" href="#_base_instruction_formats"></a>Base Instruction Formats</h3>
+<h3 id="base-instruction-formats"><a class="anchor" href="#base-instruction-formats"></a>Base Instruction Formats</h3>
 <div class="paragraph">
 <p>In the base RV32I ISA, there are four core instruction formats
 (R/I/S/U), as shown in <a href="#base_instr">Base instruction formats</a>. All are a fixed 32
@@ -648,8 +855,25 @@ bits in the instruction and have been allocated to reduce hardware
 complexity. In particular, the sign bit for all immediates is always in
 bit 31 of the instruction to speed sign-extension circuitry.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/instruction-formats.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVa_VQciaImSLUlBkjBEyaaV5ySXGOPUVG-KWMkKRMkcz01y9litWRyE5Py8tE-jq6pzEpNQcIF2UmZ5RAlQUpBtSWQB0cG0tAFSbP_U=" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVa_VQciaImSLUlBkjBEyaaV5ySXGOPUVG6JIGRrpwKQyc3OjDQ2tDGJBCmJ1FJLz89Iygc6rzklMSs0B0kWZ6RklQIWeuiGVBUCX1dYCAA7jORk=" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVa_VQciaImQzc3OjTawMYlHkjRHyaaV5ySXGuHQXFRviljJCkTJHtdPQ0MoUaClXrI5Ccn5eWibQ-dU5iUmpOUC6KDM9owSoLlg3pLIA6PLaWgCEyUIu" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVa_VQciaImSLUlBkjAwQUpm5udHGhlaGRrHqtVyxOgrJ-XlpmUBrqnMSk1JzgHRRZnpGCVBhqG5IZQHQhtpaAK3QKR4=" alt="svg">
+</div>
 </div>
 <div id="base_instr" class="paragraph">
 <p>RISC-V base instruction formats. Each immediate subfield is labeled with the bit position (imm[x]) in the immediate value being produced, rather than the bit position within the instruction&#8217;s immediate field as is usually done.</p>
@@ -685,13 +909,40 @@ to keep the ISA as simple as possible.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_immediate_encoding_variants"><a class="anchor" href="#_immediate_encoding_variants"></a>Immediate Encoding Variants</h3>
+<h3 id="immediate-encoding-variants"><a class="anchor" href="#immediate-encoding-variants"></a>Immediate Encoding Variants</h3>
 <div class="paragraph">
 <p>There are a further two variants of the instruction formats (B/J) based
 on the handling of immediates, as shown in <a href="#baseinstformatsimm">Base instruction formats immediate variants.</a>.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/immediate-variants.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVa_VQciaImSLUlBkjBEyaaV5ySXGOPUVG-KWMkKRMkcz01y9litWRyE5Py8tE-jq6pzEpNQcIF2UmZ5RAlQUpBtSWQB0cG0tAFSbP_U=" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVa_VQciaImSLUlBkjBEyaaV5ySXGOPUVG6JIGRrpwKQyc3OjDQ2tDGJBCmJ1FJLz89Iygc6rzklMSs0B0kWZ6RklQIWeuiGVBUCX1dYCAA7jORk=" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVa_VQciaImQzc3OjTawMYlHkjRHyaaV5ySXGuHQXFRviljJCkTJHtdPQ0MoUaClXrI5Ccn5eWibQ-dU5iUmpOUC6KDM9owSoLlg3pLIA6PLaWgCEyUIu" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp1z7EKwyAUBdA9X_G2LBaqSVpw7DdkE4fEaipEDWqHVvz3uomFrPdwee8mLzcKrANIq46Bwh0B2MVICr07hHvKPqOquCrDmDc2VtPGsJH--VBdva2IQ6NTVR_wOZGGbu1NfKUTP3-YFOs4AuGs0mV2Us7GoL9FMUGwL6vcS-r19oql8LjMn6Psz_kHV9RViw==" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVa_VQciaImSLUlBkjAx0YDKZubnRxoZWhkax6rVcsToKyfl5aZlAW6pzEpNSc4B0UWZ6RglQYahuSGUB0ILaWgCQaCj-" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp1z70KwyAUBeA9T3G3LBa8QmjrI3TuJhnyY1IhajAuqfjuvZsY6Hq_c-DcFPQqQTUAaTTxkHBnAG6wWkLr98nPus2saFc0zJU8ihhrFT4lir5KYEkoxItxVrW5xP9lwcmansHk3WJoflq8i4f5kqJgsA2j3ugazPqJVHjd3udOf-T8A8R8RZU=" alt="svg">
+</div>
 </div>
 <div id="baseinstformatsimm" class="paragraph">
 <p>The only difference between the S and B formats is that the 12-bit
@@ -713,22 +964,32 @@ formats and with each other.</p>
 each of the base instruction formats, and is labeled to show which
 instruction bit (inst[<em>y</em>]) produces each bit of the immediate value.</p>
 </div>
-<div id="immtypes" class="paragraph">
-<div class="title">Types of immediate produced by RISC-V instructions.</div>
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/i-immediate.edn[]</p>
+<div id="immtypes" class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDUUVDIS8xNtVJQjzYyiFWv1UHImSDkMvOKS6KNTKyMDFGVmKEpMTawMjJFVWKEZMWjhikKEHWGsQpADkhhrI5Ccn5eWma6VXVafl5JcWYVUKWhkY5CTmJSao5VdVFmekYJUK-nbmZubmpKZmJJqnptbS0AeCk-rA==?id=immtypes&reftext=Immediate%20types" alt="Types of immediate produced by RISC-V instructions.">
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/s-immediate.edn[]</p>
+<div class="title">Figure 1. Types of immediate produced by RISC-V instructions.</div>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/b-immediate.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDUUVDIS8xNtVJQjzaPVa_VQUiZIKQy84pLog0NrSxQVZihqTA2sDIyRVVihGTBo4YpChB1hrEKQA5IYayOQnJ-XlpmulV1Wn5eSXFmFVCloZGOQk5iUmqOVXVRZnpGCVBvsG5mbm5qSmZiSap6bW0tACfjPlw=" alt="svg">
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/u-immediate.edn[]</p>
 </div>
-<div class="paragraph">
-<div class="title">Types of immediate produced by RISC-V instructions.</div>
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/j-immediate.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNpdzD0OAiEQhuHeU0y3DSaAv5nSaxAKVlmcZGGThUpC4iE8oScRY8yK5eR95suzdQhqBZB7ShFBMIBgvEXoeFfYErZLoBCTEgKPuhH7P7HhKHct-VlXhzZJzr7peX_AZ0FoqMfbaQbnKQzkMA9TSJFuVQrJYDS9HTHP5K6p_p7W5L29kEm2K6W8AJGSRLo=" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNpdzrEKwyAQxvG9T3GbiwXPLO29RyfJYNKLPYgGolPEd29JKSGd_z8-vrpyIHAXgDpIyQRoNSQfmUAZ1fQRbhp-QVIuDu-Etj8RRH0inSFr_six4jrcW69hXNIkgeq0pJJl4--N2Q88U10lvMrHP64SIz_FF1attTdySDfT" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNpdjUEKwjAQRfeeYnbZREhiFZ0j9Aqli1bTONCk0GRlCHgIT-hJrBSpyXJ47_2JszYIzQ4g9hQ8guQArrMagQmW-AaqDZDzoVEVKtlmyqlQDgLVMVf-5hslcnYucnlBqYpc8Z_yfr5g_SJbWI6v13K4Tm4gg3GYXPD00Gszdr0eMc5k7mFp6z1Zq2_UBc1SSh9N308B" alt="Types of immediate produced by RISC-V instructions.">
+</div>
+<div class="title">Figure 2. Types of immediate produced by RISC-V instructions.</div>
 </div>
 <div class="paragraph">
 <p>The fields are labeled with the instruction bits used to construct their value.  Sign extensions always uses inst[31].</p>
@@ -765,7 +1026,7 @@ common short forward branches have straightforward immediate encodings.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_integer_computational_instructions"><a class="anchor" href="#_integer_computational_instructions"></a>Integer Computational Instructions</h3>
+<h3 id="integer-computational-instructions"><a class="anchor" href="#integer-computational-instructions"></a>Integer Computational Instructions</h3>
 <div class="paragraph">
 <p>Most integer computational instructions operate on <code>XLEN</code> bits of values
 held in the integer register file. Integer computational instructions
@@ -819,9 +1080,11 @@ comparing the results of ADD and ADDW on the operands.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_integer_register_immediate_instructions"><a class="anchor" href="#_integer_register_immediate_instructions"></a>Integer Register-Immediate Instructions</h4>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/integer-computational.edn[]</p>
+<h4 id="integer-register-immediate-instructions"><a class="anchor" href="#integer-register-immediate-instructions"></a>Integer Register-Immediate Instructions</h4>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56v4Bup6-vkis2FodhAmmCBOKUiC6kU0wBelLSS0ugdMouo0RutNK85JLjKEmwLSD-OqOLi6e-sE-IZ7RobFgvh-Q7x_kqR8BJHC7ptgQ7hwU1xQXJcMoFL2GRjowvZm5udGGhlYGIOtgeg2NQLo8dYFyqSmZiSWpcBVYBGNruWJrATlKYzc=" alt="svg">
+</div>
 </div>
 <div class="paragraph">
 <p>ADDI adds the sign-extended 12-bit immediate to register <em>rs1</em>.
@@ -844,8 +1107,10 @@ XOR on register <em>rs1</em> and the sign-extended 12-bit immediate and place
 the result in <em>rd</em>. Note, XORI <em>rd, rs1, -1</em> performs a bitwise logical
 inversion of register <em>rs1</em> (assembler pseudoinstruction NOT <em>rd, rs</em>).</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/int-comp-slli-srli-srai.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56v4Bup6-vlhZsbU6CLNMEWYVpUDMQTbLFKQvJbW4BINGMcUYYUpaaV5yiTHUJJgxIL56sI-PJ5gOgtGOnrgdU2wIdw2KY4qLktEoXEZk5uZGm1gZxILMQTUiIzG3BCaFm4dirjmquYaGVqYg9chhbgBGxkaxtVyxtQBHW3SD" alt="svg">
+</div>
 </div>
 <div id="int-comp-slli-srli-srai" class="paragraph">
 <p>Shifts by a constant are encoded as a specialization of the I-type
@@ -856,8 +1121,10 @@ shifted into the lower bits); SRLI is a logical right shift (zeros are
 shifted into the upper bits); and SRAI is an arithmetic right shift (the
 original sign bit is copied into the vacated upper bits).</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/int-comp-lui-aiupc.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKAEFiSUkRUKG6OZCv7hPqCaIcQz0DnNVja3UQ2k0R2otSoFqRtZuC9KWkFpfAaRTtRgY6MO2ZubnRxoZWhkaxQKUw7UYGIH2hukDJ1JTMxJJUhBJsorG1XLG1AEuvPl0=" alt="svg">
+</div>
 </div>
 <div id="int-comp-lui-aiupc" class="paragraph">
 <p>LUI (load upper immediate) is used to build 32-bit constants and uses
@@ -903,15 +1170,17 @@ microarchitectures.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_integer_register_register_operations"><a class="anchor" href="#_integer_register_register_operations"></a>Integer Register-Register Operations</h4>
+<h4 id="integer-register-register-operations"><a class="anchor" href="#integer-register-register-operations"></a>Integer Register-Register Operations</h4>
 <div class="paragraph">
 <p>RV32I defines several arithmetic R-type operations. All operations read
 the <em>rs1</em> and <em>rs2</em> registers as source operands and write the result
 into register <em>rd</em>. The <em>funct7</em> and <em>funct3</em> fields select the type of
 operation.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/int-reg-reg.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56v4BWMjYWh2EKaYIU4pSICYgm2IK0pOSWlyCSUMoFMOMEYalleYllxhDDYSZBuKrO7q46Af7hESHxoJ5fi76_kH6Ef5BIF6wj49-cJAPmBnqBGQ64nZtsSHcuSiuLS5KNsRJ4zbNCKdpRjhpFNPM0TwPigDkyDCAIWOj2Fqu2FoAHBV5dA==" alt="svg">
+</div>
 </div>
 <div id="int-reg-reg" class="paragraph">
 <p>ADD performs the addition of <em>rs1</em> and <em>rs2</em>. SUB performs the
@@ -930,9 +1199,11 @@ the lower 5 bits of register <em>rs2</em>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_nop_instruction"><a class="anchor" href="#_nop_instruction"></a>NOP Instruction</h4>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/nop.edn[]</p>
+<h4 id="nop-instruction"><a class="anchor" href="#nop-instruction"></a>NOP Instruction</h4>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56v4Bup6-vuqxtToIfaYIfUUpED3I-kxB-gxQtRgjtKSV5iWXGEO1wfSA-OqOLi6euG0qNoRbhc8mQyMdmJbM3NxoQ0Mrg1igMpgWQyOYHq7YWgAGTEe2" alt="svg">
+</div>
 </div>
 <div id="nop" class="paragraph">
 <p>The NOP instruction does not change any architecturally visible state,
@@ -972,7 +1243,7 @@ hardware.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_control_transfer_instructions"><a class="anchor" href="#_control_transfer_instructions"></a>Control Transfer Instructions</h3>
+<h3 id="control-transfer-instructions"><a class="anchor" href="#control-transfer-instructions"></a>Control Transfer Instructions</h3>
 <div class="paragraph">
 <p>RV32I provides two types of control transfer instructions: unconditional
 jumps and conditional branches. Control transfer instructions in RV32I
@@ -985,7 +1256,7 @@ reported on the target instruction, not on the jump or branch
 instruction.</p>
 </div>
 <div class="sect3">
-<h4 id="_unconditional_jumps"><a class="anchor" href="#_unconditional_jumps"></a>Unconditional Jumps</h4>
+<h4 id="unconditional-jumps"><a class="anchor" href="#unconditional-jumps"></a>Unconditional Jumps</h4>
 <div class="paragraph">
 <p>The jump and link (JAL) instruction uses the J-type format, where the
 J-immediate encodes a signed offset in multiples of 2 bytes. The offset
@@ -1019,8 +1290,10 @@ than the regular link register.</p>
 <p>Plain unconditional jumps (assembler pseudoinstruction J) are encoded as
 a JAL with <em>rd</em>=<code>x0</code>.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/ct-unconditional.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp1zjEOwyAMBdC9p_DGwoCRoqRsXaveADGkCUQMQBWYgnL3ki6EVt0s-X1_51UvAuQFID9tigJ6CuBHpwWQ8JrCrAmFMaW1INKXmdxvD6J2WhNdTazzSXeHnnVMLR8qt85JvArk6hQbWo6VS8QzxC_IaHOXiVaz451gTNRJ8s_ybw9nvz2KwhS8sYvIJvgU7VYo8n1_A_WgW1Y=" alt="svg">
+</div>
 </div>
 <div id="ct-unconditional" class="paragraph">
 <p>The indirect jump instruction JALR (jump and link register) uses the
@@ -1032,15 +1305,16 @@ Register <code>x0</code> can be used as the destination if the result is not
 required.</p>
 </div>
 <div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/ct-unconditional-2.edn[]
-Plain unconditional indirect jumps (assembler pseudoinstruction JR) are
+<p>Plain unconditional indirect jumps (assembler pseudoinstruction JR) are
 encoded as a JALR with <em>rd</em>=<code>x0</code>.
 Procedure returns in the standard calling convention (assembler
 pseudoinstruction RET) are encoded as a JALR with <em>rd</em>=<code>x0</code>, <em>rs1</em>=<code>x1</code>, and
 <em>imm</em>=0.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/ct-unconditional-2.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp9zT0PgyAQBuC9v-I2FgbRGBO2rk2nroYB5WgckEbOyfjfC42GlqG33cdz77bgU0J_AdiGiYKEjgPM2qEE5l-jN8jiIJYmWuIh62LPbtf7gynYeXZtdos5zLdrkzMYqHBNdnadR2qKvNSz6k9YEDntJ2zQAQsnan66ybleCFmppE8n6gS9tQHp2H4eqP0Nf-5OYA==" alt="svg">
+</div>
 </div>
 <div id="ct-unconditional-2" class="admonitionblock note">
 <table>
@@ -1190,7 +1464,7 @@ is only pushed to enable macro-op fusion of the sequences:
 </div>
 </div>
 <div class="sect3">
-<h4 id="_conditional_branches"><a class="anchor" href="#_conditional_branches"></a>Conditional Branches</h4>
+<h4 id="conditional-branches"><a class="anchor" href="#conditional-branches"></a>Conditional Branches</h4>
 <div class="paragraph">
 <p>All branch instructions use the B-type instruction format. The 12-bit
 B-immediate encodes signed offsets in multiples of 2 bytes. The offset
@@ -1198,8 +1472,10 @@ is sign-extended and added to the address of the branch instruction to
 give the target address. The conditional branch range is
 &#177;4 KiB.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/ct-conditional.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqNkD0PgjAQhnd_xW0sJFKQkHQTQ3QwJBqdCAPWljBATVsXgf9uQRSI-DHd3Xt3z3u5UtAUQzQDKE-Zkhg8E6BIcorB4BfCz9TQAkCilNBzhqdLw98vw9VmMouhNnuY28OyPI8WGFUIxQ3xyXObXc6YpGrQ_q2MfZzeh10LopzH0S8Xp70w2M39MGjT7SE6tlh_HTTZx7OFRHpsdK0UBL3FLwB7AqC1LnTleN8b_w3ZFbKwGw9A3uAng_Y_UmsVm0B4wbIUl4wXSmY3bYasur4DG-KSjw==" alt="svg">
+</div>
 </div>
 <div id="ct-conditional" class="paragraph">
 <p>Branch instructions compare two registers. BEQ and BNE take the branch
@@ -1382,8 +1658,15 @@ memory byte addresses to the less-significant register bytes.</p>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/load-store.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp1zbEKwyAQgOG9T3Gbi0NNCAG3QsdCHyA4mHi2DsYSL3QIefcqNJgUup3n93PLhA8J3Qlg6R1FCS0HGLVHCSy8hmCQpQWAJpqSY216stv9cmVq5aVqSjWZRDbeZG4w0pHXhdt5HKjeJXlmb2fo-f9EFL83eh3x6EXFN--874SQZ7WrRJWzYG1E-n7mXK0fUTJNBw==" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCSWlBQBlambA3nqwSH-Qa7qsbU6CF2mCF2ZubnRJlYGsUCVMF2mIF35aWnFqSUQKRS9xgi9aaV5ySXGSDpBbPXyzJSSDJz2FRUboluVlFicike9Ebr64qJkVOXAQEDyjaGhlSmyd8yRvAORA2mOrQUAK0Fd7w==" alt="svg">
+</div>
 </div>
 <div id="load-store" class="paragraph">
 <p>Load and store instructions transfer a value between the registers and
@@ -1494,8 +1777,10 @@ are aligned.</p>
 </div>
 <div class="sect2">
 <h3 id="fence"><a class="anchor" href="#fence"></a>Memory Ordering Instructions</h3>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/mem-order.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56r6ewc66vq6-6rG1OgidpgidRSlAZTAtpiAtBqhqjRFq00rzkkuMkdSD2Opurn7OrrjNLzYkYIEhQnFwOFytIS4lQYSV-BNW4klQSQBhtwQQdksAYbcE4HCLCVLA5yKFoQk40CExGlsLADAYkWk=" alt="mem-order">
+</div>
 </div>
 <div id="mem-order" class="paragraph">
 <p>The FENCE instruction is used to order device I/O and memory accesses as
@@ -1505,7 +1790,7 @@ and memory writes (W) may be ordered with respect to any combination of
 the same. Informally, no other RISC-V hart or external device can
 observe any operation in the <em>successor</em> set following a FENCE before
 any operation in the <em>predecessor</em> set preceding the FENCE.
-<a href="#memorymodel">[memorymodel]</a> provides a precise description
+<a href="rvwmo.html" class="xref page">"RVWMO Memory Consistency Model</a> provides a precise description
 of the RISC-V memory consistency model.</p>
 </div>
 <div class="paragraph">
@@ -1666,8 +1951,10 @@ hardware.</p>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv32.adoc - include::./images/wavedrom/env-call-breakpoint.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56sGRwSGuvkis2FodhAmmCBOKUlB1m4L0GEAIFD3GCD1ppXnJJcZANTBNILZ6QJBnGJzGaV2xIdg-gtYZGukgW2dohGQdmKPu6uzo4wNmOAW5OnqDtcfWAgDBsE9y" alt="svg">
+</div>
 </div>
 <div id="env-call" class="paragraph">
 <p>These two instructions cause a precise requested trap to the supporting
@@ -1731,7 +2018,7 @@ to distinguish a semihosting EBREAK from a debugger inserted EBREAK.</p>
 <div class="paragraph">
 <p>Note that these three instructions must be 32-bit-wide instructions,
 i.e., they mustn&#8217;t be among the compressed 16-bit instructions described
-in <a href="#compressed">[compressed]</a>.</p>
+in <a href="c-st-ext.html" class="xref page">"C" Extension for Compressed Instructions</a>.</p>
 </div>
 <div class="paragraph">
 <p>The shift NOP instructions are still considered available for use as
@@ -1755,7 +2042,7 @@ for semihosting calls in newer designs.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_hint_instructions"><a class="anchor" href="#_hint_instructions"></a>HINT Instructions</h3>
+<h3 id="hint-instructions"><a class="anchor" href="#hint-instructions"></a>HINT Instructions</h3>
 <div id="rv32i-hints" class="paragraph">
 <p>RV32I reserves a large encoding space for HINT instructions, which are
 usually used to communicate performance hints to the microarchitecture.
@@ -2007,15 +2294,65 @@ take note of their use in semihosting calls, as described in <a href="#ecall-ebr
 </div>
 </div>
 </div>
-</article>
-  </div>
+<nav class="pagination">
+  <span class="prev"><a href="intro.html">Introduction</a></span>
+  <span class="next"><a href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a></span>
+</nav>
+</article>  </div>
 </main>
+<div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <main class="modal__content" id="modal-versions-content">
+              <button data-micromodal-close class="modal-versions-close">
+                <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left">
+                  <ul class="nav-versions">
+                    <li class="component is-current">
+                      <a class="title" href="../index.html">ISA Specifications</a>
+                      <ul class="versions">
+                        <li class="version is-current is-latest">
+                          <a href="../index.html">
+                            default<span class="current">current</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="component">
+                      <a class="title" href="../../riscv-library/1/index.html">RISC-V Documentation Library</a>
+                      <ul class="versions">
+                        <li class="version is-latest">
+                          <a href="../../riscv-library/1/index.html">
+                            1<span class="current">current</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-right">
+                                  </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
 </div>
 <footer class="footer">
-  <p>This page was built using the Antora default UI.</p>
-  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+<p>
+  This page was built using a customized version of the
+  <a href="https://github.com/spring-io/antora-ui-spring" target="_blank">Antora Spring UI</a>.
+</p>
+<p>
+  The source code for this UI is licensed under the terms of the Mozilla Public License Version 2.0.
+</p>
 </footer>
-<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script src="../../_/js/vendor/import.js"></script>
+<script src="../../_/js/site.js"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
+<script async src="../../_/js/vendor/spring-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
   </body>
 </html>
