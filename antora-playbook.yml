@@ -39,7 +39,7 @@ asciidoc:
     inf: '&#8734;'
     csrname: 'envcfg'
     incexample: example$
-    incimage: ./images/
+    incimage: ../images/
 
 antora:
    extensions:
