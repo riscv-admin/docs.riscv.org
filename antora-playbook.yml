@@ -1,7 +1,7 @@
 site:
-  title: RISC-V ISA Documentation Specifications riscv-library::index.adoc
+  title: RISC-V Ratified Specifications Library
     #url: https://docs.riscv.org
-  start_page: riscv-library::index.adoc
+  #start_page: riscv-library::index.adoc
 content:
   sources:
   #- url: https://github.com/riscv/riscv-library.git
