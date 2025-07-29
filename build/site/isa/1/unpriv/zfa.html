@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="bfloat16.html">
+    <link rel="next" href="zfinx.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -272,13 +274,6 @@
   </button>
   </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
@@ -542,7 +537,7 @@ quad-precision floating-point values. The Zfa extension depends on the F
 extension.</p>
 </div>
 <div class="sect2">
-<h3 id="_load_immediate_instructions"><a class="anchor" href="#_load_immediate_instructions"></a>Load-Immediate Instructions</h3>
+<h3 id="load-immediate-instructions"><a class="anchor" href="#load-immediate-instructions"></a>Load-Immediate Instructions</h3>
 <div class="paragraph">
 <p>The FLI.S instruction loads one of 32 single-precision floating-point
 constants, encoded in the <em>rs1</em> field, into floating-point register
@@ -875,7 +870,7 @@ FLI.H is encoded like FLI.S, but with <em>fmt</em>=H.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_minimum_and_maximum_instructions"><a class="anchor" href="#_minimum_and_maximum_instructions"></a>Minimum and Maximum Instructions</h3>
+<h3 id="minimum-and-maximum-instructions"><a class="anchor" href="#minimum-and-maximum-instructions"></a>Minimum and Maximum Instructions</h3>
 <div class="paragraph">
 <p>The FMINM.S and FMAXM.S instructions are defined like the FMIN.S and
 FMAX.S instructions, except that if either input is NaN, the result is
@@ -914,7 +909,7 @@ operations.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_round_to_integer_instructions"><a class="anchor" href="#_round_to_integer_instructions"></a>Round-to-Integer Instructions</h3>
+<h3 id="round-to-integer-instructions"><a class="anchor" href="#round-to-integer-instructions"></a>Round-to-Integer Instructions</h3>
 <div class="paragraph">
 <p>The FROUND.S instruction rounds the single-precision floating-point
 number in floating-point register <em>rs1</em> to an integer, according to the
@@ -964,7 +959,7 @@ implement the other operations in the roundToIntegral family.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_modular_convert_to_integer_instruction"><a class="anchor" href="#_modular_convert_to_integer_instruction"></a>Modular Convert-to-Integer Instruction</h3>
+<h3 id="modular-convert-to-integer-instruction"><a class="anchor" href="#modular-convert-to-integer-instruction"></a>Modular Convert-to-Integer Instruction</h3>
 <div class="paragraph">
 <p>The FCVTMOD.W.D instruction is defined similarly to the FCVT.W.D
 instruction, with the following differences. FCVTMOD.W.D always rounds
@@ -1005,7 +1000,7 @@ mod \(2^{32}\).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_move_instructions"><a class="anchor" href="#_move_instructions"></a>Move Instructions</h3>
+<h3 id="move-instructions"><a class="anchor" href="#move-instructions"></a>Move Instructions</h3>
 <div class="paragraph">
 <p>For RV32 only, if the D extension is implemented, the FMVH.X.D
 instruction moves bits 63:32 of floating-point register <em>rs1</em> into
@@ -1066,7 +1061,7 @@ opcode with <em>funct3</em>=0 and <em>funct7</em>=1011011.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_comparison_instructions"><a class="anchor" href="#_comparison_instructions"></a>Comparison Instructions</h3>
+<h3 id="comparison-instructions"><a class="anchor" href="#comparison-instructions"></a>Comparison Instructions</h3>
 <div class="paragraph">
 <p>The FLEQ.S and FLTQ.S instructions are defined like the FLE.S and FLT.S
 instructions, except that quiet NaN inputs do not cause the invalid
@@ -1107,6 +1102,10 @@ masking.</p>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="bfloat16.html">"BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a></span>
+  <span class="next"><a href="zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="q-st-ext.html">
+    <link rel="next" href="bfloat16.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -272,13 +274,6 @@
   </button>
   </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
@@ -529,7 +524,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="_zfh_and_zfhmin_extensions_for_half_precision_floating_point_version_1_0"><a class="anchor" href="#_zfh_and_zfhmin_extensions_for_half_precision_floating_point_version_1_0"></a>"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</h2>
+<h2 id="zfh-and-zfhmin-extensions-for-half-precision-floating-point-version-1-0"><a class="anchor" href="#zfh-and-zfhmin-extensions-for-half-precision-floating-point-version-1-0"></a>"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This chapter describes the Zfh standard extension for 16-bit
@@ -565,7 +560,7 @@ halflatexmath:[$\)single\(\rightarrow\)half.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_half_precision_load_and_store_instructions"><a class="anchor" href="#_half_precision_load_and_store_instructions"></a>Half-Precision Load and Store Instructions</h3>
+<h3 id="half-precision-load-and-store-instructions"><a class="anchor" href="#half-precision-load-and-store-instructions"></a>Half-Precision Load and Store Instructions</h3>
 <div class="paragraph">
 <p>New 16-bit variants of LOAD-FP and STORE-FP instructions are added,
 encoded with a new value for the funct3 width field.</p>
@@ -591,7 +586,7 @@ written to <em>rd</em>, whereas FSH ignores all but the lower 16 bits in <em>rs2
 </div>
 </div>
 <div class="sect2">
-<h3 id="_half_precision_computational_instructions"><a class="anchor" href="#_half_precision_computational_instructions"></a>Half-Precision Computational Instructions</h3>
+<h3 id="half-precision-computational-instructions"><a class="anchor" href="#half-precision-computational-instructions"></a>Half-Precision Computational Instructions</h3>
 <div class="paragraph">
 <p>A new supported format is added to the format field of most
 instructions, as shown in <a href="#tab:fpextfmth">Format field encoding.</a>.</p>
@@ -650,7 +645,7 @@ half-precision operands and produce half-precision results.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_half_precision_conversion_and_move_instructions"><a class="anchor" href="#_half_precision_conversion_and_move_instructions"></a>Half-Precision Conversion and Move Instructions</h3>
+<h3 id="half-precision-conversion-and-move-instructions"><a class="anchor" href="#half-precision-conversion-and-move-instructions"></a>Half-Precision Conversion and Move Instructions</h3>
 <div class="paragraph">
 <p>New floating-point-to-integer and integer-to-floating-point conversion
 instructions are added. These instructions are defined analogously to
@@ -800,6 +795,10 @@ conversions from 64-bit integers without the Q extension.</p>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a></span>
+  <span class="next"><a href="bfloat16.html">"BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

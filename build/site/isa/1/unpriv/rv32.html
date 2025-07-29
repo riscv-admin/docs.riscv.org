@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="intro.html">
+    <link rel="next" href="rv32e.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -271,13 +273,6 @@
         ></path></g></svg>
   </button>
   </div><ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
@@ -597,7 +592,7 @@ Assembly Programmer&#8217;s Manual cite:[riscv-asm-manual].</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_programmers_model_for_base_integer_isa"><a class="anchor" href="#_programmers_model_for_base_integer_isa"></a>Programmers' Model for Base Integer ISA</h3>
+<h3 id="programmers-model-for-base-integer-isa"><a class="anchor" href="#programmers-model-for-base-integer-isa"></a>Programmers' Model for Base Integer ISA</h3>
 <div class="paragraph">
 <p><a href="#gprs">RISC-V base unprivileged integer register state.</a> shows the unprivileged state for the base
 integer ISA. For RV32I, the 32 <code>x</code> registers are each 32 bits wide,
@@ -798,7 +793,7 @@ RV32E subset, which only has 16 registers
 </div>
 </div>
 <div class="sect2">
-<h3 id="_base_instruction_formats"><a class="anchor" href="#_base_instruction_formats"></a>Base Instruction Formats</h3>
+<h3 id="base-instruction-formats"><a class="anchor" href="#base-instruction-formats"></a>Base Instruction Formats</h3>
 <div class="paragraph">
 <p>In the base RV32I ISA, there are four core instruction formats
 (R/I/S/U), as shown in <a href="#base_instr">Base instruction formats</a>. All are a fixed 32
@@ -914,7 +909,7 @@ to keep the ISA as simple as possible.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_immediate_encoding_variants"><a class="anchor" href="#_immediate_encoding_variants"></a>Immediate Encoding Variants</h3>
+<h3 id="immediate-encoding-variants"><a class="anchor" href="#immediate-encoding-variants"></a>Immediate Encoding Variants</h3>
 <div class="paragraph">
 <p>There are a further two variants of the instruction formats (B/J) based
 on the handling of immediates, as shown in <a href="#baseinstformatsimm">Base instruction formats immediate variants.</a>.</p>
@@ -1031,7 +1026,7 @@ common short forward branches have straightforward immediate encodings.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_integer_computational_instructions"><a class="anchor" href="#_integer_computational_instructions"></a>Integer Computational Instructions</h3>
+<h3 id="integer-computational-instructions"><a class="anchor" href="#integer-computational-instructions"></a>Integer Computational Instructions</h3>
 <div class="paragraph">
 <p>Most integer computational instructions operate on <code>XLEN</code> bits of values
 held in the integer register file. Integer computational instructions
@@ -1085,7 +1080,7 @@ comparing the results of ADD and ADDW on the operands.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_integer_register_immediate_instructions"><a class="anchor" href="#_integer_register_immediate_instructions"></a>Integer Register-Immediate Instructions</h4>
+<h4 id="integer-register-immediate-instructions"><a class="anchor" href="#integer-register-immediate-instructions"></a>Integer Register-Immediate Instructions</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56v4Bup6-vkis2FodhAmmCBOKUiC6kU0wBelLSS0ugdMouo0RutNK85JLjKEmwLSD-OqOLi6e-sE-IZ7RobFgvh-Q7x_kqR8BJHC7ptgQ7hwU1xQXJcMoFL2GRjowvZm5udGGhlYGIOtgeg2NQLo8dYFyqSmZiSWpcBVYBGNruWJrATlKYzc=" alt="svg">
@@ -1175,7 +1170,7 @@ microarchitectures.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_integer_register_register_operations"><a class="anchor" href="#_integer_register_register_operations"></a>Integer Register-Register Operations</h4>
+<h4 id="integer-register-register-operations"><a class="anchor" href="#integer-register-register-operations"></a>Integer Register-Register Operations</h4>
 <div class="paragraph">
 <p>RV32I defines several arithmetic R-type operations. All operations read
 the <em>rs1</em> and <em>rs2</em> registers as source operands and write the result
@@ -1204,7 +1199,7 @@ the lower 5 bits of register <em>rs2</em>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_nop_instruction"><a class="anchor" href="#_nop_instruction"></a>NOP Instruction</h4>
+<h4 id="nop-instruction"><a class="anchor" href="#nop-instruction"></a>NOP Instruction</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56v4Bup6-vuqxtToIfaYIfUUpED3I-kxB-gxQtRgjtKSV5iWXGEO1wfSA-OqOLi6euG0qNoRbhc8mQyMdmJbM3NxoQ0Mrg1igMpgWQyOYHq7YWgAGTEe2" alt="svg">
@@ -1248,7 +1243,7 @@ hardware.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_control_transfer_instructions"><a class="anchor" href="#_control_transfer_instructions"></a>Control Transfer Instructions</h3>
+<h3 id="control-transfer-instructions"><a class="anchor" href="#control-transfer-instructions"></a>Control Transfer Instructions</h3>
 <div class="paragraph">
 <p>RV32I provides two types of control transfer instructions: unconditional
 jumps and conditional branches. Control transfer instructions in RV32I
@@ -1261,7 +1256,7 @@ reported on the target instruction, not on the jump or branch
 instruction.</p>
 </div>
 <div class="sect3">
-<h4 id="_unconditional_jumps"><a class="anchor" href="#_unconditional_jumps"></a>Unconditional Jumps</h4>
+<h4 id="unconditional-jumps"><a class="anchor" href="#unconditional-jumps"></a>Unconditional Jumps</h4>
 <div class="paragraph">
 <p>The jump and link (JAL) instruction uses the J-type format, where the
 J-immediate encodes a signed offset in multiples of 2 bytes. The offset
@@ -1469,7 +1464,7 @@ is only pushed to enable macro-op fusion of the sequences:
 </div>
 </div>
 <div class="sect3">
-<h4 id="_conditional_branches"><a class="anchor" href="#_conditional_branches"></a>Conditional Branches</h4>
+<h4 id="conditional-branches"><a class="anchor" href="#conditional-branches"></a>Conditional Branches</h4>
 <div class="paragraph">
 <p>All branch instructions use the B-type instruction format. The 12-bit
 B-immediate encodes signed offsets in multiples of 2 bytes. The offset
@@ -2047,7 +2042,7 @@ for semihosting calls in newer designs.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_hint_instructions"><a class="anchor" href="#_hint_instructions"></a>HINT Instructions</h3>
+<h3 id="hint-instructions"><a class="anchor" href="#hint-instructions"></a>HINT Instructions</h3>
 <div id="rv32i-hints" class="paragraph">
 <p>RV32I reserves a large encoding space for HINT instructions, which are
 usually used to communicate performance hints to the microarchitecture.
@@ -2299,6 +2294,10 @@ take note of their use in semihosting calls, as described in <a href="#ecall-ebr
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="intro.html">Introduction</a></span>
+  <span class="next"><a href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

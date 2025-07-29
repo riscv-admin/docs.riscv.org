@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="ztso-st-ext.html">
+    <link rel="next" href="f-st-ext.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -272,13 +274,6 @@
   </button>
   </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
@@ -532,7 +527,7 @@
 <h2 id="cmo"><a class="anchor" href="#cmo"></a>"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_pseudocode_for_instruction_semantics"><a class="anchor" href="#_pseudocode_for_instruction_semantics"></a>Pseudocode for instruction semantics</h3>
+<h3 id="pseudocode-for-instruction-semantics"><a class="anchor" href="#pseudocode-for-instruction-semantics"></a>Pseudocode for instruction semantics</h3>
 <div class="paragraph">
 <p>The semantics of each instruction in the <a href="#insns">Instructions</a> chapter is expressed in a
 SAIL-like syntax.</p>
@@ -708,7 +703,7 @@ the copy were modified by a store operation. Additional details are discussed in
 </div>
 </div>
 <div class="sect3">
-<h4 id="_cache_block_operations"><a class="anchor" href="#_cache_block_operations"></a>Cache-Block Operations</h4>
+<h4 id="cache-block-operations"><a class="anchor" href="#cache-block-operations"></a>Cache-Block Operations</h4>
 <div class="paragraph">
 <p>A CBO instruction causes one or more operations to be performed on the cache
 blocks identified by the instruction. In general, a CBO instruction may identify
@@ -872,9 +867,9 @@ set of coherent caches accessed by a set of coherent agents. The mechanism to
 perform such an operation is <em>implementation-specific</em>.</p>
 </div>
 <div class="sect3">
-<h4 id="_memory_ordering"><a class="anchor" href="#_memory_ordering"></a>Memory Ordering</h4>
+<h4 id="memory-ordering"><a class="anchor" href="#memory-ordering"></a>Memory Ordering</h4>
 <div class="sect4">
-<h5 id="_preserved_program_order"><a class="anchor" href="#_preserved_program_order"></a>Preserved Program Order</h5>
+<h5 id="preserved-program-order"><a class="anchor" href="#preserved-program-order"></a>Preserved Program Order</h5>
 <div class="paragraph">
 <p>The preserved program order (abbreviated <em>PPO</em>) rules are defined by the RVWMO
 memory ordering model. How the operations resulting from CMO instructions fit
@@ -928,7 +923,7 @@ instructions.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_load_values"><a class="anchor" href="#_load_values"></a>Load Values</h5>
+<h5 id="load-values"><a class="anchor" href="#load-values"></a>Load Values</h5>
 <div class="paragraph">
 <p>An invalidate operation may change the set of values that can be returned by a
 load. In particular, an additional condition is added to the Load Value Axiom:</p>
@@ -990,7 +985,7 @@ any time.</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_traps"><a class="anchor" href="#_traps"></a>Traps</h4>
+<h4 id="traps"><a class="anchor" href="#traps"></a>Traps</h4>
 <div class="paragraph">
 <p>Execution of certain CMO instructions may result in traps due to CSR state,
 described in the <a href="#csr_state">Control and Status Register State</a> section, or due to the address translation and
@@ -998,7 +993,7 @@ protection mechanisms. The trapping behavior of CMO instructions is described in
 the following sections.</p>
 </div>
 <div class="sect4">
-<h5 id="_illegal_instruction_and_virtual_instruction_exceptions"><a class="anchor" href="#_illegal_instruction_and_virtual_instruction_exceptions"></a>Illegal Instruction and Virtual Instruction Exceptions</h5>
+<h5 id="illegal-instruction-and-virtual-instruction-exceptions"><a class="anchor" href="#illegal-instruction-and-virtual-instruction-exceptions"></a>Illegal Instruction and Virtual Instruction Exceptions</h5>
 <div class="paragraph">
 <p>Cache-block management instructions and cache-block zero instructions may raise
 illegal instruction exceptions or virtual instruction exceptions depending on
@@ -1011,7 +1006,7 @@ nor virtual instruction exceptions.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_page_fault_guest_page_fault_and_access_fault_exceptions"><a class="anchor" href="#_page_fault_guest_page_fault_and_access_fault_exceptions"></a>Page Fault, Guest-Page Fault, and Access Fault Exceptions</h5>
+<h5 id="page-fault-guest-page-fault-and-access-fault-exceptions"><a class="anchor" href="#page-fault-guest-page-fault-and-access-fault-exceptions"></a>Page Fault, Guest-Page Fault, and Access Fault Exceptions</h5>
 <div class="paragraph">
 <p>Similar to load and store instructions, CMO instructions are explicit memory
 access instructions that compute an effective address. The effective address is
@@ -1143,13 +1138,13 @@ appropriate for these instructions, regardless of the permissions required.</em>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_address_misaligned_exceptions"><a class="anchor" href="#_address_misaligned_exceptions"></a>Address Misaligned Exceptions</h5>
+<h5 id="address-misaligned-exceptions"><a class="anchor" href="#address-misaligned-exceptions"></a>Address Misaligned Exceptions</h5>
 <div class="paragraph">
 <p>CMO instructions do <em>not</em> generate address misaligned exceptions.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_breakpoint_exceptions_and_debug_mode_entry"><a class="anchor" href="#_breakpoint_exceptions_and_debug_mode_entry"></a>Breakpoint Exceptions and Debug Mode Entry</h5>
+<h5 id="breakpoint-exceptions-and-debug-mode-entry"><a class="anchor" href="#breakpoint-exceptions-and-debug-mode-entry"></a>Breakpoint Exceptions and Debug Mode Entry</h5>
 <div class="paragraph">
 <p>Unless otherwise defined by the debug architecture specification, the behavior
 of trigger modules with respect to CMO instructions is UNSPECIFIED.</p>
@@ -1257,7 +1252,7 @@ Zicbom and Zicbop extensions is expected to be defined in future extensions.</em
 </div>
 </div>
 <div class="sect4">
-<h5 id="_hypervisor_extension"><a class="anchor" href="#_hypervisor_extension"></a>Hypervisor Extension</h5>
+<h5 id="hypervisor-extension"><a class="anchor" href="#hypervisor-extension"></a>Hypervisor Extension</h5>
 <div class="paragraph">
 <p>For the purposes of writing the <code>mtinst</code> or <code>htinst</code> register on a trap, the
 following standard transformation is defined for cache-block management
@@ -1290,7 +1285,7 @@ or <code>htinst</code> instead of the standard transformation defined above.</em
 </div>
 </div>
 <div class="sect3">
-<h4 id="_effects_on_constrained_lrsc_loops"><a class="anchor" href="#_effects_on_constrained_lrsc_loops"></a>Effects on Constrained LR/SC Loops</h4>
+<h4 id="effects-on-constrained-lrsc-loops"><a class="anchor" href="#effects-on-constrained-lrsc-loops"></a>Effects on Constrained LR/SC Loops</h4>
 <div class="paragraph">
 <p>The following event is added to the list of events that satisfy the eventuality
 guarantee provided by constrained LR/SC loops, as defined in the A extension:</p>
@@ -1331,7 +1326,7 @@ LR/SC loops executed on any hart.</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_software_discovery"><a class="anchor" href="#_software_discovery"></a>Software Discovery</h4>
+<h4 id="software-discovery"><a class="anchor" href="#software-discovery"></a>Software Discovery</h4>
 <div class="paragraph">
 <p>The initial set of CMO extensions requires the following information to be
 discovered by software:</p>
@@ -2239,6 +2234,10 @@ behavior is not required.</em></p>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a></span>
+  <span class="next"><a href="f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

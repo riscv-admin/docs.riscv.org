@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="d-st-ext.html">
+    <link rel="next" href="zfh.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -272,13 +274,6 @@
   </button>
   </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
@@ -529,7 +524,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="_q_extension_for_quad_precision_floating_point_version_2_2"><a class="anchor" href="#_q_extension_for_quad_precision_floating_point_version_2_2"></a>"Q" Extension for Quad-Precision Floating-Point, Version 2.2</h2>
+<h2 id="q-extension-for-quad-precision-floating-point-version-2-2"><a class="anchor" href="#q-extension-for-quad-precision-floating-point-version-2-2"></a>"Q" Extension for Quad-Precision Floating-Point, Version 2.2</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This chapter describes the Q standard extension for 128-bit
@@ -545,7 +540,7 @@ double-precision value which is itself NaN-boxed inside a quad-precision
 value.</p>
 </div>
 <div class="sect2">
-<h3 id="_quad_precision_load_and_store_instructions"><a class="anchor" href="#_quad_precision_load_and_store_instructions"></a>Quad-Precision Load and Store Instructions</h3>
+<h3 id="quad-precision-load-and-store-instructions"><a class="anchor" href="#quad-precision-load-and-store-instructions"></a>Quad-Precision Load and Store Instructions</h3>
 <div class="paragraph">
 <p>New 128-bit variants of LOAD-FP and STORE-FP instructions are added,
 encoded with a new value for the funct3 width field.</p>
@@ -570,7 +565,7 @@ payloads of non-canonical NaNs are preserved.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_quad_precision_computational_instructions"><a class="anchor" href="#_quad_precision_computational_instructions"></a>Quad-Precision Computational Instructions</h3>
+<h3 id="quad-precision-computational-instructions"><a class="anchor" href="#quad-precision-computational-instructions"></a>Quad-Precision Computational Instructions</h3>
 <div class="paragraph">
 <p>A new supported format is added to the format field of most
 instructions, as shown in <a href="#fpextfmt">Format field encoding.</a></p>
@@ -692,7 +687,7 @@ memory.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_quad_precision_floating_point_compare_instructions"><a class="anchor" href="#_quad_precision_floating_point_compare_instructions"></a>Quad-Precision Floating-Point Compare Instructions</h3>
+<h3 id="quad-precision-floating-point-compare-instructions"><a class="anchor" href="#quad-precision-floating-point-compare-instructions"></a>Quad-Precision Floating-Point Compare Instructions</h3>
 <div class="paragraph">
 <p>The quad-precision floating-point compare instructions are defined
 analogously to their double-precision counterparts, but operate on
@@ -719,6 +714,10 @@ quad-precision operands.</p>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a></span>
+  <span class="next"><a href="zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

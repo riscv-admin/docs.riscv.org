@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="zc.html">
+    <link rel="next" href="p-st-ext.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -271,13 +273,6 @@
         ></path></g></svg>
   </button>
   </div><ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
@@ -554,7 +549,7 @@ While the shift-immediate instructions are defined to have at most a 6-bit immed
 </div>
 </div>
 <div class="sect2">
-<h3 id="_word_instructions"><a class="anchor" href="#_word_instructions"></a>Word Instructions</h3>
+<h3 id="word-instructions"><a class="anchor" href="#word-instructions"></a>Word Instructions</h3>
 <div class="paragraph">
 <p>The bitmanip extension follows the convention in RV64 that <em>w</em>-suffixed instructions (without a dot before the <em>w</em>) ignore the upper 32 bits of their inputs, operate on the least-significant 32-bits as signed values and produce a 32-bit signed result that is sign-extended to XLEN.</p>
 </div>
@@ -566,13 +561,13 @@ While the shift-immediate instructions are defined to have at most a 6-bit immed
 </div>
 </div>
 <div class="sect2">
-<h3 id="_pseudocode_for_instruction_semantics"><a class="anchor" href="#_pseudocode_for_instruction_semantics"></a>Pseudocode for instruction semantics</h3>
+<h3 id="pseudocode-for-instruction-semantics"><a class="anchor" href="#pseudocode-for-instruction-semantics"></a>Pseudocode for instruction semantics</h3>
 <div class="paragraph">
 <p>The semantics of each instruction in <a href="#insns-b">Instructions (in alphabetical order)</a> is expressed in a SAIL-like syntax.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_extensions"><a class="anchor" href="#_extensions"></a>Extensions</h3>
+<h3 id="extensions"><a class="anchor" href="#extensions"></a>Extensions</h3>
 <div class="paragraph">
 <p>The first group of bitmanip extensions to be released for Public Review are:</p>
 </div>
@@ -1136,7 +1131,7 @@ along with their specific mapping:</p>
 <div class="sect3">
 <h4 id="zbb"><a class="anchor" href="#zbb"></a>Zbb: Basic bit-manipulation</h4>
 <div class="sect4">
-<h5 id="_logical_with_negate"><a class="anchor" href="#_logical_with_negate"></a>Logical with negate</h5>
+<h5 id="logical-with-negate"><a class="anchor" href="#logical-with-negate"></a>Logical with negate</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 7.1428%;">
@@ -1191,7 +1186,7 @@ In some implementations, the inverter on rs2 used for subtraction can be reused 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_count_leadingtrailing_zero_bits"><a class="anchor" href="#_count_leadingtrailing_zero_bits"></a>Count leading/trailing zero bits</h5>
+<h5 id="count-leadingtrailing-zero-bits"><a class="anchor" href="#count-leadingtrailing-zero-bits"></a>Count leading/trailing zero bits</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 7.1428%;">
@@ -1236,7 +1231,7 @@ In some implementations, the inverter on rs2 used for subtraction can be reused 
 </table>
 </div>
 <div class="sect4">
-<h5 id="_count_population"><a class="anchor" href="#_count_population"></a>Count population</h5>
+<h5 id="count-population"><a class="anchor" href="#count-population"></a>Count population</h5>
 <div class="paragraph">
 <p>These instructions count the number of set bits (1-bits). This is also
 commonly referred to as population count.</p>
@@ -1273,7 +1268,7 @@ commonly referred to as population count.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_integer_minimummaximum"><a class="anchor" href="#_integer_minimummaximum"></a>Integer minimum/maximum</h5>
+<h5 id="integer-minimummaximum"><a class="anchor" href="#integer-minimummaximum"></a>Integer minimum/maximum</h5>
 <div class="paragraph">
 <p>The integer minimum/maximum instructions are arithmetic R-type
 instructions that return the smaller/larger of two operands.</p>
@@ -1322,7 +1317,7 @@ instructions that return the smaller/larger of two operands.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_sign_extension_and_zero_extension"><a class="anchor" href="#_sign_extension_and_zero_extension"></a>Sign extension and zero extension</h5>
+<h5 id="sign-extension-and-zero-extension"><a class="anchor" href="#sign-extension-and-zero-extension"></a>Sign extension and zero extension</h5>
 <div class="paragraph">
 <p>These instructions perform the sign extension or zero extension of the least significant 8 bits or 16 bits of the source register.</p>
 </div>
@@ -1367,7 +1362,7 @@ instructions that return the smaller/larger of two operands.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_bitwise_rotation"><a class="anchor" href="#_bitwise_rotation"></a>Bitwise rotation</h5>
+<h5 id="bitwise-rotation"><a class="anchor" href="#bitwise-rotation"></a>Bitwise rotation</h5>
 <div class="paragraph">
 <p>Bitwise rotation instructions are similar to the shift-logical operations from the base spec. However, where the shift-logical
 instructions shift in zeros, the rotate instructions shift in the bits that were shifted out of the other side of the value.
@@ -1445,7 +1440,7 @@ four-instruction sequence to achieve the same effect (neg; sll/srl; srl/sll; or)
 </div>
 </div>
 <div class="sect4">
-<h5 id="_or_combine"><a class="anchor" href="#_or_combine"></a>OR Combine</h5>
+<h5 id="or-combine"><a class="anchor" href="#or-combine"></a>OR Combine</h5>
 <div class="paragraph">
 <p><strong>orc.b</strong> sets the bits of each byte in the result <em>rd</em> to all zeros if no bit within the respective byte of <em>rs</em> is set, or to all ones if any bit within the respective byte of <em>rs</em> is set.</p>
 </div>
@@ -1478,7 +1473,7 @@ four-instruction sequence to achieve the same effect (neg; sll/srl; srl/sll; or)
 </table>
 </div>
 <div class="sect4">
-<h5 id="_byte_reverse"><a class="anchor" href="#_byte_reverse"></a>Byte-reverse</h5>
+<h5 id="byte-reverse"><a class="anchor" href="#byte-reverse"></a>Byte-reverse</h5>
 <div class="paragraph">
 <p><strong>rev8</strong> reverses the byte-ordering of <em>rs</em>.</p>
 </div>
@@ -5582,9 +5577,9 @@ directly.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_software_optimization_guide"><a class="anchor" href="#_software_optimization_guide"></a>Software optimization guide</h3>
+<h3 id="software-optimization-guide"><a class="anchor" href="#software-optimization-guide"></a>Software optimization guide</h3>
 <div class="sect3">
-<h4 id="_strlen"><a class="anchor" href="#_strlen"></a>strlen</h4>
+<h4 id="strlen"><a class="anchor" href="#strlen"></a>strlen</h4>
 <div class="paragraph">
 <p>The <strong>orc.b</strong> instruction allows for the efficient detection of <strong>NUL</strong> bytes in an XLEN-sized chunk of data:</p>
 </div>
@@ -5673,7 +5668,7 @@ strlen:
 </div>
 </div>
 <div class="sect3">
-<h4 id="_strcmp"><a class="anchor" href="#_strcmp"></a>strcmp</h4>
+<h4 id="strcmp"><a class="anchor" href="#strcmp"></a>strcmp</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">#include &lt;sys/asm.h&gt;
@@ -5738,6 +5733,10 @@ strcmp:
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a></span>
+  <span class="next"><a href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

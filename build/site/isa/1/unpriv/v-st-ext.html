@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="p-st-ext.html">
+    <link rel="next" href="scalar-crypto.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -271,13 +273,6 @@
         ></path></g></svg>
   </button>
   </div><ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
@@ -549,7 +544,7 @@ domains.</em></p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h3>
+<h3 id="introduction"><a class="anchor" href="#introduction"></a>Introduction</h3>
 <div class="paragraph">
 <p>This spec includes the complete set of currently frozen vector
 instructions.  Other instructions that have been considered during
@@ -561,7 +556,7 @@ supported by each extension.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_implementation_defined_constant_parameters"><a class="anchor" href="#_implementation_defined_constant_parameters"></a>Implementation-defined Constant Parameters</h3>
+<h3 id="implementation-defined-constant-parameters"><a class="anchor" href="#implementation-defined-constant-parameters"></a>Implementation-defined Constant Parameters</h3>
 <div class="paragraph">
 <p>Each hart supporting a vector extension defines two parameters:</p>
 </div>
@@ -646,7 +641,7 @@ VLEN or ELEN parameters.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vector_extension_programmers_model"><a class="anchor" href="#_vector_extension_programmers_model"></a>Vector Extension Programmer&#8217;s Model</h3>
+<h3 id="vector-extension-programmers-model"><a class="anchor" href="#vector-extension-programmers-model"></a>Vector Extension Programmer&#8217;s Model</h3>
 <div class="paragraph">
 <p>The vector extension adds 32 vector registers, and seven unprivileged
 CSRs (<code>vstart</code>, <code>vxsat</code>, <code>vxrm</code>, <code>vcsr</code>, <code>vtype</code>, <code>vl</code>, <code>vlenb</code>) to a
@@ -727,7 +722,7 @@ for future vector CSRs, some of which may be mirrored into <code>vcsr</code>.
 </table>
 </div>
 <div class="sect3">
-<h4 id="_vector_registers"><a class="anchor" href="#_vector_registers"></a>Vector Registers</h4>
+<h4 id="vector-registers"><a class="anchor" href="#vector-registers"></a>Vector Registers</h4>
 <div class="paragraph">
 <p>The vector extension adds 32 architectural vector registers,
 <code>v0</code>-<code>v31</code> to the base scalar RISC-V ISA.</p>
@@ -737,7 +732,7 @@ for future vector CSRs, some of which may be mirrored into <code>vcsr</code>.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_context_status_in_mstatus"><a class="anchor" href="#_vector_context_status_in_mstatus"></a>Vector Context Status in <code>mstatus</code></h4>
+<h4 id="vector-context-status-in-mstatus"><a class="anchor" href="#vector-context-status-in-mstatus"></a>Vector Context Status in <code>mstatus</code></h4>
 <div class="paragraph">
 <p>A vector context status field, <code>VS</code>, is added to <code>mstatus[10:9]</code> and shadowed
 in <code>sstatus[10:9]</code>.  It is defined analogously to the floating-point context
@@ -793,7 +788,7 @@ with writable <code>misa.V</code>.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_context_status_in_vsstatus"><a class="anchor" href="#_vector_context_status_in_vsstatus"></a>Vector Context Status in <code>vsstatus</code></h4>
+<h4 id="vector-context-status-in-vsstatus"><a class="anchor" href="#vector-context-status-in-vsstatus"></a>Vector Context Status in <code>vsstatus</code></h4>
 <div class="paragraph">
 <p>When the hypervisor extension is present, a vector context status field, <code>VS</code>,
 is added to <code>vsstatus[10:9]</code>.
@@ -825,7 +820,7 @@ the <code>vsstatus.VS</code> field may exist even if <code>misa.V</code> is clea
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_type_vtype_register"><a class="anchor" href="#_vector_type_vtype_register"></a>Vector Type (<code>vtype</code>) Register</h4>
+<h4 id="vector-type-vtype-register"><a class="anchor" href="#vector-type-vtype-register"></a>Vector Type (<code>vtype</code>) Register</h4>
 <div class="paragraph">
 <p>The read-only XLEN-wide <em>vector</em> <em>type</em> CSR, <code>vtype</code> provides the
 default type used to interpret the contents of the vector register
@@ -971,7 +966,7 @@ encoding.
 </table>
 </div>
 <div class="sect4">
-<h5 id="_vector_selected_element_width_vsew20"><a class="anchor" href="#_vector_selected_element_width_vsew20"></a>Vector Selected Element Width (<code>vsew[2:0]</code>)</h5>
+<h5 id="vector-selected-element-width-vsew20"><a class="anchor" href="#vector-selected-element-width-vsew20"></a>Vector Selected Element Width (<code>vsew[2:0]</code>)</h5>
 <div class="paragraph">
 <p>The value in <code>vsew</code> sets the dynamic <em>selected</em> <em>element</em> <em>width</em>
 (SEW).  By default, a vector register is viewed as being divided into
@@ -1568,7 +1563,7 @@ flags, it was decided to always require them in future assembly code.
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_type_illegal_vill"><a class="anchor" href="#_vector_type_illegal_vill"></a>Vector Type Illegal (<code>vill</code>)</h5>
+<h5 id="vector-type-illegal-vill"><a class="anchor" href="#vector-type-illegal-vill"></a>Vector Type Illegal (<code>vill</code>)</h5>
 <div class="paragraph">
 <p>The <code>vill</code> bit is used to encode that a previous <code>vset{i}vl{i}</code>
 instruction attempted to write an unsupported value to <code>vtype</code>.</p>
@@ -1610,7 +1605,7 @@ zero.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_length_vl_register"><a class="anchor" href="#_vector_length_vl_register"></a>Vector Length (<code>vl</code>) Register</h4>
+<h4 id="vector-length-vl-register"><a class="anchor" href="#vector-length-vl-register"></a>Vector Length (<code>vl</code>) Register</h4>
 <div class="paragraph">
 <p>The <em>XLEN</em>-bit-wide read-only <code>vl</code> CSR can only be updated by the
 <code>vset{i}vl{i}</code> instructions, and the <em>fault-only-first</em> vector load
@@ -1639,7 +1634,7 @@ SEW=8 would need at least six bits in <code>vl</code> to hold the values 0-32
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_byte_length_vlenb_register"><a class="anchor" href="#_vector_byte_length_vlenb_register"></a>Vector Byte Length (<code>vlenb</code>) Register</h4>
+<h4 id="vector-byte-length-vlenb-register"><a class="anchor" href="#vector-byte-length-vlenb-register"></a>Vector Byte Length (<code>vlenb</code>) Register</h4>
 <div class="paragraph">
 <p>The <em>XLEN</em>-bit-wide read-only CSR <code>vlenb</code> holds the value VLEN/8,
 i.e., the vector register length in bytes.</p>
@@ -1673,7 +1668,7 @@ settings which require them to be saved and restored.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_start_index_vstart_register"><a class="anchor" href="#_vector_start_index_vstart_register"></a>Vector Start Index (<code>vstart</code>) Register</h4>
+<h4 id="vector-start-index-vstart-register"><a class="anchor" href="#vector-start-index-vstart-register"></a>Vector Start Index (<code>vstart</code>) Register</h4>
 <div class="paragraph">
 <p>The <em>XLEN</em>-bit-wide read-write <code>vstart</code> CSR specifies the index of the
 first element to be executed by a vector instruction, as described in
@@ -1808,7 +1803,7 @@ locations.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_fixed_point_rounding_mode_vxrm_register"><a class="anchor" href="#_vector_fixed_point_rounding_mode_vxrm_register"></a>Vector Fixed-Point Rounding Mode (<code>vxrm</code>) Register</h4>
+<h4 id="vector-fixed-point-rounding-mode-vxrm-register"><a class="anchor" href="#vector-fixed-point-rounding-mode-vxrm-register"></a>Vector Fixed-Point Rounding Mode (<code>vxrm</code>) Register</h4>
 <div class="paragraph">
 <p>The vector fixed-point rounding-mode register holds a two-bit
 read-write rounding-mode field in the least-significant bits
@@ -1902,7 +1897,7 @@ roundoff_signed(v, d) = (signed(v) &gt;&gt; d) + r</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_fixed_point_saturation_flag_vxsat"><a class="anchor" href="#_vector_fixed_point_saturation_flag_vxsat"></a>Vector Fixed-Point Saturation Flag (<code>vxsat</code>)</h4>
+<h4 id="vector-fixed-point-saturation-flag-vxsat"><a class="anchor" href="#vector-fixed-point-saturation-flag-vxsat"></a>Vector Fixed-Point Saturation Flag (<code>vxsat</code>)</h4>
 <div class="paragraph">
 <p>The <code>vxsat</code> CSR has a single read-write least-significant bit
 (<code>vxsat[0]</code>) that indicates if a fixed-point instruction has had to
@@ -1914,7 +1909,7 @@ Bits <code>vxsat[XLEN-1:1]</code> should be written as zeros.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_control_and_status_vcsr_register"><a class="anchor" href="#_vector_control_and_status_vcsr_register"></a>Vector Control and Status (<code>vcsr</code>) Register</h4>
+<h4 id="vector-control-and-status-vcsr-register"><a class="anchor" href="#vector-control-and-status-vcsr-register"></a>Vector Control and Status (<code>vcsr</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>vxrm</code> and <code>vxsat</code> separate CSRs can also be accessed via fields
 in the <em>XLEN</em>-bit-wide vector control and status CSR, <code>vcsr</code>.</p>
@@ -1953,7 +1948,7 @@ in the <em>XLEN</em>-bit-wide vector control and status CSR, <code>vcsr</code>.<
 </table>
 </div>
 <div class="sect3">
-<h4 id="_state_of_vector_extension_at_reset"><a class="anchor" href="#_state_of_vector_extension_at_reset"></a>State of Vector Extension at Reset</h4>
+<h4 id="state-of-vector-extension-at-reset"><a class="anchor" href="#state-of-vector-extension-at-reset"></a>State of Vector Extension at Reset</h4>
 <div class="paragraph">
 <p>The vector extension must have a consistent state at reset.  In
 particular, <code>vtype</code> and <code>vl</code> must have values that can be read and
@@ -1995,7 +1990,7 @@ reset explicitly in software before use.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_mapping_of_vector_elements_to_vector_register_state"><a class="anchor" href="#_mapping_of_vector_elements_to_vector_register_state"></a>Mapping of Vector Elements to Vector Register State</h3>
+<h3 id="mapping-of-vector-elements-to-vector-register-state"><a class="anchor" href="#mapping-of-vector-elements-to-vector-register-state"></a>Mapping of Vector Elements to Vector Register State</h3>
 <div class="paragraph">
 <p>The following diagrams illustrate how different width elements are
 packed into the bytes of a vector register depending on the current
@@ -2027,7 +2022,7 @@ different EEW.
 </table>
 </div>
 <div class="sect3">
-<h4 id="_mapping_for_lmul_1"><a class="anchor" href="#_mapping_for_lmul_1"></a>Mapping for LMUL = 1</h4>
+<h4 id="mapping-for-lmul-1"><a class="anchor" href="#mapping-for-lmul-1"></a>Mapping for LMUL = 1</h4>
 <div class="paragraph">
 <p>When LMUL=1, elements are simply packed in order from the
 least-significant to most-significant bits of the vector register.</p>
@@ -2094,7 +2089,7 @@ least-significant byte of the stored element.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mapping_for_lmul_1_2"><a class="anchor" href="#_mapping_for_lmul_1_2"></a>Mapping for LMUL &lt; 1</h4>
+<h4 id="mapping-for-lmul-1-2"><a class="anchor" href="#mapping-for-lmul-1-2"></a>Mapping for LMUL &lt; 1</h4>
 <div class="paragraph">
 <p>When LMUL &lt; 1, only the first LMUL*VLEN/SEW elements in the vector
 register are used.  The remaining space in the vector register is
@@ -2113,7 +2108,7 @@ treated as part of the tail, and hence must obey the vta setting.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mapping_for_lmul_1_3"><a class="anchor" href="#_mapping_for_lmul_1_3"></a>Mapping for LMUL &gt; 1</h4>
+<h4 id="mapping-for-lmul-1-3"><a class="anchor" href="#mapping-for-lmul-1-3"></a>Mapping for LMUL &gt; 1</h4>
 <div class="paragraph">
 <p>When vector registers are grouped, the elements of the vector register
 group are packed contiguously in element order beginning with the
@@ -2314,7 +2309,7 @@ register, independent of SEW or LMUL.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vector_instruction_formats"><a class="anchor" href="#_vector_instruction_formats"></a>Vector Instruction Formats</h3>
+<h3 id="vector-instruction-formats"><a class="anchor" href="#vector-instruction-formats"></a>Vector Instruction Formats</h3>
 <div class="paragraph">
 <p>The instructions in the vector extension fit under two existing major
 opcodes (LOAD-FP and STORE-FP) and one new major opcode (OP-V).</p>
@@ -2430,7 +2425,7 @@ elements and memory.  Vector arithmetic instructions operate on values
 held in vector register elements.</p>
 </div>
 <div class="sect3">
-<h4 id="_scalar_operands"><a class="anchor" href="#_scalar_operands"></a>Scalar Operands</h4>
+<h4 id="scalar-operands"><a class="anchor" href="#scalar-operands"></a>Scalar Operands</h4>
 <div class="paragraph">
 <p>Scalar operands can be immediates, or taken from the <code>x</code> registers,
 the <code>f</code> registers, or element 0 of a vector register.  Scalar results
@@ -2585,7 +2580,7 @@ have EMUL=1.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_masking"><a class="anchor" href="#_vector_masking"></a>Vector Masking</h4>
+<h4 id="vector-masking"><a class="anchor" href="#vector-masking"></a>Vector Masking</h4>
 <div class="paragraph">
 <p>Masking is supported on many vector instructions.  Element operations
 that are masked off (inactive) never generate exceptions.  The
@@ -2873,7 +2868,7 @@ their arguments, and write the new value of <code>vl</code> into <code>rd</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vtype_encoding"><a class="anchor" href="#_vtype_encoding"></a><code>vtype</code> encoding</h4>
+<h4 id="vtype-encoding"><a class="anchor" href="#vtype-encoding"></a><code>vtype</code> encoding</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDWUchLzE21UlAvy8ktzYk2sjKIVa_VwaqgOLUcU94QIV-SiEsmF1XGCGFoUWpxalFZagounZk5OSCp2FoAIcw3Tg==" alt="svg">
@@ -2971,7 +2966,7 @@ Examples:
 takes a <code>vtype</code> value from <code>rs2</code> and can be used for context restore.</p>
 </div>
 <div class="sect4">
-<h5 id="_unsupported_vtype_values"><a class="anchor" href="#_unsupported_vtype_values"></a>Unsupported <code>vtype</code> Values</h5>
+<h5 id="unsupported-vtype-values"><a class="anchor" href="#unsupported-vtype-values"></a>Unsupported <code>vtype</code> Values</h5>
 <div class="paragraph">
 <p>If the <code>vtype</code> value is not supported by the implementation, then
 the <code>vill</code> bit is set in <code>vtype</code>, the remaining bits in <code>vtype</code> are
@@ -3024,7 +3019,7 @@ traps instead of executing incorrectly on an older implementation.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_avl_encoding"><a class="anchor" href="#_avl_encoding"></a>AVL encoding</h4>
+<h4 id="avl-encoding"><a class="anchor" href="#avl-encoding"></a>AVL encoding</h4>
 <div class="paragraph">
 <p>The new vector
 length setting is based on AVL, which for <code>vsetvli</code> and <code>vsetvl</code> is encoded in the <code>rs1</code> and <code>rd</code>
@@ -3260,7 +3255,7 @@ All vector loads and stores may
 generate and accept a non-zero <code>vstart</code> value.</p>
 </div>
 <div class="sect3">
-<h4 id="_vector_loadstore_instruction_encoding"><a class="anchor" href="#_vector_loadstore_instruction_encoding"></a>Vector Load/Store Instruction Encoding</h4>
+<h4 id="vector-loadstore-instruction-encoding"><a class="anchor" href="#vector-loadstore-instruction-encoding"></a>Vector Load/Store Instruction Encoding</h4>
 <div class="paragraph">
 <p>Vector loads and stores are encoded within the scalar floating-point
 load and store major opcodes (LOAD-FP/STORE-FP).  The vector load and
@@ -3373,7 +3368,7 @@ SEW/LMUL to specify the data width.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_loadstore_addressing_modes"><a class="anchor" href="#_vector_loadstore_addressing_modes"></a>Vector Load/Store Addressing Modes</h4>
+<h4 id="vector-loadstore-addressing-modes"><a class="anchor" href="#vector-loadstore-addressing-modes"></a>Vector Load/Store Addressing Modes</h4>
 <div class="paragraph">
 <p>The vector extension supports unit-stride, strided, and
 indexed (scatter/gather) addressing modes.  Vector load/store base
@@ -3900,7 +3895,7 @@ currently reserved.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_unit_stride_instructions"><a class="anchor" href="#_vector_unit_stride_instructions"></a>Vector Unit-Stride Instructions</h4>
+<h4 id="vector-unit-stride-instructions"><a class="anchor" href="#vector-unit-stride-instructions"></a>Vector Unit-Stride Instructions</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Vector unit-stride loads and stores
@@ -3988,7 +3983,7 @@ and also reduce the cost of mask spill/fill by reducing need to change
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_strided_instructions"><a class="anchor" href="#_vector_strided_instructions"></a>Vector Strided Instructions</h4>
+<h4 id="vector-strided-instructions"><a class="anchor" href="#vector-strided-instructions"></a>Vector Strided Instructions</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Vector strided loads and stores
@@ -4070,7 +4065,7 @@ address are required, then an ordered indexed operation can be used.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_indexed_instructions"><a class="anchor" href="#_vector_indexed_instructions"></a>Vector Indexed Instructions</h4>
+<h4 id="vector-indexed-instructions"><a class="anchor" href="#vector-indexed-instructions"></a>Vector Indexed Instructions</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Vector indexed loads and stores
@@ -4137,7 +4132,7 @@ retained as an alias during transition to help reduce software churn.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_unit_stride_fault_only_first_loads"><a class="anchor" href="#_unit_stride_fault_only_first_loads"></a>Unit-stride Fault-Only-First Loads</h4>
+<h4 id="unit-stride-fault-only-first-loads"><a class="anchor" href="#unit-stride-fault-only-first-loads"></a>Unit-stride Fault-Only-First Loads</h4>
 <div class="paragraph">
 <p>The unit-stride fault-only-first load instructions are used to
 vectorize loops with data-dependent exit conditions ("while" loops).
@@ -4400,7 +4395,7 @@ access to a segment, it is implementation-defined whether a subset
 of the faulting segment&#8217;s accesses are performed before the trap is taken.</p>
 </div>
 <div class="sect4">
-<h5 id="_vector_unit_stride_segment_loads_and_stores"><a class="anchor" href="#_vector_unit_stride_segment_loads_and_stores"></a>Vector Unit-Stride Segment Loads and Stores</h5>
+<h5 id="vector-unit-stride-segment-loads-and-stores"><a class="anchor" href="#vector-unit-stride-segment-loads-and-stores"></a>Vector Unit-Stride Segment Loads and Stores</h5>
 <div class="paragraph">
 <p>The vector unit-stride load and store segment instructions move packed
 contiguous segments into multiple destination vector register groups.</p>
@@ -4480,7 +4475,7 @@ at which vector length is trimmed.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_strided_segment_loads_and_stores"><a class="anchor" href="#_vector_strided_segment_loads_and_stores"></a>Vector Strided Segment Loads and Stores</h5>
+<h5 id="vector-strided-segment-loads-and-stores"><a class="anchor" href="#vector-strided-segment-loads-and-stores"></a>Vector Strided Segment Loads and Stores</h5>
 <div class="paragraph">
 <p>Vector strided segment loads and stores move contiguous segments where
 each segment is separated by the byte-stride offset given in the <code>rs2</code>
@@ -4523,7 +4518,7 @@ in memory.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_indexed_segment_loads_and_stores"><a class="anchor" href="#_vector_indexed_segment_loads_and_stores"></a>Vector Indexed Segment Loads and Stores</h5>
+<h5 id="vector-indexed-segment-loads-and-stores"><a class="anchor" href="#vector-indexed-segment-loads-and-stores"></a>Vector Indexed Segment Loads and Stores</h5>
 <div class="paragraph">
 <p>Vector indexed segment loads and stores move contiguous segments where
 each segment is located at an address given by adding the scalar base
@@ -4580,7 +4575,7 @@ that raise exceptions partway through loading a structure.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_loadstore_whole_register_instructions"><a class="anchor" href="#_vector_loadstore_whole_register_instructions"></a>Vector Load/Store Whole Register Instructions</h4>
+<h4 id="vector-loadstore-whole-register-instructions"><a class="anchor" href="#vector-loadstore-whole-register-instructions"></a>Vector Load/Store Whole Register Instructions</h4>
 <div class="paragraph">
 <p>Format for Vector Load Whole Register Instructions under LOAD-FP major opcode</p>
 </div>
@@ -4776,7 +4771,7 @@ vsetvli x0, t0, &lt;new type&gt;         # Restore vl (potentially already prese
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vector_memory_alignment_constraints"><a class="anchor" href="#_vector_memory_alignment_constraints"></a>Vector Memory Alignment Constraints</h3>
+<h3 id="vector-memory-alignment-constraints"><a class="anchor" href="#vector-memory-alignment-constraints"></a>Vector Memory Alignment Constraints</h3>
 <div class="paragraph">
 <p>If an element accessed by a vector memory instruction is not naturally
 aligned to the size of the element, either the element is transferred
@@ -4808,7 +4803,7 @@ as scalar misaligned memory accesses.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vector_memory_consistency_model"><a class="anchor" href="#_vector_memory_consistency_model"></a>Vector Memory Consistency Model</h3>
+<h3 id="vector-memory-consistency-model"><a class="anchor" href="#vector-memory-consistency-model"></a>Vector Memory Consistency Model</h3>
 <div class="paragraph">
 <p>Vector memory instructions appear to execute in program order on the
 local hart.</p>
@@ -4877,7 +4872,7 @@ a misspeculation-recovery mechanism.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vector_arithmetic_instruction_formats"><a class="anchor" href="#_vector_arithmetic_instruction_formats"></a>Vector Arithmetic Instruction Formats</h3>
+<h3 id="vector-arithmetic-instruction-formats"><a class="anchor" href="#vector-arithmetic-instruction-formats"></a>Vector Arithmetic Instruction Formats</h3>
 <div class="paragraph">
 <p>The vector arithmetic instructions use a new major opcode (OP-V =
 1010111<sub>2</sub>) which neighbors OP-FP.  The three-bit <code>funct3</code> field is
@@ -5311,7 +5306,7 @@ vnop.wx  vd, vs2, rs1, vm  # integer vector-scalar      vd[i] = vs2[i] op x[rs1]
 otherwise stated, integer operations wrap around on overflow.</p>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_integer_add_and_subtract"><a class="anchor" href="#_vector_single_width_integer_add_and_subtract"></a>Vector Single-Width Integer Add and Subtract</h4>
+<h4 id="vector-single-width-integer-add-and-subtract"><a class="anchor" href="#vector-single-width-integer-add-and-subtract"></a>Vector Single-Width Integer Add and Subtract</h4>
 <div class="paragraph">
 <p>Vector integer add and subtract are provided.  Reverse-subtract
 instructions are also provided for the vector-scalar forms.</p>
@@ -5348,7 +5343,7 @@ assembly pseudoinstruction <code>vneg.v vd,vs</code> = <code>vrsub.vx vd,vs,x0</
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_widening_integer_addsubtract"><a class="anchor" href="#_vector_widening_integer_addsubtract"></a>Vector Widening Integer Add/Subtract</h4>
+<h4 id="vector-widening-integer-addsubtract"><a class="anchor" href="#vector-widening-integer-addsubtract"></a>Vector Widening Integer Add/Subtract</h4>
 <div class="paragraph">
 <p>The widening add/subtract instructions are provided in both signed and
 unsigned variants, depending on whether the narrower source operands
@@ -5398,7 +5393,7 @@ pseudoinstructions <code>vwcvt.x.x.v vd,vs,vm</code> = <code>vwadd.vx vd,vs,x0,v
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_integer_extension"><a class="anchor" href="#_vector_integer_extension"></a>Vector Integer Extension</h4>
+<h4 id="vector-integer-extension"><a class="anchor" href="#vector-integer-extension"></a>Vector Integer Extension</h4>
 <div class="paragraph">
 <p>The vector integer extension instructions zero- or sign-extend a
 source vector integer operand with EEW less than SEW to fill SEW-sized
@@ -5442,7 +5437,7 @@ arithmetic instruction is not available.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_integer_add_with_carry_subtract_with_borrow_instructions"><a class="anchor" href="#_vector_integer_add_with_carry_subtract_with_borrow_instructions"></a>Vector Integer Add-with-Carry / Subtract-with-Borrow Instructions</h4>
+<h4 id="vector-integer-add-with-carry-subtract-with-borrow-instructions"><a class="anchor" href="#vector-integer-add-with-carry-subtract-with-borrow-instructions"></a>Vector Integer Add-with-Carry / Subtract-with-Borrow Instructions</h4>
 <div class="paragraph">
 <p>To support multi-word integer arithmetic, instructions that operate on
 a carry bit are provided.  For each operation (add or subtract), two
@@ -5573,7 +5568,7 @@ operations that overwrite the mask register.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_bitwise_logical_instructions"><a class="anchor" href="#_vector_bitwise_logical_instructions"></a>Vector Bitwise Logical Instructions</h4>
+<h4 id="vector-bitwise-logical-instructions"><a class="anchor" href="#vector-bitwise-logical-instructions"></a>Vector Bitwise Logical Instructions</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Bitwise logical operations.
@@ -5606,7 +5601,7 @@ an assembler pseudoinstruction <code>vnot.v vd,vs,vm</code> = <code>vxor.vi vd,v
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_shift_instructions"><a class="anchor" href="#_vector_single_width_shift_instructions"></a>Vector Single-Width Shift Instructions</h4>
+<h4 id="vector-single-width-shift-instructions"><a class="anchor" href="#vector-single-width-shift-instructions"></a>Vector Single-Width Shift Instructions</h4>
 <div class="paragraph">
 <p>A full set of vector shift instructions are provided, including
 logical shift left (<code>sll</code>), and logical (zero-extending <code>srl</code>) and
@@ -5635,7 +5630,7 @@ vsra.vi vd, vs2, uimm, vm   # vector-immediate</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_narrowing_integer_right_shift_instructions"><a class="anchor" href="#_vector_narrowing_integer_right_shift_instructions"></a>Vector Narrowing Integer Right Shift Instructions</h4>
+<h4 id="vector-narrowing-integer-right-shift-instructions"><a class="anchor" href="#vector-narrowing-integer-right-shift-instructions"></a>Vector Narrowing Integer Right Shift Instructions</h4>
 <div class="paragraph">
 <p>The narrowing right shifts extract a smaller field from a wider
 operand and have both zero-extending (<code>srl</code>) and sign-extending
@@ -5687,7 +5682,7 @@ pseudoinstruction is provided <code>vncvt.x.x.w vd,vs,vm</code> = <code>vnsrl.wx
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_integer_compare_instructions"><a class="anchor" href="#_vector_integer_compare_instructions"></a>Vector Integer Compare Instructions</h4>
+<h4 id="vector-integer-compare-instructions"><a class="anchor" href="#vector-integer-compare-instructions"></a>Vector Integer Compare Instructions</h4>
 <div class="paragraph">
 <p>The following integer compare instructions write 1 to the destination
 mask register element if the comparison evaluates to true, and 0
@@ -5911,7 +5906,7 @@ tail-agnostic policy.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_integer_minmax_instructions"><a class="anchor" href="#_vector_integer_minmax_instructions"></a>Vector Integer Min/Max Instructions</h4>
+<h4 id="vector-integer-minmax-instructions"><a class="anchor" href="#vector-integer-minmax-instructions"></a>Vector Integer Min/Max Instructions</h4>
 <div class="paragraph">
 <p>Signed and unsigned integer minimum and maximum instructions are
 supported.</p>
@@ -5937,7 +5932,7 @@ vmax.vx vd, vs2, rs1, vm   # vector-scalar</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_integer_multiply_instructions"><a class="anchor" href="#_vector_single_width_integer_multiply_instructions"></a>Vector Single-Width Integer Multiply Instructions</h4>
+<h4 id="vector-single-width-integer-multiply-instructions"><a class="anchor" href="#vector-single-width-integer-multiply-instructions"></a>Vector Single-Width Integer Multiply Instructions</h4>
 <div class="paragraph">
 <p>The single-width multiply instructions perform a SEW-bit*SEW-bit
 multiply to generate a 2*SEW-bit product, then return one half of the
@@ -5998,7 +5993,7 @@ cases.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_integer_divide_instructions"><a class="anchor" href="#_vector_integer_divide_instructions"></a>Vector Integer Divide Instructions</h4>
+<h4 id="vector-integer-divide-instructions"><a class="anchor" href="#vector-integer-divide-instructions"></a>Vector Integer Divide Instructions</h4>
 <div class="paragraph">
 <p>The divide and remainder instructions are equivalent to the RISC-V
 standard scalar integer multiply/divides, with the same results for
@@ -6054,7 +6049,7 @@ operation.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_widening_integer_multiply_instructions"><a class="anchor" href="#_vector_widening_integer_multiply_instructions"></a>Vector Widening Integer Multiply Instructions</h4>
+<h4 id="vector-widening-integer-multiply-instructions"><a class="anchor" href="#vector-widening-integer-multiply-instructions"></a>Vector Widening Integer Multiply Instructions</h4>
 <div class="paragraph">
 <p>The widening integer multiply instructions return the full 2*SEW-bit
 product from an SEW-bit*SEW-bit multiply.</p>
@@ -6076,7 +6071,7 @@ vwmulsu.vx vd, vs2, rs1, vm # vector-scalar</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_integer_multiply_add_instructions"><a class="anchor" href="#_vector_single_width_integer_multiply_add_instructions"></a>Vector Single-Width Integer Multiply-Add Instructions</h4>
+<h4 id="vector-single-width-integer-multiply-add-instructions"><a class="anchor" href="#vector-single-width-integer-multiply-add-instructions"></a>Vector Single-Width Integer Multiply-Add Instructions</h4>
 <div class="paragraph">
 <p>The integer multiply-add instructions are destructive and are provided
 in two forms, one that overwrites the addend or minuend
@@ -6122,7 +6117,7 @@ vnmsub.vx vd, rs1, vs2, vm    # vd[i] = -(x[rs1] * vd[i]) + vs2[i]</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_widening_integer_multiply_add_instructions"><a class="anchor" href="#_vector_widening_integer_multiply_add_instructions"></a>Vector Widening Integer Multiply-Add Instructions</h4>
+<h4 id="vector-widening-integer-multiply-add-instructions"><a class="anchor" href="#vector-widening-integer-multiply-add-instructions"></a>Vector Widening Integer Multiply-Add Instructions</h4>
 <div class="paragraph">
 <p>The widening integer multiply-add instructions add the full 2*SEW-bit
 product from a SEW-bit*SEW-bit multiply to a 2*SEW-bit value and
@@ -6149,7 +6144,7 @@ vwmaccus.vx vd, rs1, vs2, vm  # vd[i] = +(unsigned(x[rs1]) * signed(vs2[i])) + v
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_integer_merge_instructions"><a class="anchor" href="#_vector_integer_merge_instructions"></a>Vector Integer Merge Instructions</h4>
+<h4 id="vector-integer-merge-instructions"><a class="anchor" href="#vector-integer-merge-instructions"></a>Vector Integer Merge Instructions</h4>
 <div class="paragraph">
 <p>The vector integer merge instructions combine two source operands
 based on a mask.  Unlike regular arithmetic instructions, the
@@ -6176,7 +6171,7 @@ vmerge.vim vd, vs2, imm, v0  # vd[i] = v0.mask[i] ? imm    : vs2[i]</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_integer_move_instructions"><a class="anchor" href="#_vector_integer_move_instructions"></a>Vector Integer Move Instructions</h4>
+<h4 id="vector-integer-move-instructions"><a class="anchor" href="#vector-integer-move-instructions"></a>Vector Integer Move Instructions</h4>
 <div class="paragraph">
 <p>The vector integer move instructions copy a source operand to a vector
 register group.
@@ -6287,7 +6282,7 @@ to avoid overflow.
 </table>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_saturating_add_and_subtract"><a class="anchor" href="#_vector_single_width_saturating_add_and_subtract"></a>Vector Single-Width Saturating Add and Subtract</h4>
+<h4 id="vector-single-width-saturating-add-and-subtract"><a class="anchor" href="#vector-single-width-saturating-add-and-subtract"></a>Vector Single-Width Saturating Add and Subtract</h4>
 <div class="paragraph">
 <p>Saturating forms of integer add and subtract are provided, for both
 signed and unsigned integers.  If the result would overflow the
@@ -6317,7 +6312,7 @@ vssub.vx vd, vs2, rs1, vm   # vector-scalar</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_averaging_add_and_subtract"><a class="anchor" href="#_vector_single_width_averaging_add_and_subtract"></a>Vector Single-Width Averaging Add and Subtract</h4>
+<h4 id="vector-single-width-averaging-add-and-subtract"><a class="anchor" href="#vector-single-width-averaging-add-and-subtract"></a>Vector Single-Width Averaging Add and Subtract</h4>
 <div class="paragraph">
 <p>The averaging add and subtract instructions right shift the result by
 one bit and round off the result according to the setting in <code>vxrm</code>.
@@ -6363,7 +6358,7 @@ vasub.vx vd, vs2, rs1, vm   # roundoff_signed(vs2[i] - x[rs1], 1)</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_fractional_multiply_with_rounding_and_saturation"><a class="anchor" href="#_vector_single_width_fractional_multiply_with_rounding_and_saturation"></a>Vector Single-Width Fractional Multiply with Rounding and Saturation</h4>
+<h4 id="vector-single-width-fractional-multiply-with-rounding-and-saturation"><a class="anchor" href="#vector-single-width-fractional-multiply-with-rounding-and-saturation"></a>Vector Single-Width Fractional Multiply with Rounding and Saturation</h4>
 <div class="paragraph">
 <p>The signed fractional multiply instruction produces a 2*SEW product of
 the two SEW inputs, then shifts the result right by SEW-1 bits,
@@ -6415,7 +6410,7 @@ simply truncation (<code>rdn</code>).
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_scaling_shift_instructions"><a class="anchor" href="#_vector_single_width_scaling_shift_instructions"></a>Vector Single-Width Scaling Shift Instructions</h4>
+<h4 id="vector-single-width-scaling-shift-instructions"><a class="anchor" href="#vector-single-width-scaling-shift-instructions"></a>Vector Single-Width Scaling Shift Instructions</h4>
 <div class="paragraph">
 <p>These instructions shift the input value right, and round off the
 shifted out bits according to <code>vxrm</code>.  The scaling right shifts have
@@ -6441,7 +6436,7 @@ used to control the shift amount.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_narrowing_fixed_point_clip_instructions"><a class="anchor" href="#_vector_narrowing_fixed_point_clip_instructions"></a>Vector Narrowing Fixed-Point Clip Instructions</h4>
+<h4 id="vector-narrowing-fixed-point-clip-instructions"><a class="anchor" href="#vector-narrowing-fixed-point-clip-instructions"></a>Vector Narrowing Fixed-Point Clip Instructions</h4>
 <div class="paragraph">
 <p>The <code>vnclip</code> instructions are used to pack a fixed-point value into a
 narrower destination.  The instructions support rounding, scaling, and
@@ -6575,7 +6570,7 @@ scalar floating-point instructions with regard to NaNs.</p>
 as described in Section <a href="#sec-arithmetic-encoding">Vector Arithmetic Instruction encoding</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_exception_flags"><a class="anchor" href="#_vector_floating_point_exception_flags"></a>Vector Floating-Point Exception Flags</h4>
+<h4 id="vector-floating-point-exception-flags"><a class="anchor" href="#vector-floating-point-exception-flags"></a>Vector Floating-Point Exception Flags</h4>
 <div class="paragraph">
 <p>A vector floating-point exception at any active floating-point element
 sets the standard FP exception flags in the <code>fflags</code> register.  Inactive
@@ -6583,7 +6578,7 @@ elements do not set FP exception flags.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_floating_point_addsubtract_instructions"><a class="anchor" href="#_vector_single_width_floating_point_addsubtract_instructions"></a>Vector Single-Width Floating-Point Add/Subtract Instructions</h4>
+<h4 id="vector-single-width-floating-point-addsubtract-instructions"><a class="anchor" href="#vector-single-width-floating-point-addsubtract-instructions"></a>Vector Single-Width Floating-Point Add/Subtract Instructions</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Floating-point add
@@ -6598,7 +6593,7 @@ vfrsub.vf vd, vs2, rs1, vm  # Scalar-vector vd[i] = f[rs1] - vs2[i]</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_widening_floating_point_addsubtract_instructions"><a class="anchor" href="#_vector_widening_floating_point_addsubtract_instructions"></a>Vector Widening Floating-Point Add/Subtract Instructions</h4>
+<h4 id="vector-widening-floating-point-addsubtract-instructions"><a class="anchor" href="#vector-widening-floating-point-addsubtract-instructions"></a>Vector Widening Floating-Point Add/Subtract Instructions</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Widening FP add/subtract, 2*SEW = SEW +/- SEW
@@ -6616,7 +6611,7 @@ vfwsub.wf  vd, vs2, rs1, vm  # vector-scalar</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_floating_point_multiplydivide_instructions"><a class="anchor" href="#_vector_single_width_floating_point_multiplydivide_instructions"></a>Vector Single-Width Floating-Point Multiply/Divide Instructions</h4>
+<h4 id="vector-single-width-floating-point-multiplydivide-instructions"><a class="anchor" href="#vector-single-width-floating-point-multiplydivide-instructions"></a>Vector Single-Width Floating-Point Multiply/Divide Instructions</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Floating-point multiply
@@ -6633,7 +6628,7 @@ vfrdiv.vf vd, vs2, rs1, vm  # scalar-vector, vd[i] = f[rs1]/vs2[i]</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_widening_floating_point_multiply"><a class="anchor" href="#_vector_widening_floating_point_multiply"></a>Vector Widening Floating-Point Multiply</h4>
+<h4 id="vector-widening-floating-point-multiply"><a class="anchor" href="#vector-widening-floating-point-multiply"></a>Vector Widening Floating-Point Multiply</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Widening floating-point multiply
@@ -6643,7 +6638,7 @@ vfwmul.vf    vd, vs2, rs1, vm # vector-scalar</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_single_width_floating_point_fused_multiply_add_instructions"><a class="anchor" href="#_vector_single_width_floating_point_fused_multiply_add_instructions"></a>Vector Single-Width Floating-Point Fused Multiply-Add Instructions</h4>
+<h4 id="vector-single-width-floating-point-fused-multiply-add-instructions"><a class="anchor" href="#vector-single-width-floating-point-fused-multiply-add-instructions"></a>Vector Single-Width Floating-Point Fused Multiply-Add Instructions</h4>
 <div class="paragraph">
 <p>All four varieties of fused multiply-add are provided, and in two
 destructive forms that overwrite one of the operands, either the
@@ -6701,7 +6696,7 @@ operation with three inputs and separate output.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_widening_floating_point_fused_multiply_add_instructions"><a class="anchor" href="#_vector_widening_floating_point_fused_multiply_add_instructions"></a>Vector Widening Floating-Point Fused Multiply-Add Instructions</h4>
+<h4 id="vector-widening-floating-point-fused-multiply-add-instructions"><a class="anchor" href="#vector-widening-floating-point-fused-multiply-add-instructions"></a>Vector Widening Floating-Point Fused Multiply-Add Instructions</h4>
 <div class="paragraph">
 <p>The widening floating-point fused multiply-add instructions all
 overwrite the wide addend with the result.  The multiplier inputs are
@@ -6728,7 +6723,7 @@ vfwnmsac.vf vd, rs1, vs2, vm   # vd[i] = -(f[rs1] * vs2[i]) + vd[i]</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_square_root_instruction"><a class="anchor" href="#_vector_floating_point_square_root_instruction"></a>Vector Floating-Point Square-Root Instruction</h4>
+<h4 id="vector-floating-point-square-root-instruction"><a class="anchor" href="#vector-floating-point-square-root-instruction"></a>Vector Floating-Point Square-Root Instruction</h4>
 <div class="paragraph">
 <p>This is a unary vector-vector instruction.</p>
 </div>
@@ -6740,7 +6735,7 @@ vfsqrt.v vd, vs2, vm   # Vector-vector square root</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_reciprocal_square_root_estimate_instruction"><a class="anchor" href="#_vector_floating_point_reciprocal_square_root_estimate_instruction"></a>Vector Floating-Point Reciprocal Square-Root Estimate Instruction</h4>
+<h4 id="vector-floating-point-reciprocal-square-root-estimate-instruction"><a class="anchor" href="#vector-floating-point-reciprocal-square-root-estimate-instruction"></a>Vector Floating-Point Reciprocal Square-Root Estimate Instruction</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Floating-point reciprocal square-root estimate to 7 bits.
@@ -7558,7 +7553,7 @@ with greater estimate accuracy.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_reciprocal_estimate_instruction"><a class="anchor" href="#_vector_floating_point_reciprocal_estimate_instruction"></a>Vector Floating-Point Reciprocal Estimate Instruction</h4>
+<h4 id="vector-floating-point-reciprocal-estimate-instruction"><a class="anchor" href="#vector-floating-point-reciprocal-estimate-instruction"></a>Vector Floating-Point Reciprocal Estimate Instruction</h4>
 <div class="listingblock">
 <div class="content">
 <pre># Floating-point reciprocal estimate to 7 bits.
@@ -8347,7 +8342,7 @@ with greater estimate accuracy.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_minmax_instructions"><a class="anchor" href="#_vector_floating_point_minmax_instructions"></a>Vector Floating-Point MIN/MAX Instructions</h4>
+<h4 id="vector-floating-point-minmax-instructions"><a class="anchor" href="#vector-floating-point-minmax-instructions"></a>Vector Floating-Point MIN/MAX Instructions</h4>
 <div class="paragraph">
 <p>The vector floating-point <code>vfmin</code> and <code>vfmax</code> instructions have the
 same behavior as the corresponding scalar floating-point instructions
@@ -8367,7 +8362,7 @@ vfmax.vf vd, vs2, rs1, vm   # vector-scalar</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_sign_injection_instructions"><a class="anchor" href="#_vector_floating_point_sign_injection_instructions"></a>Vector Floating-Point Sign-Injection Instructions</h4>
+<h4 id="vector-floating-point-sign-injection-instructions"><a class="anchor" href="#vector-floating-point-sign-injection-instructions"></a>Vector Floating-Point Sign-Injection Instructions</h4>
 <div class="paragraph">
 <p>Vector versions of the scalar sign-injection instructions.  The result
 takes all bits except the sign bit from the vector <code>vs2</code> operands.</p>
@@ -8415,7 +8410,7 @@ pseudoinstruction is provided: <code>vfabs.v vd,vs</code> = <code>vfsgnjx.vv vd,
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_compare_instructions"><a class="anchor" href="#_vector_floating_point_compare_instructions"></a>Vector Floating-Point Compare Instructions</h4>
+<h4 id="vector-floating-point-compare-instructions"><a class="anchor" href="#vector-floating-point-compare-instructions"></a>Vector Floating-Point Compare Instructions</h4>
 <div class="paragraph">
 <p>These vector FP compare instructions compare two source operands and
 write the comparison result to a mask register.  The destination mask
@@ -8533,7 +8528,7 @@ element of <code>va</code> contains a quiet NaN and the corresponding element in
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_classify_instruction"><a class="anchor" href="#_vector_floating_point_classify_instruction"></a>Vector Floating-Point Classify Instruction</h4>
+<h4 id="vector-floating-point-classify-instruction"><a class="anchor" href="#vector-floating-point-classify-instruction"></a>Vector Floating-Point Classify Instruction</h4>
 <div class="paragraph">
 <p>This is a unary vector-vector instruction that operates in the same
 way as the scalar classify instruction.</p>
@@ -8552,7 +8547,7 @@ destination elements.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_floating_point_merge_instruction"><a class="anchor" href="#_vector_floating_point_merge_instruction"></a>Vector Floating-Point Merge Instruction</h4>
+<h4 id="vector-floating-point-merge-instruction"><a class="anchor" href="#vector-floating-point-merge-instruction"></a>Vector Floating-Point Merge Instruction</h4>
 <div class="paragraph">
 <p>A vector-scalar floating-point merge instruction is provided, which
 operates on all body elements from <code>vstart</code> up to the current vector
@@ -8600,7 +8595,7 @@ instruction, but with <code>vm=1</code> and <code>vs2=v0</code>.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_single_width_floating_pointinteger_type_convert_instructions"><a class="anchor" href="#_single_width_floating_pointinteger_type_convert_instructions"></a>Single-Width Floating-Point/Integer Type-Convert Instructions</h4>
+<h4 id="single-width-floating-pointinteger-type-convert-instructions"><a class="anchor" href="#single-width-floating-pointinteger-type-convert-instructions"></a>Single-Width Floating-Point/Integer Type-Convert Instructions</h4>
 <div class="paragraph">
 <p>Conversion operations are provided to convert to and from
 floating-point values and unsigned and signed integers, where both
@@ -8639,7 +8634,7 @@ from floating-point to integer, as is common in languages like C and Java.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_widening_floating_pointinteger_type_convert_instructions"><a class="anchor" href="#_widening_floating_pointinteger_type_convert_instructions"></a>Widening Floating-Point/Integer Type-Convert Instructions</h4>
+<h4 id="widening-floating-pointinteger-type-convert-instructions"><a class="anchor" href="#widening-floating-pointinteger-type-convert-instructions"></a>Widening Floating-Point/Integer Type-Convert Instructions</h4>
 <div class="paragraph">
 <p>A set of conversion instructions is provided to convert between
 narrower integer and floating-point datatypes to a type of twice the
@@ -8706,7 +8701,7 @@ additional exception flags raised.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_narrowing_floating_pointinteger_type_convert_instructions"><a class="anchor" href="#_narrowing_floating_pointinteger_type_convert_instructions"></a>Narrowing Floating-Point/Integer Type-Convert Instructions</h4>
+<h4 id="narrowing-floating-pointinteger-type-convert-instructions"><a class="anchor" href="#narrowing-floating-pointinteger-type-convert-instructions"></a>Narrowing Floating-Point/Integer Type-Convert Instructions</h4>
 <div class="paragraph">
 <p>A set of conversion instructions is provided to convert wider integer
 and floating-point datatypes to a type of half the width.</p>
@@ -8764,7 +8759,7 @@ destination format is converted to the destination format&#8217;s largest finite
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vector_reduction_operations"><a class="anchor" href="#_vector_reduction_operations"></a>Vector Reduction Operations</h3>
+<h3 id="vector-reduction-operations"><a class="anchor" href="#vector-reduction-operations"></a>Vector Reduction Operations</h3>
 <div class="paragraph">
 <p>Vector reduction operations take a vector register group of elements
 and a scalar held in element 0 of a vector register, and perform a
@@ -8910,7 +8905,7 @@ Older assembler mnemonic <code>vfredsum</code> is retained as alias for <code>vf
 </table>
 </div>
 <div class="sect4">
-<h5 id="_vector_ordered_single_width_floating_point_sum_reduction"><a class="anchor" href="#_vector_ordered_single_width_floating_point_sum_reduction"></a>Vector Ordered Single-Width Floating-Point Sum Reduction</h5>
+<h5 id="vector-ordered-single-width-floating-point-sum-reduction"><a class="anchor" href="#vector-ordered-single-width-floating-point-sum-reduction"></a>Vector Ordered Single-Width Floating-Point Sum Reduction</h5>
 <div class="paragraph">
 <p>The <code>vfredosum</code> instruction must sum the floating-point values in
 element order, starting with the scalar in <code>vs1[0]</code>--that is, it
@@ -8961,7 +8956,7 @@ summation loop.
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_unordered_single_width_floating_point_sum_reduction"><a class="anchor" href="#_vector_unordered_single_width_floating_point_sum_reduction"></a>Vector Unordered Single-Width Floating-Point Sum Reduction</h5>
+<h5 id="vector-unordered-single-width-floating-point-sum-reduction"><a class="anchor" href="#vector-unordered-single-width-floating-point-sum-reduction"></a>Vector Unordered Single-Width Floating-Point Sum Reduction</h5>
 <div class="paragraph">
 <p>The unordered sum reduction instruction, <code>vfredusum</code>, provides an
 implementation more freedom in performing the reduction.</p>
@@ -9030,7 +9025,7 @@ The <code>vfredosum</code> instruction is a valid implementation of the
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_single_width_floating_point_max_and_min_reductions"><a class="anchor" href="#_vector_single_width_floating_point_max_and_min_reductions"></a>Vector Single-Width Floating-Point Max and Min Reductions</h5>
+<h5 id="vector-single-width-floating-point-max-and-min-reductions"><a class="anchor" href="#vector-single-width-floating-point-max-and-min-reductions"></a>Vector Single-Width Floating-Point Max and Min Reductions</h5>
 <div class="paragraph">
 <p>The <code>vfredmin</code> and <code>vfredmax</code> instructions reduce the scalar argument in
 <code>vs1[0]</code> and active elements in <code>vs2</code> using the <code>minimumNumber</code> and
@@ -9391,7 +9386,7 @@ use.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_count_population_in_mask_vcpop_m"><a class="anchor" href="#_vector_count_population_in_mask_vcpop_m"></a>Vector count population in mask <code>vcpop.m</code></h4>
+<h4 id="vector-count-population-in-mask-vcpop-m"><a class="anchor" href="#vector-count-population-in-mask-vcpop-m"></a>Vector count population in mask <code>vcpop.m</code></h4>
 <div class="listingblock">
 <div class="content">
 <pre>vcpop.m rd, vs2, vm</pre>
@@ -9441,7 +9436,7 @@ value 0, since no mask elements are active).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vfirst_find_first_set_mask_bit"><a class="anchor" href="#_vfirst_find_first_set_mask_bit"></a><code>vfirst</code> find-first-set mask bit</h4>
+<h4 id="vfirst-find-first-set-mask-bit"><a class="anchor" href="#vfirst-find-first-set-mask-bit"></a><code>vfirst</code> find-first-set mask bit</h4>
 <div class="listingblock">
 <div class="content">
 <pre>vfirst.m rd, vs2, vm</pre>
@@ -9478,7 +9473,7 @@ value -1, since no mask elements are active).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vmsbf_m_set_before_first_mask_bit"><a class="anchor" href="#_vmsbf_m_set_before_first_mask_bit"></a><code>vmsbf.m</code> set-before-first mask bit</h4>
+<h4 id="vmsbf-m-set-before-first-mask-bit"><a class="anchor" href="#vmsbf-m-set-before-first-mask-bit"></a><code>vmsbf.m</code> set-before-first mask bit</h4>
 <div class="listingblock">
 <div class="content">
 <pre>    vmsbf.m vd, vs2, vm
@@ -9528,7 +9523,7 @@ and, if masked, cannot overlap the mask register ('v0').</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vmsif_m_set_including_first_mask_bit"><a class="anchor" href="#_vmsif_m_set_including_first_mask_bit"></a><code>vmsif.m</code> set-including-first mask bit</h4>
+<h4 id="vmsif-m-set-including-first-mask-bit"><a class="anchor" href="#vmsif-m-set-including-first-mask-bit"></a><code>vmsif.m</code> set-including-first mask bit</h4>
 <div class="paragraph">
 <p>The vector mask set-including-first instruction is similar to
 set-before-first, except it also includes the element with a set bit.</p>
@@ -9570,7 +9565,7 @@ and, if masked, cannot overlap the mask register ('v0').</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vmsof_m_set_only_first_mask_bit"><a class="anchor" href="#_vmsof_m_set_only_first_mask_bit"></a><code>vmsof.m</code> set-only-first mask bit</h4>
+<h4 id="vmsof-m-set-only-first-mask-bit"><a class="anchor" href="#vmsof-m-set-only-first-mask-bit"></a><code>vmsof.m</code> set-only-first mask bit</h4>
 <div class="paragraph">
 <p>The vector mask set-only-first instruction is similar to
 set-before-first, except it only sets the first element with a bit
@@ -9613,7 +9608,7 @@ and, if masked, cannot overlap the mask register ('v0').</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_example_using_vector_mask_instructions"><a class="anchor" href="#_example_using_vector_mask_instructions"></a>Example using vector mask instructions</h4>
+<h4 id="example-using-vector-mask-instructions"><a class="anchor" href="#example-using-vector-mask-instructions"></a>Example using vector mask instructions</h4>
 <div class="paragraph">
 <p>The following is an example of vectorizing a data-dependent exit loop.</p>
 </div>
@@ -9677,7 +9672,7 @@ zero_loop:
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_iota_instruction"><a class="anchor" href="#_vector_iota_instruction"></a>Vector Iota Instruction</h4>
+<h4 id="vector-iota-instruction"><a class="anchor" href="#vector-iota-instruction"></a>Vector Iota Instruction</h4>
 <div class="paragraph">
 <p>The <code>viota.m</code> instruction reads a source vector mask register and
 writes to each element of the destination vector register group the
@@ -9775,7 +9770,7 @@ loop:
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_element_index_instruction"><a class="anchor" href="#_vector_element_index_instruction"></a>Vector Element Index Instruction</h4>
+<h4 id="vector-element-index-instruction"><a class="anchor" href="#vector-element-index-instruction"></a>Vector Element Index Instruction</h4>
 <div class="paragraph">
 <p>The <code>vid.v</code> instruction writes each element&#8217;s index to the
 destination vector register group, from 0 to <code>vl</code>-1.</p>
@@ -9820,7 +9815,7 @@ same datapath as <code>viota.m</code> but with an implicit set mask source.
 around within the vector registers.</p>
 </div>
 <div class="sect3">
-<h4 id="_integer_scalar_move_instructions"><a class="anchor" href="#_integer_scalar_move_instructions"></a>Integer Scalar Move Instructions</h4>
+<h4 id="integer-scalar-move-instructions"><a class="anchor" href="#integer-scalar-move-instructions"></a>Integer Scalar Move Instructions</h4>
 <div class="paragraph">
 <p>The integer scalar read/write instructions transfer a single
 value between a scalar <code>x</code> register and element 0 of a vector
@@ -9877,7 +9872,7 @@ and <code>vmv.s.x</code> are reserved.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_floating_point_scalar_move_instructions"><a class="anchor" href="#_floating_point_scalar_move_instructions"></a>Floating-Point Scalar Move Instructions</h4>
+<h4 id="floating-point-scalar-move-instructions"><a class="anchor" href="#floating-point-scalar-move-instructions"></a>Floating-Point Scalar Move Instructions</h4>
 <div class="paragraph">
 <p>The floating-point scalar read/write instructions transfer a single
 value between a scalar <code>f</code> register and element 0 of a vector
@@ -9933,7 +9928,7 @@ and <code>vfmv.s.f</code> are reserved.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_slide_instructions"><a class="anchor" href="#_vector_slide_instructions"></a>Vector Slide Instructions</h4>
+<h4 id="vector-slide-instructions"><a class="anchor" href="#vector-slide-instructions"></a>Vector Slide Instructions</h4>
 <div class="paragraph">
 <p>The slide instructions move elements up and down a vector register
 group.</p>
@@ -9981,7 +9976,7 @@ controlling whether <em>destination</em> element <em>i</em> is written.  The mas
 undisturbed/agnostic policy is followed for inactive elements.</p>
 </div>
 <div class="sect4">
-<h5 id="_vector_slideup_instructions"><a class="anchor" href="#_vector_slideup_instructions"></a>Vector Slideup Instructions</h5>
+<h5 id="vector-slideup-instructions"><a class="anchor" href="#vector-slideup-instructions"></a>Vector Slideup Instructions</h5>
 <div class="listingblock">
 <div class="content">
 <pre>vslideup.vx vd, vs2, rs1, vm        # vd[i+x[rs1]] = vs2[i]
@@ -10029,7 +10024,7 @@ input vectors during execution, and enables restart with non-zero
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_slidedown_instructions"><a class="anchor" href="#_vector_slidedown_instructions"></a>Vector Slidedown Instructions</h5>
+<h5 id="vector-slidedown-instructions"><a class="anchor" href="#vector-slidedown-instructions"></a>Vector Slidedown Instructions</h5>
 <div class="listingblock">
 <div class="content">
 <pre>vslidedown.vx vd, vs2, rs1, vm       # vd[i] = vs2[i+x[rs1]]
@@ -10062,7 +10057,7 @@ vslidedown behavior for destination element i in slide (`vstart` &lt; `vl`)
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_slide1up"><a class="anchor" href="#_vector_slide1up"></a>Vector Slide1up</h5>
+<h5 id="vector-slide1up"><a class="anchor" href="#vector-slide1up"></a>Vector Slide1up</h5>
 <div class="paragraph">
 <p>Variants of slide are provided that only move by one element but which
 also allow a scalar integer value to be inserted at the vacated
@@ -10121,7 +10116,7 @@ but sources its scalar argument from an <code>f</code> register.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_vector_slide1down_instruction"><a class="anchor" href="#_vector_slide1down_instruction"></a>Vector Slide1down Instruction</h5>
+<h5 id="vector-slide1down-instruction"><a class="anchor" href="#vector-slide1down-instruction"></a>Vector Slide1down Instruction</h5>
 <div class="paragraph">
 <p>The <code>vslide1down</code> instruction copies the first <code>vl</code>-1 active elements
 values from index <em>i</em>+1 in the source vector register group to index
@@ -10188,7 +10183,7 @@ but sources its scalar argument from an <code>f</code> register.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_register_gather_instructions"><a class="anchor" href="#_vector_register_gather_instructions"></a>Vector Register Gather Instructions</h4>
+<h4 id="vector-register-gather-instructions"><a class="anchor" href="#vector-register-gather-instructions"></a>Vector Register Gather Instructions</h4>
 <div class="paragraph">
 <p>The vector register gather instructions read elements from a first
 source vector register group at locations given by a second source
@@ -10264,7 +10259,7 @@ instruction encoding is reserved.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vector_compress_instruction"><a class="anchor" href="#_vector_compress_instruction"></a>Vector Compress Instruction</h4>
+<h4 id="vector-compress-instruction"><a class="anchor" href="#vector-compress-instruction"></a>Vector Compress Instruction</h4>
 <div class="paragraph">
 <p>The vector compress instruction allows elements selected by a vector
 mask register from a source vector register group to be packed into
@@ -10329,7 +10324,7 @@ element 0.  This does mean elements in destination register after
 </table>
 </div>
 <div class="sect4">
-<h5 id="_synthesizing_vdecompress"><a class="anchor" href="#_synthesizing_vdecompress"></a>Synthesizing <code>vdecompress</code></h5>
+<h5 id="synthesizing-vdecompress"><a class="anchor" href="#synthesizing-vdecompress"></a>Synthesizing <code>vdecompress</code></h5>
 <div class="paragraph">
 <p>There is no inverse <code>vdecompress</code> provided, as this operation can be
 readily synthesized using iota and a masked vrgather:</p>
@@ -10368,7 +10363,7 @@ e q r d c b v a    # v11 destination after vrgather using viota.m under mask</pr
 </div>
 </div>
 <div class="sect3">
-<h4 id="_whole_vector_register_move"><a class="anchor" href="#_whole_vector_register_move"></a>Whole Vector Register Move</h4>
+<h4 id="whole-vector-register-move"><a class="anchor" href="#whole-vector-register-move"></a>Whole Vector Register Move</h4>
 <div class="paragraph">
 <p>The <code>vmv&lt;nr&gt;r.v</code> instructions copy whole vector registers (i.e., all
 VLEN bits) and can copy whole vector register groups.  The <code>nr</code> value
@@ -10487,7 +10482,7 @@ restrictions.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_exception_handling"><a class="anchor" href="#_exception_handling"></a>Exception Handling</h3>
+<h3 id="exception-handling"><a class="anchor" href="#exception-handling"></a>Exception Handling</h3>
 <div class="paragraph">
 <p>On a trap during a vector instruction (caused by either a synchronous
 exception or an asynchronous interrupt), the existing <code>*epc</code> CSR is
@@ -10516,7 +10511,7 @@ virtual memory.
 </table>
 </div>
 <div class="sect3">
-<h4 id="_precise_vector_traps"><a class="anchor" href="#_precise_vector_traps"></a>Precise vector traps</h4>
+<h4 id="precise-vector-traps"><a class="anchor" href="#precise-vector-traps"></a>Precise vector traps</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -10576,7 +10571,7 @@ guaranteed for the element or segment reported by <code>vstart</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_imprecise_vector_traps"><a class="anchor" href="#_imprecise_vector_traps"></a>Imprecise vector traps</h4>
+<h4 id="imprecise-vector-traps"><a class="anchor" href="#imprecise-vector-traps"></a>Imprecise vector traps</h4>
 <div class="paragraph">
 <p>Imprecise vector traps are traps that are not precise.  In particular,
 instructions newer than <code>*epc</code> may have committed results, and
@@ -10609,7 +10604,7 @@ traps caused by synchronous vector exceptions.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_selectable_preciseimprecise_traps"><a class="anchor" href="#_selectable_preciseimprecise_traps"></a>Selectable precise/imprecise traps</h4>
+<h4 id="selectable-preciseimprecise-traps"><a class="anchor" href="#selectable-preciseimprecise-traps"></a>Selectable precise/imprecise traps</h4>
 <div class="paragraph">
 <p>Some profiles may choose to provide a privileged mode bit to select
 between precise and imprecise vector traps.  Imprecise mode would run
@@ -10623,7 +10618,7 @@ same errors as in imprecise mode.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_swappable_traps"><a class="anchor" href="#_swappable_traps"></a>Swappable traps</h4>
+<h4 id="swappable-traps"><a class="anchor" href="#swappable-traps"></a>Swappable traps</h4>
 <div class="paragraph">
 <p>Another trap mode can support swappable state in the vector unit,
 where on a trap, special instructions can save and restore the vector
@@ -10665,7 +10660,7 @@ additional vector extensions in various domains, including
 cryptography and machine learning.</p>
 </div>
 <div class="sect3">
-<h4 id="_zvl_minimum_vector_length_standard_extensions"><a class="anchor" href="#_zvl_minimum_vector_length_standard_extensions"></a>Zvl*: Minimum Vector Length Standard Extensions</h4>
+<h4 id="zvl-minimum-vector-length-standard-extensions"><a class="anchor" href="#zvl-minimum-vector-length-standard-extensions"></a>Zvl*: Minimum Vector Length Standard Extensions</h4>
 <div class="paragraph">
 <p>All standard vector extensions have a minimum required VLEN as
 described below.  A set of vector length extensions are provided to
@@ -10780,7 +10775,7 @@ capabilities.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_zve_vector_extensions_for_embedded_processors"><a class="anchor" href="#_zve_vector_extensions_for_embedded_processors"></a>Zve*: Vector Extensions for Embedded Processors</h4>
+<h4 id="zve-vector-extensions-for-embedded-processors"><a class="anchor" href="#zve-vector-extensions-for-embedded-processors"></a>Zve*: Vector Extensions for Embedded Processors</h4>
 <div class="paragraph">
 <p>The following five standard extensions are defined to provide varying
 degrees of vector support and are intended for use with embedded
@@ -10952,7 +10947,7 @@ from FP32 to FP64.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_v_vector_extension_for_application_processors"><a class="anchor" href="#_v_vector_extension_for_application_processors"></a>V: Vector Extension for Application Processors</h4>
+<h4 id="v-vector-extension-for-application-processors"><a class="anchor" href="#v-vector-extension-for-application-processors"></a>V: Vector Extension for Application Processors</h4>
 <div class="paragraph">
 <p>The single-letter V extension is intended for use in application
 processor profiles.</p>
@@ -11047,7 +11042,7 @@ as is RV64GCV_Zve64f_Zve32x_Zvl128b.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_zvfhmin_vector_extension_for_minimal_half_precision_floating_point"><a class="anchor" href="#_zvfhmin_vector_extension_for_minimal_half_precision_floating_point"></a>Zvfhmin: Vector Extension for Minimal Half-Precision Floating-Point</h4>
+<h4 id="zvfhmin-vector-extension-for-minimal-half-precision-floating-point"><a class="anchor" href="#zvfhmin-vector-extension-for-minimal-half-precision-floating-point"></a>Zvfhmin: Vector Extension for Minimal Half-Precision Floating-Point</h4>
 <div class="paragraph">
 <p>The Zvfhmin extension provides minimal support for vectors of IEEE 754-2008
 binary16 values, adding conversions to and from binary32.
@@ -11061,7 +11056,7 @@ format.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_zvfh_vector_extension_for_half_precision_floating_point"><a class="anchor" href="#_zvfh_vector_extension_for_half_precision_floating_point"></a>Zvfh: Vector Extension for Half-Precision Floating-Point</h4>
+<h4 id="zvfh-vector-extension-for-half-precision-floating-point"><a class="anchor" href="#zvfh-vector-extension-for-half-precision-floating-point"></a>Zvfh: Vector Extension for Half-Precision Floating-Point</h4>
 <div class="paragraph">
 <p>The Zvfh extension provides support for vectors of IEEE 754-2008
 binary16 values.
@@ -11117,7 +11112,7 @@ instruction set design for vector instructions that operate on element
 groups.</p>
 </div>
 <div class="sect3">
-<h4 id="_element_group_size"><a class="anchor" href="#_element_group_size"></a>Element Group Size</h4>
+<h4 id="element-group-size"><a class="anchor" href="#element-group-size"></a>Element Group Size</h4>
 <div class="paragraph">
 <p>The <em>element</em> <em>group</em> <em>size</em> (EGS) is the number of elements in one
 group, and must be a power-of-two (POT).</p>
@@ -11179,7 +11174,7 @@ size of 2 and SHA-256 requires an element group size of 4).
 </div>
 </div>
 <div class="sect3">
-<h4 id="_setting_vl"><a class="anchor" href="#_setting_vl"></a>Setting <code>vl</code></h4>
+<h4 id="setting-vl"><a class="anchor" href="#setting-vl"></a>Setting <code>vl</code></h4>
 <div class="paragraph">
 <p>Each source and destination operand to a vector instruction might be
 defined as either a single element group or a vector of element
@@ -11266,7 +11261,7 @@ instructions to ensure legal length values for all operands.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_determining_eew"><a class="anchor" href="#_determining_eew"></a>Determining EEW</h4>
+<h4 id="determining-eew"><a class="anchor" href="#determining-eew"></a>Determining EEW</h4>
 <div class="paragraph">
 <p>The <code>vtype</code> SEW can be used to indicate or calculate the effective
 element size (EEW) of one or more operands of an element group
@@ -11299,7 +11294,7 @@ the individual elements in the vector.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_determining_emul"><a class="anchor" href="#_determining_emul"></a>Determining EMUL</h4>
+<h4 id="determining-emul"><a class="anchor" href="#determining-emul"></a>Determining EMUL</h4>
 <div class="paragraph">
 <p>The <code>vtype</code> LMUL setting can be used to indicate or calculate the
 effective length multiplier (EMUL) for one or more operands.  Element
@@ -11316,7 +11311,7 @@ different element group size, different EMUL, and/or different EEW.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_element_group_width"><a class="anchor" href="#_element_group_width"></a>Element Group Width</h4>
+<h4 id="element-group-width"><a class="anchor" href="#element-group-width"></a>Element Group Width</h4>
 <div class="paragraph">
 <p>The <em>element</em> <em>group</em> <em>width</em> (EGW) is the number of bits in the
 element group as a whole.
@@ -11360,7 +11355,7 @@ functional unit at the same time.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_masking"><a class="anchor" href="#_masking"></a>Masking</h4>
+<h4 id="masking"><a class="anchor" href="#masking"></a>Masking</h4>
 <div class="paragraph">
 <p>No ratified extensions include masked element-group instructions.
 Future extensions might extend the element-group scheme to support
@@ -11371,7 +11366,7 @@ the mask element group is set).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vector_instruction_listing"><a class="anchor" href="#_vector_instruction_listing"></a>Vector Instruction Listing</h3>
+<h3 id="vector-instruction-listing"><a class="anchor" href="#vector-instruction-listing"></a>Vector Instruction Listing</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 7.6923%;">
@@ -12876,6 +12871,10 @@ the mask element group is set).</p>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a></span>
+  <span class="next"><a href="scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

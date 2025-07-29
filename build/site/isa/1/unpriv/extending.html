@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="rv-32-64g.html">
+    <link rel="next" href="naming.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -271,13 +273,6 @@
         ></path></g></svg>
   </button>
   </div><ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
@@ -550,13 +545,13 @@ the unprivileged ISA, although the same approach and terminology is used
 for supervisor-level extensions described in the second volume.</p>
 </div>
 <div class="sect2">
-<h3 id="_extension_terminology"><a class="anchor" href="#_extension_terminology"></a>Extension Terminology</h3>
+<h3 id="extension-terminology"><a class="anchor" href="#extension-terminology"></a>Extension Terminology</h3>
 <div class="paragraph">
 <p>This section defines some standard terminology for describing RISC-V
 extensions.</p>
 </div>
 <div class="sect3">
-<h4 id="_standard_versus_non_standard_extension"><a class="anchor" href="#_standard_versus_non_standard_extension"></a>Standard versus Non-Standard Extension</h4>
+<h4 id="standard-versus-non-standard-extension"><a class="anchor" href="#standard-versus-non-standard-extension"></a>Standard versus Non-Standard Extension</h4>
 <div class="paragraph">
 <p>Any RISC-V processor implementation must support a base integer ISA
 (RV32I, RV32E, RV64I, RV64E, or RV128I). In addition, an implementation may
@@ -581,7 +576,7 @@ some eventually being promoted to standard extensions.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_instruction_encoding_spaces_and_prefixes"><a class="anchor" href="#_instruction_encoding_spaces_and_prefixes"></a>Instruction Encoding Spaces and Prefixes</h4>
+<h4 id="instruction-encoding-spaces-and-prefixes"><a class="anchor" href="#instruction-encoding-spaces-and-prefixes"></a>Instruction Encoding Spaces and Prefixes</h4>
 <div class="paragraph">
 <p>An instruction encoding space is some number of instruction bits within
 which a base ISA or ISA extension is encoded. RISC-V supports varying
@@ -733,7 +728,7 @@ extensions into a single global encoding.
 </table>
 </div>
 <div class="sect3">
-<h4 id="_greenfield_versus_brownfield_extensions"><a class="anchor" href="#_greenfield_versus_brownfield_extensions"></a>Greenfield versus Brownfield Extensions</h4>
+<h4 id="greenfield-versus-brownfield-extensions"><a class="anchor" href="#greenfield-versus-brownfield-extensions"></a>Greenfield versus Brownfield Extensions</h4>
 <div class="paragraph">
 <p>We use the term <em>greenfield extension</em> to describe an extension that
 begins populating a new instruction encoding space, and hence can only
@@ -801,7 +796,7 @@ complete base encoding.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standard_compatible_global_encodings"><a class="anchor" href="#_standard_compatible_global_encodings"></a>Standard-Compatible Global Encodings</h4>
+<h4 id="standard-compatible-global-encodings"><a class="anchor" href="#standard-compatible-global-encodings"></a>Standard-Compatible Global Encodings</h4>
 <div class="paragraph">
 <p>A complete or <em>global</em> encoding of an ISA for an actual RISC-V
 implementation must allocate a unique non-conflicting prefix for every
@@ -824,7 +819,7 @@ any RISC-V standard-compatible global encoding.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_guaranteed_non_standard_encoding_space"><a class="anchor" href="#_guaranteed_non_standard_encoding_space"></a>Guaranteed Non-Standard Encoding Space</h4>
+<h4 id="guaranteed-non-standard-encoding-space"><a class="anchor" href="#guaranteed-non-standard-encoding-space"></a>Guaranteed Non-Standard Encoding Space</h4>
 <div class="paragraph">
 <p>To support development of proprietary custom extensions, portions of the
 encoding space are guaranteed to never be used by standard extensions.</p>
@@ -832,7 +827,7 @@ encoding space are guaranteed to never be used by standard extensions.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_risc_v_extension_design_philosophy"><a class="anchor" href="#_risc_v_extension_design_philosophy"></a>RISC-V Extension Design Philosophy</h3>
+<h3 id="risc-v-extension-design-philosophy"><a class="anchor" href="#risc-v-extension-design-philosophy"></a>RISC-V Extension Design Philosophy</h3>
 <div class="paragraph">
 <p>We intend to support a large number of independently developed
 extensions by encouraging extension developers to operate within
@@ -904,7 +899,7 @@ for many restricted accelerators and research prototypes.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_available_30_bit_instruction_encoding_spaces"><a class="anchor" href="#_available_30_bit_instruction_encoding_spaces"></a>Available 30-bit instruction encoding spaces</h4>
+<h4 id="available-30-bit-instruction-encoding-spaces"><a class="anchor" href="#available-30-bit-instruction-encoding-spaces"></a>Available 30-bit instruction encoding spaces</h4>
 <div class="paragraph">
 <p>In the standard encoding, three of the available 30-bit instruction
 encoding spaces (those with 2-bit prefixes <code>00</code>, <code>01</code>, and <code>10</code>) are used to
@@ -915,7 +910,7 @@ available encoding space within the 32-bit format.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_available_25_bit_instruction_encoding_spaces"><a class="anchor" href="#_available_25_bit_instruction_encoding_spaces"></a>Available 25-bit instruction encoding spaces</h4>
+<h4 id="available-25-bit-instruction-encoding-spaces"><a class="anchor" href="#available-25-bit-instruction-encoding-spaces"></a>Available 25-bit instruction encoding spaces</h4>
 <div class="paragraph">
 <p>A 25-bit instruction encoding space corresponds to a major opcode in the
 base and standard extension encodings.</p>
@@ -951,7 +946,7 @@ to 16 available for extensions.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_available_22_bit_instruction_encoding_spaces"><a class="anchor" href="#_available_22_bit_instruction_encoding_spaces"></a>Available 22-bit instruction encoding spaces</h4>
+<h4 id="available-22-bit-instruction-encoding-spaces"><a class="anchor" href="#available-22-bit-instruction-encoding-spaces"></a>Available 22-bit instruction encoding spaces</h4>
 <div class="paragraph">
 <p>A 22-bit encoding space corresponds to a funct3 minor opcode space in
 the base and standard extension encodings. Several major opcodes have a
@@ -966,7 +961,7 @@ decoding.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_other_spaces"><a class="anchor" href="#_other_spaces"></a>Other spaces</h4>
+<h4 id="other-spaces"><a class="anchor" href="#other-spaces"></a>Other spaces</h4>
 <div class="paragraph">
 <p>Smaller spaces are available under certain major opcodes, and not all
 minor opcodes are entirely filled.</p>
@@ -974,7 +969,7 @@ minor opcodes are entirely filled.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_adding_aligned_64_bit_instruction_extensions"><a class="anchor" href="#_adding_aligned_64_bit_instruction_extensions"></a>Adding aligned 64-bit instruction extensions</h3>
+<h3 id="adding-aligned-64-bit-instruction-extensions"><a class="anchor" href="#adding-aligned-64-bit-instruction-extensions"></a>Adding aligned 64-bit instruction extensions</h3>
 <div class="paragraph">
 <p>The simplest approach to provide space for extensions that are too large
 for the base 32-bit fixed-width instruction format is to add naturally
@@ -1011,7 +1006,7 @@ variable-length instruction encodings.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_supporting_vliw_encodings"><a class="anchor" href="#_supporting_vliw_encodings"></a>Supporting VLIW encodings</h3>
+<h3 id="supporting-vliw-encodings"><a class="anchor" href="#supporting-vliw-encodings"></a>Supporting VLIW encodings</h3>
 <div class="paragraph">
 <p>Although RISC-V was not designed as a base for a pure VLIW machine, VLIW
 encodings can be added as extensions using several alternative
@@ -1019,7 +1014,7 @@ approaches. In all cases, the base 32-bit encoding has to be supported
 to allow use of any standard software tools.</p>
 </div>
 <div class="sect3">
-<h4 id="_fixed_size_instruction_group"><a class="anchor" href="#_fixed_size_instruction_group"></a>Fixed-size instruction group</h4>
+<h4 id="fixed-size-instruction-group"><a class="anchor" href="#fixed-size-instruction-group"></a>Fixed-size instruction group</h4>
 <div class="paragraph">
 <p>The simplest approach is to define a single large naturally aligned
 instruction format (e.g., 128 bits) within which VLIW operations are
@@ -1030,7 +1025,7 @@ VLIW code size expansion to VLIW-accelerated functions.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_encoded_length_groups"><a class="anchor" href="#_encoded_length_groups"></a>Encoded-Length Groups</h4>
+<h4 id="encoded-length-groups"><a class="anchor" href="#encoded-length-groups"></a>Encoded-Length Groups</h4>
 <div class="paragraph">
 <p>Another approach is to use the standard length encoding from
 <a href="#instlengthcode">[instlengthcode]</a> to encode parallel
@@ -1052,7 +1047,7 @@ virtual memory pages).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_fixed_size_instruction_bundles"><a class="anchor" href="#_fixed_size_instruction_bundles"></a>Fixed-Size Instruction Bundles</h4>
+<h4 id="fixed-size-instruction-bundles"><a class="anchor" href="#fixed-size-instruction-bundles"></a>Fixed-Size Instruction Bundles</h4>
 <div class="paragraph">
 <p>Another approach, similar to Itanium, is to use a larger naturally
 aligned fixed instruction bundle size (e.g., 128 bits) across which
@@ -1063,7 +1058,7 @@ to be supported.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_end_of_group_bits_in_prefix"><a class="anchor" href="#_end_of_group_bits_in_prefix"></a>End-of-Group bits in Prefix</h4>
+<h4 id="end-of-group-bits-in-prefix"><a class="anchor" href="#end-of-group-bits-in-prefix"></a>End-of-Group bits in Prefix</h4>
 <div class="paragraph">
 <p>None of the above approaches retains the RISC-V encoding for the
 individual operations within a VLIW instruction. Yet another approach is
@@ -1085,6 +1080,10 @@ registers in the standard 30-bit encoding space.</p>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="rv-32-64g.html">RV32/64G Instruction Set Listings</a></span>
+  <span class="next"><a href="naming.html">ISA Extension Naming Conventions</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

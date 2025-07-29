@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="smcntrpmf.html">
+    <link rel="next" href="smcdeleg.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -271,13 +273,6 @@
         ></path></g></svg>
   </button>
   </div><ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
@@ -546,7 +541,7 @@ recoverable and so execution is not generally resumable.</p>
 instruction, MNRET, to resume from the RNMI handler.</p>
 </div>
 <div class="sect2">
-<h3 id="_rnmi_interrupt_signals"><a class="anchor" href="#_rnmi_interrupt_signals"></a>RNMI Interrupt Signals</h3>
+<h3 id="rnmi-interrupt-signals"><a class="anchor" href="#rnmi-interrupt-signals"></a>RNMI Interrupt Signals</h3>
 <div class="paragraph">
 <p>The <code>rnmi</code> interrupt signals are inputs to the hart. These interrupts
 have higher priority than any other interrupt or exception on the hart
@@ -555,7 +550,7 @@ by clearing the <code>mstatus</code>.MIE register.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_rnmi_handler_addresses"><a class="anchor" href="#_rnmi_handler_addresses"></a>RNMI Handler Addresses</h3>
+<h3 id="rnmi-handler-addresses"><a class="anchor" href="#rnmi-handler-addresses"></a>RNMI Handler Addresses</h3>
 <div class="paragraph">
 <p>The RNMI interrupt trap handler address is implementation-defined.</p>
 </div>
@@ -578,7 +573,7 @@ in <code>mtvec</code> as the RNMI exception trap handler.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_rnmi_csrs"><a class="anchor" href="#_rnmi_csrs"></a>RNMI CSRs</h3>
+<h3 id="rnmi-csrs"><a class="anchor" href="#rnmi-csrs"></a>RNMI CSRs</h3>
 <div class="paragraph">
 <p>This extension adds additional M-mode CSRs to enable a resumable
 non-maskable interrupt (RNMI).</p>
@@ -727,7 +722,7 @@ and hardware implementations should return zeros.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_mnret_instruction"><a class="anchor" href="#_mnret_instruction"></a>MNRET Instruction</h3>
+<h3 id="mnret-instruction"><a class="anchor" href="#mnret-instruction"></a>MNRET Instruction</h3>
 <div class="paragraph">
 <p>MNRET is an M-mode-only instruction that uses the values in <code>mnepc</code> and
 <code>mnstatus</code> to return to the program counter, privilege mode, and
@@ -738,7 +733,7 @@ is <em>y</em>, MNRET sets <code>ELP</code> to the logical AND of <em>y</em>LPE (
 </div>
 </div>
 <div class="sect2">
-<h3 id="_rnmi_operation"><a class="anchor" href="#_rnmi_operation"></a>RNMI Operation</h3>
+<h3 id="rnmi-operation"><a class="anchor" href="#rnmi-operation"></a>RNMI Operation</h3>
 <div class="paragraph">
 <p>When an RNMI interrupt is detected, the interrupted PC is written to the
 <code>mnepc</code> CSR, the type of RNMI to the <code>mncause</code> CSR, and the privilege
@@ -777,6 +772,10 @@ instructions. In particular, MRET and SRET are unaffected by the
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a></span>
+  <span class="next"><a href="smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

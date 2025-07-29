@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="zfa.html">
+    <link rel="next" href="c-st-ext.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -271,13 +273,6 @@
         ></path></g></svg>
   </button>
   </div><ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
@@ -596,7 +591,7 @@ number.</p>
 <p>The Zfinx extension depends on the "Zicsr" extension for control and status register access.</p>
 </div>
 <div class="sect2">
-<h3 id="_processing_of_narrower_values"><a class="anchor" href="#_processing_of_narrower_values"></a>Processing of Narrower Values</h3>
+<h3 id="processing-of-narrower-values"><a class="anchor" href="#processing-of-narrower-values"></a>Processing of Narrower Values</h3>
 <div class="paragraph">
 <p>Floating-point operands of width <em>w</em> \(&lt;\) XLEN bits occupy
 bits <em>w</em>-1:0 of an <code>x</code> register. Floating-point operations on <em>w</em>-bit
@@ -630,7 +625,7 @@ registers is compatible with the existing RV64 calling conventions, which leave 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_zdinx"><a class="anchor" href="#_zdinx"></a>Zdinx</h3>
+<h3 id="zdinx"><a class="anchor" href="#zdinx"></a>Zdinx</h3>
 <div class="paragraph">
 <p>The Zdinx extension provides analogous double-precision floating-point
 instructions. The Zdinx extension depends upon the Zfinx extension.</p>
@@ -648,7 +643,7 @@ number.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_processing_of_wider_values"><a class="anchor" href="#_processing_of_wider_values"></a>Processing of Wider Values</h3>
+<h3 id="processing-of-wider-values"><a class="anchor" href="#processing-of-wider-values"></a>Processing of Wider Values</h3>
 <div class="paragraph">
 <p>Double-precision operands in RV32Zdinx are held in aligned <code>x</code>-register
 pairs, i.e., register numbers must be even. Use of misaligned
@@ -690,7 +685,7 @@ however.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_zhinx"><a class="anchor" href="#_zhinx"></a>Zhinx</h3>
+<h3 id="zhinx"><a class="anchor" href="#zhinx"></a>Zhinx</h3>
 <div class="paragraph">
 <p>The Zhinx extension provides analogous half-precision floating-point
 instructions. The Zhinx extension depends upon the Zfinx extension.</p>
@@ -708,7 +703,7 @@ number.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_zhinxmin"><a class="anchor" href="#_zhinxmin"></a>Zhinxmin</h3>
+<h3 id="zhinxmin"><a class="anchor" href="#zhinxmin"></a>Zhinxmin</h3>
 <div class="paragraph">
 <p>The Zhinxmin extension provides minimal support for 16-bit
 half-precision floating-point instructions that operate on the <code>x</code>
@@ -737,7 +732,7 @@ but would require quad-register groups.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_privileged_architecture_implications"><a class="anchor" href="#_privileged_architecture_implications"></a>Privileged Architecture Implications</h3>
+<h3 id="privileged-architecture-implications"><a class="anchor" href="#privileged-architecture-implications"></a>Privileged Architecture Implications</h3>
 <div class="paragraph">
 <p>In the standard privileged architecture defined in Volume II, the
 <code>mstatus</code> field FS is hardwired to 0 if the Zfinx extension is
@@ -766,6 +761,10 @@ of the Zfinx, Zhinx, and Zdinx extensions.</p>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a></span>
+  <span class="next"><a href="c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

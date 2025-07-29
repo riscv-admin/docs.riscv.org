@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="zfinx.html">
+    <link rel="next" href="zc.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -272,13 +274,6 @@
   </button>
   </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
@@ -541,7 +536,7 @@ we use the generic term "RVC" to cover any of these. Typically,
 instructions, resulting in a 25%-30% code-size reduction.</p>
 </div>
 <div class="sect2">
-<h3 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h3>
+<h3 id="overview"><a class="anchor" href="#overview"></a>Overview</h3>
 <div class="paragraph">
 <p>RVC uses a simple compression scheme that offers shorter 16-bit versions
 of common 32-bit RISC-V instructions when:</p>
@@ -765,7 +760,7 @@ performance impact as doubling the instruction cache size. cite:[waterman-ms]</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="_compressed_instruction_formats"><a class="anchor" href="#_compressed_instruction_formats"></a>Compressed Instruction Formats</h3>
+<h3 id="compressed-instruction-formats"><a class="anchor" href="#compressed-instruction-formats"></a>Compressed Instruction Formats</h3>
 <div class="paragraph">
 <p></p>
 </div>
@@ -1091,7 +1086,7 @@ encoding space for other instructions requiring fewer operand bits.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_load_and_store_instructions"><a class="anchor" href="#_load_and_store_instructions"></a>Load and Store Instructions</h3>
+<h3 id="load-and-store-instructions"><a class="anchor" href="#load-and-store-instructions"></a>Load and Store Instructions</h3>
 <div class="paragraph">
 <p>To increase the reach of 16-bit instructions, data-transfer instructions
 use zero-extended immediates that are scaled by the size of the data in
@@ -1105,7 +1100,7 @@ other can reference one of 8 base address registers and one of 8 data
 registers.</p>
 </div>
 <div class="sect3">
-<h4 id="_stack_pointer_based_loads_and_stores"><a class="anchor" href="#_stack_pointer_based_loads_and_stores"></a>Stack-Pointer-Based Loads and Stores</h4>
+<h4 id="stack-pointer-based-loads-and-stores"><a class="anchor" href="#stack-pointer-based-loads-and-stores"></a>Stack-Pointer-Based Loads and Stores</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUQCBxJKSIqAadSN1HXVn7ERsrQ7CCFO4EZm5uRAzYEaYApXnp6UVp5ZEm1gZ1ZhbmcUCFSCEjGss0IRqLNHV4NaGwxVFKWgeAbkiJbW45FHnAgOQOfjYcBrFcEPcXjREeNE0lmQ2ii3GcFvSSvOSS4yBFsFsMQaFu55PeHAAyIFAlgucFQhjuSGk3cDyIMNjdRSS8_PSMoGxDvOLWW0tAHBqlSU=" alt="svg">
@@ -1258,7 +1253,7 @@ attain the greatest code size reduction.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_register_based_loads_and_stores"><a class="anchor" href="#_register_based_loads_and_stores"></a>Register-Based Loads and Stores</h4>
+<h4 id="register-based-loads-and-stores"><a class="anchor" href="#register-based-loads-and-stores"></a>Register-Based Loads and Stores</h4>
 <div id="reg-based-ldnstr" class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUUgsKSkCyqsbAdnqzgY4ydhaHYQZxnAzilJO7QSqgBtjDFKeklpcgqCxUSimIVyUmZsLcxLURflpacWpJdFGNWaxSFxzK3xcbIpxOb_YEOx-FOcnJRanEqRxGAjxAap5UHeYWhnH4uHWmNRYxBJQjsPStNK85BJjDHud9XzCobQLlA6E0G4wCTegDMjQWB2F5Py8tExgUoGabmhWWwsAcj2iYg==?id=reg-based-ldnstr" alt="svg">
@@ -1354,7 +1349,7 @@ register <code><em>rs1′</em></code>. It expands to
 </div>
 </div>
 <div class="sect2">
-<h3 id="_control_transfer_instructions"><a class="anchor" href="#_control_transfer_instructions"></a>Control Transfer Instructions</h3>
+<h3 id="control-transfer-instructions"><a class="anchor" href="#control-transfer-instructions"></a>Control Transfer Instructions</h3>
 <div class="paragraph">
 <p>RVC provides unconditional jump instructions and conditional branch
 instructions. As with base RVI instructions, the offsets of all RVC
@@ -1451,13 +1446,13 @@ expands to <code>beq rs1′, x0, offset</code>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_integer_computational_instructions"><a class="anchor" href="#_integer_computational_instructions"></a>Integer Computational Instructions</h3>
+<h3 id="integer-computational-instructions"><a class="anchor" href="#integer-computational-instructions"></a>Integer Computational Instructions</h3>
 <div class="paragraph">
 <p>RVC provides several instructions for integer arithmetic and constant
 generation.</p>
 </div>
 <div class="sect3">
-<h4 id="_integer_constant_generation_instructions"><a class="anchor" href="#_integer_constant_generation_instructions"></a>Integer Constant-Generation Instructions</h4>
+<h4 id="integer-constant-generation-instructions"><a class="anchor" href="#integer-constant-generation-instructions"></a>Integer Constant-Generation Instructions</h4>
 <div class="paragraph">
 <p>The two constant-generation instructions both use the CI instruction
 format and can target any integer register.</p>
@@ -1488,7 +1483,7 @@ C.ADDI16SP instruction.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_integer_register_immediate_operations"><a class="anchor" href="#_integer_register_immediate_operations"></a>Integer Register-Immediate Operations</h4>
+<h4 id="integer-register-immediate-operations"><a class="anchor" href="#integer-register-immediate-operations"></a>Integer Register-Immediate Operations</h4>
 <div class="paragraph">
 <p>These integer register-immediate operations are encoded in the CI format
 and perform operations on an integer register and a 6-bit immediate.</p>
@@ -1649,7 +1644,7 @@ expands to <code>andi rd′, rd′, imm</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_integer_register_register_operations"><a class="anchor" href="#_integer_register_register_operations"></a>Integer Register-Register Operations</h4>
+<h4 id="integer-register-register-operations"><a class="anchor" href="#integer-register-register-operations"></a>Integer Register-Register Operations</h4>
 <div id="c-cr" class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUQCBxJKSIqAadSMgX90ZRsbq1OogtJnCtRUVG0H0wbSZgjQUFyU_6lxggMzEaUCKflGxIVAligEpqcUlMBPgbFQjTOBGpJXmJZeYIBlhAna0nm8YhHZ0cYHojdVRSM7PS8sEhgHUEEOz2loFAP5pUEs=?id=c-cr" alt="svg">
@@ -1756,7 +1751,7 @@ improvement in static and dynamic compression.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_defined_illegal_instruction"><a class="anchor" href="#_defined_illegal_instruction"></a>Defined Illegal Instruction</h4>
+<h4 id="defined-illegal-instruction"><a class="anchor" href="#defined-illegal-instruction"></a>Defined Illegal Instruction</h4>
 <div id="c-def-illegal-inst" class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlA3UNdRSCwpKQJKqxup6wD5sTq1OgiVplhVmlKk0hCrSkMsKo2xqjRGqIzVUUjOz0vLBHoPZrhZbS0ABoVARg==?id=c-def-illegal-inst" alt="svg">
@@ -1791,7 +1786,7 @@ non-existent memory regions.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_nop_instruction"><a class="anchor" href="#_nop_instruction"></a>NOP Instruction</h4>
+<h4 id="nop-instruction"><a class="anchor" href="#nop-instruction"></a>NOP Instruction</h4>
 <div id="c-nop-instr" class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUUgsKSkCyqsbqeuoOxuqx-rU6iDUmsLVZubmRptYGcQi6TAF6jDAqaEoRb-o2JCAckMU802RTTfEotwYrjytNC-5xBhJuTHI-Xp-_gEQLbG1AGi5RFc=?id=c-nop-instr" alt="svg">
@@ -1808,7 +1803,7 @@ performance counters. <code>C.NOP</code> expands to <code>nop</code>. <code>C.NO
 </div>
 </div>
 <div class="sect3">
-<h4 id="_breakpoint_instruction"><a class="anchor" href="#_breakpoint_instruction"></a>Breakpoint Instruction</h4>
+<h4 id="breakpoint-instruction"><a class="anchor" href="#breakpoint-instruction"></a>Breakpoint Instruction</h4>
 <div id="c-breakpoint-instr" class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUUgsKSkCyqsbqeuoOxupx-rU6iDUGhrAFRsgqTUEcoACqGpN4ErTSvOSS0yQ1JuAzNZzdQpydfSG6IrVUUjOz0vLBDoNZpVZbS0A-aYv3w==?id=c-breakpoint-instr" alt="svg">
@@ -1826,7 +1821,7 @@ to cause control to be transferred back to the debugging environment.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_usage_of_c_instructions_in_lrsc_sequences"><a class="anchor" href="#_usage_of_c_instructions_in_lrsc_sequences"></a>Usage of C Instructions in LR/SC Sequences</h3>
+<h3 id="usage-of-c-instructions-in-lrsc-sequences"><a class="anchor" href="#usage-of-c-instructions-in-lrsc-sequences"></a>Usage of C Instructions in LR/SC Sequences</h3>
 <div class="paragraph">
 <p>On implementations that support the C extension, compressed forms of the
 I instructions permitted inside constrained LR/SC sequences, as
@@ -1996,7 +1991,7 @@ no standard HINTs will ever be defined in this subspace.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_rvc_instruction_set_listings"><a class="anchor" href="#_rvc_instruction_set_listings"></a>RVC Instruction Set Listings</h3>
+<h3 id="rvc-instruction-set-listings"><a class="anchor" href="#rvc-instruction-set-listings"></a>RVC Instruction Set Listings</h3>
 <div class="paragraph">
 <p><a href="#rvcopcodemap">RVC opcode map instructions.</a> shows a map of the major
 opcodes for RVC. Each row of the table corresponds to one quadrant of
@@ -2129,6 +2124,10 @@ RV128</p></td>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a></span>
+  <span class="next"><a href="zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

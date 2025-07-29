@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="zicond.html">
+    <link rel="next" href="a-st-ext.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -271,13 +273,6 @@
         ></path></g></svg>
   </button>
   </div><ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
@@ -554,7 +549,7 @@ accelerators.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_multiplication_operations"><a class="anchor" href="#_multiplication_operations"></a>Multiplication Operations</h3>
+<h3 id="multiplication-operations"><a class="anchor" href="#multiplication-operations"></a>Multiplication Operations</h3>
 <div class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVddRSCwpKQIqUjcHstX9AyCkrrGRemytDkKnKUJnUQpQDQjAdJqC9KSkFpfAaRStxgitaaV5ySXGSJaC2Oq-oT76QOwRHR0cGxoLFQnHbX-xIcQBKPbnluaUZBbkZCYn5qVg8HEbZYTHqNQiNB6KMeZo3jJHD0ugJ1w8w5BYIO2xtQD_tXMS" alt="svg">
@@ -615,7 +610,7 @@ to shift both arguments left by 32 bits, then use MULH[[S]U].</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_division_operations"><a class="anchor" href="#_division_operations"></a>Division Operations</h3>
+<h3 id="division-operations"><a class="anchor" href="#division-operations"></a>Division Operations</h3>
 <div class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVddRSCwpKQIqUjcHstX9AyCkrrGRemytDkKnKUJnUQpQDQjAdJqC9KSkFpfAaRStxgitaaV5ySXGIO0wvUCOuotnWHRorH6Qqy-QApkBEQiHioTjdkmxIcQpqC7JLMtMSc1LQWHjNsIIhxHF-UXITBQDzNG8ZI4ejr6hPkBPILFA2mNrAXNucCQ=" alt="svg">
@@ -749,11 +744,11 @@ simplifies the hardware.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_zmmul_extension_version_1_0"><a class="anchor" href="#_zmmul_extension_version_1_0"></a>Zmmul Extension, Version 1.0</h3>
+<h3 id="zmmul-extension-version-1-0"><a class="anchor" href="#zmmul-extension-version-1-0"></a>Zmmul Extension, Version 1.0</h3>
 <div class="paragraph">
 <p>The Zmmul extension implements the multiplication subset of the M
 extension. It adds all of the instructions defined in
-<a href="#_multiplication_operations">Multiplication Operations</a>, namely: MUL, MULH, MULHU,
+<a href="#multiplication-operations">Multiplication Operations</a>, namely: MUL, MULH, MULHU,
 MULHSU, and (for RV64 only) MULW. The encodings are identical to those
 of the corresponding M-extension instructions. M implies Zmmul.
 </p>
@@ -782,6 +777,10 @@ multipliers but require dividers be implemented in soft logic.</p>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a></span>
+  <span class="next"><a href="a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

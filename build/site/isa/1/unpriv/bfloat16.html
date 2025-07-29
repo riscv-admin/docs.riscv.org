@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="zfh.html">
+    <link rel="next" href="zfa.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -271,13 +273,6 @@
         ></path></g></svg>
   </button>
   </div><ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
@@ -645,7 +640,7 @@ but they are the ones we considered most while writing it.</p>
 <div class="sect2">
 <h3 id="BF16_format"><a class="anchor" href="#BF16_format"></a>Number Format</h3>
 <div class="sect3">
-<h4 id="_bf16_operand_format"><a class="anchor" href="#_bf16_operand_format"></a>BF16 Operand Format</h4>
+<h4 id="bf16-operand-format"><a class="anchor" href="#bf16-operand-format"></a>BF16 Operand Format</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">BF16 bits</dt>
@@ -777,13 +772,13 @@ For BF16 these values are:</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_bf16_behavior"><a class="anchor" href="#_bf16_behavior"></a>BF16 Behavior</h4>
+<h4 id="bf16-behavior"><a class="anchor" href="#bf16-behavior"></a>BF16 Behavior</h4>
 <div class="paragraph">
 <p>For these BF16 extensions, instruction behavior on BF16 operands is the same as for other floating-point
 instructions in the RISC-V ISA. For easy reference, some of this behavior is repeated here.</p>
 </div>
 <div class="sect4">
-<h5 id="_subnormal_numbers"><a class="anchor" href="#_subnormal_numbers"></a>Subnormal Numbers:</h5>
+<h5 id="subnormal-numbers"><a class="anchor" href="#subnormal-numbers"></a>Subnormal Numbers:</h5>
 <div class="paragraph">
 <p>Floating-point values that are too small to be represented as normal numbers, but can still be expressed
 by the format&#8217;s smallest exponent value with a "0" integer bit and at least one "1" bit
@@ -812,7 +807,7 @@ The comments about supporting subnormal BF16 values are limited to those instruc
 </div>
 </div>
 <div class="sect4">
-<h5 id="_infinities"><a class="anchor" href="#_infinities"></a>Infinities:</h5>
+<h5 id="infinities"><a class="anchor" href="#infinities"></a>Infinities:</h5>
 <div class="paragraph">
 <p>Infinities are used to represent values that are too large to be represented by the target format.
 These are usually produced as a result of overflows (depending on the rounding mode), but can also
@@ -823,7 +818,7 @@ be provided as inputs. Infinities have a sign associated with them: there are po
 </div>
 </div>
 <div class="sect4">
-<h5 id="_nans"><a class="anchor" href="#_nans"></a>NaNs</h5>
+<h5 id="nans"><a class="anchor" href="#nans"></a>NaNs</h5>
 <div class="paragraph">
 <p>NaN stands for Not a Number.</p>
 </div>
@@ -850,7 +845,7 @@ is the most significant 16 bits of the RISC-V single-precision canonical NaN.</p
 </div>
 </div>
 <div class="sect4">
-<h5 id="_scalar_nan_boxing"><a class="anchor" href="#_scalar_nan_boxing"></a>Scalar NaN Boxing</h5>
+<h5 id="scalar-nan-boxing"><a class="anchor" href="#scalar-nan-boxing"></a>Scalar NaN Boxing</h5>
 <div class="paragraph">
 <p>RISC-V applies NaN boxing to scalar results and checks for NaN boxing when a floating-point operation
 --- even a vector-scalar operation --- consumes a value from a scalar floating-point register.
@@ -868,7 +863,7 @@ are more significant than the operand&#8217;s most significant bit.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_rounding_modes"><a class="anchor" href="#_rounding_modes"></a>Rounding Modes:</h5>
+<h5 id="rounding-modes"><a class="anchor" href="#rounding-modes"></a>Rounding Modes:</h5>
 <div class="paragraph">
 <p>As is the case with other floating-point instructions,
 the BF16 instructions support all 5 RISC-V Floating-point rounding modes.
@@ -946,7 +941,7 @@ mode specified in the <code>frm</code> CSR.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_handling_exceptions"><a class="anchor" href="#_handling_exceptions"></a>Handling exceptions</h5>
+<h5 id="handling-exceptions"><a class="anchor" href="#handling-exceptions"></a>Handling exceptions</h5>
 <div class="paragraph">
 <p>RISC-V supports IEEE-defined default exception handling. BF16 is no exception.</p>
 </div>
@@ -957,7 +952,7 @@ BF16 instructions set floating-point exception flags the same way as all other f
 in RISC-V.</p>
 </div>
 <div class="sect5">
-<h6 id="_underflow"><a class="anchor" href="#_underflow"></a>Underflow</h6>
+<h6 id="underflow"><a class="anchor" href="#underflow"></a>Underflow</h6>
 <div class="paragraph">
 <p>The IEEE-defined underflow exception requires that a result be inexact and tiny, where tininess can be
 detected before or after rounding. In RISC-V, tininess is detected after rounding.</p>
@@ -1722,7 +1717,7 @@ vfmacc.vf        vd, T1, T2, vm</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_bibliography"><a class="anchor" href="#_bibliography"></a>Bibliography</h3>
+<h3 id="bibliography"><a class="anchor" href="#bibliography"></a>Bibliography</h3>
 <div class="paragraph">
 <p><a href="https://ieeexplore.ieee.org/document/8766229">754-2019 - IEEE Standard for Floating-Point Arithmetic</a><br>
 <a href="https://ieeexplore.ieee.org/document/4610935">754-2008 - IEEE Standard for Floating-Point Arithmetic</a></p>
@@ -1730,6 +1725,10 @@ vfmacc.vf        vd, T1, T2, vm</code></pre>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a></span>
+  <span class="next"><a href="zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

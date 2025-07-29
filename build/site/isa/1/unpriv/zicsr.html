@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="zifencei.html">
+    <link rel="next" href="counters.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -271,13 +273,6 @@
         ></path></g></svg>
   </button>
   </div><ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
@@ -559,7 +554,7 @@ chapter.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_csr_instructions"><a class="anchor" href="#_csr_instructions"></a>CSR Instructions</h3>
+<h3 id="csr-instructions"><a class="anchor" href="#csr-instructions"></a>CSR Instructions</h3>
 <div class="paragraph">
 <p>All CSR instructions atomically read-modify-write a single CSR, whose
 CSR specifier is encoded in the 12-bit <em>csr</em> field of the instruction
@@ -816,7 +811,7 @@ in the CSR when the old value is not required: CSRS/CSRC <em>csr, rs1</em>;
 CSRSI/CSRCI <em>csr, uimm</em>.</p>
 </div>
 <div class="sect3">
-<h4 id="_csr_access_ordering"><a class="anchor" href="#_csr_access_ordering"></a>CSR Access Ordering</h4>
+<h4 id="csr-access-ordering"><a class="anchor" href="#csr-access-ordering"></a>CSR Access Ordering</h4>
 <div class="paragraph">
 <p>Each RISC-V hart normally observes its own CSR accesses, including its
 implicit CSR accesses, as performed in program order. In particular,
@@ -910,6 +905,10 @@ should probably be moved to <a href="rvwmo.html" class="xref page">"RVWMO Memory
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a></span>
+  <span class="next"><a href="counters.html">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

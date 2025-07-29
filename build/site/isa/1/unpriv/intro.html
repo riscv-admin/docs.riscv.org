@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="colophon.html">
+    <link rel="next" href="rv32.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -272,13 +274,6 @@
   </button>
   </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
@@ -529,7 +524,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<h2 id="introduction"><a class="anchor" href="#introduction"></a>Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>RISC-V (pronounced "risk-five") is a new instruction-set architecture
@@ -659,7 +654,7 @@ microarchitectures or alternative privileged architectures.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_risc_v_hardware_platform_terminology"><a class="anchor" href="#_risc_v_hardware_platform_terminology"></a>RISC-V Hardware Platform Terminology</h3>
+<h3 id="risc-v-hardware-platform-terminology"><a class="anchor" href="#risc-v-hardware-platform-terminology"></a>RISC-V Hardware Platform Terminology</h3>
 <div class="paragraph">
 <p>A RISC-V hardware platform can contain one or more RISC-V-compatible
 processing cores together with other non-RISC-V-compatible cores,
@@ -703,7 +698,7 @@ subsystems.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_risc_v_software_execution_environments_and_harts"><a class="anchor" href="#_risc_v_software_execution_environments_and_harts"></a>RISC-V Software Execution Environments and Harts</h3>
+<h3 id="risc-v-software-execution-environments-and-harts"><a class="anchor" href="#risc-v-software-execution-environments-and-harts"></a>RISC-V Software Execution Environments and Harts</h3>
 <div class="paragraph">
 <p>The behavior of a RISC-V program depends on the execution environment in
 which it runs. A RISC-V execution environment interface (EEI) defines
@@ -833,7 +828,7 @@ software on a guest hart to "yield" control of the guest hart.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_risc_v_isa_overview"><a class="anchor" href="#_risc_v_isa_overview"></a>RISC-V ISA Overview</h3>
+<h3 id="risc-v-isa-overview"><a class="anchor" href="#risc-v-isa-overview"></a>RISC-V ISA Overview</h3>
 <div class="paragraph">
 <p>A RISC-V ISA is defined as a base integer ISA, which must be present in
 any implementation, plus optional extensions to the base ISA. The base
@@ -1016,7 +1011,7 @@ regardless of any subsequent extensions.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_memory"><a class="anchor" href="#_memory"></a>Memory</h3>
+<h3 id="memory"><a class="anchor" href="#memory"></a>Memory</h3>
 <div class="paragraph">
 <p>A RISC-V hart has a single byte-addressable address space of
 \(2^{\text{XLEN}}\) bytes for all memory accesses. A <em>word</em> of
@@ -1124,7 +1119,7 @@ environment.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_base_instruction_length_encoding"><a class="anchor" href="#_base_instruction_length_encoding"></a>Base Instruction-Length Encoding</h3>
+<h3 id="base-instruction-length-encoding"><a class="anchor" href="#base-instruction-length-encoding"></a>Base Instruction-Length Encoding</h3>
 <div class="paragraph">
 <p>The base RISC-V ISA has fixed-length 32-bit instructions that must be
 naturally aligned on 32-bit boundaries. However, the standard RISC-V
@@ -1160,7 +1155,7 @@ optional compressed 16-bit instruction-set extensions have their lowest
 two bits equal to <code>00</code>, <code>01</code>, or <code>10</code>.</p>
 </div>
 <div class="sect3">
-<h4 id="_expanded_instruction_length_encoding"><a class="anchor" href="#_expanded_instruction_length_encoding"></a>Expanded Instruction-Length Encoding</h4>
+<h4 id="expanded-instruction-length-encoding"><a class="anchor" href="#expanded-instruction-length-encoding"></a>Expanded Instruction-Length Encoding</h4>
 <div class="paragraph">
 <p>A portion of the 32-bit instruction-encoding space has been tentatively
 allocated for instructions longer than 32 bits. The entirety of this
@@ -1547,7 +1542,7 @@ may cause a fatal trap.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_unspecified_behaviors_and_values"><a class="anchor" href="#_unspecified_behaviors_and_values"></a>UNSPECIFIED Behaviors and Values</h3>
+<h3 id="unspecified-behaviors-and-values"><a class="anchor" href="#unspecified-behaviors-and-values"></a>UNSPECIFIED Behaviors and Values</h3>
 <div class="paragraph">
 <p>The architecture fully describes what implementations must do and any
 constraints on what they may do. In cases where the architecture
@@ -1572,6 +1567,10 @@ extensions, platform standards, or implementations.</p>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="colophon.html">Preface</a></span>
+  <span class="next"><a href="rv32.html">RV32I Base Integer Instruction Set</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

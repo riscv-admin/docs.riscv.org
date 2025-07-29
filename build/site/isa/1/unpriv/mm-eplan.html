@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="history.html">
+    <link rel="next" href="mm-formal.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -272,13 +274,6 @@
   </button>
   </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
@@ -529,7 +524,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="_rvwmo_explanatory_material_version_0_1"><a class="anchor" href="#_rvwmo_explanatory_material_version_0_1"></a>Appendix A: RVWMO Explanatory Material, Version 0.1</h2>
+<h2 id="rvwmo-explanatory-material-version-0-1"><a class="anchor" href="#rvwmo-explanatory-material-version-0-1"></a>Appendix A: RVWMO Explanatory Material, Version 0.1</h2>
 <div class="sectionbody">
 <div id="mm-explain" class="paragraph">
 <p>This section provides more explanation for RVWMO
@@ -841,13 +836,13 @@ use as part of the RISC-V compliance test suite as well.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_explaining_the_rvwmo_rules"><a class="anchor" href="#_explaining_the_rvwmo_rules"></a>Explaining the RVWMO Rules</h3>
+<h3 id="explaining-the-rvwmo-rules"><a class="anchor" href="#explaining-the-rvwmo-rules"></a>Explaining the RVWMO Rules</h3>
 <div class="paragraph">
 <p>In this section, we provide explanation and examples for all of the
 RVWMO rules and axioms.</p>
 </div>
 <div class="sect3">
-<h4 id="_preserved_program_order_and_global_memory_order"><a class="anchor" href="#_preserved_program_order_and_global_memory_order"></a>Preserved Program Order and Global Memory Order</h4>
+<h4 id="preserved-program-order-and-global-memory-order"><a class="anchor" href="#preserved-program-order-and-global-memory-order"></a>Preserved Program Order and Global Memory Order</h4>
 <div class="paragraph">
 <p>Preserved program order represents the subset of program order that must
 be respected within the global memory order. Conceptually, events from
@@ -2462,7 +2457,7 @@ addresses do indeed overlap.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_beyond_main_memory"><a class="anchor" href="#_beyond_main_memory"></a>Beyond Main Memory</h3>
+<h3 id="beyond-main-memory"><a class="anchor" href="#beyond-main-memory"></a>Beyond Main Memory</h3>
 <div class="paragraph">
 <p>RVWMO does not currently attempt to formally describe how FENCE.I,
 SFENCE.VMA, I/O fences, and PMAs behave. All of these behaviors will be
@@ -2473,7 +2468,7 @@ Privileged Architecture Manual, and the behavior of I/O fences and the
 effects of PMAs are described below.</p>
 </div>
 <div class="sect3">
-<h4 id="_coherence_and_cacheability"><a class="anchor" href="#_coherence_and_cacheability"></a>Coherence and Cacheability</h4>
+<h4 id="coherence-and-cacheability"><a class="anchor" href="#coherence-and-cacheability"></a>Coherence and Cacheability</h4>
 <div class="paragraph">
 <p>The RISC-V Privileged ISA defines Physical Memory Attributes (PMAs)
 which specify, among other things, whether portions of the address space
@@ -2520,7 +2515,7 @@ legal. This distinction does not affect the memory model.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_io_ordering"><a class="anchor" href="#_io_ordering"></a>I/O Ordering</h4>
+<h4 id="io-ordering"><a class="anchor" href="#io-ordering"></a>I/O Ordering</h4>
 <div class="paragraph">
 <p>For I/O, the load value axiom and atomicity axiom in general do not
 apply, as both reads and writes might have device-specific side effects
@@ -3305,7 +3300,7 @@ require platform-specific SW (e.g., memory-mapped I/O).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_implementation_guidelines"><a class="anchor" href="#_implementation_guidelines"></a>Implementation Guidelines</h3>
+<h3 id="implementation-guidelines"><a class="anchor" href="#implementation-guidelines"></a>Implementation Guidelines</h3>
 <div class="paragraph">
 <p>The RVWMO and RVTSO memory models by no means preclude
 microarchitectures from employing sophisticated speculation techniques
@@ -3590,7 +3585,7 @@ cases be legal, if for example there were no data dependency between (d)
 and (e).</p>
 </div>
 <div class="sect3">
-<h4 id="_possible_future_extensions"><a class="anchor" href="#_possible_future_extensions"></a>Possible Future Extensions</h4>
+<h4 id="possible-future-extensions"><a class="anchor" href="#possible-future-extensions"></a>Possible Future Extensions</h4>
 <div class="paragraph">
 <p>We expect that any or all of the following possible future extensions
 would be compatible with the RVWMO memory model:</p>
@@ -3826,6 +3821,10 @@ of this rule to RVWMO.</p>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="history.html">History and Acknowledgments</a></span>
+  <span class="next"><a href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

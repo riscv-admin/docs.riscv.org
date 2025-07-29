@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="priv-csrs.html">
+    <link rel="next" href="indirect-csr.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -272,13 +274,6 @@
   </button>
   </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
@@ -542,7 +537,7 @@ extended depending on which other privilege levels are supported and
 other details of the hardware implementation.</p>
 </div>
 <div class="sect2">
-<h3 id="_machine_level_csrs"><a class="anchor" href="#_machine_level_csrs"></a>Machine-Level CSRs</h3>
+<h3 id="machine-level-csrs"><a class="anchor" href="#machine-level-csrs"></a>Machine-Level CSRs</h3>
 <div class="paragraph">
 <p>In addition to the machine-level CSRs described in this section, M-mode
 code can access all CSRs at lower privilege levels.</p>
@@ -853,7 +848,7 @@ reserved, not necessarily illegal.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_vendor_id_mvendorid_register"><a class="anchor" href="#_machine_vendor_id_mvendorid_register"></a>Machine Vendor ID (<code>mvendorid</code>) Register</h4>
+<h4 id="machine-vendor-id-mvendorid-register"><a class="anchor" href="#machine-vendor-id-mvendorid-register"></a>Machine Vendor ID (<code>mvendorid</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>mvendorid</code> CSR is a 32-bit read-only register providing the JEDEC
 manufacturer ID of the provider of the core. This register must be
@@ -903,7 +898,7 @@ ID with JEDEC has a one-time cost of $500.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_architecture_id_marchid_register"><a class="anchor" href="#_machine_architecture_id_marchid_register"></a>Machine Architecture ID (<code>marchid</code>) Register</h4>
+<h4 id="machine-architecture-id-marchid-register"><a class="anchor" href="#machine-architecture-id-marchid-register"></a>Machine Architecture ID (<code>marchid</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>marchid</code> CSR is an MXLEN-bit read-only register encoding the base
 microarchitecture of the hart. This register must be readable in any
@@ -958,7 +953,7 @@ variants of a design.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_implementation_id_mimpid_register"><a class="anchor" href="#_machine_implementation_id_mimpid_register"></a>Machine Implementation ID (<code>mimpid</code>) Register</h4>
+<h4 id="machine-implementation-id-mimpid-register"><a class="anchor" href="#machine-implementation-id-mimpid-register"></a>Machine Implementation ID (<code>mimpid</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>mimpid</code> CSR provides a unique encoding of the version of the
 processor implementation. This register must be readable in any
@@ -993,7 +988,7 @@ boundaries to ease human readability.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_hart_id_mhartid_register"><a class="anchor" href="#_hart_id_mhartid_register"></a>Hart ID (<code>mhartid</code>) Register</h4>
+<h4 id="hart-id-mhartid-register"><a class="anchor" href="#hart-id-mhartid-register"></a>Hart ID (<code>mhartid</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>mhartid</code> CSR is an MXLEN-bit read-only register containing the
 integer ID of the hardware thread running the code. This register must
@@ -1029,7 +1024,7 @@ of the largest hart ID used in a system.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_status_mstatus_and_mstatush_registers"><a class="anchor" href="#_machine_status_mstatus_and_mstatush_registers"></a>Machine Status (<code>mstatus</code> and <code>mstatush</code>) Registers</h4>
+<h4 id="machine-status-mstatus-and-mstatush-registers"><a class="anchor" href="#machine-status-mstatus-and-mstatush-registers"></a>Machine Status (<code>mstatus</code> and <code>mstatush</code>) Registers</h4>
 <div class="paragraph">
 <p>The <code>mstatus</code> register is an MXLEN-bit read/write register formatted as
 shown in <a href="#mstatusreg-rv32">Machine-mode status (<code>mstatus</code>) register for RV32</a> for RV32 and
@@ -1403,7 +1398,7 @@ privilege mode.
 </div>
 </div>
 <div class="sect4">
-<h5 id="_memory_privilege_in_mstatus_register"><a class="anchor" href="#_memory_privilege_in_mstatus_register"></a>Memory Privilege in <code>mstatus</code> Register</h5>
+<h5 id="memory-privilege-in-mstatus-register"><a class="anchor" href="#memory-privilege-in-mstatus-register"></a>Memory Privilege in <code>mstatus</code> Register</h5>
 <div class="paragraph">
 <p>The MPRV (Modify PRiVilege) bit modifies the <em>effective privilege mode</em>,
 i.e., the privilege level at which loads and stores execute. When
@@ -1467,7 +1462,7 @@ whether access-fault exceptions are raised due to PMAs or PMP.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_endianness_control_in_mstatus_and_mstatush_registers"><a class="anchor" href="#_endianness_control_in_mstatus_and_mstatush_registers"></a>Endianness Control in <code>mstatus</code> and <code>mstatush</code> Registers</h5>
+<h5 id="endianness-control-in-mstatus-and-mstatush-registers"><a class="anchor" href="#endianness-control-in-mstatus-and-mstatush-registers"></a>Endianness Control in <code>mstatus</code> and <code>mstatush</code> Registers</h5>
 <div class="paragraph">
 <p>The MBE, SBE, and UBE bits in <code>mstatus</code> and <code>mstatush</code> are <strong>WARL</strong> fields that
 control the endianness of memory accesses other than instruction
@@ -1670,7 +1665,7 @@ provide it.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_extension_context_status_in_mstatus_register"><a class="anchor" href="#_extension_context_status_in_mstatus_register"></a>Extension Context Status in <code>mstatus</code> Register</h5>
+<h5 id="extension-context-status-in-mstatus-register"><a class="anchor" href="#extension-context-status-in-mstatus-register"></a>Extension Context Status in <code>mstatus</code> Register</h5>
 <div class="paragraph">
 <p>Supporting substantial extensions is one of the primary goals of RISC-V,
 and hence we define a standard interface to allow unchanged
@@ -2224,7 +2219,7 @@ interrupts, unless the interrupt results in a user-level context swap.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_previous_expected_landing_pad_elp_state_in_mstatus_register"><a class="anchor" href="#_previous_expected_landing_pad_elp_state_in_mstatus_register"></a>Previous Expected Landing Pad (ELP) State in <code>mstatus</code> Register</h5>
+<h5 id="previous-expected-landing-pad-elp-state-in-mstatus-register"><a class="anchor" href="#previous-expected-landing-pad-elp-state-in-mstatus-register"></a>Previous Expected Landing Pad (ELP) State in <code>mstatus</code> Register</h5>
 <div class="paragraph">
 <p>The Zicfilp extension adds the <code>SPELP</code> and <code>MPELP</code> fields that hold the previous
 <code>ELP</code>, and are updated as specified in <a href="#ZICFILP_FORWARD_TRAPS">[ZICFILP_FORWARD_TRAPS]</a>. The
@@ -2243,7 +2238,7 @@ interrupts, unless the interrupt results in a user-level context swap.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_trap_vector_base_address_mtvec_register"><a class="anchor" href="#_machine_trap_vector_base_address_mtvec_register"></a>Machine Trap-Vector Base-Address (<code>mtvec</code>) Register</h4>
+<h4 id="machine-trap-vector-base-address-mtvec-register"><a class="anchor" href="#machine-trap-vector-base-address-mtvec-register"></a>Machine Trap-Vector Base-Address (<code>mtvec</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>mtvec</code> register is an MXLEN-bit <strong>WARL</strong> read/write register that holds
 trap vector configuration, consisting of a vector base address (BASE)
@@ -2344,7 +2339,7 @@ implemented without a hardware adder circuit.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_trap_delegation_medeleg_and_mideleg_registers"><a class="anchor" href="#_machine_trap_delegation_medeleg_and_mideleg_registers"></a>Machine Trap Delegation (<code>medeleg</code> and <code>mideleg</code>) Registers</h4>
+<h4 id="machine-trap-delegation-medeleg-and-mideleg-registers"><a class="anchor" href="#machine-trap-delegation-medeleg-and-mideleg-registers"></a>Machine Trap Delegation (<code>medeleg</code> and <code>mideleg</code>) Registers</h4>
 <div class="paragraph">
 <p>By default, all traps at any privilege level are handled in machine
 mode, though a machine-mode handler can redirect traps back to the
@@ -2477,7 +2472,7 @@ corresponding <code>medeleg</code> bits should be read-only zero. In particular,
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_interrupt_mip_and_mie_registers"><a class="anchor" href="#_machine_interrupt_mip_and_mie_registers"></a>Machine Interrupt (<code>mip</code> and <code>mie</code>) Registers</h4>
+<h4 id="machine-interrupt-mip-and-mie-registers"><a class="anchor" href="#machine-interrupt-mip-and-mie-registers"></a>Machine Interrupt (<code>mip</code> and <code>mie</code>) Registers</h4>
 <div class="paragraph">
 <p>The <code>mip</code> register is an MXLEN-bit read/write register containing
 information on pending interrupts, while <code>mie</code> is the corresponding
@@ -2728,7 +2723,7 @@ Otherwise, the corresponding bits in <code>sip</code> and <code>sie</code> are r
 </div>
 </div>
 <div class="sect3">
-<h4 id="_hardware_performance_monitor"><a class="anchor" href="#_hardware_performance_monitor"></a>Hardware Performance Monitor</h4>
+<h4 id="hardware-performance-monitor"><a class="anchor" href="#hardware-performance-monitor"></a>Hardware Performance Monitor</h4>
 <div class="paragraph">
 <p>M-mode includes a basic hardware performance-monitoring facility. The
 <code>mcycle</code> CSR counts the number of clock cycles executed by the processor
@@ -2853,7 +2848,7 @@ executing in a less-privileged mode. In harts without U-mode, the
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_counter_inhibit_mcountinhibit_register"><a class="anchor" href="#_machine_counter_inhibit_mcountinhibit_register"></a>Machine Counter-Inhibit (<code>mcountinhibit</code>) Register</h4>
+<h4 id="machine-counter-inhibit-mcountinhibit-register"><a class="anchor" href="#machine-counter-inhibit-mcountinhibit-register"></a>Machine Counter-Inhibit (<code>mcountinhibit</code>) Register</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/bytefield/svg/eNq9UV1LwzAUfd-vuOSpRVqatNWtr4Low0B8k7GHdEtdMUtKUp0f9L97R4K26oqCDnI54ZxzP3ITrEXF29ZYKBrJawULj69FpVUbVXxby2cg8xOgDVxwKUu-uifdMpwEmApG76KNqO82LWT5gONrYaJKgaql50v9JGzUII0OSNmeNnwXrbR82CqfYrGzL8gScEPY-kUAnUIheSmkhcCIR3QKWJCEAKEYDANP6iBzkGOcuuvPD5t6nPmSiUdKlmEXTvzQ-Bggl9dzpHFi23AFrAs_i8mIuG_wvRjH8btEz74k5iNFs7FpDmlXNx_thkpySDi_HSh9qbcQKEpt3Kd2w_y_M7G0t6tjNPylif6X6Q1q7hhj" alt="Counter-inhibit `mcountinhibit` register">
@@ -2905,7 +2900,7 @@ cannot be inhibited with the <code>mcountinhibit</code> mechanism.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_scratch_mscratch_register"><a class="anchor" href="#_machine_scratch_mscratch_register"></a>Machine Scratch (<code>mscratch</code>) Register</h4>
+<h4 id="machine-scratch-mscratch-register"><a class="anchor" href="#machine-scratch-mscratch-register"></a>Machine Scratch (<code>mscratch</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>mscratch</code> register is an MXLEN-bit read/write register dedicated
 for use by machine mode. Typically, it is used to hold a pointer to a
@@ -2947,7 +2942,7 @@ while the user context is running.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_exception_program_counter_mepc_register"><a class="anchor" href="#_machine_exception_program_counter_mepc_register"></a>Machine Exception Program Counter (<code>mepc</code>) Register</h4>
+<h4 id="machine-exception-program-counter-mepc-register"><a class="anchor" href="#machine-exception-program-counter-mepc-register"></a>Machine Exception Program Counter (<code>mepc</code>) Register</h4>
 <div class="paragraph">
 <p><code>mepc</code> is an MXLEN-bit read/write register formatted as shown in
 <a href="#mepcreg">Machine exception program counter register.</a>. The low bit of <code>mepc</code> (<code>mepc[0]</code>) is
@@ -3362,7 +3357,7 @@ priority order at which the hardware error is discovered.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_trap_value_mtval_register"><a class="anchor" href="#_machine_trap_value_mtval_register"></a>Machine Trap Value (<code>mtval</code>) Register</h4>
+<h4 id="machine-trap-value-mtval-register"><a class="anchor" href="#machine-trap-value-mtval-register"></a>Machine Trap Value (<code>mtval</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>mtval</code> register is an MXLEN-bit read-write register formatted as
 shown in <a href="#mtvalreg">Machine Trap Value (<code>mtval</code>) register.</a>. When a trap is taken into
@@ -3498,7 +3493,7 @@ be able to hold all values less than 2<sup><em>N</em></sup>, where
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_configuration_pointer_mconfigptr_register"><a class="anchor" href="#_machine_configuration_pointer_mconfigptr_register"></a>Machine Configuration Pointer (<code>mconfigptr</code>) Register</h4>
+<h4 id="machine-configuration-pointer-mconfigptr-register"><a class="anchor" href="#machine-configuration-pointer-mconfigptr-register"></a>Machine Configuration Pointer (<code>mconfigptr</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>mconfigptr</code> register is an MXLEN-bit read-only CSR, formatted as shown in
 <a href="#mconfigptrreg">Machine Configuration Pointer (<code>mconfigptr</code>) register.</a>, that holds the physical
@@ -3744,7 +3739,7 @@ not exist.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_security_configuration_mseccfg_register"><a class="anchor" href="#_machine_security_configuration_mseccfg_register"></a>Machine Security Configuration (<code>mseccfg</code>) Register</h4>
+<h4 id="machine-security-configuration-mseccfg-register"><a class="anchor" href="#machine-security-configuration-mseccfg-register"></a>Machine Security Configuration (<code>mseccfg</code>) Register</h4>
 <div class="paragraph">
 <p><code>mseccfg</code> is an optional 64-bit read/write register, formatted as
 shown in <a href="#mseccfg">Machine security configuration (<code>mseccfg</code>) register.</a>, that controls security features.</p>
@@ -3790,9 +3785,9 @@ Register <code>mseccfgh</code> does not exist when XLEN=64.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_machine_level_memory_mapped_registers"><a class="anchor" href="#_machine_level_memory_mapped_registers"></a>Machine-Level Memory-Mapped Registers</h3>
+<h3 id="machine-level-memory-mapped-registers"><a class="anchor" href="#machine-level-memory-mapped-registers"></a>Machine-Level Memory-Mapped Registers</h3>
 <div class="sect3">
-<h4 id="_machine_timer_mtime_and_mtimecmp_registers"><a class="anchor" href="#_machine_timer_mtime_and_mtimecmp_registers"></a>Machine Timer (<code>mtime</code> and <code>mtimecmp</code>) Registers</h4>
+<h4 id="machine-timer-mtime-and-mtimecmp-registers"><a class="anchor" href="#machine-timer-mtime-and-mtimecmp-registers"></a>Machine Timer (<code>mtime</code> and <code>mtimecmp</code>) Registers</h4>
 <div class="paragraph">
 <p>Platforms provide a real-time counter, exposed as a memory-mapped
 machine-mode read-write register, <code>mtime</code>. <code>mtime</code> must increment at
@@ -3915,9 +3910,9 @@ eventually, but not necessarily immediately.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_machine_mode_privileged_instructions"><a class="anchor" href="#_machine_mode_privileged_instructions"></a>Machine-Mode Privileged Instructions</h3>
+<h3 id="machine-mode-privileged-instructions"><a class="anchor" href="#machine-mode-privileged-instructions"></a>Machine-Mode Privileged Instructions</h3>
 <div class="sect3">
-<h4 id="_environment_call_and_breakpoint"><a class="anchor" href="#_environment_call_and_breakpoint"></a>Environment Call and Breakpoint</h4>
+<h4 id="environment-call-and-breakpoint"><a class="anchor" href="#environment-call-and-breakpoint"></a>Environment Call and Breakpoint</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUQ-ODA5x9UUwYnVqdRCaTeGai1KQNJoC1RuAMapyY7jytNK85BJjJC1AtnpAkGcYjMJpT7EhERYZGqHaZGiEpAnEUXd1dvTxAdFOQa6O3uo6sUDtsToKyfl5aZnAAII52Ki2FgDvfFSH" alt="svg">
@@ -4143,7 +4138,7 @@ extensions that wait on memory locations changing, or message arrival.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_custom_system_instructions"><a class="anchor" href="#_custom_system_instructions"></a>Custom SYSTEM Instructions</h4>
+<h4 id="custom-system-instructions"><a class="anchor" href="#custom-system-instructions"></a>Custom SYSTEM Instructions</h4>
 <div class="paragraph">
 <p>The subspace of the SYSTEM major opcode shown in <a href="#customsys">SYSTEM instruction encodings designated for custom use.</a> is designated for custom use. It is recommended that these instructions use bits 29:28 to designate the
 minimum required privilege mode, as do other SYSTEM instructions.</p>
@@ -4318,7 +4313,7 @@ involve platform-specific operations, such as cache flushes, that are
 available only to machine-mode.</p>
 </div>
 <div class="sect3">
-<h4 id="_main_memory_versus_io_regions"><a class="anchor" href="#_main_memory_versus_io_regions"></a>Main Memory versus I/O Regions</h4>
+<h4 id="main-memory-versus-io-regions"><a class="anchor" href="#main-memory-versus-io-regions"></a>Main Memory versus I/O Regions</h4>
 <div class="paragraph">
 <p>The most important characterization of a given memory address range is
 whether it holds regular main memory or I/O devices.
@@ -4344,7 +4339,7 @@ Main memory regions that are not accessible are also allowed.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_supported_access_type_pmas"><a class="anchor" href="#_supported_access_type_pmas"></a>Supported Access Type PMAs</h4>
+<h4 id="supported-access-type-pmas"><a class="anchor" href="#supported-access-type-pmas"></a>Supported Access Type PMAs</h4>
 <div class="paragraph">
 <p>Access types specify which access widths, from 8-bit byte to long
 multi-word burst, are supported, and also whether misaligned accesses
@@ -4420,7 +4415,7 @@ memory supports page-table walks.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_atomicity_pmas"><a class="anchor" href="#_atomicity_pmas"></a>Atomicity PMAs</h4>
+<h4 id="atomicity-pmas"><a class="anchor" href="#atomicity-pmas"></a>Atomicity PMAs</h4>
 <div class="paragraph">
 <p>Atomicity PMAs describes which atomic instructions are supported in this
 address region. Support for atomic instructions is divided into two
@@ -4442,7 +4437,7 @@ all atomic operations required by the attached processors.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_amo_pma"><a class="anchor" href="#_amo_pma"></a>AMO PMA</h5>
+<h5 id="amo-pma"><a class="anchor" href="#amo-pma"></a>AMO PMA</h5>
 <div class="paragraph">
 <p>Within AMOs, there are four levels of support: <em>AMONone</em>, <em>AMOSwap</em>,
 <em>AMOLogical</em>, and <em>AMOArithmetic</em>. AMONone indicates that no AMO
@@ -4498,7 +4493,7 @@ possible.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_reservability_pma"><a class="anchor" href="#_reservability_pma"></a>Reservability PMA</h5>
+<h5 id="reservability-pma"><a class="anchor" href="#reservability-pma"></a>Reservability PMA</h5>
 <div class="paragraph">
 <p>For <em>LR/SC</em>, there are three levels of support indicating combinations
 of the reservability and eventuality properties: <em>RsrvNone</em>,
@@ -4536,7 +4531,7 @@ progress is detected.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_misaligned_atomicity_granule_pma"><a class="anchor" href="#_misaligned_atomicity_granule_pma"></a>Misaligned Atomicity Granule PMA</h4>
+<h4 id="misaligned-atomicity-granule-pma"><a class="anchor" href="#misaligned-atomicity-granule-pma"></a>Misaligned Atomicity Granule PMA</h4>
 <div class="paragraph">
 <p>The misaligned atomicity granule PMA provides constrained support for
 misaligned AMOs.
@@ -4582,7 +4577,7 @@ granule.  Implicit accesses are similarly unaffected by this PMA.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_memory_ordering_pmas"><a class="anchor" href="#_memory_ordering_pmas"></a>Memory-Ordering PMAs</h4>
+<h4 id="memory-ordering-pmas"><a class="anchor" href="#memory-ordering-pmas"></a>Memory-Ordering PMAs</h4>
 <div class="paragraph">
 <p>Regions of the address space are classified as either <em>main memory</em> or
 <em>I/O</em> for the purposes of ordering by the FENCE instruction and
@@ -4661,7 +4656,7 @@ same interconnect path and the path does not reorder requests.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_coherence_and_cacheability_pmas"><a class="anchor" href="#_coherence_and_cacheability_pmas"></a>Coherence and Cacheability PMAs</h4>
+<h4 id="coherence-and-cacheability-pmas"><a class="anchor" href="#coherence-and-cacheability-pmas"></a>Coherence and Cacheability PMAs</h4>
 <div class="paragraph">
 <p>Coherence is a property defined for a single physical address, and
 indicates that writes to that address by one agent will eventually be
@@ -4766,7 +4761,7 @@ modes’ uncacheable accesses.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_idempotency_pmas"><a class="anchor" href="#_idempotency_pmas"></a>Idempotency PMAs</h4>
+<h4 id="idempotency-pmas"><a class="anchor" href="#idempotency-pmas"></a>Idempotency PMAs</h4>
 <div class="paragraph">
 <p>Idempotency PMAs describe whether reads and writes to an address region
 are idempotent. Main memory regions are assumed to be idempotent. For
@@ -4873,7 +4868,7 @@ default has full permissions.</p>
 <p>PMP violations are always trapped precisely at the processor.</p>
 </div>
 <div class="sect3">
-<h4 id="_physical_memory_protection_csrs"><a class="anchor" href="#_physical_memory_protection_csrs"></a>Physical Memory Protection CSRs</h4>
+<h4 id="physical-memory-protection-csrs"><a class="anchor" href="#physical-memory-protection-csrs"></a>Physical Memory Protection CSRs</h4>
 <div class="paragraph">
 <p>PMP entries are described by an 8-bit configuration register and one
 MXLEN-bit address register. Some PMP settings additionally use the
@@ -4988,7 +4983,7 @@ within a PMP region without write permissions raises a store
 access-fault exception.</p>
 </div>
 <div class="sect4">
-<h5 id="_address_matching"><a class="anchor" href="#_address_matching"></a>Address Matching</h5>
+<h5 id="address-matching"><a class="anchor" href="#address-matching"></a>Address Matching</h5>
 <div class="paragraph">
 <p>The A field in a PMP entry&#8217;s configuration register encodes the
 address-matching mode of the associated PMP address register. The
@@ -5143,7 +5138,7 @@ matching.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_locking_and_privilege_mode"><a class="anchor" href="#_locking_and_privilege_mode"></a>Locking and Privilege Mode</h5>
+<h5 id="locking-and-privilege-mode"><a class="anchor" href="#locking-and-privilege-mode"></a>Locking and Privilege Mode</h5>
 <div class="paragraph">
 <p>The L bit indicates that the PMP entry is locked, i.e., writes to the
 configuration register and associated address registers are ignored.
@@ -5176,7 +5171,7 @@ R/W/X permissions apply only to S and U modes.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_priority_and_matching_logic"><a class="anchor" href="#_priority_and_matching_logic"></a>Priority and Matching Logic</h5>
+<h5 id="priority-and-matching-logic"><a class="anchor" href="#priority-and-matching-logic"></a>Priority and Matching Logic</h5>
 <div class="paragraph">
 <p>PMP entries are statically prioritized. The lowest-numbered PMP entry
 that matches any byte of an access determines whether that access
@@ -5270,6 +5265,10 @@ the PMP settings synchronously, so no SFENCE.VMA is needed.</p>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="priv-csrs.html">Control and Status Registers (CSRs)</a></span>
+  <span class="next"><a href="indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

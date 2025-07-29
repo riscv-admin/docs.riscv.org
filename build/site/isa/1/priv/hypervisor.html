@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="smcdeleg.html">
+    <link rel="next" href="priv-cfi.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -271,13 +273,6 @@
         ></path></g></svg>
   </button>
   </div><ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
@@ -592,7 +587,7 @@ Hypervisors can support nested virtualization analogously.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_privilege_modes"><a class="anchor" href="#_privilege_modes"></a>Privilege Modes</h3>
+<h3 id="privilege-modes"><a class="anchor" href="#privilege-modes"></a>Privilege Modes</h3>
 <div class="paragraph">
 <p>The current <em>virtualization mode</em>, denoted V, indicates whether the hart
 is currently executing in a guest. When V=1, the hart is either in
@@ -680,7 +675,7 @@ is adopted.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_hypervisor_and_virtual_supervisor_csrs"><a class="anchor" href="#_hypervisor_and_virtual_supervisor_csrs"></a>Hypervisor and Virtual Supervisor CSRs</h3>
+<h3 id="hypervisor-and-virtual-supervisor-csrs"><a class="anchor" href="#hypervisor-and-virtual-supervisor-csrs"></a>Hypervisor and Virtual Supervisor CSRs</h3>
 <div class="paragraph">
 <p>An OS or hypervisor running in HS-mode uses the supervisor CSRs to
 interact with the exception, interrupt, and address-translation
@@ -898,7 +893,7 @@ same endianness as HS-mode.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_hypervisor_trap_delegation_hedeleg_and_hideleg_registers"><a class="anchor" href="#_hypervisor_trap_delegation_hedeleg_and_hideleg_registers"></a>Hypervisor Trap Delegation (<code>hedeleg</code> and <code>hideleg</code>) Registers</h4>
+<h4 id="hypervisor-trap-delegation-hedeleg-and-hideleg-registers"><a class="anchor" href="#hypervisor-trap-delegation-hedeleg-and-hideleg-registers"></a>Hypervisor Trap Delegation (<code>hedeleg</code> and <code>hideleg</code>) Registers</h4>
 <div class="paragraph">
 <p>Register <code>hedeleg</code> is a 64-bit read/write register, formatted as shown in
 <a href="#hedelegreg">Hypervisor exception delegation register (<code>hedeleg</code>).</a>.
@@ -1437,7 +1432,7 @@ XLEN=64.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_hypervisor_counter_enable_hcounteren_register"><a class="anchor" href="#_hypervisor_counter_enable_hcounteren_register"></a>Hypervisor Counter-Enable (<code>hcounteren</code>) Register</h4>
+<h4 id="hypervisor-counter-enable-hcounteren-register"><a class="anchor" href="#hypervisor-counter-enable-hcounteren-register"></a>Hypervisor Counter-Enable (<code>hcounteren</code>) Register</h4>
 <div class="paragraph">
 <p>The counter-enable register <code>hcounteren</code> is a 32-bit register that
 controls the availability of the hardware performance monitoring
@@ -1466,7 +1461,7 @@ an exception when V=1. Hence, they are effectively <strong>WARL</strong> fields.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_hypervisor_time_delta_htimedelta_register"><a class="anchor" href="#_hypervisor_time_delta_htimedelta_register"></a>Hypervisor Time Delta (<code>htimedelta</code>) Register</h4>
+<h4 id="hypervisor-time-delta-htimedelta-register"><a class="anchor" href="#hypervisor-time-delta-htimedelta-register"></a>Hypervisor Time Delta (<code>htimedelta</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>htimedelta</code> CSR is a 64-bit read/write register that contains the delta
 between the value of the <code>time</code> CSR and the value returned in VS-mode or
@@ -1505,7 +1500,7 @@ must be implemented.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_hypervisor_trap_value_htval_register"><a class="anchor" href="#_hypervisor_trap_value_htval_register"></a>Hypervisor Trap Value (<code>htval</code>) Register</h4>
+<h4 id="hypervisor-trap-value-htval-register"><a class="anchor" href="#hypervisor-trap-value-htval-register"></a>Hypervisor Trap Value (<code>htval</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>htval</code> register is an HSXLEN-bit read/write register formatted as
 shown in <a href="#htvalreg">Hypervisor trap value register (<code>htval</code>).</a>. When a trap is taken into
@@ -1593,7 +1588,7 @@ confirm the stored value.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_hypervisor_trap_instruction_htinst_register"><a class="anchor" href="#_hypervisor_trap_instruction_htinst_register"></a>Hypervisor Trap Instruction (<code>htinst</code>) Register</h4>
+<h4 id="hypervisor-trap-instruction-htinst-register"><a class="anchor" href="#hypervisor-trap-instruction-htinst-register"></a>Hypervisor Trap Instruction (<code>htinst</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>htinst</code> register is an HSXLEN-bit read/write register formatted as
 shown in <a href="#htinstreg">Hypervisor trap instruction (<code>htinst</code>) register.</a>. When a trap is taken into
@@ -1883,7 +1878,7 @@ double trap (See <a href="#supv-double-trap">[supv-double-trap]</a>) in VS-mode.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_virtual_supervisor_interrupt_vsip_and_vsie_registers"><a class="anchor" href="#_virtual_supervisor_interrupt_vsip_and_vsie_registers"></a>Virtual Supervisor Interrupt (<code>vsip</code> and <code>vsie</code>) Registers</h4>
+<h4 id="virtual-supervisor-interrupt-vsip-and-vsie-registers"><a class="anchor" href="#virtual-supervisor-interrupt-vsip-and-vsie-registers"></a>Virtual Supervisor Interrupt (<code>vsip</code> and <code>vsie</code>) Registers</h4>
 <div class="paragraph">
 <p>The <code>vsip</code> and <code>vsie</code> registers are VSXLEN-bit read/write registers that
 are VS-mode’s versions of supervisor CSRs <code>sip</code> and <code>sie</code>, formatted as
@@ -1949,7 +1944,7 @@ read-only zeros. Else, <code>vsip</code>.SSIP and <code>vsie</code>.SSIE are ali
 </div>
 </div>
 <div class="sect3">
-<h4 id="_virtual_supervisor_trap_vector_base_address_vstvec_register"><a class="anchor" href="#_virtual_supervisor_trap_vector_base_address_vstvec_register"></a>Virtual Supervisor Trap Vector Base Address (<code>vstvec</code>) Register</h4>
+<h4 id="virtual-supervisor-trap-vector-base-address-vstvec-register"><a class="anchor" href="#virtual-supervisor-trap-vector-base-address-vstvec-register"></a>Virtual Supervisor Trap Vector Base Address (<code>vstvec</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>vstvec</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>stvec</code>, formatted as shown in
@@ -1966,7 +1961,7 @@ affect the behavior of the machine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_virtual_supervisor_scratch_vsscratch_register"><a class="anchor" href="#_virtual_supervisor_scratch_vsscratch_register"></a>Virtual Supervisor Scratch (<code>vsscratch</code>) Register</h4>
+<h4 id="virtual-supervisor-scratch-vsscratch-register"><a class="anchor" href="#virtual-supervisor-scratch-vsscratch-register"></a>Virtual Supervisor Scratch (<code>vsscratch</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>vsscratch</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>sscratch</code>, formatted as shown
@@ -1983,7 +1978,7 @@ of <code>vsscratch</code> never directly affect the behavior of the machine.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_virtual_supervisor_exception_program_counter_vsepc_register"><a class="anchor" href="#_virtual_supervisor_exception_program_counter_vsepc_register"></a>Virtual Supervisor Exception Program Counter (<code>vsepc</code>) Register</h4>
+<h4 id="virtual-supervisor-exception-program-counter-vsepc-register"><a class="anchor" href="#virtual-supervisor-exception-program-counter-vsepc-register"></a>Virtual Supervisor Exception Program Counter (<code>vsepc</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>vsepc</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>sepc</code>, formatted as shown in
@@ -2004,7 +1999,7 @@ that <code>sepc</code> can hold.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_virtual_supervisor_cause_vscause_register"><a class="anchor" href="#_virtual_supervisor_cause_vscause_register"></a>Virtual Supervisor Cause (<code>vscause</code>) Register</h4>
+<h4 id="virtual-supervisor-cause-vscause-register"><a class="anchor" href="#virtual-supervisor-cause-vscause-register"></a>Virtual Supervisor Cause (<code>vscause</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>vscause</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>scause</code>, formatted as shown in
@@ -2025,7 +2020,7 @@ values that <code>scause</code> can hold.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_virtual_supervisor_trap_value_vstval_register"><a class="anchor" href="#_virtual_supervisor_trap_value_vstval_register"></a>Virtual Supervisor Trap Value (<code>vstval</code>) Register</h4>
+<h4 id="virtual-supervisor-trap-value-vstval-register"><a class="anchor" href="#virtual-supervisor-trap-value-vstval-register"></a>Virtual Supervisor Trap Value (<code>vstval</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>vstval</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>stval</code>, formatted as shown in
@@ -2046,7 +2041,7 @@ that <code>stval</code> can hold.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_virtual_supervisor_address_translation_and_protection_vsatp_register"><a class="anchor" href="#_virtual_supervisor_address_translation_and_protection_vsatp_register"></a>Virtual Supervisor Address Translation and Protection (<code>vsatp</code>) Register</h4>
+<h4 id="virtual-supervisor-address-translation-and-protection-vsatp-register"><a class="anchor" href="#virtual-supervisor-address-translation-and-protection-vsatp-register"></a>Virtual Supervisor Address Translation and Protection (<code>vsatp</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>vsatp</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>satp</code>, formatted as shown in
@@ -2107,13 +2102,13 @@ though</em> V=1.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_hypervisor_instructions"><a class="anchor" href="#_hypervisor_instructions"></a>Hypervisor Instructions</h3>
+<h3 id="hypervisor-instructions"><a class="anchor" href="#hypervisor-instructions"></a>Hypervisor Instructions</h3>
 <div class="paragraph">
 <p>The hypervisor extension adds virtual-machine load and store
 instructions and two privileged fence instructions.</p>
 </div>
 <div class="sect3">
-<h4 id="_hypervisor_virtual_machine_load_and_store_instructions"><a class="anchor" href="#_hypervisor_virtual_machine_load_and_store_instructions"></a>Hypervisor Virtual-Machine Load and Store Instructions</h4>
+<h4 id="hypervisor-virtual-machine-load-and-store-instructions"><a class="anchor" href="#hypervisor-virtual-machine-load-and-store-instructions"></a>Hypervisor Virtual-Machine Load and Store Instructions</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNp1kc8LgjAcxe_9FbvtMqwUGXgPDAoi0wrxYNssD2lsiw7i_94mzNzC03v78XlvfNdxdo9AvgCgu9VSRAAj0JRPFgHYvkhLGUSglJKrOxBDBJNrctrs1ea_K3r0iwnHGE4nEaGKoExIjRld2WQwktW7ITKY0MrDw3GbDa2OmWsXa6e-pJRrzNJZ2nfoPC00FO-yi1bBic1i-_XYGZ_ivE9N5cOEeHG6PKfDKjFHOrBAgLRNVavPMXPx-_4LFKB5Bw==" alt="svg">
@@ -2356,14 +2351,14 @@ when <code>mstatus</code>.TVM=1 also causes an illegal-instruction exception.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="_machine_level_csrs"><a class="anchor" href="#_machine_level_csrs"></a>Machine-Level CSRs</h3>
+<h3 id="machine-level-csrs"><a class="anchor" href="#machine-level-csrs"></a>Machine-Level CSRs</h3>
 <div class="paragraph">
 <p>The hypervisor extension augments or modifies machine CSRs <code>mstatus</code>,
 <code>mstatush</code>, <code>mideleg</code>, <code>mip</code>, and <code>mie</code>, and adds CSRs <code>mtval2</code> and
 <code>mtinst</code>.</p>
 </div>
 <div class="sect3">
-<h4 id="_machine_status_mstatus_and_mstatush_registers"><a class="anchor" href="#_machine_status_mstatus_and_mstatush_registers"></a>Machine Status (<code>mstatus</code> and <code>mstatush</code>) Registers</h4>
+<h4 id="machine-status-mstatus-and-mstatush-registers"><a class="anchor" href="#machine-status-mstatus-and-mstatush-registers"></a>Machine Status (<code>mstatus</code> and <code>mstatush</code>) Registers</h4>
 <div class="paragraph">
 <p>The hypervisor extension adds two fields, MPV and GVA, to the
 machine-level <code>mstatus</code> or <code>mstatush</code> CSR, and modifies the behavior of
@@ -2531,7 +2526,7 @@ but is not a superset of <code>vsstatus</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_interrupt_delegation_mideleg_register"><a class="anchor" href="#_machine_interrupt_delegation_mideleg_register"></a>Machine Interrupt Delegation (<code>mideleg</code>) Register</h4>
+<h4 id="machine-interrupt-delegation-mideleg-register"><a class="anchor" href="#machine-interrupt-delegation-mideleg-register"></a>Machine Interrupt Delegation (<code>mideleg</code>) Register</h4>
 <div class="paragraph">
 <p>When the hypervisor extension is implemented, bits 10, 6, and 2 of
 <code>mideleg</code> (corresponding to the standard VS-level interrupts) are each
@@ -2547,7 +2542,7 @@ past M-mode to HS-mode.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_interrupt_mip_and_mie_registers"><a class="anchor" href="#_machine_interrupt_mip_and_mie_registers"></a>Machine Interrupt (<code>mip</code> and <code>mie</code>) Registers</h4>
+<h4 id="machine-interrupt-mip-and-mie-registers"><a class="anchor" href="#machine-interrupt-mip-and-mie-registers"></a>Machine Interrupt (<code>mip</code> and <code>mie</code>) Registers</h4>
 <div class="paragraph">
 <p>The hypervisor extension gives registers <code>mip</code> and <code>mie</code> additional
 active bits for the hypervisor-added interrupts. <a href="#hypervisor-mipreg-standard">Standard portion (bits 15:0) of <code>mip</code>.</a> and <a href="#hypervisor-miereg-standard">Standard portion (bits 15:0) of <code>mie</code>.</a> show the
@@ -2573,7 +2568,7 @@ bits in hypervisor CSR <code>hip</code>, while SGEIE, VSEIE, VSTIE, and VSSIE in
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_second_trap_value_mtval2_register"><a class="anchor" href="#_machine_second_trap_value_mtval2_register"></a>Machine Second Trap Value (<code>mtval2</code>) Register</h4>
+<h4 id="machine-second-trap-value-mtval2-register"><a class="anchor" href="#machine-second-trap-value-mtval2-register"></a>Machine Second Trap Value (<code>mtval2</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>mtval2</code> register is an MXLEN-bit read/write register formatted as
 shown in <a href="#mtval2reg">Machine second trap value register (<code>mtval2</code>).</a>. When a trap is taken into
@@ -2618,7 +2613,7 @@ the <code>mtval2</code> CSR.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_machine_trap_instruction_mtinst_register"><a class="anchor" href="#_machine_trap_instruction_mtinst_register"></a>Machine Trap Instruction (<code>mtinst</code>) Register</h4>
+<h4 id="machine-trap-instruction-mtinst-register"><a class="anchor" href="#machine-trap-instruction-mtinst-register"></a>Machine Trap Instruction (<code>mtinst</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>mtinst</code> register is an MXLEN-bit read/write register formatted as
 shown in <a href="#mtinstreg">Machine trap instruction (<code>mtinst</code>) register.</a>. When a trap is taken into
@@ -2850,7 +2845,7 @@ whether this usage will ever become common, we chose not to preclude it.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_guest_page_faults"><a class="anchor" href="#_guest_page_faults"></a>Guest-Page Faults</h4>
+<h4 id="guest-page-faults"><a class="anchor" href="#guest-page-faults"></a>Guest-Page Faults</h4>
 <div class="paragraph">
 <p>Guest-page-fault traps may be delegated from M-mode to HS-mode under the
 control of CSR <code>medeleg</code>, but cannot be delegated to other privilege
@@ -2952,7 +2947,7 @@ value, obviating the need to execute an HFENCE.VVMA instruction.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_traps"><a class="anchor" href="#_traps"></a>Traps</h3>
+<h3 id="traps"><a class="anchor" href="#traps"></a>Traps</h3>
 <div class="sect3">
 <h4 id="sec:hcauses"><a class="anchor" href="#sec:hcauses"></a>Trap Cause Codes</h4>
 <div class="paragraph">
@@ -3369,7 +3364,7 @@ indicates which exception is taken and reported in <code>mcause</code> or <code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_trap_entry"><a class="anchor" href="#_trap_entry"></a>Trap Entry</h4>
+<h4 id="trap-entry"><a class="anchor" href="#trap-entry"></a>Trap Entry</h4>
 <div class="paragraph">
 <p>When a trap occurs in HS-mode or U-mode, it goes to M-mode, unless
 delegated by <code>medeleg</code> or <code>mideleg</code>, in which case it goes to HS-mode.
@@ -3968,7 +3963,7 @@ instruction.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_trap_return"><a class="anchor" href="#_trap_return"></a>Trap Return</h4>
+<h4 id="trap-return"><a class="anchor" href="#trap-return"></a>Trap Return</h4>
 <div class="paragraph">
 <p>The MRET instruction is used to return from a trap taken into M-mode.
 MRET first determines what the new privilege mode will be according to
@@ -4003,6 +3998,10 @@ to 0. When executed in VS-mode, <code>vsstatus.SDT</code> is set to 0.</p>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a></span>
+  <span class="next"><a href="priv-cfi.html">Control-flow Integrity(CFI)</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

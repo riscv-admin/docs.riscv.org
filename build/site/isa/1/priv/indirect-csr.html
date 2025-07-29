@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="machine.html">
+    <link rel="next" href="smcntrpmf.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -272,13 +274,6 @@
   </button>
   </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
@@ -532,7 +527,7 @@
 <h2 id="indirect-csr"><a class="anchor" href="#indirect-csr"></a>"Smcsrind/Sscsrind" Indirect CSR Access, Version 1.0</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h3>
+<h3 id="introduction"><a class="anchor" href="#introduction"></a>Introduction</h3>
 <div class="paragraph">
 <p>Smcsrind/Sscsrind is an ISA extension that extends the indirect CSR
 access mechanism originally defined as part of the
@@ -779,7 +774,7 @@ read-only 0 state, or raise an illegal instruction exception.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_supervisor_level_csrs"><a class="anchor" href="#_supervisor_level_csrs"></a>Supervisor-level CSRs</h3>
+<h3 id="supervisor-level-csrs"><a class="anchor" href="#supervisor-level-csrs"></a>Supervisor-level CSRs</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 15%;">
@@ -952,7 +947,7 @@ mode is M (running RV64 code) but 32 bits when the privilege mode is S
 </div>
 </div>
 <div class="sect2">
-<h3 id="_virtual_supervisor_level_csrs"><a class="anchor" href="#_virtual_supervisor_level_csrs"></a>Virtual Supervisor-level CSRs</h3>
+<h3 id="virtual-supervisor-level-csrs"><a class="anchor" href="#virtual-supervisor-level-csrs"></a>Virtual Supervisor-level CSRs</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 15%;">
@@ -1127,7 +1122,7 @@ VS-mode (RV32 code).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_access_control_by_the_state_enable_csrs"><a class="anchor" href="#_access_control_by_the_state_enable_csrs"></a>Access control by the state-enable CSRs</h3>
+<h3 id="access-control-by-the-state-enable-csrs"><a class="anchor" href="#access-control-by-the-state-enable-csrs"></a>Access control by the state-enable CSRs</h3>
 <div class="paragraph">
 <p>If extension Smstateen is implemented together with Smcsrind, bit 60 of
 state-enable register <code>mstateen0</code> controls access to <code>siselect</code>, <code>sireg*</code>,
@@ -1181,6 +1176,10 @@ incorporates the bit defined above for <code>hstateen0</code> but not that for
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="machine.html">Machine-Level ISA, Version 1.13</a></span>
+  <span class="next"><a href="smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

@@ -6,7 +6,7 @@ content:
   sources:
   - url: https://github.com/riscv/riscv-library.git
     branches: main
-    start_path: /
+    #start_path: /
     #start_page: index.adoc
   - url: https://github.com/riscv/riscv-isa-manual.git
     branches: antora-refactor

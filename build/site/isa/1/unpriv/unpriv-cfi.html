@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="vector-crypto.html">
+    <link rel="next" href="rv-32-64g.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -272,13 +274,6 @@
   </button>
   </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
@@ -529,7 +524,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="_control_flow_integrity_cfi"><a class="anchor" href="#_control_flow_integrity_cfi"></a>Control-flow Integrity (CFI)</h2>
+<h2 id="control-flow-integrity-cfi"><a class="anchor" href="#control-flow-integrity-cfi"></a>Control-flow Integrity (CFI)</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Control-flow Integrity (CFI) capabilities help defend against Return-Oriented
@@ -697,7 +692,7 @@ for each privilege mode.</p>
 <p>The Zicfilp extension depends on the Zicsr extension.</p>
 </div>
 <div class="sect3">
-<h4 id="_landing_pad_enforcement"><a class="anchor" href="#_landing_pad_enforcement"></a>Landing Pad Enforcement</h4>
+<h4 id="landing-pad-enforcement"><a class="anchor" href="#landing-pad-enforcement"></a>Landing Pad Enforcement</h4>
 <div class="paragraph">
 <p>To enforce that the target of an indirect call or indirect jump must be a valid
 landing pad instruction, the hart maintains an expected landing pad (<code>ELP</code>) state
@@ -974,7 +969,7 @@ if the Zcmop extension is implemented, the Zicfiss extension also provides the
 requires S-mode to be implemented. Use of Zicfiss in M-mode is not supported.</p>
 </div>
 <div class="sect3">
-<h4 id="_zicfiss_instructions_summary"><a class="anchor" href="#_zicfiss_instructions_summary"></a>Zicfiss Instructions Summary</h4>
+<h4 id="zicfiss-instructions-summary"><a class="anchor" href="#zicfiss-instructions-summary"></a>Zicfiss Instructions Summary</h4>
 <div class="paragraph">
 <p>The Zicfiss extension introduces the following instructions:</p>
 </div>
@@ -1036,7 +1031,7 @@ redefined by another extension.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_shadow_stack_pointer_ssp"><a class="anchor" href="#_shadow_stack_pointer_ssp"></a>Shadow Stack Pointer (<code>ssp</code>)</h4>
+<h4 id="shadow-stack-pointer-ssp"><a class="anchor" href="#shadow-stack-pointer-ssp"></a>Shadow Stack Pointer (<code>ssp</code>)</h4>
 <div class="paragraph">
 <p>The <code>ssp</code> CSR is an unprivileged read-write (URW) CSR that reads and writes
 <code>XLEN</code> low order bits of the shadow stack pointer (<code>ssp</code>). The CSR address is
@@ -1047,7 +1042,7 @@ UXLEN or SXLEN may never be 32, then the bit 2 is also read-only zero.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_zicfiss_instructions"><a class="anchor" href="#_zicfiss_instructions"></a>Zicfiss Instructions</h4>
+<h4 id="zicfiss-instructions"><a class="anchor" href="#zicfiss-instructions"></a>Zicfiss Instructions</h4>
 
 </div>
 <div class="sect3">
@@ -1574,6 +1569,10 @@ value at the memory location operated on by <code>SSAMOSWAP.W/D</code> is not re
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a></span>
+  <span class="next"><a href="rv-32-64g.html">RV32/64G Instruction Set Listings</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

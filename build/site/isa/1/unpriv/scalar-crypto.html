@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="v-st-ext.html">
+    <link rel="next" href="vector-crypto.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -272,13 +274,6 @@
   </button>
   </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
@@ -532,7 +527,7 @@
 <h2 id="crypto_scalar_instructions"><a class="anchor" href="#crypto_scalar_instructions"></a>Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_changelog"><a class="anchor" href="#_changelog"></a>Changelog</h3>
+<h3 id="changelog"><a class="anchor" href="#changelog"></a>Changelog</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -1311,7 +1306,7 @@ recommendations to implementers.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_zkt_data_independent_execution_latency"><a class="anchor" href="#_zkt_data_independent_execution_latency"></a><code>Zkt</code> - Data Independent Execution Latency</h4>
+<h4 id="zkt-data-independent-execution-latency"><a class="anchor" href="#zkt-data-independent-execution-latency"></a><code>Zkt</code> - Data Independent Execution Latency</h4>
 <div class="paragraph">
 <p>This extension allows CPU implementers to indicate to
 cryptographic software developers that a subset of RISC-V instructions
@@ -6020,7 +6015,7 @@ typically result in a CERT CVE security advisory.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_scope_and_goal"><a class="anchor" href="#_scope_and_goal"></a>Scope and Goal</h4>
+<h4 id="scope-and-goal"><a class="anchor" href="#scope-and-goal"></a>Scope and Goal</h4>
 <div class="paragraph">
 <p>An "ISA contract" is made between a programmer and the RISC-V implementation
 that Zkt instructions do not leak information about processed secret data
@@ -6109,7 +6104,7 @@ and L1TF/Foreshadow, etc. See e.g.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_background"><a class="anchor" href="#_background"></a>Background</h4>
+<h4 id="background"><a class="anchor" href="#background"></a>Background</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6156,7 +6151,7 @@ specific zeroization/sanitisation or by being declared ciphertext
 </div>
 </div>
 <div class="sect3">
-<h4 id="_specific_instruction_rationale"><a class="anchor" href="#_specific_instruction_rationale"></a>Specific Instruction Rationale</h4>
+<h4 id="specific-instruction-rationale"><a class="anchor" href="#specific-instruction-rationale"></a>Specific Instruction Rationale</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -6186,7 +6181,7 @@ including them in testing scope.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_programming_information"><a class="anchor" href="#_programming_information"></a>Programming Information</h4>
+<h4 id="programming-information"><a class="anchor" href="#programming-information"></a>Programming Information</h4>
 <div class="paragraph">
 <p>For background information on secure programming "models", see:</p>
 </div>
@@ -6220,7 +6215,7 @@ including them in testing scope.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_zkt_listings"><a class="anchor" href="#_zkt_listings"></a>Zkt listings</h4>
+<h4 id="zkt-listings"><a class="anchor" href="#zkt-listings"></a>Zkt listings</h4>
 <div class="paragraph">
 <p>The following instructions are included in the <code>Zkt</code> subset
 They are listed here grouped by their original parent extension.</p>
@@ -6243,7 +6238,7 @@ adhere to the requirements of <code>Zkt</code>.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_rvi_base_instruction_set"><a class="anchor" href="#_rvi_base_instruction_set"></a>RVI (Base Instruction Set)</h5>
+<h5 id="rvi-base-instruction-set"><a class="anchor" href="#rvi-base-instruction-set"></a>RVI (Base Instruction Set)</h5>
 <div class="paragraph">
 <p>Only basic arithmetic and <code>slt*</code> (for carry computations) are included.
 The data-independent timing requirement does not apply to HINT instruction
@@ -6449,7 +6444,7 @@ encoding forms of these instructions.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_rvm_multiply"><a class="anchor" href="#_rvm_multiply"></a>RVM (Multiply)</h5>
+<h5 id="rvm-multiply"><a class="anchor" href="#rvm-multiply"></a>RVM (Multiply)</h5>
 <div class="paragraph">
 <p>Multiplication is included; division and remaindering excluded.</p>
 </div>
@@ -6503,7 +6498,7 @@ encoding forms of these instructions.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_rvc_compressed"><a class="anchor" href="#_rvc_compressed"></a>RVC (Compressed)</h5>
+<h5 id="rvc-compressed"><a class="anchor" href="#rvc-compressed"></a>RVC (Compressed)</h5>
 <div class="paragraph">
 <p>Same criteria as in RVI. Organised by quadrants.</p>
 </div>
@@ -6623,7 +6618,7 @@ encoding forms of these instructions.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_rvk_scalar_cryptography"><a class="anchor" href="#_rvk_scalar_cryptography"></a>RVK (Scalar Cryptography)</h5>
+<h5 id="rvk-scalar-cryptography"><a class="anchor" href="#rvk-scalar-cryptography"></a>RVK (Scalar Cryptography)</h5>
 <div class="paragraph">
 <p>All K-specific instructions are included.
 Additionally, <code>seed</code> CSR latency should be independent of <code>ES16</code> state output
@@ -6824,7 +6819,7 @@ See <a href="#crypto_scalar_appx_es_access">Security Considerations for Direct H
 </table>
 </div>
 <div class="sect4">
-<h5 id="_rvb_bitmanip"><a class="anchor" href="#_rvb_bitmanip"></a>RVB (Bitmanip)</h5>
+<h5 id="rvb-bitmanip"><a class="anchor" href="#rvb-bitmanip"></a>RVB (Bitmanip)</h5>
 <div class="paragraph">
 <p>The <a href="#zbkb-sc">Zbkb-sc</a>, <a href="#zbkc-sc">Zbkc-sc</a> and <a href="#zbkx-sc">Zbkx-sc</a> extensions are included in their entirety.</p>
 </div>
@@ -6994,7 +6989,7 @@ extension. It also tries to record how the designs of instructions were
 derived, or where they were contributed from.</p>
 </div>
 <div class="sect3">
-<h4 id="_aes_instructions"><a class="anchor" href="#_aes_instructions"></a>AES Instructions</h4>
+<h4 id="aes-instructions"><a class="anchor" href="#aes-instructions"></a>AES Instructions</h4>
 <div class="paragraph">
 <p>The 32-bit instructions were derived from work in cite:[MJS:LWAES:20] and
 contributed to the RISC-V cryptography extension.
@@ -7008,7 +7003,7 @@ for all of the AES instructions in the specification can be found in the paper
 </div>
 </div>
 <div class="sect3">
-<h4 id="_sha2_instructions"><a class="anchor" href="#_sha2_instructions"></a>SHA2 Instructions</h4>
+<h4 id="sha2-instructions"><a class="anchor" href="#sha2-instructions"></a>SHA2 Instructions</h4>
 <div class="paragraph">
 <p>These instructions were developed based on academic
 work at the University of Bristol as part of the XCrypto project
@@ -7020,7 +7015,7 @@ in cite:[MJS:LWSHA:20], before being contributed in the same way.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_sm3_and_sm4_instructions"><a class="anchor" href="#_sm3_and_sm4_instructions"></a>SM3 and SM4 Instructions</h4>
+<h4 id="sm3-and-sm4-instructions"><a class="anchor" href="#sm3-and-sm4-instructions"></a>SM3 and SM4 Instructions</h4>
 <div class="paragraph">
 <p>The SM4 instructions were derived from work in cite:[MJS:LWAES:20], and
 are hence very similar to the RV32 AES instructions.</p>
@@ -7069,7 +7064,7 @@ both,
 would be required to implement these instructions.</p>
 </div>
 <div class="sect4">
-<h5 id="_rotations"><a class="anchor" href="#_rotations"></a>Rotations</h5>
+<h5 id="rotations"><a class="anchor" href="#rotations"></a>Rotations</h5>
 <div class="listingblock">
 <div class="content">
 <pre>RV32, RV64:                         RV64 only:
@@ -7113,7 +7108,7 @@ SHA512, SHA3.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_bit_byte_permutations"><a class="anchor" href="#_bit_byte_permutations"></a>Bit &amp; Byte Permutations</h5>
+<h5 id="bit-byte-permutations"><a class="anchor" href="#bit-byte-permutations"></a>Bit &amp; Byte Permutations</h5>
 <div class="listingblock">
 <div class="content">
 <pre>RV32:
@@ -7196,7 +7191,7 @@ rotation instructions, so <code>zip</code> and <code>unzip</code> are not requir
 </div>
 </div>
 <div class="sect4">
-<h5 id="_carry_less_multiply"><a class="anchor" href="#_carry_less_multiply"></a>Carry-less Multiply</h5>
+<h5 id="carry-less-multiply"><a class="anchor" href="#carry-less-multiply"></a>Carry-less Multiply</h5>
 <div class="listingblock">
 <div class="content">
 <pre>RV32, RV64:
@@ -7232,7 +7227,7 @@ protocol.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_logic_with_negate"><a class="anchor" href="#_logic_with_negate"></a>Logic With Negate</h5>
+<h5 id="logic-with-negate"><a class="anchor" href="#logic-with-negate"></a>Logic With Negate</h5>
 <div class="listingblock">
 <div class="content">
 <pre>RV32, RV64:
@@ -7269,7 +7264,7 @@ Software based power/EM side-channel countermeasures based on masking.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_packing"><a class="anchor" href="#_packing"></a>Packing</h5>
+<h5 id="packing"><a class="anchor" href="#packing"></a>Packing</h5>
 <div class="listingblock">
 <div class="content">
 <pre>RV32, RV64:                         RV64:
@@ -7305,7 +7300,7 @@ be word aligned) into registers to perform the round functions.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_crossbar_permutation_instructions"><a class="anchor" href="#_crossbar_permutation_instructions"></a>Crossbar Permutation Instructions</h5>
+<h5 id="crossbar-permutation-instructions"><a class="anchor" href="#crossbar-permutation-instructions"></a>Crossbar Permutation Instructions</h5>
 <div class="listingblock">
 <div class="content">
 <pre>RV32, RV64:
@@ -7386,7 +7381,7 @@ also discuss non-ISA system features that may be needed for cryptographic
 standards compliance and security testing.</p>
 </div>
 <div class="sect3">
-<h4 id="_checklists_for_design_and_self_certification"><a class="anchor" href="#_checklists_for_design_and_self_certification"></a>Checklists for Design and Self-Certification</h4>
+<h4 id="checklists-for-design-and-self-certification"><a class="anchor" href="#checklists-for-design-and-self-certification"></a>Checklists for Design and Self-Certification</h4>
 <div class="paragraph">
 <p>The security of cryptographic systems is based on secret bits and keys.
 These bits need to be random and originate from cryptographically secure
@@ -7476,7 +7471,7 @@ allows 90B validations to be re-used for different (FIPS 140-3) modules.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_standards_and_terminology"><a class="anchor" href="#_standards_and_terminology"></a>Standards and Terminology</h4>
+<h4 id="standards-and-terminology"><a class="anchor" href="#standards-and-terminology"></a>Standards and Terminology</h4>
 <div class="paragraph">
 <p>As a fundamental security function, the generation of random numbers is
 governed by numerous standards and technical evaluation methods, the main
@@ -7586,9 +7581,9 @@ refreshed (reseeded) for forward and backward security.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_specific_rationale_and_considerations"><a class="anchor" href="#_specific_rationale_and_considerations"></a>Specific Rationale and Considerations</h4>
+<h4 id="specific-rationale-and-considerations"><a class="anchor" href="#specific-rationale-and-considerations"></a>Specific Rationale and Considerations</h4>
 <div class="sect4">
-<h5 id="_the_seed_csr"><a class="anchor" href="#_the_seed_csr"></a>The <code>seed</code> CSR</h5>
+<h5 id="the-seed-csr"><a class="anchor" href="#the-seed-csr"></a>The <code>seed</code> CSR</h5>
 <div class="paragraph">
 <p>See <a href="#crypto_scalar_seed_csr">The <code>seed</code> CSR</a>.</p>
 </div>
@@ -7634,7 +7629,7 @@ both RV32 and RV64 architectures for programming convenience.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_nist_sp_800_90b"><a class="anchor" href="#_nist_sp_800_90b"></a>NIST SP 800-90B</h5>
+<h5 id="nist-sp-800-90b"><a class="anchor" href="#nist-sp-800-90b"></a>NIST SP 800-90B</h5>
 <div class="paragraph">
 <p>See <a href="#crypto_scalar_es_req_90b">NIST SP 800-90B / FIPS 140-3 Requirements</a>.</p>
 </div>
@@ -7673,7 +7668,7 @@ by vendor-defined tests.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_bsi_ais_31"><a class="anchor" href="#_bsi_ais_31"></a>BSI AIS-31</h5>
+<h5 id="bsi-ais-31"><a class="anchor" href="#bsi-ais-31"></a>BSI AIS-31</h5>
 <div class="paragraph">
 <p>See <a href="#crypto_scalar_es_req_ptg2">BSI AIS-31 PTG.2 / Common Criteria Requirements</a>.</p>
 </div>
@@ -7730,7 +7725,7 @@ necessarily so. The technical validation process is somewhat different.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_virtual_sources"><a class="anchor" href="#_virtual_sources"></a>Virtual Sources</h5>
+<h5 id="virtual-sources"><a class="anchor" href="#virtual-sources"></a>Virtual Sources</h5>
 <div class="paragraph">
 <p><a href="#crypto_scalar_es_req_virt">Virtual Sources: Security Requirement</a>.</p>
 </div>
@@ -7857,7 +7852,7 @@ follows from the definition of an Entropy Source; without it, the module is
 simply a noise source and can&#8217;t be trusted to safely generate keying material.</p>
 </div>
 <div class="sect4">
-<h5 id="_t1_on_demand_testing"><a class="anchor" href="#_t1_on_demand_testing"></a>T1: On-demand testing</h5>
+<h5 id="t1-on-demand-testing"><a class="anchor" href="#t1-on-demand-testing"></a>T1: On-demand testing</h5>
 <div class="paragraph">
 <p>A sequence of simple tests is invoked via resetting, rebooting, or
 powering up the hardware (not an ISA signal). The implementation will
@@ -7876,7 +7871,7 @@ non-autonomous crypto devices with human operators).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_t2_continuous_checks"><a class="anchor" href="#_t2_continuous_checks"></a>T2: Continuous checks</h5>
+<h5 id="t2-continuous-checks"><a class="anchor" href="#t2-continuous-checks"></a>T2: Continuous checks</h5>
 <div class="paragraph">
 <p>If an error is detected in continuous tests or
 environmental sensors, the entropy source will enter a no-output state.
@@ -7911,7 +7906,7 @@ the zeroization requirement.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_t3_fatal_error_states"><a class="anchor" href="#_t3_fatal_error_states"></a>T3: Fatal error states</h5>
+<h5 id="t3-fatal-error-states"><a class="anchor" href="#t3-fatal-error-states"></a>T3: Fatal error states</h5>
 <div class="paragraph">
 <p>Since the security of most cryptographic operations depends on the
 entropy source, a system-wide "default deny" security policy approach
@@ -7941,7 +7936,7 @@ negligible over the entire device lifetime.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_information_flows"><a class="anchor" href="#_information_flows"></a>Information Flows</h5>
+<h5 id="information-flows"><a class="anchor" href="#information-flows"></a>Information Flows</h5>
 <div class="paragraph">
 <p>Some of the most devastating practical attacks
 against real-life cryptosystems have used inconsequential-looking
@@ -8083,7 +8078,7 @@ electrical filters, and usage of a differential oscillator may help.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_shot_noise"><a class="anchor" href="#_shot_noise"></a>Shot Noise</h5>
+<h5 id="shot-noise"><a class="anchor" href="#shot-noise"></a>Shot Noise</h5>
 <div class="paragraph">
 <p>A category of random sources consisting of discrete events
 and modeled as a Poisson process is called "shot noise."
@@ -8097,7 +8092,7 @@ described as a Shot Noise generator).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_other_types_of_noise"><a class="anchor" href="#_other_types_of_noise"></a>Other types of noise</h5>
+<h5 id="other-types-of-noise"><a class="anchor" href="#other-types-of-noise"></a>Other types of noise</h5>
 <div class="paragraph">
 <p>It may be possible to certify more exotic noise sources and designs,
 although their stochastic model needs to be equally well understood,
@@ -8319,7 +8314,7 @@ which classical noise-based sources are designed to resist.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_post_quantum_cryptography"><a class="anchor" href="#_post_quantum_cryptography"></a>Post-Quantum Cryptography</h5>
+<h5 id="post-quantum-cryptography"><a class="anchor" href="#post-quantum-cryptography"></a>Post-Quantum Cryptography</h5>
 <div class="paragraph">
 <p>PQC public-key cryptography standards cite:[NI16] do not require
 quantum-origin randomness, just sufficiently secure keying material.
@@ -8823,6 +8818,10 @@ function aes_mixcolumns_inv(x) = {
 <a href="#_footnoteref_1">1</a>. <a href="http://svn.clairexen.net/handicraft/2020/lut4perm/demo02.cc" class="bare">http://svn.clairexen.net/handicraft/2020/lut4perm/demo02.cc</a>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a></span>
+  <span class="next"><a href="vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">

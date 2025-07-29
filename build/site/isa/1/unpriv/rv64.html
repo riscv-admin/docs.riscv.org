@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -272,13 +272,6 @@
   </button>
   </div><ul class="nav-list">
   <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
@@ -533,14 +526,14 @@ This chapter presents only the differences with RV32I, so should be read
 in conjunction with the earlier chapter.</p>
 </div>
 <div class="sect2">
-<h3 id="_register_state"><a class="anchor" href="#_register_state"></a>Register State</h3>
+<h3 id="register-state"><a class="anchor" href="#register-state"></a>Register State</h3>
 <div class="paragraph">
 <p>RV64I widens the integer registers and supported user address space to
 64 bits (XLEN=64 in <a href="#gprs">[gprs]</a>).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_integer_computational_instructions"><a class="anchor" href="#_integer_computational_instructions"></a>Integer Computational Instructions</h3>
+<h3 id="integer-computational-instructions"><a class="anchor" href="#integer-computational-instructions"></a>Integer Computational Instructions</h3>
 <div class="paragraph">
 <p>Most integer computational instructions operate on XLEN-bit values.
 Additional instruction variants are provided to manipulate 32-bit values
@@ -578,7 +571,7 @@ ensure reasonable performance for 32-bit values.</p>
 </p>
 </div>
 <div class="sect3">
-<h4 id="_integer_register_immediate_instructions"><a class="anchor" href="#_integer_register_immediate_instructions"></a>Integer Register-Immediate Instructions</h4>
+<h4 id="integer-register-immediate-instructions"><a class="anchor" href="#integer-register-immediate-instructions"></a>Integer Register-Immediate Instructions</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNp1zb0KgzAUBeDdp7hbFgONIkK2gouDtFsHyZAmacngD8ntJHn3JlRrHTqee8_HWZx5cugzgOVu0XOoc4BRDoYDmWY1aUPiAUAiutgjdYzkcqVt19GyICLkO6126vSH_dIqUW08HlW5q8drVFiucmMpk3PTtLf_a5595w5r3qkjYkW-ITsMPWP8JGJxQ6xIqqXxZ7SVaNaGCJkIb_byULA=" alt="svg">
@@ -675,7 +668,7 @@ with LD, AUIPC with JALR, etc. in RV64I is
 </div>
 </div>
 <div class="sect3">
-<h4 id="_integer_register_register_operations"><a class="anchor" href="#_integer_register_register_operations"></a>Integer Register-Register Operations</h4>
+<h4 id="integer-register-register-operations"><a class="anchor" href="#integer-register-register-operations"></a>Integer Register-Register Operations</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56v4ByKSusREWRmytDsJQU4ShRSkQA5ENNQVpS0ktLiFIo5hqjDA1rTQvucQY1akgrnqwj49-cJAPmBnkCKIcXVzCoTLhICkIJ9QJxHEMx-3uYkO4w1HcXVyUbEiQxm2qEU5TjQjSKKaao4WGOZaIM4AAMNMQwTTAyoQqiK3liq0FAEiaiuc=" alt="svg">
@@ -706,7 +699,7 @@ results to 64 bits. The shift amount is given by <em>rs2[4:0]</em>.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_load_and_store_instructions"><a class="anchor" href="#_load_and_store_instructions"></a>Load and Store Instructions</h3>
+<h3 id="load-and-store-instructions"><a class="anchor" href="#load-and-store-instructions"></a>Load and Store Instructions</h3>
 <div class="paragraph">
 <p>RV64I extends the address space to 64 bits. The execution environment
 will define what portions of the address space are legal to access.</p>

@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V ISA Documentation Library Antora Demo Site</title>
-    <meta name="generator" content="Antora 3.1.9">
+    <link rel="prev" href="zimop.html">
+    <link rel="next" href="m-st-ext.html">
+    <meta name="generator" content="Antora 3.1.10">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -271,13 +273,6 @@
         ></path></g></svg>
   </button>
   </div><ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../index.html">RISC-V ISA Documentation</a>
-  </li>
-</ul>
-  </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
@@ -547,7 +542,7 @@ The design principles of RISC-V (e.g. the absence of an instruction-format that 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_zicond_specification"><a class="anchor" href="#_zicond_specification"></a>Zicond specification</h3>
+<h3 id="zicond-specification"><a class="anchor" href="#zicond-specification"></a>Zicond specification</h3>
 <div class="paragraph">
 <p>The "Conditional" operations extension provides a simple solution that provides most of the benefit and all of the flexibility one would desire to support conditional arithmetic and conditional-select/move operations, while remaining true to the RISC-V design philosophy.
 The instructions follow the format for R-type instructions with 3 operands (i.e., 2 source operands and 1 destination operand).
@@ -655,7 +650,7 @@ Using these instructions, branchless sequences can be implemented (typically in 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_instructions_in_alphabetical_order"><a class="anchor" href="#_instructions_in_alphabetical_order"></a>Instructions (in alphabetical order)</h3>
+<h3 id="instructions-in-alphabetical-order"><a class="anchor" href="#instructions-in-alphabetical-order"></a>Instructions (in alphabetical order)</h3>
 <div class="sect3">
 <h4 id="insns-czero-eqz"><a class="anchor" href="#insns-czero-eqz"></a>czero.eqz</h4>
 <div class="dlist">
@@ -751,12 +746,12 @@ Furthermore, if the Zkt extension is implemented, this instruction&#8217;s timin
 </div>
 </div>
 <div class="sect2">
-<h3 id="_usage_examples"><a class="anchor" href="#_usage_examples"></a>Usage examples</h3>
+<h3 id="usage-examples"><a class="anchor" href="#usage-examples"></a>Usage examples</h3>
 <div class="paragraph">
 <p>The instructions from this extension can be used to construct sequences that perform conditional-arithmetic, conditional-bitwise-logical, and conditional-select operations.</p>
 </div>
 <div class="sect3">
-<h4 id="_instruction_sequences"><a class="anchor" href="#_instruction_sequences"></a>Instruction sequences</h4>
+<h4 id="instruction-sequences"><a class="anchor" href="#instruction-sequences"></a>Instruction sequences</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 44.4444%;">
@@ -856,6 +851,10 @@ or         rd, rd, rtmp</pre></div></td>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a></span>
+  <span class="next"><a href="m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a></span>
+</nav>
 </article>  </div>
 </main>
 <div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">
