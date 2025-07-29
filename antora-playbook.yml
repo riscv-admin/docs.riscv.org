@@ -11,7 +11,7 @@ content:
   - url: https://github.com/riscv/riscv-isa-manual.git
     branches: antora-refactor
     #start_page: ROOT::index.adoc
-    start_path: /src
+    start_path: /
 #  - url: https://github.com/riscv/docs-dev-guide
 #    branches: main
   #- url: https://github.com/riscv-admin/riscv-getting-started-guide.git
@@ -39,7 +39,7 @@ asciidoc:
     inf: '&#8734;'
     csrname: 'envcfg'
     incexample: example$
-    incimage: ../images/
+    incimage: /images/
 
 antora:
    extensions:
