@@ -4,8 +4,8 @@ site:
   start_page: riscv-library::index.adoc
 content:
   sources:
-  - url: https://github.com/riscv/riscv-library.git
-    branches: main
+  #- url: https://github.com/riscv/riscv-library.git
+  #  branches: main
     #start_path: /
     #start_page: index.adoc
   - url: https://github.com/riscv/riscv-isa-manual.git
