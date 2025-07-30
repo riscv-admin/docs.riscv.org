@@ -11,7 +11,7 @@ content:
 
   - url: https://github.com/riscv-non-isa/e-trace-encap.git
     branches: antora-refactor
-    tags: v1.0
+    tags: [v1.0]
     start_page: ROOT::header.adoc
     start_path: /
 
