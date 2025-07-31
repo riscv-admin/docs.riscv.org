@@ -30,6 +30,11 @@ content:
     start_page: ROOT::intro.adoc
     start_path: /
 
+  - url: https://github.com/riscv-non-isa/riscv-acpi-ffh.git
+    branches: antora-refactor
+    start_page: ROOT::index.adoc
+    start_path: /
+
 asciidoc:
   extensions:
   - asciidoctor-kroki
