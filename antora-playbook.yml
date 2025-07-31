@@ -22,7 +22,7 @@ content:
 
   - url: https://github.com/riscv-non-isa/riscv-cbqri.git
     branches: antora-refactor
-    start_page: ROOT::qos_intro.adoc
+    start_page: ROOT::index.adoc
     start_path: /
 
 asciidoc:
