@@ -32,7 +32,7 @@ content:
 
   - url: https://github.com/riscv-non-isa/riscv-acpi-ffh.git
     branches: antora-refactor
-    start_page: ROOT::index.adoc
+    start_page: ROOT::riscv-ffh.adoc
     start_path: /
 
 asciidoc:
