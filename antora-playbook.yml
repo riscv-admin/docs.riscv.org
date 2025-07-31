@@ -15,6 +15,11 @@ content:
     start_page: ROOT::header.adoc
     start_path: /
 
+  - url: https://github.com/riscv-non-isa/riscv-elf-psabi-doc.git
+    branches: antora-refactor
+    start_page: ROOT::introduction.adoc
+    start_path: /
+
 asciidoc:
   extensions:
   - asciidoctor-kroki
