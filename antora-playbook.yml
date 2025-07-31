@@ -20,6 +20,11 @@ content:
     start_page: ROOT::introduction.adoc
     start_path: /
 
+  - url: https://github.com/riscv-non-isa/riscv-cbqri.git
+    branches: antora-refactor
+    start_page: ROOT::qos_header.adoc
+    start_path: /
+
 asciidoc:
   extensions:
   - asciidoctor-kroki
