@@ -42,9 +42,9 @@ asciidoc:
     incexample: example$
     incimage: ../images/
 
-#antora:
-#   extensions:
-#   - '@antora/pdf-extension'
+antora:
+   extensions:
+   - '@antora/pdf-extension'
 
 runtime:
   fetch: true
