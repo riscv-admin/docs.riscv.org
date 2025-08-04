@@ -45,6 +45,16 @@ content:
     start_page: ROOT::index.adoc
     start_path: /
 
+  - url: https://github.com/riscv-non-isa/riscv-ras-eri.git
+    branches: antora-refactor
+    start_page: ROOT::index.adoc
+    start_path: /
+
+  - url: https://github.com/riscv-non-isa/riscv-semihosting.git
+    branches: antora-refactor
+    start_page: ROOT::index.adoc
+    start_path: /
+
 asciidoc:
   extensions:
   - asciidoctor-kroki
