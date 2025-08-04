@@ -40,6 +40,11 @@ content:
     start_page: ROOT::index.adoc
     start_path: /
 
+  - url: https://github.com/riscv/riscv-plic-spec.git
+    branches: antora-refactor
+    start_page: ROOT::index.adoc
+    start_path: /
+
 asciidoc:
   extensions:
   - asciidoctor-kroki
