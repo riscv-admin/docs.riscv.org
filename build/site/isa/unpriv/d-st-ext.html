@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="v0.4.16"> 
+    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -675,8 +675,15 @@ value from the floating-point registers to memory.
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/d-st-ext.adoc - include::images/wavedrom/double-ls.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp1zTELwjAQhuHdX3HbLRFMSylkE4qToHvJkJpUM9SUJOBQ-t89sTHt4HrfPbyTN3cB7Q5g6mwMAmoG8FSDEYBuvDltkA4AKkZPf1gjw_Pl2OxPV5Qzy67KzuuvWbuKnDYhblGZ0cvq-FhcQiWh5n8m8F9nnelUMFvEC5aQHYaWc3GQRBPiBSnX98HEZftoOb8B5K1NOw==" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpm6vrqAeH-Ae56roFqMfW6iA0miI0ZubmRptYGcSCtMI0mgI15qelFaeWQKRQ9Boj9JZnppRkQOyE6zUG6nXBaVtRsSFUPaptSYnFqXg0GWHVVFyUjKoHGB5IvjI0tDIFeQs5OKC-gkiB9MbWAgBNbF4j" alt="svg">
+</div>
 </div>
 <div id="double-ls" class="paragraph">
 <p>FLD and FSD are only guaranteed to execute atomically if the effective
@@ -694,8 +701,15 @@ payloads of non-canonical NaNs are preserved.</p>
 defined analogously to their single-precision counterparts, but operate
 on double-precision operands and produce double-precision results.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/d-st-ext.adoc - include::images/wavedrom/double-fl-compute.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULwEnH1uogTDKFm1SUAjQFBGAmmQJ1pKQWl2CnUEwxRpiSi2aKMVBDkC-M8PX00_d1jIBwcTmk2BBiBrJDiouSDbFRuA0xwmqIEQZlgGqEEdyItNwSVCNAql1QMA7L00rzkktMkSIFZLmbo4uLvltwqBNQXN3NN9RH383FMwzC8fTTBYcKkB0cGBQCNje2FgA5b4aD" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUXeL9ov1dXRx0QczgkOd1GNrdRC6TeG6i1KAOkEAptsUqDsltbgEVYMxQkMumgZjoIYgX5zmFxtC1CObX1yUjFu9EVb1RqgajOAa0nJLUDUA9au74DbeGKvxxmANsbUArjBi4g==" alt="svg">
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -720,8 +734,10 @@ inputs are the same as for FCVT.<em>int</em>.S.
 instructions round according to the <em>rm</em> field. Note FCVT.D.W[U] always
 produces an exact result and is unaffected by rounding mode.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/d-st-ext.adoc - include::images/wavedrom/double-fl-convert-mv.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULgNOxtToInaZwnUUpQF0gANNpCtSRklpcAqNQ9Bkj9OWi6TMGagjyhRC47Co2hGhCtqu4KBlK4tRlhKkrPDo0Vt8HSKCwUUwwgpuQlluCagLQQHUXMMZhZ1ppXnKJKVJ4gux0cw4L0cvMK9FzgXFcQFywGbG1AFrncb8=" alt="svg">
+</div>
 </div>
 <div id="fl-convert-mv" class="paragraph">
 <p>The double-precision to single-precision and single-precision to
@@ -734,16 +750,20 @@ never round.
 
 </p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/d-st-ext.adoc - include::images/wavedrom/fcvt-sd-ds.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULgNOxtToInaZwnUUpQF0gANNpCtSRklpcAqNQ9Bkj9OWi6TMGagjyhRC47Co2hGhCtqu4KBlK4tRlhKnLBSikHoyqxQiuJS23BFUL0ASgapA2HJakleYll5giBSDIEjfnsBC9YD2wXWC2ix7EythaAAKbat0=" alt="svg">
+</div>
 </div>
 <div id="fcvt-sd-ds" class="paragraph">
 <p>Floating-point to floating-point sign-injection instructions, FSGNJ.D,
 FSGNJN.D, and FSGNJX.D are defined analogously to the single-precision
 sign-injection instruction.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/d-st-ext.adoc - include::images/wavedrom/fsjgnjnx-d.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5ToI6U1OISVA3GCA25aBqMgRq8ov1i9b0icFpSbAjRhGxJcVGyIW4NRlg1GKFqMIJrSMstQdUA1K_ugsv4tNK85BJTpGACGe8W7O7nBdYRWwsAY5ZhvQ==" alt="svg">
+</div>
 </div>
 <div class="paragraph">
 <p>For XLEN&#8805;64 only, instructions are provided to move bit
@@ -758,8 +778,10 @@ register <em>rd</em>.</p>
 <p>FMV.X.D and FMV.D.X do not modify the bits being transferred; in
 particular, the payloads of non-canonical NaNs are preserved.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/d-st-ext.adoc - include::images/wavedrom/d-xwwx.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULgNOxtToInaZwnUUpQF0gANNpCtSRklpcAqNQ9Bkj9OWi6TMGajAwMICSuGwrNoRoQ7atuCgZSuLUZYSpC2wTqg4juI603BJUHUAD1F3AGIcdaaV5ySWmSCEIssPNN0wvQs8FynLRiwDrjq0FAI2Kaa8=" alt="svg">
+</div>
 </div>
 <div id="fmvxddx" class="admonitionblock note">
 <table>
@@ -803,8 +825,10 @@ analogously to their single-precision counterparts, but operate on
 double-precision operands.
 </p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/d-st-ext.adoc - include::images/wavedrom/double-fl-compare.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5ToI6U1OISVA3GCA25IA0w1cZA1a6B-j4h-j6uOK0oNoTYgWxFcVGyIW4NRlg1GKFqMIJrSMstQdUA1K_ugsv4tNK85BJTpEACGe_m7AsJo9haAGw5YQ8=" alt="svg">
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -815,8 +839,10 @@ defined analogously to its single-precision counterpart, but operates on
 double-precision operands.
 </p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/d-st-ext.adoc - include::images/wavedrom/double-fl-class.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5ToI6U1OISVA3GCA25aBqMgRoMcRpfbAhRjmx8cVEybvVGmOoNUFUbwVWn5ZagqgZqVnfBZXZaaV5yiSlS4IDMdnP2cQwOBmuJrQUAn2Velg==" alt="svg">
+</div>
 </div>
 </div>
 </div>
@@ -836,47 +862,198 @@ double-precision operands.
               </button>
               <div class="colset">
                 <div class="col-left">
+
                   <ul class="nav-versions">
-                    <li class="component">
-                      <a class="title" href="../../etrace/v1.0/index.html">E-Trace Encapsulation Specification</a>
-                      <ul class="versions">
-                        <li class="version is-latest">
-                          <a href="../../etrace/v1.0/index.html">
-                            v1.0<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="component">
-                      <a class="title" href="../../psabi/v1.0/index.html">ELF psABI Specification</a>
-                      <ul class="versions">
-                        <li class="version is-latest">
-                          <a href="../../psabi/v1.0/index.html">
-                            v1.0<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="component is-current">
-                      <a class="title" href="../index.html">ISA Specifications</a>
-                      <ul class="versions">
-                        <li class="version is-current is-latest">
-                          <a href="../index.html">
-                            default<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="component">
-                      <a class="title" href="../../qos/v1.0/index.html">RISC-V Capacity and Bandwidth QoS Register Interface</a>
-                      <ul class="versions">
-                        <li class="version is-latest">
-                          <a href="../../qos/v1.0/index.html">
-                            v1.0<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../ffh/v1.0/index.html">ACPI Functional Fixed Hardware</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../ffh/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../aia/v1.0/index.html">Advanced Interrupt Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../aia/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../etrace/v1.0/index.html">E-Trace Encapsulation Specification</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../etrace/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../psabi/v1.0/index.html">ELF psABI Specification</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../psabi/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../iommuArch/v1.0/index.html">IOMMU Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../iommuArch/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../index.html">ISA Specifications</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../index.html">
+      default
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../reri/v1.0/index.html">RERI Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../reri/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../qos/v1.0/index.html">RISC-V Capacity and Bandwidth QoS Register Interface</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../qos/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../plic/v1.0.0/index.html">RISC-V Platform-Level Interrupt Controller</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../plic/v1.0.0/index.html">
+      v1.0.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../semihost/v1.0/index.html">semihosting</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../semihost/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
                   </ul>
                 </div>
                 <div class="col-right">

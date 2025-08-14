@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="v0.4.16"> 
+    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -705,9 +705,11 @@ control and status register (CSR). It is a 32-bit read/write register
 that selects the dynamic rounding mode for floating-point arithmetic
 operations and holds the accrued exception flags, as shown in <a href="#fcsr">Floating-Point Control and Status Register</a>.</p>
 </div>
-<div id="fcsr" class="paragraph">
-<div class="title">Floating-point control and status register</div>
-<p>Unresolved include directive in modules/unpriv/pages/f-st-ext.adoc - include::images/wavedrom/float-csr.edn[]</p>
+<div id="fcsr" class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDUUVDIS8xNtVJQ94tQ11FILCkpAipQN1SPrdXBqizUjShl_sQpc4kiSplfGG5lxghlQfmleSmZeekKvvkpqTAd0erGqBqMTHTgGlKLU4vKUlMQao1MwIpjdRSS8_PSMoGhVZ2Wn1dSnFkFVG9oUFsLAOmfXK0=?id=fcsr&reftext=Floating-Point%20Control%20and%20Status%20Register" alt="Floating-point control and status register">
+</div>
+<div class="title">Figure 1. Floating-point control and status register</div>
 </div>
 <div class="paragraph">
 <p>The <code>fcsr</code> register can be read and written with the FRCSR and FSCSR
@@ -976,8 +978,15 @@ signals.</p>
 <div class="paragraph">
 <p>Floating-point loads and stores use the same base+offset addressing mode as the integer base ISAs, with a base address in register <em>rs1</em> and a 12-bit signed byte offset. The FLW instruction loads a single-precision floating-point value from memory into floating-point register <em>rd</em>. FSW stores a single-precision value from floating-point register <em>rs2</em> to memory.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/f-st-ext.adoc - include::images/wavedrom/sp-load-store-2.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56j7-ji66bgHqsbU6CI2mCI1FKRBNyBpNQRpTUotLUHUZI3SVZ6aUZEA1wnQZg3SF47ao2BBuE4pFSYnFqai6DI10YLoyc3OjDQ2tDGKBKmG6DI1A2vLT0opTS6CSIO2xtQATj03u" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56sEh_kGuum4B6rG1Ogidpgidmbm50SZWBrEgvTCdpiCd-WlpxaklEDkUzcYIzeWZKSUZEFvhmo1BmsNx2ldUbAjVgGZfUmJxKh5dRth1FRclo2oCBgqSzwwNrUxBXkMJE6jPIHIgzbG1AAeNXvY=" alt="svg">
+</div>
 </div>
 <div id="sp-ldst" class="paragraph">
 <p>FLW and FSW are only guaranteed to execute atomically if the effective
@@ -1069,8 +1078,10 @@ handling of signaling NaNs.</p>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/f-st-ext.adoc - include::images/wavedrom/spfloat.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp1kcELgjAUxu_9Fbu9y8RSRPBmyEDIMs0IwoPpjA5q6DqJ_3ubpU7QHd7b99j34-OtrenTQvcNQu3jxRoLmRiVSUEtBNU7rTIKGCWM1fwNmIDh5CvEX-1xhyeSMZLqjFPEGUgGd2S0YcttRtEnSiEoA0LnrwOPT6QKnntUPfu2mqPZ_YLIOZo6FVO5j3KVoy1ytL-x79tRzCjaSMkLNqdwG4TCJZeVCPmnTJkhfY64A7EdRyVhtO-FFx1U4rjXXoTn4ML5hK9IGVYUd1_oFoe_" alt="svg">
+</div>
 </div>
 <div id="spfloat" class="paragraph">
 <p></p>
@@ -1117,8 +1128,10 @@ compared to ARM.</p>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/f-st-ext.adoc - include::images/wavedrom/spfloat2.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUXeL9ov1dXRx0QczgkOd1GNrdRC6TeG6i1KAOkEAptsUqDsltbgEVYMxQkMumgZjoIYgX5zmFxtC1CObX1yUbIhbgxFWDUaoGozgGtJyS1A1APWrB-M23hgpqKBmG4NVx9YCAOtaYsI=" alt="svg">
+</div>
 </div>
 <div id="fnmaddsub" class="admonitionblock note">
 <table>
@@ -1252,8 +1265,10 @@ FCVT.S.W <em>rd</em>, <code>x0</code>, which will never set any exception flags.
 flag if the rounded result differs from the operand value and the
 Invalid exception flag is not set.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/f-st-ext.adoc - include::images/wavedrom/spfloat-cn-cmp.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp1kLsKgzAUhvc-xdmypJYqIri2OLVUeh3EwWosDmpJ0kl8955j6o1i4Fw53_9DGilePkQrgOZZaOWDx6FKSuEDq99pnQnGIdFa4g3zGGencB2EuPs1cctH1B1QmeEJvR51Ec2E0kR2dQY6I1gS2FMOUuejSUtOamuspk5KpmREZRGz_7FHdIs3B0x7oodprmEPGnmp5xooyS5dLLjmnyrV7uRHyTXY3a9WUWnL6JkZe9p1QnH7BXTVdGc=" alt="svg">
+</div>
 </div>
 <div id="fcvt" class="paragraph">
 <p>Floating-point to floating-point sign-injection instructions, FSGNJ.S,
@@ -1268,8 +1283,10 @@ FSGNJN.S <em>rx, ry, ry</em> moves the negation of <em>ry</em> to <em>rx</em> (a
 pseudoinstruction FNEG.S <em>rx, ry</em>); and FSGNJX.S <em>rx, ry, ry</em> moves the absolute value of <em>ry</em> to <em>rx</em> (assembler pseudoinstruction FABS.S <em>rx,
 ry</em>).</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/f-st-ext.adoc - include::images/wavedrom/spfloat-sign-inj.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5TIF89JbW4BFWHMUJHLkgHTLkx0AKvaL9Yfa8InFYUG0LsQLJCvbgo2RC3BiOsGoxQNRjBNaTllqBqAOpXD8ZlfFppXnKJKVIggYx3C3b38wLriK0FAN_rYYw=" alt="svg">
+</div>
 </div>
 <div id="inj" class="admonitionblock note">
 <table>
@@ -1311,8 +1328,10 @@ preserved.</p>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/f-st-ext.adoc - include::images/wavedrom/spfloat-mv.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULgNOxtToInaZwnUUpQF0gANNpCtSRklpcAqNQ9Bkj9OWi6TMGajAwMACKgilc1hUbQvQhW1dclAwlceoywtRlAMYoOozgOtJyS1B1AA1QDwZjHHakleYll5giBSHIDjffML0IvXAoK1wvAqw7thYA4ghqEw==" alt="svg">
+</div>
 </div>
 <div id="spfloat-mv" class="admonitionblock note">
 <table>
@@ -1348,8 +1367,10 @@ condition holds, and 0 otherwise.</p>
 exception flag if either input is NaN. FEQ.S performs a <em>quiet</em>
 comparison: it only sets the invalid operation exception flag if either input is a signaling NaN. For all three instructions, the result is 0 if either operand is NaN.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/f-st-ext.adoc - include::images/wavedrom/spfloat-comp.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5ToI6U1OISVA3GCA25IA0w1cZA1a6BQBF1nxAw6YrTomJDiE3IFhUXJRvi1mCEVYMRqgYjuIa03BJUDUD96sG4jE8rzUsuMUUKKpDxbs6-kJCKrQUAFNNh9A==" alt="svg">
+</div>
 </div>
 <div id="spfloat-comp" class="admonitionblock note">
 <table>
@@ -1382,8 +1403,10 @@ be set if the property is true and clear otherwise. All other bits in
 FCLASS.S does not set the floating-point exception flags.
 </p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/f-st-ext.adoc - include::images/wavedrom/spfloat-classify.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5ToI6U1OISVA3GCA25aBqMgRoMDAxxWlBsCNGAbEFxUTJu9UaY6g1QVRvBVafllqCqBmpWD8ZldlppXnKJKVLwgMx2c_ZxDIZoia0FAD87XwU=" alt="svg">
+</div>
 </div>
 <table id="fclass" class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 6. Format of result of FCLASS instruction.</caption>
@@ -1458,47 +1481,198 @@ FCLASS.S does not set the floating-point exception flags.
               </button>
               <div class="colset">
                 <div class="col-left">
+
                   <ul class="nav-versions">
-                    <li class="component">
-                      <a class="title" href="../../etrace/v1.0/index.html">E-Trace Encapsulation Specification</a>
-                      <ul class="versions">
-                        <li class="version is-latest">
-                          <a href="../../etrace/v1.0/index.html">
-                            v1.0<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="component">
-                      <a class="title" href="../../psabi/v1.0/index.html">ELF psABI Specification</a>
-                      <ul class="versions">
-                        <li class="version is-latest">
-                          <a href="../../psabi/v1.0/index.html">
-                            v1.0<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="component is-current">
-                      <a class="title" href="../index.html">ISA Specifications</a>
-                      <ul class="versions">
-                        <li class="version is-current is-latest">
-                          <a href="../index.html">
-                            default<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="component">
-                      <a class="title" href="../../qos/v1.0/index.html">RISC-V Capacity and Bandwidth QoS Register Interface</a>
-                      <ul class="versions">
-                        <li class="version is-latest">
-                          <a href="../../qos/v1.0/index.html">
-                            v1.0<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../ffh/v1.0/index.html">ACPI Functional Fixed Hardware</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../ffh/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../aia/v1.0/index.html">Advanced Interrupt Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../aia/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../etrace/v1.0/index.html">E-Trace Encapsulation Specification</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../etrace/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../psabi/v1.0/index.html">ELF psABI Specification</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../psabi/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../iommuArch/v1.0/index.html">IOMMU Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../iommuArch/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../index.html">ISA Specifications</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../index.html">
+      default
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../reri/v1.0/index.html">RERI Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../reri/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../qos/v1.0/index.html">RISC-V Capacity and Bandwidth QoS Register Interface</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../qos/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../plic/v1.0.0/index.html">RISC-V Platform-Level Interrupt Controller</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../plic/v1.0.0/index.html">
+      v1.0.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../semihost/v1.0/index.html">semihosting</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../semihost/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
                   </ul>
                 </div>
                 <div class="col-right">

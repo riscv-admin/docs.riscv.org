@@ -32,7 +32,7 @@ content:
 
   - url: https://github.com/riscv-non-isa/riscv-acpi-ffh.git
     branches: antora-refactor
-    start_page: ROOT::index.adoc
+    start_page: ROOT::contributors.adoc
     start_path: /
 
   - url: https://github.com/riscv-non-isa/riscv-iommu.git
@@ -72,9 +72,9 @@ asciidoc:
     incexample: example$
     incimage: ../images/
 
-antora:
-   extensions:
-   - '@antora/pdf-extension'
+#antora:
+ #  extensions:
+   #- '@antora/pdf-extension'
 
 runtime:
   fetch: true
@@ -85,6 +85,7 @@ ui:
     #url: https://github.com/apache/camel-website/releases/latest/ui-bundle.zip
     #url: https://github.com/mulesoft/docs-site-ui/releases/download/prod-627/ui-bundle.zip
     #url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
-    url: https://github.com/spring-io/antora-ui-spring/releases/download/v0.4.16/ui-bundle.zip
+    #url: https://github.com/spring-io/antora-ui-spring/releases/download/v0.4.16/ui-bundle.zip
+    url: https://github.com/riscv-admin/riscv-antora-ui/releases/download/latest/ui-bundle.zip
     snapshot: true
   supplemental_files: ./supplemental-ui

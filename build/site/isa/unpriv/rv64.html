@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="v0.4.16"> 
+    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -572,8 +572,10 @@ ensure reasonable performance for 32-bit values.</p>
 </div>
 <div class="sect3">
 <h4 id="integer-register-immediate-instructions"><a class="anchor" href="#integer-register-immediate-instructions"></a>Integer Register-Immediate Instructions</h4>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv64.adoc - include::images/wavedrom/rv64i-base-int.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp1zb0KgzAUBeDdp7hbFgONIkK2gouDtFsHyZAmacngD8ntJHn3JlRrHTqee8_HWZx5cugzgOVu0XOoc4BRDoYDmWY1aUPiAUAiutgjdYzkcqVt19GyICLkO6126vSH_dIqUW08HlW5q8drVFiucmMpk3PTtLf_a5595w5r3qkjYkW-ITsMPWP8JGJxQ6xIqqXxZ7SVaNaGCJkIb_byULA=" alt="svg">
+</div>
 </div>
 <div id="rv64i-base-int" class="paragraph">
 <p>ADDIW is an RV64I instruction that adds the sign-extended 12-bit
@@ -583,8 +585,10 @@ immediate to register <em>rs1</em> and produces the proper sign extension of a
 writes the sign extension of the lower 32 bits of register <em>rs1</em> into
 register <em>rd</em> (assembler pseudoinstruction SEXT.W).</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv64.adoc - include::images/wavedrom/rv64i-slli.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp9jjEPgjAQhXd-xW1dMKEhlKSbIwlEoyPpgFCVoUDaOhH-u7QGa1Hs8t673n15o-Q3CmUAMF5arSikIUBXCU4B9UPdNxzNA4BKaznvoXSO6HDcZUXx07EpdKzEsWTz4nyyEnPXcKW_1KPEjnJ9dLWO_UYmonOeZ1ZPi-6z7S4Kv8t4XZSsV-IhiEO0QpQJjZjhLAhij-6V0MvXdvrHxZgSs-9xI_tWDlvHpoBNTyW6d-4=" alt="svg">
+</div>
 </div>
 <div id="rv64i-slli" class="paragraph">
 <p>Shifts by a constant are encoded as a specialization of the I-type
@@ -600,8 +604,10 @@ copied into the vacated upper bits).
 
 </p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv64.adoc - include::images/wavedrom/rv64i-slliw.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp9jzEPgjAUhHd-xdu6QEJFIOnmSALR6OBAOiCgMhRMqRPhv0sxUB4GO_Tdtb0v106WDwapBdDdKtUyCG2AOhMlA9K88qYoyXAAkCklh3ckHCw5npwoSRxv98fw3jZQ30Bl8QUuob6OFmWrfiaieIZyf9e58nA1bckljqPrKM6zOAxis05L5z6oTivz1dhCVEKke-ZyzcGIZybUdLXtEJcabupz_EHdlLiLDSUD3IhSFuj8FA7GyLhWio6K9xbvP3HniEY=" alt="svg">
+</div>
 </div>
 <div id="rv64i-slliw" class="paragraph">
 <p>SLLIW, SRLIW, and SRAIW are RV64I-only instructions that are analogously
@@ -625,8 +631,10 @@ are marked as reserved. This is a backwards-compatible change.</p>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv64.adoc - include::images/wavedrom/rv64-lui-auipc.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKAEFiSUkRUKG6OZCv7hPqCaIcQz0DnNVja3UQ2k0R2otSoFqRtZuC9KWkFpfAaRTtRgY6MO2ZubnRxoZWhkaxQKUw7UYGIH2hukDJ1JTMxJJUhBJsorG1XLG1AEuvPl0=" alt="svg">
+</div>
 </div>
 <div id="rv64_lui-auipc" class="paragraph">
 <p>LUI (load upper immediate) uses the same opcode as RV32I. LUI places the
@@ -661,8 +669,10 @@ with LD, AUIPC with JALR, etc. in RV64I is
 </div>
 <div class="sect3">
 <h4 id="integer-register-register-operations"><a class="anchor" href="#integer-register-register-operations"></a>Integer Register-Register Operations</h4>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv64.adoc - include::images/wavedrom/rv64i-int-reg-reg.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56v4ByKSusREWRmytDsJQU4ShRSkQA5ENNQVpS0ktLiFIo5hqjDA1rTQvucQY1akgrnqwj49-cJAPmBnkCKIcXVzCoTLhICkIJ9QJxHEMx-3uYkO4w1HcXVyUbEiQxm2qEU5TjQjSKKaao4WGOZaIM4AAMNMQwTTAyoQqiK3liq0FAEiaiuc=" alt="svg">
+</div>
 </div>
 <div id="int_reg-reg" class="paragraph">
 <p>ADDW and SUBW are RV64I-only instructions that are defined analogously
@@ -694,8 +704,15 @@ results to 64 bits. The shift amount is given by <em>rs2[4:0]</em>.
 <p>RV64I extends the address space to 64 bits. The execution environment
 will define what portions of the address space are legal to access.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/unpriv/pages/rv64.adoc - include::images/wavedrom/load-store.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp1zbEKwyAQgOG9T3Gbi0NNCAG3QsdCHyA4mHi2DsYSL3QIefcqNJgUup3n93PLhA8J3Qlg6R1FCS0HGLVHCSy8hmCQpQWAJpqSY216stv9cmVq5aVqSjWZRDbeZG4w0pHXhdt5HKjeJXlmb2fo-f9EFL83eh3x6EXFN--874SQZ7WrRJWzYG1E-n7mXK0fUTJNBw==" alt="svg">
+</div>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCSWlBQBlambA3nqwSH-Qa7qsbU6CF2mCF2ZubnRJlYGsUCVMF2mIF35aWnFqSUQKRS9xgi9aaV5ySXGSDpBbPXyzJSSDJz2FRUboluVlFicike9Ebr64qJkVOXAQEDyjaGhlSmyd8yRvAORA2mOrQUAK0Fd7w==" alt="svg">
+</div>
 </div>
 <div id="load_store" class="paragraph">
 <p>The LD instruction loads a 64-bit value from memory into register <em>rd</em>
@@ -953,47 +970,198 @@ no standard HINTs will ever be defined in this subspace.</p>
               </button>
               <div class="colset">
                 <div class="col-left">
+
                   <ul class="nav-versions">
-                    <li class="component">
-                      <a class="title" href="../../etrace/v1.0/index.html">E-Trace Encapsulation Specification</a>
-                      <ul class="versions">
-                        <li class="version is-latest">
-                          <a href="../../etrace/v1.0/index.html">
-                            v1.0<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="component">
-                      <a class="title" href="../../psabi/v1.0/index.html">ELF psABI Specification</a>
-                      <ul class="versions">
-                        <li class="version is-latest">
-                          <a href="../../psabi/v1.0/index.html">
-                            v1.0<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="component is-current">
-                      <a class="title" href="../index.html">ISA Specifications</a>
-                      <ul class="versions">
-                        <li class="version is-current is-latest">
-                          <a href="../index.html">
-                            default<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="component">
-                      <a class="title" href="../../qos/v1.0/index.html">RISC-V Capacity and Bandwidth QoS Register Interface</a>
-                      <ul class="versions">
-                        <li class="version is-latest">
-                          <a href="../../qos/v1.0/index.html">
-                            v1.0<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../ffh/v1.0/index.html">ACPI Functional Fixed Hardware</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../ffh/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../aia/v1.0/index.html">Advanced Interrupt Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../aia/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../etrace/v1.0/index.html">E-Trace Encapsulation Specification</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../etrace/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../psabi/v1.0/index.html">ELF psABI Specification</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../psabi/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../iommuArch/v1.0/index.html">IOMMU Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../iommuArch/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../index.html">ISA Specifications</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../index.html">
+      default
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../reri/v1.0/index.html">RERI Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../reri/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../qos/v1.0/index.html">RISC-V Capacity and Bandwidth QoS Register Interface</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../qos/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../plic/v1.0.0/index.html">RISC-V Platform-Level Interrupt Controller</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../plic/v1.0.0/index.html">
+      v1.0.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../semihost/v1.0/index.html">semihosting</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../semihost/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
                   </ul>
                 </div>
                 <div class="col-right">

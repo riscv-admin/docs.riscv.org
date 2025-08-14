@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="v0.4.16"> 
+    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -744,20 +744,17 @@ when executing in VS-mode.</p>
 <div class="paragraph">
 <p>The <code>hstatus</code> register is an HSXLEN-bit read/write register formatted as
 shown in <a href="#hstatusreg-rv32">Hypervisor status register (<code>hstatus</code>) when HSLEN=32</a> when HSXLEN=32
-and <a href="#hstatusreg">Hypervisor status register (<code>hstatus</code>) when HSXLEN=64.</a> when HSXLEN=64. The <code>hstatus</code>
+and <a href="#hstatusreg">./images/bytefieldefield/hstatusreg.edn[]</a> when HSXLEN=64. The <code>hstatus</code>
 register provides facilities analogous to the <code>mstatus</code> register for
 tracking and controlling the exception behavior of a VS-mode guest.</p>
 </div>
 <div id="hstatusreg-rv32" class="paragraph">
 <div class="title">Hypervisor status register (<code>hstatus</code>) when HSLEN=32</div>
-<p>#include::images/bytefield/hstatusreg-rv32.edn[]
-Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hstatusreg-rv32.edn[]</p>
+<p>#../images/bytefieldefield/hstatusreg-rv32.edn[]
+../images/bytefieldefield/hstatusreg-rv32.edn[]</p>
 </div>
 <div id="hstatusreg" class="paragraph">
-<div class="title">Hypervisor status register (<code>hstatus</code>) when HSXLEN=64.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hstatusreg.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/hstatusreg.edn[]</div>
 <p>The VSXL field controls the effective XLEN for VS-mode (known as
 VSXLEN), which may differ from the XLEN for HS-mode (HSXLEN). When
 HSXLEN=32, the VSXL field does not exist, and VSXLEN=32. When HSXLEN=64,
@@ -893,24 +890,17 @@ same endianness as HS-mode.</p>
 <h4 id="hypervisor-trap-delegation-hedeleg-and-hideleg-registers"><a class="anchor" href="#hypervisor-trap-delegation-hedeleg-and-hideleg-registers"></a>Hypervisor Trap Delegation (<code>hedeleg</code> and <code>hideleg</code>) Registers</h4>
 <div class="paragraph">
 <p>Register <code>hedeleg</code> is a 64-bit read/write register, formatted as shown in
-<a href="#hedelegreg">Hypervisor exception delegation register (<code>hedeleg</code>).</a>.
+<a href="#hedelegreg">[hedelegreg]</a>.
 Register <code>hideleg</code> is an HSXLEN-bit read/write register, formatted as shown in
-<a href="#hidelegreg">Hypervisor exception delegation register (<code>hideleg</code>).</a>.
+<a href="#hidelegreg">./images/bytefieldefield/hidelegreg.edn[]</a>.
 By default, all traps at
 any privilege level are handled in M-mode, though M-mode usually uses
 the <code>medeleg</code> and <code>mideleg</code> CSRs to delegate some traps to HS-mode. The
 <code>hedeleg</code> and <code>hideleg</code> CSRs allow these traps to be further delegated
 to a VS-mode guest; their layout is the same as <code>medeleg</code> and <code>mideleg</code>.</p>
 </div>
-<div id="hedelegreg" class="paragraph">
-<div class="title">Hypervisor exception delegation register (<code>hedeleg</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hedelegreg.edn[]</p>
-</div>
 <div id="hidelegreg" class="paragraph">
-<div class="title">Hypervisor exception delegation register (<code>hideleg</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hidelegreg.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/hidelegreg.edn[]</div>
 <p>A synchronous trap that has been delegated to HS-mode (using <code>medeleg</code>)
 is further delegated to VS-mode if V=1 before the trap and the
 corresponding <code>hedeleg</code> bit is set. Each bit of <code>hedeleg</code> shall be
@@ -1052,35 +1042,22 @@ can write to indicate virtual interrupts intended for VS-mode. Bits of
 <code>hvip</code> that are not writable are read-only zeros.</p>
 </div>
 <div id="hvipreg" class="paragraph">
-<div class="title">Hypervisor virtual-interrupt-pending register(<code>hvip</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hvipreg.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/hvipreg.edn[]</div>
 <p>The standard portion (bits 15:0) of <code>hvip</code> is formatted as shown in
-<a href="#hvipreg-standard">Standard portion (bits 15:0) of <code>hvip</code>.</a>. Bits VSEIP, VSTIP,
+<a href="#hvipreg-standard">./images/bytefieldefield/hvipreg-standard.edn[]</a>. Bits VSEIP, VSTIP,
 and VSSIP of <code>hvip</code> are writable. Setting VSEIP=1 in <code>hvip</code> asserts a
 VS-level external interrupt; setting VSTIP asserts a VS-level timer
 interrupt; and setting VSSIP asserts a VS-level software interrupt.</p>
 </div>
 <div id="hvipreg-standard" class="paragraph">
-<div class="title">Standard portion (bits 15:0) of <code>hvip</code>.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hvipreg-standard.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/hvipreg-standard.edn[]</div>
 <p>Registers <code>hip</code> and <code>hie</code> are HSXLEN-bit read/write registers that
 supplement HS-level’s <code>sip</code> and <code>sie</code> respectively. The <code>hip</code> register
 indicates pending VS-level and hypervisor-specific interrupts, while
 <code>hie</code> contains enable bits for the same interrupts.</p>
 </div>
-<div id="hipreg" class="paragraph">
-<div class="title">Hypervisor interrupt-pending register (<code>hip</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hipreg.edn[]</p>
-</div>
 <div id="hiereg" class="paragraph">
-<div class="title">Hypervisor interrupt-enable register (<code>hie</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hiereg.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/hiereg.edn[]</div>
 <p>For each writable bit in <code>sie</code>, the corresponding bit shall be read-only
 zero in both <code>hip</code> and <code>hie</code>. Hence, the nonzero bits in <code>sie</code> and <code>hie</code>
 are always mutually exclusive, and likewise for <code>sip</code> and <code>hip</code>.</p>
@@ -1126,17 +1103,10 @@ read-only zero.</p>
 </div>
 <div class="paragraph">
 <p>The standard portions (bits 15:0) of registers <code>hip</code> and <code>hie</code> are
-formatted as shown in <a href="#hipreg-standard">Standard portion (bits 15:0) of <code>hip</code>.</a> and <a href="#hiereg-standard">Standard portion (bits 15:0) of <code>hie</code>.</a> respectively.</p>
-</div>
-<div id="hipreg-standard" class="paragraph">
-<div class="title">Standard portion (bits 15:0) of <code>hip</code>.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hipreg-standard.edn[]</p>
+formatted as shown in <a href="#hipreg-standard">[hipreg-standard]</a> and <a href="#hiereg-standard">./images/bytefieldefield/hiereg-standard.edn[]</a> respectively.</p>
 </div>
 <div id="hiereg-standard" class="paragraph">
-<div class="title">Standard portion (bits 15:0) of <code>hie</code>.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hiereg-standard.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/hiereg-standard.edn[]</div>
 <p>Bits <code>hip</code>.SGEIP and <code>hie</code>.SGEIE are the interrupt-pending and
 interrupt-enable bits for guest external interrupts at supervisor level
 (HS-level). SGEIP is read-only in <code>hip</code>, and is 1 if and only if the
@@ -1183,22 +1153,15 @@ VSTI, LCOFI.</p>
 <h4 id="hgeinterruptregs"><a class="anchor" href="#hgeinterruptregs"></a>Hypervisor Guest External Interrupt Registers (<code>hgeip</code> and <code>hgeie</code>)</h4>
 <div class="paragraph">
 <p>The <code>hgeip</code> register is an HSXLEN-bit read-only register, formatted as
-shown in <a href="#hgeipreg">Hypervisor guest external interrupt-pending register (<code>hgeip</code>).</a>, that indicates pending guest
+shown in <a href="#hgeipreg">[hgeipreg]</a>, that indicates pending guest
 external interrupts for this hart. The <code>hgeie</code> register is an HSXLEN-bit
 read/write register, formatted as shown in
-<a href="#hgeiereg">Hypervisor guest external interrupt-enable register (<code>hgeie</code>).</a>, that contains enable bits for the
+<a href="#hgeiereg">./images/bytefieldefield/hgeiereg.edn[]</a>, that contains enable bits for the
 guest external interrupts at this hart. Guest external interrupt number
 <em>i</em> corresponds with bit <em>i</em> in both <code>hgeip</code> and <code>hgeie</code>.</p>
 </div>
-<div id="hgeipreg" class="paragraph">
-<div class="title">Hypervisor guest external interrupt-pending register (<code>hgeip</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hgeipreg.edn[]</p>
-</div>
 <div id="hgeiereg" class="paragraph">
-<div class="title">Hypervisor guest external interrupt-enable register (<code>hgeie</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hgeiereg.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/hgeiereg.edn[]</div>
 <p>Guest external interrupts represent interrupts directed to individual
 virtual machines at VS-level. If a RISC-V platform supports placing a
 physical device under the direct control of a guest OS with minimal
@@ -1416,10 +1379,7 @@ controls the availability of the hardware performance monitoring
 counters to the guest virtual machine.</p>
 </div>
 <div class="paragraph">
-<div class="title">Hypervisor counter-enable register (<code>hcounteren</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hcounterenreg.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/hcounterenreg.edn[]</div>
 <p>When the CY, TM, IR, or HPM_n_ bit in the <code>hcounteren</code> register is
 clear, attempts to read the <code>cycle</code>, <code>time</code>, <code>instret</code>, or
 <code>hpmcounter</code> <em>n</em> register while V=1 will cause a virtual-instruction
@@ -1459,10 +1419,7 @@ values of <code>htimedelta</code> may be used to represent negative time offsets
 </table>
 </div>
 <div class="paragraph">
-<div class="title">Hypervisor time delta register.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/htimedelta.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/htimedelta.edn[]</div>
 <p>When XLEN=32, <code>htimedeltah</code> is a 32-bit read/write register
 that aliases bits 63:32 of <code>htimedelta</code>.
 Register <code>htimedeltah</code> does not exist when XLEN=64.</p>
@@ -1476,15 +1433,12 @@ must be implemented.</p>
 <h4 id="hypervisor-trap-value-htval-register"><a class="anchor" href="#hypervisor-trap-value-htval-register"></a>Hypervisor Trap Value (<code>htval</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>htval</code> register is an HSXLEN-bit read/write register formatted as
-shown in <a href="#htvalreg">Hypervisor trap value register (<code>htval</code>).</a>. When a trap is taken into
+shown in <a href="#htvalreg">./images/bytefieldefield/htvalreg.edn[]</a>. When a trap is taken into
 HS-mode, <code>htval</code> is written with additional exception-specific
 information, alongside <code>stval</code>, to assist software in handling the trap.</p>
 </div>
 <div id="htvalreg" class="paragraph">
-<div class="title">Hypervisor trap value register (<code>htval</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/htvalreg.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/htvalreg.edn[]</div>
 <p>When a guest-page-fault trap is taken into HS-mode, <code>htval</code> is written
 with either zero or the guest physical address that faulted, shifted
 right by 2 bits. For other traps, <code>htval</code> is set to zero, but a future
@@ -1562,17 +1516,14 @@ confirm the stored value.</p>
 <h4 id="hypervisor-trap-instruction-htinst-register"><a class="anchor" href="#hypervisor-trap-instruction-htinst-register"></a>Hypervisor Trap Instruction (<code>htinst</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>htinst</code> register is an HSXLEN-bit read/write register formatted as
-shown in <a href="#htinstreg">Hypervisor trap instruction (<code>htinst</code>) register.</a>. When a trap is taken into
+shown in <a href="#htinstreg">./images/bytefieldefield/htinstreg.edn[]</a>. When a trap is taken into
 HS-mode, <code>htinst</code> is written with a value that, if nonzero, provides
 information about the instruction that trapped, to assist software in
 handling the trap. The values that may be written to <code>htinst</code> on a trap
 are documented in <a href="#tinst-vals">Transformed Instruction or Pseudoinstruction for <code>mtinst</code> or <code>htinst</code></a>.</p>
 </div>
 <div id="htinstreg" class="paragraph">
-<div class="title">Hypervisor trap instruction (<code>htinst</code>) register.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/htinstreg.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/htinstreg.edn[]</div>
 <p><code>htinst</code> is a <strong>WARL</strong> register that need only be able to hold the values that
 the implementation may automatically write to it on a trap.</p>
 </div>
@@ -1581,8 +1532,8 @@ the implementation may automatically write to it on a trap.</p>
 <h4 id="hgatp"><a class="anchor" href="#hgatp"></a>Hypervisor Guest Address Translation and Protection (<code>hgatp</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>hgatp</code> register is an HSXLEN-bit read/write register, formatted as
-shown in <a href="#rv32hgatp">Hypervisor guest address translation and protection register <code>hgatp</code> when HSXLEN=32.</a> for HSXLEN=32 and
-<a href="#rv64hgatp">Hypervisor guest address translation and protection register <code>hgatp</code> when HSXLEN=64 for MODE values Bare, Sv39x4, and Sv57x4.</a> for HSXLEN=64, which controls
+shown in <a href="#rv32hgatp">[rv32hgatp]</a> for HSXLEN=32 and
+<a href="#rv64hgatp">./images/bytefieldefield/rv64hgatp.edn[]</a> for HSXLEN=64, which controls
 G-stage address translation and protection, the second stage of
 two-stage translation for guest virtual addresses (see
 <a href="#two-stage-translation">Two-Stage Address Translation</a>). Similar to CSR <code>satp</code>, this
@@ -1593,15 +1544,8 @@ field, which selects the address-translation scheme for guest physical
 addresses. When <code>mstatus</code>.TVM=1, attempts to read or write <code>hgatp</code> while
 executing in HS-mode will raise an illegal-instruction exception.</p>
 </div>
-<div id="rv32hgatp" class="paragraph">
-<div class="title">Hypervisor guest address translation and protection register <code>hgatp</code> when HSXLEN=32.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/rv32hgatp.edn[]</p>
-</div>
 <div id="rv64hgatp" class="paragraph">
-<div class="title">Hypervisor guest address translation and protection register <code>hgatp</code> when HSXLEN=64 for MODE values Bare, Sv39x4, and Sv57x4.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/rv64hgatp.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/rv64hgatp.edn[]</div>
 <p><a href="#hgatp-mode">Encoding of <code>hgatp</code> MODE field.</a> shows the encodings of the MODE field when
 HSXLEN=32 and HSXLEN=64. When MODE=Bare, guest physical addresses are
 equal to supervisor physical addresses, and there is no further memory
@@ -1847,35 +1791,21 @@ double trap (See <a href="#supv-double-trap">[supv-double-trap]</a>) in VS-mode.
 <div class="paragraph">
 <p>The <code>vsip</code> and <code>vsie</code> registers are VSXLEN-bit read/write registers that
 are VS-mode’s versions of supervisor CSRs <code>sip</code> and <code>sie</code>, formatted as
-shown in <a href="#vsipreg">Virtual supervisor interrupt-pending register (<code>vsip</code>).</a> and <a href="#vsiereg">Virtual supervisor interrupt-enable register (<code>vsie</code>).</a>
+shown in <a href="#vsipreg">[vsipreg]</a> and <a href="#vsiereg">./images/bytefieldefield/vsiereg.edn[]</a>
 respectively. When V=1, <code>vsip</code> and <code>vsie</code> substitute for the usual <code>sip</code>
 and <code>sie</code>, so instructions that normally read or modify <code>sip</code>/<code>sie</code>
 actually access <code>vsip</code>/<code>vsie</code> instead. However, interrupts directed to
 HS-level continue to be indicated in the HS-level <code>sip</code> register, not in
 <code>vsip</code>, when V=1.</p>
 </div>
-<div id="vsipreg" class="paragraph">
-<div class="title">Virtual supervisor interrupt-pending register (<code>vsip</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/vsipreg.edn[]</p>
-</div>
 <div id="vsiereg" class="paragraph">
-<div class="title">Virtual supervisor interrupt-enable register (<code>vsie</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/vsiereg.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/vsiereg.edn[]</div>
 <p>The standard portions (bits 15:0) of registers <code>vsip</code> and <code>vsie</code> are
-formatted as shown in <a href="#vsipreg-standard">Standard portion (bits 15:0) of <code>vsip</code>.</a>
-and <a href="#vsiereg-standard">Standard portion (bits 15:0) of <code>vsie</code>.</a> respectively.</p>
-</div>
-<div id="vsipreg-standard" class="paragraph">
-<div class="title">Standard portion (bits 15:0) of <code>vsip</code>.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/vsipreg-standard.edn[]</p>
+formatted as shown in <a href="#vsipreg-standard">[vsipreg-standard]</a>
+and <a href="#vsiereg-standard">./images/bytefieldefield/vsiereg-standard.edn[]</a> respectively.</p>
 </div>
 <div id="vsiereg-standard" class="paragraph">
-<div class="title">Standard portion (bits 15:0) of <code>vsie</code>.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/vsiereg-standard.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/vsiereg-standard.edn[]</div>
 <p>Extension Shlcofideleg supports delegating LCOFI interrupts to VS-mode.
 If the Shlcofideleg extension is implemented, <code>hideleg</code> bit 13 is
 writable; otherwise, it is read-only zero.
@@ -1905,37 +1835,31 @@ read-only zeros. Else, <code>vsip</code>.SSIP and <code>vsie</code>.SSIE are ali
 <div class="paragraph">
 <p>The <code>vstvec</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>stvec</code>, formatted as shown in
-<a href="#vstvecreg">Virtual supervisor trap vector base address register <code>vstvec</code>.</a>. When V=1, <code>vstvec</code> substitutes for
+<a href="#vstvecreg">Virtual Supervisor Scratch (<code>vsscratch</code>) Register</a>. When V=1, <code>vstvec</code> substitutes for
 the usual <code>stvec</code>, so instructions that normally read or modify <code>stvec</code>
 actually access <code>vstvec</code> instead. When V=0, <code>vstvec</code> does not directly
 affect the behavior of the machine.</p>
 </div>
-<div id="vstvecreg" class="paragraph">
-<div class="title">Virtual supervisor trap vector base address register <code>vstvec</code>.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/vstvecreg.edn[]</p>
-</div>
 </div>
 <div class="sect3">
-<h4 id="virtual-supervisor-scratch-vsscratch-register"><a class="anchor" href="#virtual-supervisor-scratch-vsscratch-register"></a>Virtual Supervisor Scratch (<code>vsscratch</code>) Register</h4>
+<h4 id="vstvecreg"><a class="anchor" href="#vstvecreg"></a>Virtual Supervisor Scratch (<code>vsscratch</code>) Register</h4>
 <div class="paragraph">
+<div class="title">./images/bytefieldefield/vstvecreg.edn[]</div>
 <p>The <code>vsscratch</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>sscratch</code>, formatted as shown
-in <a href="#vsscratchreg">Virtual supervisor scratch register <code>vsscratch</code>.</a>. When V=1, <code>vsscratch</code>
+in <a href="#vsscratchreg">Virtual Supervisor Exception Program Counter (<code>vsepc</code>) Register</a>. When V=1, <code>vsscratch</code>
 substitutes for the usual <code>sscratch</code>, so instructions that normally read
 or modify <code>sscratch</code> actually access <code>vsscratch</code> instead. The contents
 of <code>vsscratch</code> never directly affect the behavior of the machine.</p>
 </div>
-<div id="vsscratchreg" class="paragraph">
-<div class="title">Virtual supervisor scratch register <code>vsscratch</code>.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/vsscratchreg.edn[]</p>
-</div>
 </div>
 <div class="sect3">
-<h4 id="virtual-supervisor-exception-program-counter-vsepc-register"><a class="anchor" href="#virtual-supervisor-exception-program-counter-vsepc-register"></a>Virtual Supervisor Exception Program Counter (<code>vsepc</code>) Register</h4>
+<h4 id="vsscratchreg"><a class="anchor" href="#vsscratchreg"></a>Virtual Supervisor Exception Program Counter (<code>vsepc</code>) Register</h4>
 <div class="paragraph">
+<div class="title">./images/bytefieldefield/vsscratchreg.edn[]</div>
 <p>The <code>vsepc</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>sepc</code>, formatted as shown in
-<a href="#vsepcreg">Virtual supervisor exception program counter (<code>vsepc</code>).</a>. When V=1, <code>vsepc</code> substitutes for the
+<a href="#vsepcreg">Virtual Supervisor Cause (<code>vscause</code>) Register</a>. When V=1, <code>vsepc</code> substitutes for the
 usual <code>sepc</code>, so instructions that normally read or modify <code>sepc</code>
 actually access <code>vsepc</code> instead. When V=0, <code>vsepc</code> does not directly
 affect the behavior of the machine.</p>
@@ -1944,17 +1868,14 @@ affect the behavior of the machine.</p>
 <p><code>vsepc</code> is a <strong>WARL</strong> register that must be able to hold the same set of values
 that <code>sepc</code> can hold.</p>
 </div>
-<div id="vsepcreg" class="paragraph">
-<div class="title">Virtual supervisor exception program counter (<code>vsepc</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/vsepcreg.edn[]</p>
-</div>
 </div>
 <div class="sect3">
-<h4 id="virtual-supervisor-cause-vscause-register"><a class="anchor" href="#virtual-supervisor-cause-vscause-register"></a>Virtual Supervisor Cause (<code>vscause</code>) Register</h4>
+<h4 id="vsepcreg"><a class="anchor" href="#vsepcreg"></a>Virtual Supervisor Cause (<code>vscause</code>) Register</h4>
 <div class="paragraph">
+<div class="title">./images/bytefieldefield/vsepcreg.edn[]</div>
 <p>The <code>vscause</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>scause</code>, formatted as shown in
-<a href="#vscausereg">Virtual supervisor cause register (<code>vscause</code>).</a>. When V=1, <code>vscause</code> substitutes
+<a href="#vscausereg">Virtual Supervisor Trap Value (<code>vstval</code>) Register</a>. When V=1, <code>vscause</code> substitutes
 for the usual <code>scause</code>, so instructions that normally read or modify
 <code>scause</code> actually access <code>vscause</code> instead. When V=0, <code>vscause</code> does not
 directly affect the behavior of the machine.</p>
@@ -1963,17 +1884,14 @@ directly affect the behavior of the machine.</p>
 <p><code>vscause</code> is a <strong>WLRL</strong> register that must be able to hold the same set of
 values that <code>scause</code> can hold.</p>
 </div>
-<div id="vscausereg" class="paragraph">
-<div class="title">Virtual supervisor cause register (<code>vscause</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/vscausereg.edn[]</p>
-</div>
 </div>
 <div class="sect3">
-<h4 id="virtual-supervisor-trap-value-vstval-register"><a class="anchor" href="#virtual-supervisor-trap-value-vstval-register"></a>Virtual Supervisor Trap Value (<code>vstval</code>) Register</h4>
+<h4 id="vscausereg"><a class="anchor" href="#vscausereg"></a>Virtual Supervisor Trap Value (<code>vstval</code>) Register</h4>
 <div class="paragraph">
+<div class="title">./images/bytefieldefield/vscausereg.edn[]</div>
 <p>The <code>vstval</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>stval</code>, formatted as shown in
-<a href="#vstvalreg">Virtual supervisor trap value register (<code>vstval</code>).</a>. When V=1, <code>vstval</code> substitutes for
+<a href="#vstvalreg">Virtual Supervisor Address Translation and Protection (<code>vsatp</code>) Register</a>. When V=1, <code>vstval</code> substitutes for
 the usual <code>stval</code>, so instructions that normally read or modify <code>stval</code>
 actually access <code>vstval</code> instead. When V=0, <code>vstval</code> does not directly
 affect the behavior of the machine.</p>
@@ -1982,32 +1900,22 @@ affect the behavior of the machine.</p>
 <p><code>vstval</code> is a <strong>WARL</strong> register that must be able to hold the same set of values
 that <code>stval</code> can hold.</p>
 </div>
-<div id="vstvalreg" class="paragraph">
-<div class="title">Virtual supervisor trap value register (<code>vstval</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/vstvalreg.edn[]</p>
-</div>
 </div>
 <div class="sect3">
-<h4 id="virtual-supervisor-address-translation-and-protection-vsatp-register"><a class="anchor" href="#virtual-supervisor-address-translation-and-protection-vsatp-register"></a>Virtual Supervisor Address Translation and Protection (<code>vsatp</code>) Register</h4>
+<h4 id="vstvalreg"><a class="anchor" href="#vstvalreg"></a>Virtual Supervisor Address Translation and Protection (<code>vsatp</code>) Register</h4>
 <div class="paragraph">
+<div class="title">./images/bytefieldefield/vstvalreg.edn[]</div>
 <p>The <code>vsatp</code> register is a VSXLEN-bit read/write register that is
 VS-mode’s version of supervisor register <code>satp</code>, formatted as shown in
-<a href="#rv32vsatpreg">Virtual supervisor address translation and protection <code>vsatp</code> register when VSXLEN=32.</a> for VSXLEN=32 and <a href="#rv64vsatpreg">Virtual supervisor address translation and protection <code>vsatp</code> register when VSXLEN=64.</a> for VSXLEN=64. When V=1,
+<a href="#rv32vsatpreg">[rv32vsatpreg]</a> for VSXLEN=32 and <a href="#rv64vsatpreg">./images/bytefieldefield/rv64vsatpreg.edn[]</a> for VSXLEN=64. When V=1,
 <code>vsatp</code> substitutes for the usual <code>satp</code>, so instructions that normally
 read or modify <code>satp</code> actually access <code>vsatp</code> instead. <code>vsatp</code> controls
 VS-stage address translation, the first stage of two-stage translation
 for guest virtual addresses (see
 <a href="#two-stage-translation">Two-Stage Address Translation</a>).</p>
 </div>
-<div id="rv32vsatpreg" class="paragraph">
-<div class="title">Virtual supervisor address translation and protection <code>vsatp</code> register when VSXLEN=32.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/rv32vsatpreg.edn[]</p>
-</div>
 <div id="rv64vsatpreg" class="paragraph">
-<div class="title">Virtual supervisor address translation and protection <code>vsatp</code> register when VSXLEN=64.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/rv64vsatpreg.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/rv64vsatpreg.edn[]</div>
 <p>The <code>vsatp</code> register is considered <em>active</em> for the purposes of the
 address-translation algorithm <em>unless</em> the effective privilege mode is U
 and <code>hstatus</code>.HU=0. However, even when <code>vsatp</code> is active, VS-stage
@@ -2052,8 +1960,10 @@ instructions and two privileged fence instructions.</p>
 </div>
 <div class="sect3">
 <h4 id="hypervisor-virtual-machine-load-and-store-instructions"><a class="anchor" href="#hypervisor-virtual-machine-load-and-store-instructions"></a>Hypervisor Virtual-Machine Load and Store Instructions</h4>
-<div class="paragraph">
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/wavedrom/hypv-virt-load-and-store.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNp1kc8LgjAcxe_9FbvtMqwUGXgPDAoi0wrxYNssD2lsiw7i_94mzNzC03v78XlvfNdxdo9AvgCgu9VSRAAj0JRPFgHYvkhLGUSglJKrOxBDBJNrctrs1ea_K3r0iwnHGE4nEaGKoExIjRld2WQwktW7ITKY0MrDw3GbDa2OmWsXa6e-pJRrzNJZ2nfoPC00FO-yi1bBic1i-_XYGZ_ivE9N5cOEeHG6PKfDKjFHOrBAgLRNVavPMXPx-_4LFKB5Bw==" alt="svg">
+</div>
 </div>
 <div class="paragraph">
 <p>The hypervisor virtual-machine load and store instructions are valid
@@ -2124,8 +2034,10 @@ illegal-instruction exception.</p>
 </div>
 <div class="sect3">
 <h4 id="hfence.vma"><a class="anchor" href="#hfence.vma"></a>Hypervisor Memory-Management Fence Instructions</h4>
-<div class="paragraph">
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/wavedrom/hypv-mm-fence.edn[]</p>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRNwey1YMjg0NcfZFYsbU6CN2mcN1FKUg6TdV11A1AegxQlRvDlaeV5iWXGCNpAbLVA4I8w0C6wDQue4oN0SwqS0xJKQJpSwczcOozQtOXWJwJcrN6WS6QRtFljupMc9QwUfdwc_VzdtULC_N1BOmHct1BXJAxsToKyfl5aZnAcIZ526i2FgDI1Gn-" alt="svg">
+</div>
 </div>
 <div class="paragraph">
 <p>The hypervisor memory-management fence instructions, HFENCE.VVMA and
@@ -2302,23 +2214,16 @@ when <code>mstatus</code>.TVM=1 also causes an illegal-instruction exception.</p
 <p>The hypervisor extension adds two fields, MPV and GVA, to the
 machine-level <code>mstatus</code> or <code>mstatush</code> CSR, and modifies the behavior of
 several existing <code>mstatus</code> fields.
-<a href="#hypervisor-mstatus">Machine status (<code>mstatus</code>) register for RV64 when the hypervisor extension is implemented.</a> shows the modified
+<a href="#hypervisor-mstatus">[hypervisor-mstatus]</a> shows the modified
 <code>mstatus</code> register when the hypervisor extension is implemented and
 MXLEN=64. When MXLEN=32, the hypervisor extension adds MPV and GVA not
 to <code>mstatus</code> but to <code>mstatush</code>.
-<a href="#hypervisor-mstatush">Additional machine status (<code>mstatush</code>) register for RV32 when the hypervisor extension is implemented.  The format of <code>mstatus</code> is unchanged for RV32.</a> shows the
+<a href="#hypervisor-mstatush">./images/bytefieldefield/hypv-mstatush.edn[]</a> shows the
 <code>mstatush</code> register when the hypervisor extension is implemented and
 MXLEN=32.</p>
 </div>
-<div id="hypervisor-mstatus" class="paragraph">
-<div class="title">Machine status (<code>mstatus</code>) register for RV64 when the hypervisor extension is implemented.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hypv-mstatus.edn[]</p>
-</div>
 <div id="hypervisor-mstatush" class="paragraph">
-<div class="title">Additional machine status (<code>mstatush</code>) register for RV32 when the hypervisor extension is implemented.  The format of <code>mstatus</code> is unchanged for RV32.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hypv-mstatush.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/hypv-mstatush.edn[]</div>
 <p>The MPV bit (Machine Previous Virtualization Mode) is written by the
 implementation whenever a trap is taken into M-mode. Just as the MPP
 field is set to the (nominal) privilege mode at the time of the trap,
@@ -2480,19 +2385,12 @@ past M-mode to HS-mode.</p>
 <h4 id="machine-interrupt-mip-and-mie-registers"><a class="anchor" href="#machine-interrupt-mip-and-mie-registers"></a>Machine Interrupt (<code>mip</code> and <code>mie</code>) Registers</h4>
 <div class="paragraph">
 <p>The hypervisor extension gives registers <code>mip</code> and <code>mie</code> additional
-active bits for the hypervisor-added interrupts. <a href="#hypervisor-mipreg-standard">Standard portion (bits 15:0) of <code>mip</code>.</a> and <a href="#hypervisor-miereg-standard">Standard portion (bits 15:0) of <code>mie</code>.</a> show the
+active bits for the hypervisor-added interrupts. <a href="#hypervisor-mipreg-standard">[hypervisor-mipreg-standard]</a> and <a href="#hypervisor-miereg-standard">./images/bytefieldefield/hypv-miereg-standard.edn[]</a> show the
 standard portions (bits 15:0) of registers <code>mip</code> and <code>mie</code> when the
 hypervisor extension is implemented.</p>
 </div>
-<div id="hypervisor-mipreg-standard" class="paragraph">
-<div class="title">Standard portion (bits 15:0) of <code>mip</code>.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hypv-mipreg-standard.edn[]</p>
-</div>
 <div id="hypervisor-miereg-standard" class="paragraph">
-<div class="title">Standard portion (bits 15:0) of <code>mie</code>.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/hypv-miereg-standard.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/hypv-miereg-standard.edn[]</div>
 <p>Bits SGEIP, VSEIP, VSTIP, and VSSIP in <code>mip</code> are aliases for the same
 bits in hypervisor CSR <code>hip</code>, while SGEIE, VSEIE, VSTIE, and VSSIE in
 <code>mie</code> are aliases for the same bits in <code>hie</code>.</p>
@@ -2502,15 +2400,12 @@ bits in hypervisor CSR <code>hip</code>, while SGEIE, VSEIE, VSTIE, and VSSIE in
 <h4 id="machine-second-trap-value-mtval2-register"><a class="anchor" href="#machine-second-trap-value-mtval2-register"></a>Machine Second Trap Value (<code>mtval2</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>mtval2</code> register is an MXLEN-bit read/write register formatted as
-shown in <a href="#mtval2reg">Machine second trap value register (<code>mtval2</code>).</a>. When a trap is taken into
+shown in <a href="#mtval2reg">./images/bytefieldefield/mtval2reg.edn[]</a>. When a trap is taken into
 M-mode, <code>mtval2</code> is written with additional exception-specific
 information, alongside <code>mtval</code>, to assist software in handling the trap.</p>
 </div>
 <div id="mtval2reg" class="paragraph">
-<div class="title">Machine second trap value register (<code>mtval2</code>).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/mtval2reg.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/mtval2reg.edn[]</div>
 <p>When a guest-page-fault trap is taken into M-mode, <code>mtval2</code> is written
 with either zero or the guest physical address that faulted, shifted
 right by 2 bits. For other traps, <code>mtval2</code> is set to zero, but a future
@@ -2545,17 +2440,14 @@ the <code>mtval2</code> CSR.</p>
 <h4 id="machine-trap-instruction-mtinst-register"><a class="anchor" href="#machine-trap-instruction-mtinst-register"></a>Machine Trap Instruction (<code>mtinst</code>) Register</h4>
 <div class="paragraph">
 <p>The <code>mtinst</code> register is an MXLEN-bit read/write register formatted as
-shown in <a href="#mtinstreg">Machine trap instruction (<code>mtinst</code>) register.</a>. When a trap is taken into
+shown in <a href="#mtinstreg">./images/bytefieldefield/mtinstreg.edn[]</a>. When a trap is taken into
 M-mode, <code>mtinst</code> is written with a value that, if nonzero, provides
 information about the instruction that trapped, to assist software in
 handling the trap. The values that may be written to <code>mtinst</code> on a trap
 are documented in <a href="#tinst-vals">Transformed Instruction or Pseudoinstruction for <code>mtinst</code> or <code>htinst</code></a>.</p>
 </div>
 <div id="mtinstreg" class="paragraph">
-<div class="title">Machine trap instruction (<code>mtinst</code>) register.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/mtinstreg.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/mtinstreg.edn[]</div>
 <p><code>mtinst</code> is a <strong>WARL</strong> register that need only be able to hold the values that
 the implementation may automatically write to it on a trap.</p>
 </div>
@@ -2622,7 +2514,7 @@ formats as documented in <a href="#sv32">[sv32]</a>, <a href="#sv39">[sv39]</a>,
 <div class="paragraph">
 <p>For Sv32x4, an incoming guest physical address is partitioned into a
 virtual page number (VPN) and page offset as shown in
-<a href="#sv32x4va">Sv32x4 virtual address (guest physical address).</a>. This partitioning is identical to
+<a href="#sv32x4va">./images/bytefieldefield/sv32x4va.edn[]</a>. This partitioning is identical to
 that for an Sv32 virtual address as depicted in
 <a href="#sv32va">[sv32va]</a>, except with 2 more bits at the
 high end in VPN[1]. (Note that the fields of a partitioned guest
@@ -2631,50 +2523,38 @@ Sv32 assigns to a physical address, depicted in
 <a href="#sv32va">[sv32va]</a>.)</p>
 </div>
 <div id="sv32x4va" class="paragraph">
-<div class="title">Sv32x4 virtual address (guest physical address).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/sv32x4va.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/sv32x4va.edn[]</div>
 <p>For Sv39x4, an incoming guest physical address is partitioned as shown
-in <a href="#sv39x4va">Sv39x4 virtual address (guest physical address).</a>. This partitioning is identical to that for an Sv39 virtual address as depicted in <a href="#sv39va">[sv39va]</a>, except with 2 more bits at the
+in <a href="#sv39x4va">./images/bytefieldefield/sv39x4va.edn[]</a>. This partitioning is identical to that for an Sv39 virtual address as depicted in <a href="#sv39va">[sv39va]</a>, except with 2 more bits at the
 high end in VPN[2]. Address bits 63:41 must all be zeros, or else a
 guest-page-fault exception occurs.</p>
 </div>
 <div id="sv39x4va" class="paragraph">
-<div class="title">Sv39x4 virtual address (guest physical address).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/sv39x4va.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/sv39x4va.edn[]</div>
 <p>For Sv48x4, an incoming guest physical address is partitioned as shown
-in <a href="#sv48x4va">Sv48x4 virtual address (guest physical address).</a>. This partitioning is identical to
+in <a href="#sv48x4va">./images/bytefieldefield/sv48x4va.edn[]</a>. This partitioning is identical to
 that for an Sv48 virtual address as depicted in
 <a href="#sv48va">[sv48va]</a>, except with 2 more bits at the
 high end in VPN[3]. Address bits 63:50 must all be zeros, or else a
 guest-page-fault exception occurs.</p>
 </div>
 <div id="sv48x4va" class="paragraph">
-<div class="title">Sv48x4 virtual address (guest physical address).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/sv48x4va.edn[]</p>
-</div>
-<div class="paragraph">
+<div class="title">./images/bytefieldefield/sv48x4va.edn[]</div>
 <p>For Sv57x4, an incoming guest physical address is partitioned as shown
-in <a href="#sv57x4va">Sv57x4 virtual address (guest physical address).</a>. This partitioning is identical to
+in <a href="#sv57x4va">./images/bytefieldefield/sv57x4va.edn[]</a>. This partitioning is identical to
 that for an Sv57 virtual address as depicted in
 <a href="#sv57va">[sv57va]</a>, except with 2 more bits at the
 high end in VPN[4]. Address bits 63:59 must all be zeros, or else a
 guest-page-fault exception occurs.</p>
 </div>
-<div id="sv57x4va" class="paragraph">
-<div class="title">Sv57x4 virtual address (guest physical address).</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/bytefield/sv57x4va.edn[]</p>
-</div>
-<div class="admonitionblock note">
+<div id="sv57x4va" class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
+<div class="title">./images/bytefieldefield/sv57x4va.edn[]</div>
 <div class="paragraph">
 <p>The page-based G-stage address translation scheme for RV32, Sv32x4, is
 defined to support a 34-bit guest physical address so that an RV32
@@ -3680,9 +3560,11 @@ is one of LB, LBU, LH, LHU, LW, LWU, LD, FLW, FLD, FLQ, or FLH, the
 transformed instruction has the format shown in
 <a href="#transformedloadinst">Transformed noncompressed load instruction (LB, LBU, LH, LHU, LW, LWU, LD, FLW, FLD, FLQ, or FLH). Fields funct3, rd, and opcode are the same as the trapping load instruction.</a>.</p>
 </div>
-<div id="transformedloadinst" class="paragraph">
-<div class="title">Transformed noncompressed load instruction (LB, LBU, LH, LHU, LW, LWU, LD, FLW, FLD, FLQ, or FLH). Fields funct3, rd, and opcode are the same as the trapping load instruction.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/wavedrom/transformedloadinst.edn[]</p>
+<div id="transformedloadinst" class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1ePrdVBqDSFqyxKQVJliqrKGK4qrTQvucQYSaUxLvMcU1KK9BT809KKU0twm4xQb4BbkTlWRRCfxOooJOfnpWUCAwDmWKPaWgDCBE9P?id=transformedloadinst" alt="Transformed noncompressed load instruction (LB, LBU, LH, LHU, LW, LWU, LD, FLW, FLD, FLQ, or FLH). Fields funct3, rd, and opcode are the same as the trapping load instruction.">
+</div>
+<div class="title">Figure 4. Transformed noncompressed load instruction (LB, LBU, LH, LHU, LW, LWU, LD, FLW, FLD, FLQ, or FLH). Fields funct3, rd, and opcode are the same as the trapping load instruction.</div>
 </div>
 <div class="paragraph">
 <p>For a standard store instruction that is not a compressed instruction
@@ -3690,23 +3572,29 @@ and is one of SB, SH, SW, SD, FSW, FSD, FSQ, or FSH, the transformed
 instruction has the format shown in
 <a href="#transformedstoreinst">Transformed noncompressed store instruction (SB, SH, SW, SD, FSW, FSD, FSQ, or FSH). Fields rs2, funct3, and opcode are the same as the trapping store instruction.</a>.</p>
 </div>
-<div id="transformedstoreinst" class="paragraph">
-<div class="title">Transformed noncompressed store instruction (SB, SH, SW, SD, FSW, FSD, FSQ, or FSH). Fields rs2, funct3, and opcode are the same as the trapping store instruction.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/wavedrom/transformedstoreinst.edn[]</p>
+<div id="transformedstoreinst" class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1ePrdVBqDSFqzRAUmSKqsgYriitNC-5xBhJpTEu4xxTUor0FPzT0opTS3CbjFBfVGyEW5k5VldCvBKro5Ccn5eWCQwBmHONamsB4PtPkA==?id=transformedstoreinst" alt="Transformed noncompressed store instruction (SB, SH, SW, SD, FSW, FSD, FSQ, or FSH). Fields rs2, funct3, and opcode are the same as the trapping store instruction.">
+</div>
+<div class="title">Figure 5. Transformed noncompressed store instruction (SB, SH, SW, SD, FSW, FSD, FSQ, or FSH). Fields rs2, funct3, and opcode are the same as the trapping store instruction.</div>
 </div>
 <div class="paragraph">
 <p>For a standard atomic instruction (load-reserved, store-conditional, or AMO instruction), the transformed instruction has the format shown in <a href="#transformedatomicinst">Transformed atomic instruction (load-reserved, store-conditional, or AMO instruc-tion). All fields are the same as the trapping instruction except bits 19:15, Addr. Offset.</a>.</p>
 </div>
-<div id="transformedatomicinst" class="paragraph">
-<div class="title">Transformed atomic instruction (load-reserved, store-conditional, or AMO instruc-tion). All fields are the same as the trapping instruction except bits 19:15, Addr. Offset.</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/wavedrom/transformedatomicinst.edn[]</p>
+<div id="transformedatomicinst" class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1ePrdVBqDSFqyxKQVJliqrKGK4qrTQvucQYSaUxLvMcU1KK9BT809KKU0twm4xkf7ERbmWGCGU5SKoMcalKLMStyhTVM6YYtsbqKCTn56VlAsMU5n-j2loAbOxntw==?id=transformedatomicinst" alt="Transformed atomic instruction (load-reserved, store-conditional, or AMO instruc-tion). All fields are the same as the trapping instruction except bits 19:15, Addr. Offset.">
+</div>
+<div class="title">Figure 6. Transformed atomic instruction (load-reserved, store-conditional, or AMO instruc-tion). All fields are the same as the trapping instruction except bits 19:15, Addr. Offset.</div>
 </div>
 <div class="paragraph">
 <p>For a standard virtual-machine load/store instruction (HLV, HLVX, or HSV), the transformed instruction has the format shown in <a href="#transformedvmaccessinst">Transformed virtual-machine load/store instruction (HLV, HLVX, HSV). All fields are the same as the trapping instruction except bits 19:15, Addr. Offset</a>.</p>
 </div>
-<div id="transformedvmaccessinst" class="paragraph">
-<div class="title">Transformed virtual-machine load/store instruction (HLV, HLVX, HSV). All fields are the same as the trapping instruction except bits 19:15, Addr. Offset</div>
-<p>Unresolved include directive in modules/priv/pages/hypervisor.adoc - include::images/wavedrom/transformedvmaccessinst.edn[]</p>
+<div id="transformedvmaccessinst" class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1ePrdVBqDSFqyxKQVJliqrKGK4qrTQvucQYSaUxLvMcU1KK9BT809KKU0twm4xkf7ERbmXmqA4wx_BQrI5Ccn5eWiYwHGBuNqqtBQAsyFJd?id=transformedvmaccessinst" alt="Transformed virtual-machine load/store instruction (HLV, HLVX, HSV). All fields are the same as the trapping instruction except bits 19:15, Addr. Offset">
+</div>
+<div class="title">Figure 7. Transformed virtual-machine load/store instruction (HLV, HLVX, HSV). All fields are the same as the trapping instruction except bits 19:15, Addr. Offset</div>
 </div>
 <div class="paragraph">
 <p>In all the transformed instructions above, the Addr. Offset field that
@@ -3924,47 +3812,198 @@ to 0. When executed in VS-mode, <code>vsstatus.SDT</code> is set to 0.</p>
               </button>
               <div class="colset">
                 <div class="col-left">
+
                   <ul class="nav-versions">
-                    <li class="component">
-                      <a class="title" href="../../etrace/v1.0/index.html">E-Trace Encapsulation Specification</a>
-                      <ul class="versions">
-                        <li class="version is-latest">
-                          <a href="../../etrace/v1.0/index.html">
-                            v1.0<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="component">
-                      <a class="title" href="../../psabi/v1.0/index.html">ELF psABI Specification</a>
-                      <ul class="versions">
-                        <li class="version is-latest">
-                          <a href="../../psabi/v1.0/index.html">
-                            v1.0<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="component is-current">
-                      <a class="title" href="../index.html">ISA Specifications</a>
-                      <ul class="versions">
-                        <li class="version is-current is-latest">
-                          <a href="../index.html">
-                            default<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="component">
-                      <a class="title" href="../../qos/v1.0/index.html">RISC-V Capacity and Bandwidth QoS Register Interface</a>
-                      <ul class="versions">
-                        <li class="version is-latest">
-                          <a href="../../qos/v1.0/index.html">
-                            v1.0<span class="current">current</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../ffh/v1.0/index.html">ACPI Functional Fixed Hardware</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../ffh/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../aia/v1.0/index.html">Advanced Interrupt Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../aia/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../etrace/v1.0/index.html">E-Trace Encapsulation Specification</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../etrace/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../psabi/v1.0/index.html">ELF psABI Specification</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../psabi/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../iommuArch/v1.0/index.html">IOMMU Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../iommuArch/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../index.html">ISA Specifications</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../index.html">
+      default
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../reri/v1.0/index.html">RERI Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../reri/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../qos/v1.0/index.html">RISC-V Capacity and Bandwidth QoS Register Interface</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../qos/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../plic/v1.0.0/index.html">RISC-V Platform-Level Interrupt Controller</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../plic/v1.0.0/index.html">
+      v1.0.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../semihost/v1.0/index.html">semihosting</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../semihost/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
                   </ul>
                 </div>
                 <div class="col-right">
