@@ -91,4 +91,4 @@ ui:
     #url: https://github.com/spring-io/antora-ui-spring/releases/download/v0.4.16/ui-bundle.zip
     url: https://github.com/riscv-admin/riscv-antora-ui/releases/download/latest/ui-bundle.zip
     snapshot: true
-  supplemental_files: ./supplemental-ui
+  supplemental_files: ./supplimental-ui
