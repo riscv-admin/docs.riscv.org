@@ -1,6 +1,8 @@
-antora/build/
+antora/build
 antora/node_modules/
+antora/yarn.lock
 .DS_Store
 .docusaurus
 build
 node_modules
+yarn.lock
