@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: RISC-V Ratified Specifications Library</title>
+    <link rel="prev" href="naming.html">
+    <link rel="next" href="mm-eplan.html">
+    <meta name="generator" content="Antora 3.1.12">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
+
+    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
+    <meta name="version" content="">
+    <meta name="component" content="isa">
+    <meta name="latest-version" content="false">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/vnd.microsoft.icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <script>
+    console.log("--- Antora Objects ---");
+    // window.addEventListener('popstate', function(event) {
+    //   console.log('URL changed to: ' + document.location.pathname);
+    // });
+    var locationObject = window.location;
+    var pathnameToChange = locationObject.pathname;
+    console.log(pathnameToChange)
+    console.log(locationObject)
+
+    // window.location.assign("test")
+
+    // do stuffs to "copy" of pathname, this will not reload the page
+    // var myNewPathname = doSomethingMyPathname( pathnameToChange );
+
+  </script>
+
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">RISC-V Ratified Specifications Library</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="isa" data-version="">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">ISA Specifications</span>
+  <span class="version">default</span>
+  <button class="browse-version" id="browse-version">
+    <svg
+      height="24px"
+      id="Layer_1"
+      style="enable-background:new 0 0 512 512;"
+      version="1.1"
+      viewBox="0 0 512 512"
+      width="24px"
+      xml:space="preserve"
+    ><g><path
+          d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"
+        ></path><path
+          d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"
+        ></path><path
+          d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"
+        ></path></g></svg>
+  </button>
+  </div><ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="colophon.html">Preface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="rv32.html">RV32I Base Integer Instruction Set</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="rv32.html">RV64I Base Integer Instruction Set</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="zicsr.html">"Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="counters.html">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="zihintntl.html">"Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="zihintpause.html">"Zihintpause" Extension for Pause Hint, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="zawrs.html">"Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="zacas.html">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="zabha.html">"Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="rvwmo.html">RVWMO Memory Consistency Model, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="bfloat16.html">"BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="unpriv-cfi.html">Control-flow Integrity (CFI)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="extending.html">Extending RISC-V</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link"  href="history.html">History and Acknowledgments</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="vector-examples.html">Appendix C: Vector Assembly Code Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="calling-convention.html">Appendix D: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Volume II: RISC-V Privileged ISA Specification</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/priv-intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/priv-history.html">History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/bibliography.html">Bibliography</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button id="nav-toggle-1" class="nav-toggle"></button>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div
+      class="toc"
+      data-title=""
+      data-levels="2"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="https://github.com/riscv/riscv-isa-manual/edit/antora-refactor/modules/unpriv/pages/history.adoc">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Edit this Page
+        </a>
+              <a href="https://github.com/riscv/riscv-isa-manual" title="GitHub">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><![CDATA[
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          GitHub Project
+        </a>
+    </div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">ISA Specifications</a></li>
+      <li>Volume I: RISC-V Unprivileged ISA Specification</li>
+      <li><a href="history.html">History and Acknowledgments</a></li>
+    </ul>
+  </nav>
+</div><div class="sect1">
+<h2 id="history"><a class="anchor" href="#history"></a>History and Acknowledgments</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="why-develop-a-new-isa-rationale-from-berkeley-group"><a class="anchor" href="#why-develop-a-new-isa-rationale-from-berkeley-group"></a>"Why Develop a new ISA?" Rationale from Berkeley Group</h3>
+<div class="paragraph">
+<p>We developed RISC-V to support our own needs in research and education,
+where our group is particularly interested in actual hardware
+implementations of research ideas (we have completed eleven different
+silicon fabrications of RISC-V since the first edition of this
+specification), and in providing real implementations for students to
+explore in classes (RISC-V processor RTL designs have been used in
+multiple undergraduate and graduate classes at Berkeley). In our current
+research, we are especially interested in the move towards specialized
+and heterogeneous accelerators, driven by the power constraints imposed
+by the end of conventional transistor scaling. We wanted a highly
+flexible and extensible base ISA around which to build our research
+effort.</p>
+</div>
+<div class="paragraph">
+<p>A question we have been repeatedly asked is "Why develop a new ISA?"
+The biggest obvious benefit of using an existing commercial ISA is the
+large and widely supported software ecosystem, both development tools
+and ported applications, which can be leveraged in research and
+teaching. Other benefits include the existence of large amounts of
+documentation and tutorial examples. However, our experience of using
+commercial instruction sets for research and teaching is that these
+benefits are smaller in practice, and do not outweigh the disadvantages:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Commercial ISAs are proprietary.</strong> Except for SPARC V8, which is an
+open IEEE standard cite:[sparcieee1994] , most owners of commercial ISAs carefully guard
+their intellectual property and do not welcome freely available
+competitive implementations. This is much less of an issue for academic
+research and teaching using only software simulators, but has been a
+major concern for groups wishing to share actual RTL implementations. It
+is also a major concern for entities who do not want to trust the few
+sources of commercial ISA implementations, but who are prohibited from
+creating their own clean room implementations. We cannot guarantee that
+all RISC-V implementations will be free of third-party patent
+infringements, but we can guarantee we will not attempt to sue a RISC-V
+implementor.</p>
+</li>
+<li>
+<p><strong>Commercial ISAs are only popular in certain market domains.</strong> The most
+obvious examples at time of writing are that the ARM architecture is not
+well supported in the server space, and the Intel x86 architecture (or
+for that matter, almost every other architecture) is not well supported
+in the mobile space, though both Intel and ARM are attempting to enter
+each other&#8217;s market segments. Another example is ARC and Tensilica,
+which provide extensible cores but are focused on the embedded space.
+This market segmentation dilutes the benefit of supporting a particular
+commercial ISA as in practice the software ecosystem only exists for
+certain domains, and has to be built for others.</p>
+</li>
+<li>
+<p><strong>Commercial ISAs come and go.</strong> Previous research infrastructures have
+been built around commercial ISAs that are no longer popular (SPARC,
+MIPS) or even no longer in production (Alpha). These lose the benefit of
+an active software ecosystem, and the lingering intellectual property
+issues around the ISA and supporting tools interfere with the ability of
+interested third parties to continue supporting the ISA. An open ISA
+might also lose popularity, but any interested party can continue using
+and developing the ecosystem.</p>
+</li>
+<li>
+<p><strong>Popular commercial ISAs are complex.</strong> The dominant commercial ISAs
+(x86 and ARM) are both very complex to implement in hardware to the
+level of supporting common software stacks and operating systems. Worse,
+nearly all the complexity is due to bad, or at least outdated, ISA
+design decisions rather than features that truly improve efficiency.</p>
+</li>
+<li>
+<p><strong>Commercial ISAs alone are not enough to bring up applications.</strong> Even
+if we expend the effort to implement a commercial ISA, this is not
+enough to run existing applications for that ISA. Most applications need
+a complete ABI (application binary interface) to run, not just the
+user-level ISA. Most ABIs rely on libraries, which in turn rely on
+operating system support. To run an existing operating system requires
+implementing the supervisor-level ISA and device interfaces expected by
+the OS. These are usually much less well-specified and considerably more
+complex to implement than the user-level ISA.</p>
+</li>
+<li>
+<p><strong>Popular commercial ISAs were not designed for extensibility.</strong> The
+dominant commercial ISAs were not particularly designed for
+extensibility, and as a consequence have added considerable instruction
+encoding complexity as their instruction sets have grown. Companies such
+as Tensilica (acquired by Cadence) and ARC (acquired by Synopsys) have
+built ISAs and toolchains around extensibility, but have focused on
+embedded applications rather than general-purpose computing systems.</p>
+</li>
+<li>
+<p><strong>A modified commercial ISA is a new ISA.</strong> One of our main goals is to
+support architecture research, including major ISA extensions. Even
+small extensions diminish the benefit of using a standard ISA, as
+compilers have to be modified and applications rebuilt from source code
+to use the extension. Larger extensions that introduce new architectural
+state also require modifications to the operating system. Ultimately,
+the modified commercial ISA becomes a new ISA, but carries along all the
+legacy baggage of the base ISA.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Our position is that the ISA is perhaps the most important interface in
+a computing system, and there is no reason that such an important
+interface should be proprietary. The dominant commercial ISAs are based
+on instruction-set concepts that were already well known over 30 years
+ago. Software developers should be able to target an open standard
+hardware target, and commercial processor designers should compete on
+implementation quality.</p>
+</div>
+<div class="paragraph">
+<p>We are far from the first to contemplate an open ISA design suitable for
+hardware implementation. We also considered other existing open ISA
+designs, of which the closest to our goals was the OpenRISC
+architecture cite:[openriscarch]. We decided against adopting the OpenRISC ISA for several
+technical reasons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>OpenRISC has condition codes and branch delay slots, which complicate
+higher performance implementations.</p>
+</li>
+<li>
+<p>OpenRISC uses a fixed 32-bit encoding and 16-bit immediates, which
+precludes a denser instruction encoding and limits space for later
+expansion of the ISA.</p>
+</li>
+<li>
+<p>OpenRISC does not support the 2008 revision to the IEEE 754
+floating-point standard.</p>
+</li>
+<li>
+<p>The OpenRISC 64-bit design had not been completed when we began.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By starting from a clean slate, we could design an ISA that met all of
+our goals, though of course, this took far more effort than we had
+planned at the outset. We have now invested considerable effort in
+building up the RISC-V ISA infrastructure, including documentation,
+compiler tool chains, operating system ports, reference ISA simulators,
+FPGA implementations, efficient ASIC implementations, architecture test
+suites, and teaching materials. Since the last edition of this manual,
+there has been considerable uptake of the RISC-V ISA in both academia
+and industry, and we have created the non-profit RISC-V Foundation to
+protect and promote the standard. The RISC-V Foundation website at
+<a href="https://riscv.org" class="bare">https://riscv.org</a> contains the latest information on the Foundation
+membership and various open-source projects using RISC-V.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="history-from-revision-1-0-of-isa-manual"><a class="anchor" href="#history-from-revision-1-0-of-isa-manual"></a>History from Revision 1.0 of ISA manual</h3>
+<div class="paragraph">
+<p>The RISC-V ISA and instruction-set manual builds upon several earlier
+projects. Several aspects of the supervisor-level machine and the
+overall format of the manual date back to the T0 (Torrent-0) vector
+microprocessor project at UC Berkeley and ICSI, begun in 1992. T0 was a
+vector processor based on the MIPS-II ISA, with Krste Asanović as main
+architect and RTL designer, and Brian Kingsbury and Bertrand Irrisou as
+principal VLSI implementors. David Johnson at ICSI was a major
+contributor to the T0 ISA design, particularly supervisor mode, and to
+the manual text. John Hauser also provided considerable feedback on the
+T0 ISA design.</p>
+</div>
+<div class="paragraph">
+<p>The Scale (Software-Controlled Architecture for Low Energy) project at
+MIT, begun in 2000, built upon the T0 project infrastructure, refined
+the supervisor-level interface, and moved away from the MIPS scalar ISA
+by dropping the branch delay slot. Ronny Krashinsky and Christopher
+Batten were the principal architects of the Scale Vector-Thread
+processor at MIT, while Mark Hampton ported the GCC-based compiler
+infrastructure and tools for Scale.</p>
+</div>
+<div class="paragraph">
+<p>A lightly edited version of the T0 MIPS scalar processor specification
+(MIPS-6371) was used in teaching a new version of the MIT 6.371
+Introduction to VLSI Systems class in the Fall 2002 semester, with Chris
+Terman and Krste Asanović as lecturers. Chris Terman contributed most of
+the lab material for the class (there was no TA!). The 6.371 class
+evolved into the trial 6.884 Complex Digital Design class at MIT, taught
+by Arvind and Krste Asanović in Spring 2005, which became a regular
+Spring class 6.375. A reduced version of the Scale MIPS-based scalar
+ISA, named SMIPS, was used in 6.884/6.375. Christopher Batten was the TA
+for the early offerings of these classes and developed a considerable
+amount of documentation and lab material based around the SMIPS ISA.
+This same SMIPS lab material was adapted and enhanced by TA Yunsup Lee
+for the UC Berkeley Fall 2009 CS250 VLSI Systems Design class taught by
+John Wawrzynek, Krste Asanović, and John Lazzaro.</p>
+</div>
+<div class="paragraph">
+<p>The Maven (Malleable Array of Vector-thread ENgines) project was a
+second-generation vector-thread architecture. Its design was led by
+Christopher Batten when he was an Exchange Scholar at UC Berkeley
+starting in summer 2007. Hidetaka Aoki, a visiting industrial fellow
+from Hitachi, gave considerable feedback on the early Maven ISA and
+microarchitecture design. The Maven infrastructure was based on the
+Scale infrastructure but the Maven ISA moved further away from the MIPS
+ISA variant defined in Scale, with a unified floating-point and integer
+register file. Maven was designed to support experimentation with
+alternative data-parallel accelerators. Yunsup Lee was the main
+implementor of the various Maven vector units, while Rimas Avižienis was
+the main implementor of the various Maven scalar units. Yunsup Lee and
+Christopher Batten ported GCC to work with the new Maven ISA.
+Christopher Celio provided the initial definition of a traditional
+vector instruction set ("Flood") variant of Maven.</p>
+</div>
+<div class="paragraph">
+<p>Based on experience with all these previous projects, the RISC-V ISA
+definition was begun in Summer 2010, with Andrew Waterman, Yunsup Lee,
+Krste Asanović, and David Patterson as principal designers. An initial
+version of the RISC-V 32-bit instruction subset was used in the UC
+Berkeley Fall 2010 CS250 VLSI Systems Design class, with Yunsup Lee as
+TA. RISC-V is a clean break from the earlier MIPS-inspired designs. John
+Hauser contributed to the floating-point ISA definition, including the
+sign-injection instructions and a register encoding scheme that permits
+internal recoding of floating-point values.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="history-from-revision-2-0-of-isa-manual"><a class="anchor" href="#history-from-revision-2-0-of-isa-manual"></a>History from Revision 2.0 of ISA manual</h3>
+<div class="paragraph">
+<p>Multiple implementations of RISC-V processors have been completed,
+including several silicon fabrications, as shown in
+<a href="#silicon">Fabricated RISC-V testchips table</a>.</p>
+</div>
+<table id="silicon" class="tableblock frame-all grid-all fit-content center">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Name</th>
+<th class="tableblock halign-center valign-top">Tapeout Date</th>
+<th class="tableblock halign-center valign-top">Process</th>
+<th class="tableblock halign-center valign-top">ISA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Raven-1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">May 29, 2011</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ST 28nm FDSOI</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">RV64G1_Xhwacha1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">EOS14</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">April 1, 2012</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">IBM 45nm SOI</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">RV64G1p1_Xhwacha2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">EOS16</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">August 17, 2012</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">IBM 45nm SOI</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">RV64G1p1_Xhwacha2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Raven-2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">August 22, 2012</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ST 28nm FDSOI</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">RV64G1p1_Xhwacha2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">EOS18</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">February 6, 2013</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">IBM 45nm SOI</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">RV64G1p1_Xhwacha2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">EOS20</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">July 3, 2013</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">IBM 45nm SOI</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">RV64G1p99_Xhwacha2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Raven-3</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">September 26, 2013</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ST 28nm SOI</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">RV64G1p99_Xhwacha2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">EOS22</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">March 7, 2014</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">IBM 45nm SOI</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">RV64G1p9999_Xhwacha3</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The first RISC-V processors to be fabricated were written in Verilog and
+manufactured in a pre-production FDSOI technology from ST as the Raven-1
+testchip in 2011. Two cores were developed by Yunsup Lee and Andrew
+Waterman, advised by Krste Asanović, and fabricated together: 1) an RV64
+scalar core with error-detecting flip-flops, and 2) an RV64 core with an
+attached 64-bit floating-point vector unit. The first microarchitecture
+was informally known as "TrainWreck", due to the short time available
+to complete the design with immature design libraries.</p>
+</div>
+<div class="paragraph">
+<p>Subsequently, a clean microarchitecture for an in-order decoupled RV64
+core was developed by Andrew Waterman, Rimas Avižienis, and Yunsup Lee,
+advised by Krste Asanović, and, continuing the railway theme, was
+codenamed "Rocket" after George Stephenson&#8217;s successful steam
+locomotive design. Rocket was written in Chisel, a new hardware design
+language developed at UC Berkeley. The IEEE floating-point units used in
+Rocket were developed by John Hauser, Andrew Waterman, and Brian
+Richards. Rocket has since been refined and developed further, and has
+been fabricated two more times in FDSOI (Raven-2, Raven-3), and five
+times in IBM SOI technology (EOS14, EOS16, EOS18, EOS20, EOS22) for a
+photonics project. Work is ongoing to make the Rocket design available
+as a parameterized RISC-V processor generator.</p>
+</div>
+<div class="paragraph">
+<p>EOS14-EOS22 chips include early versions of Hwacha, a 64-bit IEEE
+floating-point vector unit, developed by Yunsup Lee, Andrew Waterman,
+Huy Vo, Albert Ou, Quan Nguyen, and Stephen Twigg, advised by Krste
+Asanović. EOS16-EOS22 chips include dual cores with a cache-coherence
+protocol developed by Henry Cook and Andrew Waterman, advised by Krste
+Asanović. EOS14 silicon has successfully run at 1.25 GHz. EOS16 silicon suffered
+from a bug in the IBM pad libraries. EOS18 and EOS20 have successfully
+run at 1.35 GHz.</p>
+</div>
+<div class="paragraph">
+<p>Contributors to the Raven testchips include Yunsup Lee, Andrew Waterman,
+Rimas Avižienis, Brian Zimmer, Jaehwa Kwak, Ruzica Jevtić, Milovan
+Blagojević, Alberto Puggelli, Steven Bailey, Ben Keller, Pi-Feng Chiu,
+Brian Richards, Borivoje Nikolić, and Krste Asanović.</p>
+</div>
+<div class="paragraph">
+<p>Contributors to the EOS testchips include Yunsup Lee, Rimas Avižienis,
+Andrew Waterman, Henry Cook, Huy Vo, Daiwei Li, Chen Sun, Albert Ou,
+Quan Nguyen, Stephen Twigg, Vladimir Stojanović, and Krste Asanović.</p>
+</div>
+<div class="paragraph">
+<p>Andrew Waterman and Yunsup Lee developed the C++ ISA simulator
+"Spike", used as a golden model in development and named after the
+golden spike used to celebrate completion of the US transcontinental
+railway. Spike has been made available as a BSD open-source project.</p>
+</div>
+<div class="paragraph">
+<p>Andrew Waterman completed a Master&#8217;s thesis with a preliminary design of
+the RISC-V compressed instruction set cite:[waterman-ms].</p>
+</div>
+<div class="paragraph">
+<p>Various FPGA implementations of the RISC-V have been completed,
+primarily as part of integrated demos for the Par Lab project research
+retreats. The largest FPGA design has 3 cache-coherent RV64IMA
+processors running a research operating system. Contributors to the FPGA
+implementations include Andrew Waterman, Yunsup Lee, Rimas Avižienis,
+and Krste Asanović.</p>
+</div>
+<div class="paragraph">
+<p>RISC-V processors have been used in several classes at UC Berkeley.
+Rocket was used in the Fall 2011 offering of CS250 as a basis for class
+projects, with Brian Zimmer as TA. For the undergraduate CS152 class in
+Spring 2012, Christopher Celio used Chisel to write a suite of
+educational RV32 processors, named "Sodor" after the island on which
+"Thomas the Tank Engine" and friends live. The suite includes a
+microcoded core, an unpipelined core, and 2, 3, and 5-stage pipelined
+cores, and is publicly available under a BSD license. The suite was
+subsequently updated and used again in CS152 in Spring 2013, with Yunsup
+Lee as TA, and in Spring 2014, with Eric Love as TA. Christopher Celio
+also developed an out-of-order RV64 design known as BOOM (Berkeley
+Out-of-Order Machine), with accompanying pipeline visualizations, that
+was used in the CS152 classes. The CS152 classes also used
+cache-coherent versions of the Rocket core developed by Andrew Waterman
+and Henry Cook.</p>
+</div>
+<div class="paragraph">
+<p>Over the summer of 2013, the RoCC (Rocket Custom Coprocessor) interface
+was defined to simplify adding custom accelerators to the Rocket core.
+Rocket and the RoCC interface were used extensively in the Fall 2013
+CS250 VLSI class taught by Jonathan Bachrach, with several student
+accelerator projects built to the RoCC interface. The Hwacha vector unit
+has been rewritten as a RoCC coprocessor.</p>
+</div>
+<div class="paragraph">
+<p>Two Berkeley undergraduates, Quan Nguyen and Albert Ou, have
+successfully ported Linux to run on RISC-V in Spring 2013.</p>
+</div>
+<div class="paragraph">
+<p>Colin Schmidt successfully completed an LLVM backend for RISC-V 2.0 in
+January 2014.</p>
+</div>
+<div class="paragraph">
+<p>Darius Rad at Bluespec contributed soft-float ABI support to the GCC
+port in March 2014.</p>
+</div>
+<div class="paragraph">
+<p>John Hauser contributed the definition of the floating-point
+classification instructions.</p>
+</div>
+<div class="paragraph">
+<p>We are aware of several other RISC-V core implementations, including one
+in Verilog by Tommy Thorn, and one in Bluespec by Rishiyur Nikhil.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="acknowledgments"><a class="anchor" href="#acknowledgments"></a>Acknowledgments</h3>
+<div class="paragraph">
+<p>Thanks to Christopher F. Batten, Preston Briggs, Christopher Celio,
+David Chisnall, Stefan Freudenberger, John Hauser, Ben Keller, Rishiyur
+Nikhil, Michael Taylor, Tommy Thorn, and Robert Watson for comments on
+the draft ISA version 2.0 specification.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="history-from-revision-2-1"><a class="anchor" href="#history-from-revision-2-1"></a>History from Revision 2.1</h3>
+<div class="paragraph">
+<p>Uptake of the RISC-V ISA has been very rapid since the introduction of
+the frozen version 2.0 in May 2014, with too much activity to record in
+a short history section such as this. Perhaps the most important single
+event was the formation of the non-profit RISC-V Foundation in August
+2015. The Foundation will now take over stewardship of the official
+RISC-V ISA standard, and the official website <code>riscv.org</code> is the best
+place to obtain news and updates on the RISC-V standard.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="acknowledgments-2"><a class="anchor" href="#acknowledgments-2"></a>Acknowledgments</h3>
+<div class="paragraph">
+<p>Thanks to Scott Beamer, Allen J. Baum, Christopher Celio, David
+Chisnall, Paul Clayton, Palmer Dabbelt, Jan Gray, Michael Hamburg, and
+John Hauser for comments on the version 2.0 specification.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="history-from-revision-2-2"><a class="anchor" href="#history-from-revision-2-2"></a>History from Revision 2.2</h3>
+
+</div>
+<div class="sect2">
+<h3 id="acknowledgments-3"><a class="anchor" href="#acknowledgments-3"></a>Acknowledgments</h3>
+<div class="paragraph">
+<p>Thanks to Jacob Bachmeyer, Alex Bradbury, David Horner, Stefan O’Rear,
+and Joseph Myers for comments on the version 2.1 specification.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="history-for-revision-2-3"><a class="anchor" href="#history-for-revision-2-3"></a>History for Revision 2.3</h3>
+<div class="paragraph">
+<p>Uptake of RISC-V continues at a breakneck pace.</p>
+</div>
+<div class="paragraph">
+<p>John Hauser and Andrew Waterman contributed a hypervisor ISA extension
+based upon a proposal from Paolo Bonzini.</p>
+</div>
+<div class="paragraph">
+<p>Daniel Lustig, Arvind, Krste Asanović, Shaked Flur, Paul Loewenstein,
+Yatin Manerkar, Luc Maranget, Margaret Martonosi, Vijayanand Nagarajan,
+Rishiyur Nikhil, Jonas Oberhauser, Christopher Pulte, Jose Renau, Peter
+Sewell, Susmit Sarkar, Caroline Trippel, Muralidaran Vijayaraghavan,
+Andrew Waterman, Derek Williams, Andrew Wright, and Sizhuo Zhang
+contributed the memory consistency model.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="funding"><a class="anchor" href="#funding"></a>Funding</h3>
+<div class="paragraph">
+<p>Development of the RISC-V architecture and implementations has been
+partially funded by the following sponsors.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Par Lab:</strong> Research supported by Microsoft (Award # 024263) and Intel
+(Award # 024894) funding and by matching funding by U.C. Discovery (Award
+# DIG07-10227). Additional support came from Par Lab affiliates Nokia,
+NVIDIA, Oracle, and Samsung.</p>
+</li>
+<li>
+<p><strong>Project Isis:</strong> DoE Award DE-SC0003624.</p>
+</li>
+<li>
+<p><strong>ASPIRE Lab</strong>: DARPA PERFECT program, Award HR0011-12-2-0016. DARPA
+POEM program Award HR0011-11-C-0100. The Center for Future Architectures
+Research (C-FAR), a STARnet center funded by the Semiconductor Research
+Corporation. Additional support from ASPIRE industrial sponsor, Intel,
+and ASPIRE affiliates, Google, Hewlett Packard Enterprise, Huawei,
+Nokia, NVIDIA, Oracle, and Samsung.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The content of this paper does not necessarily reflect the position or
+the policy of the US government and no official endorsement should be
+inferred.</p>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="naming.html">ISA Extension Naming Conventions</a></span>
+  <span class="next"><a href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a></span>
+</nav>
+</article>  </div>
+</main>
+<div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <main class="modal__content" id="modal-versions-content">
+              <button data-micromodal-close class="modal-versions-close">
+                <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left">
+
+                  <ul class="nav-versions">
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../ffh/v1.0/index.html">ACPI Functional Fixed Hardware</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../ffh/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../aia/v1.0/index.html">Advanced Interrupt Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../aia/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../etrace/v1.0/index.html">E-Trace Encapsulation Specification</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../etrace/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../psabi/v1.0/index.html">ELF psABI Specification</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../psabi/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../iommuArch/v1.0/index.html">IOMMU Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../iommuArch/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../index.html">ISA Specifications</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../index.html">
+      default
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../reri/v1.0/index.html">RERI Architecture</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../reri/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../qos/v1.0/index.html">RISC-V Capacity and Bandwidth QoS Register Interface</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../qos/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../plic/v1.0.0/index.html">RISC-V Platform-Level Interrupt Controller</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../plic/v1.0.0/index.html">
+      v1.0.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../semihost/v1.0/index.html">semihosting</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../semihost/v1.0/index.html">
+      v1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                  </ul>
+                </div>
+                <div class="col-right">
+                  <ul class="projects">
+  <li>
+    Related Spring Documentation
+    <ul class="projects-list">
+        <li>
+<a href="https://docs.spring.io/spring-boot/">
+  Spring Boot
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-framework/reference/">
+  Spring Framework
+</a>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  Spring Cloud
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-build/reference/">
+  Spring Cloud Build
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-bus/reference/">
+  Spring Cloud Bus
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
+  Spring Cloud Circuit Breaker
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-commons/reference/">
+  Spring Cloud Commons
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-config/reference/">
+  Spring Cloud Config
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-consul/reference/">
+  Spring Cloud Consul
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-contract/reference/">
+  Spring Cloud Contract
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-function/reference/">
+  Spring Cloud Function
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
+  Spring Cloud Gateway
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
+  Spring Cloud Kubernetes
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
+  Spring Cloud Netflix
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
+  Spring Cloud OpenFeign
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-stream/reference/">
+  Spring Cloud Stream
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-task/reference/">
+  Spring Cloud Task
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-vault/reference/">
+  Spring Cloud Vault
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
+  Spring Cloud Zookeeper
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  Spring Data
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-data/cassandra/reference/">
+  Spring Data Cassandra
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/commons/reference/">
+  Spring Data Commons
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/couchbase/reference/">
+  Spring Data Couchbase
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
+  Spring Data Elasticsearch
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/jpa/reference/">
+  Spring Data JPA
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
+  Spring Data KeyValue
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/ldap/reference/">
+  Spring Data LDAP
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/mongodb/reference/">
+  Spring Data MongoDB
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/neo4j/reference/">
+  Spring Data Neo4j
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/redis/reference/">
+  Spring Data Redis
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/relational/reference/">
+  Spring Data JDBC &amp; R2DBC
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/rest/reference/">
+  Spring Data REST
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-integration/reference/">
+  Spring Integration
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-batch/reference/">
+  Spring Batch
+</a>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+<a href="https://docs.spring.io/spring-security/reference/">
+  Spring Security
+</a>
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-authorization-server/reference/">
+  Spring Authorization Server
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-ldap/reference/">
+  Spring LDAP
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-security-kerberos/reference/">
+  Spring Security Kerberos
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-session/reference/">
+  Spring Session
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-vault/reference/">
+  Spring Vault
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-ai/reference/">
+  Spring AI
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-amqp/reference/">
+  Spring AMQP
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-cli/reference/">
+  Spring CLI
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-graphql/reference/">
+  Spring GraphQL
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-kafka/reference/">
+  Spring for Apache Kafka
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-modulith/reference/">
+  Spring Modulith
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-pulsar/reference/">
+  Spring for Apache Pulsar
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-shell/reference/">
+  Spring Shell
+</a>
+</li>
+    </ul>
+  </li
+  <li><a href="../../spring-projects.html">All Docs...</a></li>
+</ul>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="hidden">
+</footer><script src="../../_/js/vendor/import.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async src="../../_/js/vendor/spring-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
+  </body>
+</html>
