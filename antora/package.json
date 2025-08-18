@@ -1,0 +1,10 @@
+{
+    "name": "local",
+    "version": "0.0.1",
+    "dependencies": {
+        "@antora/pdf-extension": "^1.0.0-alpha.11",
+        "asciidoctor-kroki": "^0.18.1",
+        "bytefield-svg": "^1.8.0",
+        "wavedrom-cli": "^3.2.0"
+    }
+}
