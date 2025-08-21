@@ -80,10 +80,10 @@ asciidoc:
 runtime:
   fetch: true
 
-# antora:
-#   extensions:
+antora:
+   extensions:
 #     - '@antora/lunr-extension'
-#     - '@antora/pdf-extension'
+     - '@antora/pdf-extension'
 #     - '@antora/asciidoctor-bibtex'
 
 ui:
