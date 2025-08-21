@@ -59,6 +59,9 @@ asciidoc:
   extensions:
   - asciidoctor-kroki
   attributes:
+    company: RISC-V
+    url-riscv: https://riscv.org
+    doctype: book
     experimental: ''
     idprefix: ''
     idseparator: '-'
