@@ -4,10 +4,10 @@ site:
 
 content:
   sources:
-#  - url: https://github.com/riscv/riscv-isa-manual.git
-#    branches: antora-refactor
-#    start_page: ROOT::index.adoc
-#    start_path: /
+  - url: https://github.com/riscv/riscv-isa-manual.git
+    branches: antora-refactor
+    start_page: ROOT::index.adoc
+    start_path: /
 
 #  - url: https://github.com/riscv-non-isa/e-trace-encap.git
 #    branches: antora-refactor
