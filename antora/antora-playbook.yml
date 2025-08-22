@@ -83,7 +83,7 @@ runtime:
 antora:
    extensions:
 #     - '@antora/lunr-extension'
-     - '@antora/pdf-extension'
+#     - '@antora/pdf-extension'
 #     - '@antora/asciidoctor-bibtex'
 
 ui:
