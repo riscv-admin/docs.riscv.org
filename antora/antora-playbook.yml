@@ -74,7 +74,7 @@ asciidoc:
     csrname: 'envcfg'
     incexample: example$
     incimage: images
-    imagesdir: images
+ #   imagesdir: images
 
 
 runtime:
