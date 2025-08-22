@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
+    <meta name="antora-ui-version" content="3f4ce2c51445edcfc62ee1f59ab97fffc218fb79"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -91,10 +91,7 @@
     <a class="nav-link"  href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">RV64I Base Integer Instruction Set</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="rv64.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
@@ -172,9 +169,6 @@
     <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -190,13 +184,7 @@
     <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Extending RISC-V</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">History and Acknowledgments</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -307,12 +295,28 @@
             version="1.1"
             viewBox="0 0 512 512"
             width="512px"
-          ><style type="text/css"><![CDATA[
+          ><style type="text/css"><
               .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
                 class="st0"
                 d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
               ></path></g></svg>
           GitHub Project
+        </a>
+
+      <a href="" title="PDF">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          Download PDF
         </a>
     </div>
   </div>
@@ -374,20 +378,20 @@ return from procedure if <code>rs1</code> is a conventional link register (i.e. 
 </div>
 <div class="paragraph">
 <p>The term <em>call</em> is used to refer to a <code>JAL</code> or <code>JALR</code> instruction with a link
-register as destination, i.e., <code>rd != x0</code>. Conventionally, the link register is
+register as destination, i.e., <em>rd</em>≠<code>x0</code>. Conventionally, the link register is
 <code>x1</code> or <code>x5</code>. A <em>call</em> using <code>JAL</code> or <code>C.JAL</code> is termed a direct call. A
 <code>C.JALR</code> expands to <code>JALR x1, 0(rs1)</code> and is a <em>call</em>. A <em>call</em> using <code>JALR</code> or
 <code>C.JALR</code> is termed an <em>indirect-call</em>.</p>
 </div>
 <div class="paragraph">
-<p>The term <em>return</em> is used to refer to a <code>JALR</code> instruction with <code>rd == x0</code> and
-with <code>rs1 == x1</code> or <code>rs1 == x5</code>. A <code>C.JR</code> instruction expands to
-<code>JALR x0, 0(rs1)</code> and is a <em>return</em> if <code>rs1 == x1</code> or <code>rs1 == x5</code>.</p>
+<p>The term <em>return</em> is used to refer to a <code>JALR</code> instruction with <em>rd</em>=<code>x0</code> and
+with <em>rs1</em>=<code>x1</code> or <em>rs1</em>=<code>x5</code>. A <code>C.JR</code> instruction expands to
+<code>JALR x0, 0(rs1)</code> and is a <em>return</em> if <em>rs1</em>=<code>x1</code> or <em>rs1</em>=<code>x5</code>.</p>
 </div>
 <div class="paragraph">
-<p>The term <em>indirect-jump</em> is used to refer to a <code>JALR</code> instruction with <code>rd == x0</code>
-and where the <code>rs1</code> is not <code>x1</code> or <code>x5</code> (i.e., not a return). A <code>C.JR</code>
-instruction where <code>rs1</code> is not <code>x1</code> or <code>x5</code> (i.e., not a return) is an
+<p>The term <em>indirect-jump</em> is used to refer to a <code>JALR</code> instruction with <em>rd</em>=<code>x0</code>
+and where the <em>rs1</em> is not <code>x1</code> or <code>x5</code> (i.e., not a return). A <code>C.JR</code>
+instruction where <em>rs1</em> is not <code>x1</code> or <code>x5</code> (i.e., not a return) is an
 <em>indirect-jump</em>.</p>
 </div>
 <div class="paragraph">
@@ -407,7 +411,7 @@ Privileged ISA specification.</p>
 a landing pad (<code>LPAD</code>) instruction. The <code>LPAD</code> instruction must be placed at the
 program locations that are valid targets of indirect jumps or calls. The <code>LPAD</code>
 instruction (See <a href="#LP_INST">Landing Pad Instruction</a>) is encoded using the <code>AUIPC</code> major opcode with
-<code>rd=x0</code>.</p>
+<em>rd</em>=<code>x0</code>.</p>
 </div>
 <div class="paragraph">
 <p>Compilers emit a landing pad instruction as the first instruction of an
@@ -1111,7 +1115,7 @@ register.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Encoding <code>rd</code> as <code>x0</code> is not supported for <code>SSRDP</code>.</p>
+<p>Encoding <em>rd</em> as <code>x0</code> is not supported for <code>SSRDP</code>.</p>
 </div>
 <div class="paragraph">
 <p>The operation of the <code>SSRDP</code> instructions is as follows:</p>
@@ -1186,7 +1190,7 @@ function, it is not required to).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>setjmp() {
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">setjmp() {
     :
     :
     // read and save the shadow stack pointer to jmp_buf
@@ -1215,7 +1219,7 @@ longjmp() {
     }
 back_cfi_not_active:
     :
-}</pre>
+}</code></pre>
 </div>
 </div>
 </td>
@@ -1248,9 +1252,9 @@ data values.</p>
   else if privilege_mode == U &amp;&amp; senvcfg.SSE == 0
       raise illegal-instruction exception
   else if privilege_mode == VS &amp;&amp; henvcfg.SSE == 0
-      raise virtual instruction exception
+      raise virtual-instruction  exception
   else if privilege_mode == VU &amp;&amp; senvcfg.SSE == 0
-      raise virtual instruction exception
+      raise virtual-instruction  exception
   else
       X(rd) = mem[X(rs1)]
       mem[X(rs1)] = X(rs2)
@@ -1273,9 +1277,9 @@ address in <code>rs1</code>.</p>
   else if privilege_mode == U &amp;&amp; senvcfg.SSE == 0
       raise illegal-instruction exception
   else if privilege_mode == VS &amp;&amp; henvcfg.SSE == 0
-      raise virtual instruction exception
+      raise virtual-instruction  exception
   else if privilege_mode == VU &amp;&amp; senvcfg.SSE == 0
-      raise virtual instruction exception
+      raise virtual-instruction  exception
   else
       temp[31:0] = mem[X(rs1)]
       X(rd) = SignExtend(temp[31:0])
@@ -1385,9 +1389,6 @@ value at the memory location operated on by <code>SSAMOSWAP.W/D</code> is not re
               <button data-micromodal-close class="modal-versions-close">
                 <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
               </button>
-              <div class="colset">
-                <div class="col-left">
-
                   <ul class="nav-versions">
                       <li class="component">
                         <div>
@@ -1580,263 +1581,6 @@ value at the memory location operated on by <code>SSAMOSWAP.W/D</code> is not re
                         
                       </li>
                   </ul>
-                </div>
-                <div class="col-right">
-                  <ul class="projects">
-  <li>
-    Related Spring Documentation
-    <ul class="projects-list">
-        <li>
-<a href="https://docs.spring.io/spring-boot/">
-  Spring Boot
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-framework/reference/">
-  Spring Framework
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Cloud
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-build/reference/">
-  Spring Cloud Build
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-bus/reference/">
-  Spring Cloud Bus
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
-  Spring Cloud Circuit Breaker
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-commons/reference/">
-  Spring Cloud Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-config/reference/">
-  Spring Cloud Config
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-consul/reference/">
-  Spring Cloud Consul
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-contract/reference/">
-  Spring Cloud Contract
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-function/reference/">
-  Spring Cloud Function
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
-  Spring Cloud Gateway
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
-  Spring Cloud Kubernetes
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
-  Spring Cloud Netflix
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
-  Spring Cloud OpenFeign
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-stream/reference/">
-  Spring Cloud Stream
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-task/reference/">
-  Spring Cloud Task
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-vault/reference/">
-  Spring Cloud Vault
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
-  Spring Cloud Zookeeper
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Data
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-data/cassandra/reference/">
-  Spring Data Cassandra
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/commons/reference/">
-  Spring Data Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/couchbase/reference/">
-  Spring Data Couchbase
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
-  Spring Data Elasticsearch
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/jpa/reference/">
-  Spring Data JPA
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
-  Spring Data KeyValue
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/ldap/reference/">
-  Spring Data LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/mongodb/reference/">
-  Spring Data MongoDB
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/neo4j/reference/">
-  Spring Data Neo4j
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/redis/reference/">
-  Spring Data Redis
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/relational/reference/">
-  Spring Data JDBC &amp; R2DBC
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/rest/reference/">
-  Spring Data REST
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-integration/reference/">
-  Spring Integration
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-batch/reference/">
-  Spring Batch
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-<a href="https://docs.spring.io/spring-security/reference/">
-  Spring Security
-</a>
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-authorization-server/reference/">
-  Spring Authorization Server
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-ldap/reference/">
-  Spring LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-security-kerberos/reference/">
-  Spring Security Kerberos
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-session/reference/">
-  Spring Session
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-vault/reference/">
-  Spring Vault
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-ai/reference/">
-  Spring AI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-amqp/reference/">
-  Spring AMQP
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-cli/reference/">
-  Spring CLI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-graphql/reference/">
-  Spring GraphQL
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-kafka/reference/">
-  Spring for Apache Kafka
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-modulith/reference/">
-  Spring Modulith
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-pulsar/reference/">
-  Spring for Apache Pulsar
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-shell/reference/">
-  Spring Shell
-</a>
-</li>
-    </ul>
-  </li
-  <li><a href="../../spring-projects.html">All Docs...</a></li>
-</ul>
-                </div>
-              </div>
             </main>
         </div>
     </div>

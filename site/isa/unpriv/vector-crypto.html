@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
+    <meta name="antora-ui-version" content="3f4ce2c51445edcfc62ee1f59ab97fffc218fb79"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -91,10 +91,7 @@
     <a class="nav-link"  href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">RV64I Base Integer Instruction Set</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="rv64.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
@@ -172,9 +169,6 @@
     <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -190,13 +184,7 @@
     <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Extending RISC-V</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">History and Acknowledgments</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -307,12 +295,28 @@
             version="1.1"
             viewBox="0 0 512 512"
             width="512px"
-          ><style type="text/css"><![CDATA[
+          ><style type="text/css"><
               .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
                 class="st0"
                 d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
               ></path></g></svg>
           GitHub Project
+        </a>
+
+      <a href="" title="PDF">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          Download PDF
         </a>
     </div>
   </div>
@@ -337,12 +341,12 @@ RISC-V Instruction Set Architecture.</p>
 <h3 id="crypto_vector_introduction"><a class="anchor" href="#crypto_vector_introduction"></a>Introduction</h3>
 <div class="paragraph">
 <p>This document describes the RISC-V <em>vector</em> cryptography extensions.
-All instructions proposed here are based on the Vector registers.
+All instructions described here are based on the Vector registers.
 The instructions are designed to be highly performant, with large
 application and server-class cores being the main target.
 A companion chapter <em>Volume I: Scalar &amp; Entropy Source Instructions</em>,
 describes
-cryptographic instruction proposals for smaller cores which do not
+cryptographic instructions for smaller cores which do not
 implement the vector extension.</p>
 </div>
 <div class="sect3">
@@ -464,22 +468,22 @@ This supporting code is listed in
 </div>
 <div class="paragraph">
 <p>The
-<a href="https://github.com/rems-project/sail/blob/sail2/manual.pdf">Sail Manual</a>
+<a href="https://alasdair.github.io/manual.html">Sail Manual</a>
 is recommended reading in order to best understand the code snippets.
 Also, the
 <a href="https://github.com/billmcspadden-riscv/sail/blob/cookbook_br/cookbook/doc/TheSailCookbook_Complete.pdf">The Sail Programming Language: A Sail Cookbook</a>
-is a good reference that is in the process of being written.</p>
+is a good reference.</p>
 </div>
 <div class="paragraph">
 <p>For the latest RISC-V Sail model, refer to
-the formal model Github
+the formal model GitHub
 <a href="https://github.com/riscv/sail-riscv">repository</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="crypto_vector_policies"><a class="anchor" href="#crypto_vector_policies"></a>Policies</h4>
 <div class="paragraph">
-<p>In creating this proposal, we tried to adhere to the following
+<p>In creating this extension, we tried to adhere to the following
 policies:</p>
 </div>
 <div class="ulist">
@@ -669,7 +673,7 @@ typically needed for other instructions when implementing the targeted algorithm
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Since the the <strong>vector extension for application processors</strong> requires a minimum of VLEN of 128,
+<p>Since the <strong>vector extension for application processors</strong> requires a minimum of VLEN of 128,
 at most such implementations would require LMUL=2 to form the largest element groups in this specification.</p>
 </div>
 <div class="paragraph">
@@ -760,7 +764,7 @@ Element Group Size (<code>EGS</code>).</p>
 <dt class="hdlist1">LMUL constraints</dt>
 <dd>
 <p>For element-group instructions, <code>LMUL</code>*<code>VLEN</code> must always be at least as large as <code>EGW</code>, otherwise an
-<em>illegal instruction exception</em> is raised, even if <code>vl</code>=0.</p>
+<em>illegal-instruction exception</em> is raised, even if <code>vl</code>=0.</p>
 </dd>
 </dl>
 </div>
@@ -1113,13 +1117,14 @@ Instruction Set Extension Specification.</p>
 </div>
 <div class="paragraph">
 <p>The <a href="#zvknh">Zvknhb</a> and <a href="#zvbc">Zvbc</a> Vector Crypto Extensions
---and accordingly the composite extensions <a href="#zvkn">Zvkn</a> and <a href="#zvks">Zvks</a>--
-require a Zve64x base,
-or application ("V") base Vector Extension.</p>
+--and accordingly the composite extensions <a href="#zvkn">Zvkn</a>, <a href="#zvknc">Zvknc</a>, <a href="#zvkng">Zvkng</a>, and <a href="#zvksc">Zvksc</a>--
+depend on Zve64x.</p>
 </div>
 <div class="paragraph">
-<p>All of the other Vector Crypto Extensions can be built
-on <em>any</em> embedded (Zve*) or application ("V") base Vector Extension.</p>
+<p>All of the other Vector Crypto Extensions depend on <code>Zve32x</code>.</p>
+</div>
+<div class="paragraph">
+<p>Note: If <code>Zve32x</code> is supported then <code>Zvkb</code> or <code>Zvbb</code> provide support for EEW of 8, 16, and 32. If <code>Zve64x</code> is supported then <code>Zvkb</code> or <code>Zvbb</code> also add support for EEW 64.</p>
 </div>
 <div class="paragraph">
 <p>All <em>cryptography-specific</em> instructions defined in this Vector Crypto specification (i.e., those
@@ -1277,7 +1282,7 @@ efficiently.</p>
 <div class="paragraph">
 <p>This Zvkb extension is a proper subset of the Zvbb extension.
 Zvkb allows for vector crypto implementations without incurring
-the the cost of implementing the additional bitmanip instructions
+the cost of implementing the additional bitmanip instructions
 in the Zvbb extension: vbrev.v, vclz.v, vctz.v, vcpop.v, and vwsll.[vv,vx,vi].</p>
 </div>
 </td>
@@ -1585,7 +1590,7 @@ Likewise, <code>vstart</code> must be a multiple of <code>EGS=4</code>.</p>
 <h4 id="zvksed"><a class="anchor" href="#zvksed"></a><code>Zvksed</code> - ShangMi Suite: SM4 Block Cipher</h4>
 <div class="paragraph">
 <p>Instructions for accelerating
-encryption, decryption and key-schedule
+encryption, decryption, and key-schedule
 functions of the SM4 block cipher.</p>
 </div>
 <div class="paragraph">
@@ -1839,7 +1844,7 @@ vector carryless multiply extension to enable AES-GCM.</p>
 <td class="content">
 <div class="paragraph">
 <p>This extension combines the NIST Algorithm Suite with the
-GCM/GMAC extension to enable high-performace AES-GCM.</p>
+GCM/GMAC extension to enable high-performance AES-GCM.</p>
 </div>
 </td>
 </tr>
@@ -1978,7 +1983,7 @@ vector carryless multiply extension to enable SM4-GCM.</p>
 <td class="content">
 <div class="paragraph">
 <p>This extension combines the ShangMi Algorithm Suite with the
-GCM/GMAC extension to enable high-performace SM4-GCM.</p>
+GCM/GMAC extension to enable high-performance SM4-GCM.</p>
 </div>
 </td>
 </tr>
@@ -2631,7 +2636,7 @@ on the data being operated upon.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VAESDF(vs2, vd, suffix)) = {
   if(LMUL*VLEN &lt; EGW)  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -2784,7 +2789,7 @@ on the data being operated upon.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VAESDM(vs2, vd, suffix)) = {
   if(LMUL*VLEN &lt; EGW)  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -2937,7 +2942,7 @@ on the data being operated upon.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VAESEF(vs2, vd, suffix) = {
   if(LMUL*VLEN &lt; EGW)  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -3089,7 +3094,7 @@ on the data being operated upon.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VAESEM(vs2, vd, suffix)) = {
   if(LMUL*VLEN &lt; EGW)  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -3253,7 +3258,7 @@ behavior to be fully defined for all values of <code>uimm[4:0]</code> with minim
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-Sail hljs" data-lang="Sail">function clause execute (VAESKF1(rnd, vd, vs2)) = {
   if(LMUL*VLEN &lt; EGW)  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -3428,7 +3433,7 @@ behavior to be fully defined for all values of <code>uimm[4:0]</code> with minim
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-Sail hljs" data-lang="Sail">function clause execute (VAESKF2(rnd, vd, vs2)) = {
   if(LMUL*VLEN &lt; EGW)  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -3596,7 +3601,7 @@ This instruction only exists in the <code>.vs</code> form because the <code>.vv<
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VAESZ(vs2, vd) = {
   if(((vstart%EGS)&lt;&gt;0) | (LMUL*VLEN &lt; EGW))  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -4651,7 +4656,7 @@ Y<sub>i+1</sub> = ((Y<sub>i</sub> ^ X<sub>i</sub>) &#183; H)</p>
 for a polynomial x<sub>0</sub> + x<sub>1</sub>u +x<sub>2</sub> u<sup>2</sup> + &#8230;&#8203; + x<sub>127</sub>u<sup>127</sup>. This can be viewed as a collection of
 byte elements in memory with the byte containing the lowest coefficients (i.e., 0,1,2,3,4,5,6,7)
 residing at the lowest memory address. Since the bits in the bytes are reversed,
-This instruction internally performs bit swaps within bytes to put the bits in the standard ordering
+this instruction internally performs bit swaps within bytes to put the bits in the standard ordering
 (e.g., 7,6,5,4,3,2,1,0).</p>
 </div>
 <div class="paragraph">
@@ -4700,7 +4705,7 @@ a future extension might define a vector-scalar version of this instruction wher
 <pre class="highlightjs highlight"><code class="language-pseudocode hljs" data-lang="pseudocode">function clause execute (VGHSH(vs2, vs1, vd)) = {
   // operands are input with bits reversed in each byte
   if(LMUL*VLEN &lt; EGW)  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -4914,7 +4919,7 @@ doesn&#8217;t use the add-multiply form of the <code>vghsh.vv</code> instruction
 <pre class="highlightjs highlight"><code class="language-pseudocode hljs" data-lang="pseudocode">function clause execute (VGMUL(vs2, vs1, vd)) = {
   // operands are input with bits reversed in each byte
   if(LMUL*VLEN &lt; EGW)  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -5384,10 +5389,10 @@ function clause execute (VROR_VX(vs2, rs1, vd)) = {
   RETIRE_SUCCESS
 }
 
-function clause execute (VROR_VI(vs2, imm[5:0], vd)) = {
+function clause execute (VROR_VI(vs2, uimm[5:0], vd)) = {
   foreach (i from vstart to vl - 1) {
     set_velem(vd, EEW=SEW, i,
-      get_velem(vs2, i) &gt;&gt;&gt; (imm[5:0] &amp; (SEW-1))
+      get_velem(vs2, i) &gt;&gt;&gt; (uimm[5:0] &amp; (SEW-1))
     )
   }
   RETIRE_SUCCESS
@@ -5596,7 +5601,7 @@ that <code>vd</code>, <code>vs1</code> and <code>vs2</code> each are different r
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VSHA2c(vs2, vs1, vd)) = {
   if(LMUL*VLEN &lt; EGW)  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -5604,51 +5609,51 @@ that <code>vd</code>, <code>vs1</code> and <code>vs2</code> each are different r
   eg_start = (vstart/EGS)
 
   foreach (i from eg_start to eg_len-1) {
-	  let {a @ b @ e @ f} : bits(4*SEW) = get_velem(vs2, 4*SEW, i);
-	  let {c @ d @ g @ h} : bits(4*SEW) = get_velem(vd, 4*SEW, i);
-	  let MessageShedPlusC[3:0] : bits(4*SEW) = get_velem(vs1, 4*SEW, i);
-	  let {W1, W0} == VSHA2cl ? MessageSchedPlusC[1:0] : MessageSchedPlusC[3:2]; // l vs h difference is the words selected
+   let {a @ b @ e @ f} : bits(4*SEW) = get_velem(vs2, 4*SEW, i);
+   let {c @ d @ g @ h} : bits(4*SEW) = get_velem(vd, 4*SEW, i);
+   let MessageShedPlusC[3:0] : bits(4*SEW) = get_velem(vs1, 4*SEW, i);
+   let {W1, W0} == VSHA2cl ? MessageSchedPlusC[1:0] : MessageSchedPlusC[3:2]; // l vs h difference is the words selected
 
-	  let T1 : bits(SEW) = h + sum1(e) + ch(e,f,g) + W0;
-	  let T2 : bits(SEW) = sum0(a) + maj(a,b,c);
-	  h  = g;
-	  g  = f;
-	  f  = e;
-	  e  = d + T1;
-	  d  = c;
-	  c  = b;
-	  b  = a;
-	  a  = T1 + T2;
+   let T1 : bits(SEW) = h + sum1(e) + ch(e,f,g) + W0;
+   let T2 : bits(SEW) = sum0(a) + maj(a,b,c);
+   h  = g;
+   g  = f;
+   f  = e;
+   e  = d + T1;
+   d  = c;
+   c  = b;
+   b  = a;
+   a  = T1 + T2;
 
 
-	  T1  = h + sum1(e) + ch(e,f,g) + W1;
-	  T2  = sum0(a) + maj(a,b,c);
-	  h = g;
-	  g = f;
-	  f = e;
-	  e = d + T1;
-	  d = c;
-	  c = b;
-	  b = a;
-	  a = T1 + T2;
-	  set_velem(vd, 4*SEW, i, {a @ b @ e @ f});
+   T1  = h + sum1(e) + ch(e,f,g) + W1;
+   T2  = sum0(a) + maj(a,b,c);
+   h = g;
+   g = f;
+   f = e;
+   e = d + T1;
+   d = c;
+   c = b;
+   b = a;
+   a = T1 + T2;
+   set_velem(vd, 4*SEW, i, {a @ b @ e @ f});
   }
   RETIRE_SUCCESS
   }
 }
 
 function sum0(x) = {
-	match SEW {
-		32 =&gt; rotr(x,2)  XOR rotr(x,13) XOR rotr(x,22),
-		64 =&gt; rotr(x,28) XOR rotr(x,34) XOR rotr(x,39)
-	}
+ match SEW {
+  32 =&gt; rotr(x,2)  XOR rotr(x,13) XOR rotr(x,22),
+  64 =&gt; rotr(x,28) XOR rotr(x,34) XOR rotr(x,39)
+ }
 }
 
 function sum1(x) = {
-	match SEW {
-		32 =&gt; rotr(x,6)  XOR rotr(x,11) XOR rotr(x,25),
-		64 =&gt; rotr(x,14) XOR rotr(x,18) XOR rotr(x,41)
-	}
+ match SEW {
+  32 =&gt; rotr(x,6)  XOR rotr(x,11) XOR rotr(x,25),
+  64 =&gt; rotr(x,14) XOR rotr(x,18) XOR rotr(x,41)
+ }
 }
 
 function ch(x, y, z) = ((x &amp; y) ^ ((~x) &amp; z))
@@ -5871,7 +5876,7 @@ that <code>vd</code>, <code>vs1</code> and <code>vs2</code> each contain differe
   // SEW32 = SHA-256
   // SEW64 =  SHA-512
   if(LMUL*VLEN &lt; EGW)  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -5895,17 +5900,17 @@ that <code>vd</code>, <code>vs1</code> and <code>vs2</code> each contain differe
 }
 
 function sig0(x) = {
-	match SEW {
-		32 =&gt; (ROTR(x,7) XOR ROTR(x,18) XOR SHR(x,3)),
-		64 =&gt; (ROTR(x,1) XOR ROTR(x,8) XOR SHR(x,7)));
-	}
+ match SEW {
+  32 =&gt; (ROTR(x,7) XOR ROTR(x,18) XOR SHR(x,3)),
+  64 =&gt; (ROTR(x,1) XOR ROTR(x,8) XOR SHR(x,7)));
+ }
 }
 
 function sig1(x) = {
-	match SEW {
-		32 =&gt; (ROTR(x,17) XOR ROTR(x,19) XOR SHR(x,10),
-		64 =&gt; ROTR(x,19) XOR ROTR(x,61) XOR SHR(x,6));
-	}
+ match SEW {
+  32 =&gt; (ROTR(x,17) XOR ROTR(x,19) XOR SHR(x,10),
+  64 =&gt; ROTR(x,19) XOR ROTR(x,61) XOR SHR(x,6));
+ }
 }
 
 function ROTR(x,n) = (x &gt;&gt; n) | (x &lt;&lt; SEW - n)
@@ -6092,7 +6097,7 @@ that <code>vd</code> and <code>vs2</code> each are different registers.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VSM3C(rnds, vs2, vd)) = {
   if(LMUL*VLEN &lt; EGW)  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -6327,7 +6332,7 @@ values to be preserved for generating the next 8 words.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VSM3ME(vs2, vs1)) = {
   if(LMUL*VLEN &lt; EGW)  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -6581,7 +6586,7 @@ Since the results are all limited to 8 bits, the modulo operation occurs for fre
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (vsm4k(uimm, vs2)) = {
   if(LMUL*VLEN &lt; EGW)  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -6627,14 +6632,14 @@ function ROUND_KEY(X, S) = ((X) ^ ((S) ^ ROL32((S), 13) ^ ROL32((S), 23)))
 
 // SM4 Constant Key (CK)
 let ck : list(bits(32)) = [|
-	0x00070E15, 0x1C232A31, 0x383F464D, 0x545B6269,
-	0x70777E85, 0x8C939AA1, 0xA8AFB6BD, 0xC4CBD2D9,
-	0xE0E7EEF5, 0xFC030A11, 0x181F262D, 0x343B4249,
-	0x50575E65, 0x6C737A81, 0x888F969D, 0xA4ABB2B9,
-	0xC0C7CED5, 0xDCE3EAF1, 0xF8FF060D, 0x141B2229,
-	0x30373E45, 0x4C535A61, 0x686F767D, 0x848B9299,
-	0xA0A7AEB5, 0xBCC3CAD1, 0xD8DFE6ED, 0xF4FB0209,
-	0x10171E25, 0x2C333A41, 0x484F565D, 0x646B7279
+ 0x00070E15, 0x1C232A31, 0x383F464D, 0x545B6269,
+ 0x70777E85, 0x8C939AA1, 0xA8AFB6BD, 0xC4CBD2D9,
+ 0xE0E7EEF5, 0xFC030A11, 0x181F262D, 0x343B4249,
+ 0x50575E65, 0x6C737A81, 0x888F969D, 0xA4ABB2B9,
+ 0xC0C7CED5, 0xDCE3EAF1, 0xF8FF060D, 0x141B2229,
+ 0x30373E45, 0x4C535A61, 0x686F767D, 0x848B9299,
+ 0xA0A7AEB5, 0xBCC3CAD1, 0xD8DFE6ED, 0xF4FB0209,
+ 0x10171E25, 0x2C333A41, 0x484F565D, 0x646B7279
   |]
 };</code></pre>
 </div>
@@ -6803,7 +6808,7 @@ previous four rounds.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-pseudocode hljs" data-lang="pseudocode">function clause execute (VSM4R(vd, vs2)) = {
   if(LMUL*VLEN &lt; EGW)  then {
-    handle_illegal();  // illegal instruction exception
+    handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
   } else {
 
@@ -8756,12 +8761,12 @@ Crypto Vector instructions except Zvbb and Zvbc</p>
 <p>This section contains the supporting Sail code referenced by the
 instruction descriptions throughout the specification.
 The
-<a href="https://github.com/rems-project/sail/blob/sail2/manual.pdf">Sail Manual</a>
+<a href="https://alasdair.github.io/manual.html">Sail Manual</a>
 is recommended reading in order to best understand the supporting code.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">/* Auxiliary function for performing GF multiplicaiton */
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">/* Auxiliary function for performing GF multiplication */
 val xt2 : bits(8) -&gt; bits(8)
 function xt2(x) = {
   (x &lt;&lt; 1) ^ (if bit_to_bool(x[7]) then 0x1b else 0x00)
@@ -8779,13 +8784,13 @@ function gfmul( x, y) = {
   (if bit_to_bool(y[3]) then xt2(xt2(xt2(x))) else 0x00)
 }
 
-/* 8-bit to 32-bit partial AES Mix Colum - forwards */
+/* 8-bit to 32-bit partial AES Mix Column - forwards */
 val aes_mixcolumn_byte_fwd : bits(8) -&gt; bits(32)
 function aes_mixcolumn_byte_fwd(so) = {
   gfmul(so, 0x3) @ so @ so @ gfmul(so, 0x2)
 }
 
-/* 8-bit to 32-bit partial AES Mix Colum - inverse*/
+/* 8-bit to 32-bit partial AES Mix Column - inverse*/
 val aes_mixcolumn_byte_inv : bits(8) -&gt; bits(32)
 function aes_mixcolumn_byte_inv(so) = {
   gfmul(so, 0xb) @ gfmul(so, 0xd) @ gfmul(so, 0x9) @ gfmul(so, 0xe)
@@ -9170,9 +9175,6 @@ function sm4_subword(x) = {
               <button data-micromodal-close class="modal-versions-close">
                 <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
               </button>
-              <div class="colset">
-                <div class="col-left">
-
                   <ul class="nav-versions">
                       <li class="component">
                         <div>
@@ -9365,263 +9367,6 @@ function sm4_subword(x) = {
                         
                       </li>
                   </ul>
-                </div>
-                <div class="col-right">
-                  <ul class="projects">
-  <li>
-    Related Spring Documentation
-    <ul class="projects-list">
-        <li>
-<a href="https://docs.spring.io/spring-boot/">
-  Spring Boot
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-framework/reference/">
-  Spring Framework
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Cloud
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-build/reference/">
-  Spring Cloud Build
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-bus/reference/">
-  Spring Cloud Bus
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
-  Spring Cloud Circuit Breaker
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-commons/reference/">
-  Spring Cloud Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-config/reference/">
-  Spring Cloud Config
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-consul/reference/">
-  Spring Cloud Consul
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-contract/reference/">
-  Spring Cloud Contract
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-function/reference/">
-  Spring Cloud Function
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
-  Spring Cloud Gateway
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
-  Spring Cloud Kubernetes
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
-  Spring Cloud Netflix
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
-  Spring Cloud OpenFeign
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-stream/reference/">
-  Spring Cloud Stream
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-task/reference/">
-  Spring Cloud Task
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-vault/reference/">
-  Spring Cloud Vault
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
-  Spring Cloud Zookeeper
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Data
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-data/cassandra/reference/">
-  Spring Data Cassandra
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/commons/reference/">
-  Spring Data Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/couchbase/reference/">
-  Spring Data Couchbase
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
-  Spring Data Elasticsearch
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/jpa/reference/">
-  Spring Data JPA
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
-  Spring Data KeyValue
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/ldap/reference/">
-  Spring Data LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/mongodb/reference/">
-  Spring Data MongoDB
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/neo4j/reference/">
-  Spring Data Neo4j
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/redis/reference/">
-  Spring Data Redis
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/relational/reference/">
-  Spring Data JDBC &amp; R2DBC
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/rest/reference/">
-  Spring Data REST
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-integration/reference/">
-  Spring Integration
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-batch/reference/">
-  Spring Batch
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-<a href="https://docs.spring.io/spring-security/reference/">
-  Spring Security
-</a>
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-authorization-server/reference/">
-  Spring Authorization Server
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-ldap/reference/">
-  Spring LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-security-kerberos/reference/">
-  Spring Security Kerberos
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-session/reference/">
-  Spring Session
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-vault/reference/">
-  Spring Vault
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-ai/reference/">
-  Spring AI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-amqp/reference/">
-  Spring AMQP
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-cli/reference/">
-  Spring CLI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-graphql/reference/">
-  Spring GraphQL
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-kafka/reference/">
-  Spring for Apache Kafka
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-modulith/reference/">
-  Spring Modulith
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-pulsar/reference/">
-  Spring for Apache Pulsar
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-shell/reference/">
-  Spring Shell
-</a>
-</li>
-    </ul>
-  </li
-  <li><a href="../../spring-projects.html">All Docs...</a></li>
-</ul>
-                </div>
-              </div>
             </main>
         </div>
     </div>

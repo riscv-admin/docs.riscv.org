@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
+    <meta name="antora-ui-version" content="3f4ce2c51445edcfc62ee1f59ab97fffc218fb79"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -91,10 +91,7 @@
     <a class="nav-link"  href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">RV64I Base Integer Instruction Set</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="rv64.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
@@ -172,9 +169,6 @@
     <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -190,13 +184,7 @@
     <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Extending RISC-V</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">History and Acknowledgments</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -307,12 +295,28 @@
             version="1.1"
             viewBox="0 0 512 512"
             width="512px"
-          ><style type="text/css"><![CDATA[
+          ><style type="text/css"><
               .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
                 class="st0"
                 d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
               ></path></g></svg>
           GitHub Project
+        </a>
+
+      <a href="" title="PDF">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          Download PDF
         </a>
     </div>
   </div>
@@ -348,14 +352,9 @@ value.</p>
 <p>New 128-bit variants of LOAD-FP and STORE-FP instructions are added,
 encoded with a new value for the funct3 width field.</p>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNp1zTELwjAQhuHdX3FblgimpRSyCeIkqHPJkJpUM6SV5MCh9L97YmPawfW-e3jHYO8Smg3A2DqMEmoO0GtvJbDheRuMZXQA0IiB_ljNODud94ft8cLUxLOrsgvma5auImdsxDUqM3o5g4_ZJVQSuv7PRPHrLDOtjnaNRMETct43QsidIpqQKEgNXRctzttHq-kN6uxNSA==" alt="svg">
-</div>
-</div>
-<div class="imageblock kroki">
-<div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNp90D0PwiAQBuDdX3EbCyZiJU3YdfVzaxhoS7UDYoDEoel_F0KVkqjr3T15895g5JVBtQAY6t5ZBiUGuAslGSD9aHQrkR8ACOeMv0Mlwuh82Z-2y90B8REnSBPslao2bMUDfUPqoe46K11cZbZI9tm37hYzP7bw9vgzzVgy3edptbDyD1p_RdY0ufH_mLUihNFQa_6OqVVcBcvHF1Y1XjA=" alt="svg">
+<img src="wavedrom/quad-ls.svg" alt="quad ls">
 </div>
 </div>
 <div id="quad-ls" class="paragraph">
@@ -415,14 +414,9 @@ instructions, as shown in <a href="#fpextfmt">Format field encoding.</a></p>
 analogously to their double-precision counterparts, but operate on
 quad-precision operands and produce quad-precision results.</p>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULwEnH1uogTDKFm1SUAjQFBGAmmQJ1pKQWl2CnUEwxRpiSi2aKMVBDkC-M8PX00_d1jIBwcTmk2BBiBrJDiouSDbFRuA0xwmqIEQZlgGqEEdyItNwSVCNAqgNRMA7L00rzkktMkSIFZLmbo4uLvltwqBNQXN3NN9RH383FMwzC8fTTBYcKkB0cGBQCNje2FgBOJ4a3" alt="svg">
-</div>
-</div>
-<div class="imageblock kroki">
-<div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUXeL9ov1dXRx0QczgkOd1GNrdRC6TeG6i1KAOkEAptsUqDsltbgEVYMxQkMumgZjoIYgX5zmFxtC1CObX1yUbIhbgxFWDUaoGozgGtJyS1A1APWrB-I23hir8cZgDbG1AAg2YyA=" alt="svg">
+<img src="wavedrom/quad-compute.svg" alt="quad compute">
 </div>
 </div>
 </div>
@@ -440,9 +434,9 @@ FCVT.WU.Q, FCVT.LU.Q, FCVT.Q.WU, and FCVT.Q.LU variants convert to or
 from unsigned integer values. FCVT.L[U].Q and FCVT.Q.L[U] are RV64-only
 instructions. Note FCVT.Q.L[U] always produces an exact result and is unaffected by rounding mode.</p>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULgNOxtToInaZwnUUpQF0gANNpCtSRklpcAqNQ9Bkj9OWC9ME0GQNVB_lCCFwWFRtCbEK2qLgoGUri1GWEqSs8OjRW3wdIAKWQOChGGMGNSMstQTUCaKJ6IBjjsDStNC-5xBQpNEGWujmHhehl5pXoBcI4gSAu2IzYWgDisXGz" alt="svg">
+<img src="wavedrom/quad-cnvrt-mv.svg" alt="quad cnvrt mv">
 </div>
 </div>
 <div id="quad-cnvrt-mv" class="paragraph">
@@ -454,39 +448,25 @@ single-precision floating-point number, or vice-versa, respectively.
 FCVT.D.Q or FCVT.Q.D converts a quad-precision floating-point number to
 a double-precision floating-point number, or vice-versa, respectively.</p>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRNwey1f0DdN0CkBhodGytDsIsU7hZRSlALSAAM8sUqCMltbgEO4ViijHClFw0U4yBGoJ80Qlcbig2hGhHdkNxUTIWEqcJRpgmBIICIxhEgFkuqJqN4JrTcktQNQPNAumDaQMbgMPitNK85BJTpKgAWezmHBaiF6wH1g5mB-oFw9kuKOIQR8XWAgAvKIIh" alt="svg">
+<img src="wavedrom/quad-cnvt-interchange.svg" alt="quad cnvt interchange">
 </div>
 </div>
-<div id="quad-convrt-interchange" class="paragraph">
+<div id="quad-convert-interchange" class="paragraph">
 <p>Floating-point to floating-point sign-injection instructions, FSGNJ.Q,
 FSGNJN.Q, and FSGNJX.Q are defined analogously to the double-precision
 sign-injection instruction.</p>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5ToI6U1OISVA3GCA25IA0w1cZAjrpXtF-svlcETiuKDSF2IFtRXJRsiFuDEVYNRqgajOAa0nJLUDUA9asH4jI-rTQvucQUKZBAxrsFu_t5gXXE1gIA5rxhig==" alt="svg">
+<img src="wavedrom/quad-cnvrt-intch-xqqx.svg" alt="quad cnvrt intch xqqx">
 </div>
 </div>
 <div id="quad-cnvrt-intch-xqqx" class="paragraph">
 <p>FMV.X.Q and FMV.Q.X instructions are not provided in RV32 or RV64, so
 quad-precision bit patterns must be moved to the integer registers via
 memory.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>RV128 will support FMV.X.Q and FMV.Q.X in the Q extension.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 </div>
 <div class="sect2">
@@ -496,9 +476,9 @@ memory.</p>
 analogously to their double-precision counterparts, but operate on
 quad-precision operands.</p>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5ToI6U1OISVA3GCA25IA0w1cZA1a6B-j4h-j6uOK0oNoTYgWxFcVGyIW4NRlg1GKFqMIJrSMstQdUA1K8eiMv4tNK85BJTpEACGe_m7AsJo9haAG8eYRw=" alt="svg">
+<img src="wavedrom/quad-float-compare.svg" alt="quad float compare">
 </div>
 </div>
 </div>
@@ -509,9 +489,9 @@ quad-precision operands.</p>
 defined analogously to its double-precision counterpart, but operates on
 quad-precision operands.</p>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5ToI6U1OISVA3GCA25aBqMgRoMDAxxWlBsCNGAbEFxUTJu9UaY6g1QVRvBVafllqCqBmpWD8RldlppXnKJKVLwgMx2c_ZxDA4Ga4mtBQA-xV8D" alt="svg">
+<img src="wavedrom/quad-float-clssfy.svg" alt="quad float clssfy">
 </div>
 </div>
 </div>
@@ -530,9 +510,6 @@ quad-precision operands.</p>
               <button data-micromodal-close class="modal-versions-close">
                 <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
               </button>
-              <div class="colset">
-                <div class="col-left">
-
                   <ul class="nav-versions">
                       <li class="component">
                         <div>
@@ -725,263 +702,6 @@ quad-precision operands.</p>
                         
                       </li>
                   </ul>
-                </div>
-                <div class="col-right">
-                  <ul class="projects">
-  <li>
-    Related Spring Documentation
-    <ul class="projects-list">
-        <li>
-<a href="https://docs.spring.io/spring-boot/">
-  Spring Boot
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-framework/reference/">
-  Spring Framework
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Cloud
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-build/reference/">
-  Spring Cloud Build
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-bus/reference/">
-  Spring Cloud Bus
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
-  Spring Cloud Circuit Breaker
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-commons/reference/">
-  Spring Cloud Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-config/reference/">
-  Spring Cloud Config
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-consul/reference/">
-  Spring Cloud Consul
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-contract/reference/">
-  Spring Cloud Contract
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-function/reference/">
-  Spring Cloud Function
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
-  Spring Cloud Gateway
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
-  Spring Cloud Kubernetes
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
-  Spring Cloud Netflix
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
-  Spring Cloud OpenFeign
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-stream/reference/">
-  Spring Cloud Stream
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-task/reference/">
-  Spring Cloud Task
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-vault/reference/">
-  Spring Cloud Vault
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
-  Spring Cloud Zookeeper
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Data
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-data/cassandra/reference/">
-  Spring Data Cassandra
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/commons/reference/">
-  Spring Data Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/couchbase/reference/">
-  Spring Data Couchbase
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
-  Spring Data Elasticsearch
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/jpa/reference/">
-  Spring Data JPA
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
-  Spring Data KeyValue
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/ldap/reference/">
-  Spring Data LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/mongodb/reference/">
-  Spring Data MongoDB
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/neo4j/reference/">
-  Spring Data Neo4j
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/redis/reference/">
-  Spring Data Redis
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/relational/reference/">
-  Spring Data JDBC &amp; R2DBC
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/rest/reference/">
-  Spring Data REST
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-integration/reference/">
-  Spring Integration
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-batch/reference/">
-  Spring Batch
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-<a href="https://docs.spring.io/spring-security/reference/">
-  Spring Security
-</a>
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-authorization-server/reference/">
-  Spring Authorization Server
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-ldap/reference/">
-  Spring LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-security-kerberos/reference/">
-  Spring Security Kerberos
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-session/reference/">
-  Spring Session
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-vault/reference/">
-  Spring Vault
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-ai/reference/">
-  Spring AI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-amqp/reference/">
-  Spring AMQP
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-cli/reference/">
-  Spring CLI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-graphql/reference/">
-  Spring GraphQL
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-kafka/reference/">
-  Spring for Apache Kafka
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-modulith/reference/">
-  Spring Modulith
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-pulsar/reference/">
-  Spring for Apache Pulsar
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-shell/reference/">
-  Spring Shell
-</a>
-</li>
-    </ul>
-  </li
-  <li><a href="../../spring-projects.html">All Docs...</a></li>
-</ul>
-                </div>
-              </div>
             </main>
         </div>
     </div>

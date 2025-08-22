@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
     <link rel="prev" href="zc.html">
-    <link rel="next" href="p-st-ext.html">
+    <link rel="next" href="v-st-ext.html">
     <meta name="generator" content="Antora 3.1.12">
     <script>
 !function (theme, navWidth) {
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
+    <meta name="antora-ui-version" content="3f4ce2c51445edcfc62ee1f59ab97fffc218fb79"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -91,10 +91,7 @@
     <a class="nav-link"  href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">RV64I Base Integer Instruction Set</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="rv64.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
@@ -172,9 +169,6 @@
     <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -190,13 +184,7 @@
     <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Extending RISC-V</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">History and Acknowledgments</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -307,12 +295,28 @@
             version="1.1"
             viewBox="0 0 512 512"
             width="512px"
-          ><style type="text/css"><![CDATA[
+          ><style type="text/css"><
               .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
                 class="st0"
                 d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
               ></path></g></svg>
           GitHub Project
+        </a>
+
+      <a href="" title="PDF">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          Download PDF
         </a>
     </div>
   </div>
@@ -346,9 +350,7 @@ The instructions have mnemonics and encodings that are independent of the extens
 Thus, when implementing extensions with overlapping instructions, there is no redundancy in logic or encoding.</p>
 </div>
 <div class="paragraph">
-<p>The bitmanip extensions are defined for RV32 and RV64.
-Most of the instructions are expected to be forward compatible with RV128.
-While the shift-immediate instructions are defined to have at most a 6-bit immediate field, a 7th bit is available in the encoding space should this be needed for RV128.</p>
+<p>The bitmanip extensions are defined for RV32 and RV64.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1125,7 +1127,7 @@ instructions that return the smaller/larger of two operands.</p>
 <p>These instructions perform the sign extension or zero extension of the least significant 8 bits or 16 bits of the source register.</p>
 </div>
 <div class="paragraph">
-<p>These instructions replace the generalized idioms <code>slli rD,rS,(XLEN-&lt;size&gt;) + srli</code> (for zero extension) or <code>slli + srai</code> (for sign extension) for the sign extension of 8-bit and 16-bit quantities, and for the zero extension of 16-bit quantities.</p>
+<p>These instructions replace the generalized idioms <code>slli rd,rs,(XLEN-&lt;size&gt;) + srai</code> (for sign extension of 8-bit and 16-bit quantities) and <code>slli + srli</code> (for zero extension of 16-bit quantities).</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2012,7 +2014,7 @@ X(rd) = (X(rs1) &gt;&gt; index) &amp; 1;</code></pre>
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>This instruction returns a single bit extracted from <em>rs1</em> at the index specified in <em>rs2</em>.
+<p>This instruction returns a single bit extracted from <em>rs1</em> at the index specified in <em>shamt</em>.
 The index is read from the lower log2(XLEN) bits of <em>shamt</em>.
 For RV32, the encodings corresponding to shamt[5]=1 are reserved.</p>
 </dd>
@@ -3616,7 +3618,7 @@ X(rd) = EXTZ(hi_half @ lo_half);</code></pre>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDSUchLzE21UjCoMK7VgYmaIkRTsYiqF6WoI4SNEYpNsCouNlTHLm6EJG6OakpsLQD79DK3" alt="svg">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDXUchLzE21UjCoME7SUUgsKSmyUohW9w_QNTZSj63VgakzhalTL0pRRwgbI7SbYFVcbKiOXdwISdwc1ZTYWgDrrzDz" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -5066,7 +5068,7 @@ directly.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDSUchLzE21UjCoMK7VgYmaIkSTsYiqF6WoI4SNEYpNsCouNlTHLm6EJG6OMMUQZExsLQAtXDLm" alt="svg">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDXUchLzE21UjCoMDbWUUgsKSmyUohW9w9Qj1Wo1YGpMoWpUi9KUUcIGyM0m2BVXGyojl3cCEkcyQmGIGNiawGzVjCD" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -5144,7 +5146,7 @@ function clause execute ( XPERM8 (rs2,rs1,rd)) = {
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDSUchLzE21UjCoMK7VgYmaIkSTsYiqF6WoI4SNEYqNsCouNlTHLm6EJG6OMMXQBCgcWwsALMIy5A==" alt="svg">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmqk7KLCm2UjDXUchLzE21UjCoMDbWUUgsKSmyUohW9w9Qj1Wo1YGpMoWpUi9KUUcIGyM0G2FVXGyojl3cCEkcyQmGJkDh2FoAsrwwgQ==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -5299,7 +5301,7 @@ function clause execute ( XPERM4 (rs2,rs1,rd)) = {
 <dt class="hdlist1">Synopsis</dt>
 <dd>
 <p>Interleave upper and lower halves of the source register into odd and even
-bits of the destination register, respectivley.</p>
+bits of the destination register, respectively.</p>
 </dd>
 <dt class="hdlist1">Mnemonic</dt>
 <dd>
@@ -5403,70 +5405,70 @@ directly.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">#include &lt;sys/asm.h&gt;
 
-	.text
-	.globl strlen
-	.type  strlen, @function
+    .text
+    .globl strlen
+    .type  strlen, @function
 strlen:
-	andi	a3, a0, (SZREG-1)   // offset
-	andi    a1, a0, -SZREG      // align pointer
+    andi    a3, a0, (SZREG-1)   // offset
+    andi    a1, a0, -SZREG      // align pointer
 .Lprologue:
-	li      a4, SZREG
-	sub     a4, a4, a3          // XLEN - offset
-	slli	a3, a3, 3           // offset * 8
-	REG_L   a2, 0(a1)           // chunk
-	/*
-	 * Shift the partial/unaligned chunk we loaded to remove the bytes
-	 * from before the start of the string, adding NUL bytes at the end.
-	 */
+    li      a4, SZREG
+    sub     a4, a4, a3          // XLEN - offset
+    slli    a3, a3, 3           // offset * 8
+    REG_L   a2, 0(a1)           // chunk
+    /*
+     * Shift the partial/unaligned chunk we loaded to remove the bytes
+     * from before the start of the string, adding NUL bytes at the end.
+     */
 #if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
-	srl	a2, a2 ,a3          // chunk &gt;&gt; (offset * 8)
+    srl     a2, a2 ,a3          // chunk &gt;&gt; (offset * 8)
 #else
-	sll     a2, a2, a3
+    sll     a2, a2, a3
 #endif
-	orc.b   a2, a2
-	not	a2, a2
-	/*
-	 * Non-NUL bytes in the string have been expanded to 0x00, while
- 	 * NUL bytes have become 0xff.  Search for the first set bit
-	 * (corresponding to a NUL byte in the original chunk).
-	 */
+    orc.b   a2, a2
+    not     a2, a2
+    /*
+     * Non-NUL bytes in the string have been expanded to 0x00, while
+     * NUL bytes have become 0xff.  Search for the first set bit
+     * (corresponding to a NUL byte in the original chunk).
+     */
 #if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
-	ctz     a2, a2
+    ctz     a2, a2
 #else
-	clz     a2, a2
+    clz     a2, a2
 #endif
-	/*
-	 * The first chunk is special: compare against the number of valid
-	 * bytes in this chunk.
-	 */
-	srli    a0, a2, 3
-	bgtu    a4, a0, .Ldone
-	addi    a3, a1, SZREG
-	li      a4, -1
-	.align 2
-	/*
-	 * Our critical loop is 4 instructions and processes data in 4 byte
-	 * or 8 byte chunks.
-	 */
+    /*
+     * The first chunk is special: compare against the number of valid
+     * bytes in this chunk.
+     */
+    srli    a0, a2, 3
+    bgtu    a4, a0, .Ldone
+    addi    a3, a1, SZREG
+    li      a4, -1
+    .align 2
+    /*
+     * Our critical loop is 4 instructions and processes data in 4 byte
+     * or 8 byte chunks.
+     */
 .Lloop:
-	REG_L   a2, SZREG(a1)
-	addi    a1, a1, SZREG
-	orc.b   a2, a2
-	beq     a2, a4, .Lloop
+    REG_L   a2, SZREG(a1)
+    addi    a1, a1, SZREG
+    orc.b   a2, a2
+    beq     a2, a4, .Lloop
 
 .Lepilogue:
-	not     a2, a2
+    not     a2, a2
 #if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
-	ctz     a2, a2
+    ctz     a2, a2
 #else
-	clz     a2, a2
+    clz     a2, a2
 #endif
-	sub     a1, a1, a3
-	add	a0, a0, a1
-	srli    a2, a2, 3
-	add 	a0, a0, a2
+    sub     a1, a1, a3
+    add     a0, a0, a1
+    srli    a2, a2, 3
+    add     a0, a0, a2
 .Ldone:
-	ret</code></pre>
+    ret</code></pre>
 </div>
 </div>
 </div>
@@ -5538,7 +5540,7 @@ strcmp:
 </div>
 <nav class="pagination">
   <span class="prev"><a href="zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a></span>
-  <span class="next"><a href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a></span>
+  <span class="next"><a href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a></span>
 </nav>
 </article>  </div>
 </main>
@@ -5549,9 +5551,6 @@ strcmp:
               <button data-micromodal-close class="modal-versions-close">
                 <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
               </button>
-              <div class="colset">
-                <div class="col-left">
-
                   <ul class="nav-versions">
                       <li class="component">
                         <div>
@@ -5744,263 +5743,6 @@ strcmp:
                         
                       </li>
                   </ul>
-                </div>
-                <div class="col-right">
-                  <ul class="projects">
-  <li>
-    Related Spring Documentation
-    <ul class="projects-list">
-        <li>
-<a href="https://docs.spring.io/spring-boot/">
-  Spring Boot
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-framework/reference/">
-  Spring Framework
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Cloud
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-build/reference/">
-  Spring Cloud Build
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-bus/reference/">
-  Spring Cloud Bus
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
-  Spring Cloud Circuit Breaker
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-commons/reference/">
-  Spring Cloud Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-config/reference/">
-  Spring Cloud Config
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-consul/reference/">
-  Spring Cloud Consul
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-contract/reference/">
-  Spring Cloud Contract
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-function/reference/">
-  Spring Cloud Function
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
-  Spring Cloud Gateway
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
-  Spring Cloud Kubernetes
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
-  Spring Cloud Netflix
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
-  Spring Cloud OpenFeign
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-stream/reference/">
-  Spring Cloud Stream
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-task/reference/">
-  Spring Cloud Task
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-vault/reference/">
-  Spring Cloud Vault
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
-  Spring Cloud Zookeeper
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Data
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-data/cassandra/reference/">
-  Spring Data Cassandra
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/commons/reference/">
-  Spring Data Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/couchbase/reference/">
-  Spring Data Couchbase
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
-  Spring Data Elasticsearch
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/jpa/reference/">
-  Spring Data JPA
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
-  Spring Data KeyValue
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/ldap/reference/">
-  Spring Data LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/mongodb/reference/">
-  Spring Data MongoDB
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/neo4j/reference/">
-  Spring Data Neo4j
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/redis/reference/">
-  Spring Data Redis
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/relational/reference/">
-  Spring Data JDBC &amp; R2DBC
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/rest/reference/">
-  Spring Data REST
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-integration/reference/">
-  Spring Integration
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-batch/reference/">
-  Spring Batch
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-<a href="https://docs.spring.io/spring-security/reference/">
-  Spring Security
-</a>
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-authorization-server/reference/">
-  Spring Authorization Server
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-ldap/reference/">
-  Spring LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-security-kerberos/reference/">
-  Spring Security Kerberos
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-session/reference/">
-  Spring Session
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-vault/reference/">
-  Spring Vault
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-ai/reference/">
-  Spring AI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-amqp/reference/">
-  Spring AMQP
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-cli/reference/">
-  Spring CLI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-graphql/reference/">
-  Spring GraphQL
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-kafka/reference/">
-  Spring for Apache Kafka
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-modulith/reference/">
-  Spring Modulith
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-pulsar/reference/">
-  Spring for Apache Pulsar
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-shell/reference/">
-  Spring Shell
-</a>
-</li>
-    </ul>
-  </li
-  <li><a href="../../spring-projects.html">All Docs...</a></li>
-</ul>
-                </div>
-              </div>
             </main>
         </div>
     </div>

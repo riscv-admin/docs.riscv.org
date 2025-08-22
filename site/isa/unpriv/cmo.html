@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
+    <meta name="antora-ui-version" content="3f4ce2c51445edcfc62ee1f59ab97fffc218fb79"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -91,10 +91,7 @@
     <a class="nav-link"  href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">RV64I Base Integer Instruction Set</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="rv64.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
@@ -172,9 +169,6 @@
     <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -190,13 +184,7 @@
     <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Extending RISC-V</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">History and Acknowledgments</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -307,12 +295,28 @@
             version="1.1"
             viewBox="0 0 512 512"
             width="512px"
-          ><style type="text/css"><![CDATA[
+          ><style type="text/css"><
               .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
                 class="st0"
                 d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
               ></path></g></svg>
           GitHub Project
+        </a>
+
+      <a href="" title="PDF">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          Download PDF
         </a>
     </div>
   </div>
@@ -796,20 +800,20 @@ protection mechanisms. The trapping behavior of CMO instructions is described in
 the following sections.</p>
 </div>
 <div class="sect4">
-<h5 id="illegal-instruction-and-virtual-instruction-exceptions"><a class="anchor" href="#illegal-instruction-and-virtual-instruction-exceptions"></a>Illegal Instruction and Virtual Instruction Exceptions</h5>
+<h5 id="illegal-instruction-and-virtual-instruction-exceptions"><a class="anchor" href="#illegal-instruction-and-virtual-instruction-exceptions"></a>Illegal-Instruction and Virtual-Instruction Exceptions</h5>
 <div class="paragraph">
 <p>Cache-block management instructions and cache-block zero instructions may raise
-illegal instruction exceptions or virtual instruction exceptions depending on
+illegal-instruction exceptions or virtual-instruction exceptions depending on
 the current privilege mode and the state of the CMO control registers described
 in the <a href="#csr_state">Control and Status Register State</a> section.</p>
 </div>
 <div class="paragraph">
-<p>Cache-block prefetch instructions raise neither illegal instruction exceptions
-nor virtual instruction exceptions.</p>
+<p>Cache-block prefetch instructions raise neither illegal-instruction exceptions
+nor virtual-instruction exceptions.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="page-fault-guest-page-fault-and-access-fault-exceptions"><a class="anchor" href="#page-fault-guest-page-fault-and-access-fault-exceptions"></a>Page Fault, Guest-Page Fault, and Access Fault Exceptions</h5>
+<h5 id="page-fault-guest-page-fault-and-access-fault-exceptions"><a class="anchor" href="#page-fault-guest-page-fault-and-access-fault-exceptions"></a>Page-Fault, Guest-Page-Fault, and Access-Fault Exceptions</h5>
 <div class="paragraph">
 <p>Similar to load and store instructions, CMO instructions are explicit memory
 access instructions that compute an effective address. The effective address is
@@ -868,8 +872,8 @@ instruction is permitted to access the physical addresses, but an instruction
 fetch is permitted to access the physical addresses, whether a cache-block
 management instruction is permitted to access the cache block is UNSPECIFIED. If
 access to the cache block is not permitted, a cache-block management instruction
-raises a store page fault or store guest-page fault exception if address
-translation does not permit any access or raises a store access fault exception
+raises a store page-fault or store guest-page-fault exception if address
+translation does not permit any access or raises a store access-fault exception
 otherwise. During address translation, the instruction also checks the accessed
 bit and may either raise an exception or set the bit as required.</p>
 </div>
@@ -897,9 +901,9 @@ dirty bit and neither raises an exception nor sets the bit.</em></p>
 whenever a store instruction is permitted to access the corresponding physical
 addresses and when the PMAs indicate that cache-block zero instructions are a
 supported access type. If access to the cache block is not permitted, a
-cache-block zero instruction raises a store page fault or store guest-page fault
+cache-block zero instruction raises a store page-fault or store guest-page-fault
 exception if address translation does not permit write access or raises a store
-access fault exception otherwise. During address translation, the instruction
+access-fault exception otherwise. During address translation, the instruction
 also checks the accessed and dirty bits and may either raise an exception or set
 the bits as required.</p>
 </div>
@@ -913,9 +917,9 @@ translation, the instruction does <em>not</em> check the accessed and dirty bits
 neither raises an exception nor sets the bits.</p>
 </div>
 <div class="paragraph">
-<p>When a page fault, guest-page fault, or access fault exception is taken, the
-relevant *tval CSR is written with the faulting effective address (i.e. the same
-faulting address value as for other causes of these exceptions).</p>
+<p>When a page-fault, guest-page-fault, or access-fault exception is taken, the
+relevant *tval CSR is written with the faulting effective address (i.e. the
+value of <em>rs1</em>).</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -941,9 +945,9 @@ appropriate for these instructions, regardless of the permissions required.</em>
 </div>
 </div>
 <div class="sect4">
-<h5 id="address-misaligned-exceptions"><a class="anchor" href="#address-misaligned-exceptions"></a>Address Misaligned Exceptions</h5>
+<h5 id="address-misaligned-exceptions"><a class="anchor" href="#address-misaligned-exceptions"></a>Address-Misaligned Exceptions</h5>
 <div class="paragraph">
-<p>CMO instructions do <em>not</em> generate address misaligned exceptions.</p>
+<p>CMO instructions do <em>not</em> generate address-misaligned exceptions.</p>
 </div>
 </div>
 <div class="sect4">
@@ -1063,7 +1067,7 @@ instructions and cache-block zero instructions:</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UlDPL0jOT0lVr9VByJrCZQ0qDBSQZYwR-tJK85JLjHHrQ5YwNNJBWJdalFiSmZ8H0hlbCwBLtSyU" alt="svg">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUqhWSMosKbZSMNdRUMhLzE21UlDPL0jOT0lVr9VByJrCZQ0qDBSQZYwR-tJK85JLjHHrQ5YwNNJBWJdalFiSmZ8H0hlbCwBz3i0H" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -1155,22 +1159,6 @@ mechanism.</p>
 </div>
 <div class="sect2">
 <h3 id="csr_state"><a class="anchor" href="#csr_state"></a>Control and Status Register State</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p><em>The CMO extensions rely on state in envcfg CSRs that will be defined in a
-future update to the privileged architecture. If this CSR update is not
-ratified, the CMO extension will define its own CSRs.</em></p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>Three CSRs control the execution of CMO instructions:</p>
 </div>
@@ -1225,7 +1213,7 @@ a lower privilege mode:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>00</code>: The instruction raises an illegal instruction or virtual instruction
+<p><code>00</code>: The instruction raises an illegal-instruction or virtual-instruction
 exception</p>
 </li>
 <li>
@@ -1253,7 +1241,7 @@ cache block flush instruction, <code>CBO.FLUSH</code>, in a lower privilege mode
 <div class="ulist">
 <ul>
 <li>
-<p><code>0</code>: The instruction raises an illegal instruction or virtual instruction
+<p><code>0</code>: The instruction raises an illegal-instruction or virtual-instruction
 exception</p>
 </li>
 <li>
@@ -1275,7 +1263,7 @@ lower privilege mode:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>0</code>: The instruction raises an illegal instruction or virtual instruction
+<p><code>0</code>: The instruction raises an illegal-instruction or virtual-instruction
 exception</p>
 </li>
 <li>
@@ -1291,23 +1279,23 @@ exception</p>
 privilege mode and the state of the appropriate CSRs, as detailed below.</p>
 </div>
 <div class="paragraph">
-<p>A <code>CBO.INVAL</code> instruction executes or raises either an illegal instruction
-exception or a virtual instruction exception based on the state of the
+<p>A <code>CBO.INVAL</code> instruction executes or raises either an illegal-instruction
+exception or a virtual-instruction exception based on the state of the
 <code>xenvcfg.CBIE</code> fields:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal instruction exceptions
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal-instruction exceptions
 if (((priv_mode != M) &amp;&amp; (menvcfg.CBIE == 00)) ||
     ((priv_mode == U) &amp;&amp; (senvcfg.CBIE == 00)))
 {
-  &lt;raise illegal instruction exception&gt;
+  &lt;raise illegal-instruction exception&gt;
 }
-// virtual instruction exceptions
+// virtual-instruction exceptions
 else if (((priv_mode == VS) &amp;&amp; (henvcfg.CBIE == 00)) ||
          ((priv_mode == VU) &amp;&amp; ((henvcfg.CBIE == 00) || (senvcfg.CBIE == 00))))
 {
-  &lt;raise virtual instruction exception&gt;
+  &lt;raise virtual-instruction exception&gt;
 }
 // execute instruction
 else
@@ -1352,23 +1340,23 @@ either traps or performs a flush operation in a lower privileged level.</em></p>
 </table>
 </div>
 <div class="paragraph">
-<p>A <code>CBO.CLEAN</code> or <code>CBO.FLUSH</code> instruction executes or raises an illegal
-instruction or virtual instruction exception based on the state of the
+<p>A <code>CBO.CLEAN</code> or <code>CBO.FLUSH</code> instruction executes or raises an illegal-instruction
+or virtual-instruction exception based on the state of the
 <code>xenvcfg.CBCFE</code> bits:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal instruction exceptions
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal-instruction exceptions
 if (((priv_mode != M) &amp;&amp; !menvcfg.CBCFE) ||
     ((priv_mode == U) &amp;&amp; !senvcfg.CBCFE))
 {
-  &lt;raise illegal instruction exception&gt;
+  &lt;raise illegal-instruction exception&gt;
 }
-// virtual instruction exceptions
+// virtual-instruction exceptions
 else if (((priv_mode == VS) &amp;&amp; !henvcfg.CBCFE) ||
          ((priv_mode == VU) &amp;&amp; !(henvcfg.CBCFE &amp;&amp; senvcfg.CBCFE)))
 {
-  &lt;raise virtual instruction exception&gt;
+  &lt;raise virtual-instruction exception&gt;
 }
 // execute instruction
 else
@@ -1378,22 +1366,22 @@ else
 </div>
 </div>
 <div class="paragraph">
-<p>Finally, a <code>CBO.ZERO</code> instruction executes or raises an illegal instruction or
-virtual instruction exception based on the state of the <code>xenvcfg.CBZE</code> bits:</p>
+<p>Finally, a <code>CBO.ZERO</code> instruction executes or raises an illegal-instruction or
+virtual-instruction exception based on the state of the <code>xenvcfg.CBZE</code> bits:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal instruction exceptions
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal-instruction exceptions
 if (((priv_mode != M) &amp;&amp; !menvcfg.CBZE) ||
     ((priv_mode == U) &amp;&amp; !senvcfg.CBZE))
 {
-  &lt;raise illegal instruction exception&gt;
+  &lt;raise illegal-instruction exception&gt;
 }
-// virtual instruction exceptions
+// virtual-instruction exceptions
 else if (((priv_mode == VS) &amp;&amp; !henvcfg.CBZE) ||
          ((priv_mode == VU) &amp;&amp; !(henvcfg.CBZE &amp;&amp; senvcfg.CBZE)))
 {
-  &lt;raise virtual instruction exception&gt;
+  &lt;raise virtual-instruction exception&gt;
 }
 // execute instruction
 else
@@ -1525,6 +1513,22 @@ physical address by the appropriate translation mechanisms.</p>
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><em>Cache-block management instructions ignore cacheability attributes and operate
+on the cache block irrespective of the PMA cacheable attribute and any Page-Based
+Memory Type (PBMT) downgrade from cacheable to non-cacheable.</em></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect3">
 <h4 id="Zicboz"><a class="anchor" href="#Zicboz"></a>Cache-Block Zero Instructions</h4>
@@ -1674,7 +1678,7 @@ field is also interpreted as imm[4:0] like a store instruction.</em></p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhoY6iAbq-fs4-roB9EQWwsA-Ck8QQ==" alt="svg">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUqhWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhoY6iAbq-fs4-roB9EQWwsAM4Q8tA==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1706,16 +1710,6 @@ copies in the set of coherent caches.</em></p>
 </tr>
 </table>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Operation</dt>
-</dl>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">TODO</code></pre>
-</div>
-</div>
 </div>
 <div class="sect3">
 <h4 id="insns-cbo_flush"><a class="anchor" href="#insns-cbo_flush"></a>cbo.flush</h4>
@@ -1734,7 +1728,7 @@ copies in the set of coherent caches.</em></p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhoY6SAbq-fmExrsAdEQWwsA-Zo8YQ==" alt="svg">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUqhWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhoY6SAbq-fmExrsAdEQWwsANPU81A==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1742,18 +1736,17 @@ copies in the set of coherent caches.</em></p>
 <dt class="hdlist1">Description</dt>
 <dd>
 <p>A <strong>cbo.flush</strong> instruction performs a flush operation on the cache block whose
-effective address is the base address specified in <em>rs1</em>. The offset operand may
-be omitted; otherwise, any expression that computes the offset shall evaluate to
-zero. The instruction operates on the set of coherent caches accessed by the
+that contains the address specified in <em>rs1</em>. It is not required that <em>rs1</em> is
+aligned to the size of a cache block. On faults, the faulting virtual address
+is considered to be the value in rs1, rather than the base address of the cache
+block. The instruction operates on the set of coherent caches accessed by the
 agent executing the instruction.</p>
 </dd>
-<dt class="hdlist1">Operation</dt>
 </dl>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">TODO</code></pre>
-</div>
+<div class="paragraph">
+<p>The assembly <em>offset</em> operand may be omitted. If it isn&#8217;t then any expression
+that computes the offset shall evaluate to zero.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1773,7 +1766,7 @@ agent executing the instruction.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhoY6CAbq-fpF-boA9EQWwsA-Rw8Vw==" alt="svg">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUqhWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhoY6CAbq-fpF-boA9EQWwsANHc8yg==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1781,14 +1774,21 @@ agent executing the instruction.</p>
 <dt class="hdlist1">Description</dt>
 <dd>
 <p>A <strong>cbo.inval</strong> instruction performs an invalidate operation on the cache block
-whose effective address is the base address specified in <em>rs1</em>. The offset
-operand may be omitted; otherwise, any expression that computes the offset shall
-evaluate to zero. The instruction operates on the set of coherent caches
-accessed by the agent executing the instruction. Depending on CSR programming,
-the instruction may perform a flush operation instead of an invalidate
-operation.</p>
+that contains the address specified in <em>rs1</em>. It is not required that <em>rs1</em> is
+aligned to the size of a cache block. On faults, the faulting virtual address
+is considered to be the value in rs1, rather than the base address of the cache
+block. The instruction operates on the set of coherent caches accessed by the
+agent executing the instruction.</p>
 </dd>
 </dl>
+</div>
+<div class="paragraph">
+<p>Depending on CSR programming, the instruction may perform a flush operation
+instead of an invalidate operation.</p>
+</div>
+<div class="paragraph">
+<p>The assembly <em>offset</em> operand may be omitted. If it isn&#8217;t then any expression
+that computes the offset shall evaluate to zero.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1806,16 +1806,6 @@ invalidate operation.</em></p>
 </td>
 </tr>
 </table>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Operation</dt>
-</dl>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">TODO</code></pre>
-</div>
 </div>
 </div>
 <div class="sect3">
@@ -1835,7 +1825,7 @@ invalidate operation.</em></p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhqY6CAbqxflGgQ1O7YWAL3BPCE=" alt="svg">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUqhWSMosKbZSMNdRUMhLzE21UjCocAOyFRJLSoqsFKLVfT2DnXV9XX3VYxVqdRDqTZHUG6DIGCPJGCGb5Ozkj9MQ9aJiQ3UduNKkxOJUNLWGQLPgFhqY6CAbqxflGgQ1O7YWAPiaPJQ=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1843,18 +1833,17 @@ invalidate operation.</em></p>
 <dt class="hdlist1">Description</dt>
 <dd>
 <p>A <strong>cbo.zero</strong> instruction performs stores of zeros to the full set of bytes
-corresponding to the cache block whose effective address is the base address
-specified in <em>rs1</em>. The offset operand may be omitted; otherwise, any expression
-that computes the offset shall evaluate to zero. An implementation may or may
-not update the entire set of bytes atomically.</p>
+corresponding to the cache block that contains the address specified in <em>rs1</em>.
+It is not required that <em>rs1</em> is aligned to the size of a cache block. On
+faults, the faulting virtual address is considered to be the value in rs1,
+rather than the base address of the cache block. An implementation may or
+may not update the entire set of bytes atomically.</p>
 </dd>
-<dt class="hdlist1">Operation</dt>
 </dl>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">TODO</code></pre>
-</div>
+<div class="paragraph">
+<p>The assembly <em>offset</em> operand may be omitted. If it isn&#8217;t then any expression
+that computes the offset shall evaluate to zero.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1875,7 +1864,7 @@ instruction fetch in the near future</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCoMDQGciAgsaSkyEohWt0_QNfT11c9VqFWB6HHFEmPAVwLXE9-Wlpxakm0iZVBLJpGYySNZpga_YM8cdqkXlRsqK6DpiEpsTiVNLcFBLm6uYY4e-ih2wQMB6hFmbm50YaGVqaxIOvQ_AQRB-uMrQUAaxJX-g==" alt="svg">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUqhWSMosKbZSMNdRUMhLzE21UjCoMDQGciAgsaSkyEohWt0_QNfT11c9VqFWB6HHFEmPAVwLXE9-Wlpxakm0iZVBLJpGYySNZpga_YM8cdqkXlRsqK6DpiEpsTiVNLcFBLm6uYY4e-ih2wQMB6hFmbm50YaGVqaxIOvQ_AQRB-uMrQUA0qlYhA==" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1905,16 +1894,6 @@ this behavior is not required.</em></p>
 </tr>
 </table>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Operation</dt>
-</dl>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">TODO</code></pre>
-</div>
-</div>
 </div>
 <div class="sect3">
 <h4 id="insns-prefetch_r"><a class="anchor" href="#insns-prefetch_r"></a>prefetch.r</h4>
@@ -1934,7 +1913,7 @@ read in the near future</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCoMDQGciAgsaSkyEohWt0_QNfT11c9VqFWB6HHFEmPAVwLXE9-Wlpxakm0iZVBLJpGYySNZpga_YM8cdqkXlRsqK6DpiEpsTgVj9sMMa0ICHJ1cw1x9tALQtMHDAeoRZm5udGGhlamsSDr0PwEEQfrjK0FAG3MWAQ=" alt="svg">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUqhWSMosKbZSMNdRUMhLzE21UjCoMDQGciAgsaSkyEohWt0_QNfT11c9VqFWB6HHFEmPAVwLXE9-Wlpxakm0iZVBLJpGYySNZpga_YM8cdqkXlRsqK6DpiEpsTgVj9sMMa0ICHJ1cw1x9tALQtMHDAeoRZm5udGGhlamsSDr0PwEEQfrjK0FANVjWI4=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -1964,16 +1943,6 @@ behavior is not required.</em></p>
 </tr>
 </table>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Operation</dt>
-</dl>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">TODO</code></pre>
-</div>
-</div>
 </div>
 <div class="sect3">
 <h4 id="insns-prefetch_w"><a class="anchor" href="#insns-prefetch_w"></a>prefetch.w</h4>
@@ -1993,7 +1962,7 @@ write in the near future</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rm4qxWSMosKbZSMNdRUMhLzE21UjCoMDQGciAgsaSkyEohWt0_QNfT11c9VqFWB6HHFEmPAVwLXE9-Wlpxakm0iZVBLJpGYySNZpga_YM8cdqkXlRsqK6DpiEpsTgVj9uMMa0ICHJ1cw1x9tALR9MHDAeoRZm5udGGhlamsSDr0PwEEQfrjK0FAG_ZWAs=" alt="svg">
+<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt4rmUqhWSMosKbZSMNdRUMhLzE21UjCoMDQGciAgsaSkyEohWt0_QNfT11c9VqFWB6HHFEmPAVwLXE9-Wlpxakm0iZVBLJpGYySNZpga_YM8cdqkXlRsqK6DpiEpsTgVj9uMMa0ICHJ1cw1x9tALR9MHDAeoRZm5udGGhlamsSDr0PwEEQfrjK0FANdwWJU=" alt="svg">
 </div>
 </div>
 <div class="dlist">
@@ -2023,16 +1992,6 @@ behavior is not required.</em></p>
 </tr>
 </table>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Operation</dt>
-</dl>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">TODO</code></pre>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -2050,9 +2009,6 @@ behavior is not required.</em></p>
               <button data-micromodal-close class="modal-versions-close">
                 <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
               </button>
-              <div class="colset">
-                <div class="col-left">
-
                   <ul class="nav-versions">
                       <li class="component">
                         <div>
@@ -2245,263 +2201,6 @@ behavior is not required.</em></p>
                         
                       </li>
                   </ul>
-                </div>
-                <div class="col-right">
-                  <ul class="projects">
-  <li>
-    Related Spring Documentation
-    <ul class="projects-list">
-        <li>
-<a href="https://docs.spring.io/spring-boot/">
-  Spring Boot
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-framework/reference/">
-  Spring Framework
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Cloud
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-build/reference/">
-  Spring Cloud Build
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-bus/reference/">
-  Spring Cloud Bus
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
-  Spring Cloud Circuit Breaker
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-commons/reference/">
-  Spring Cloud Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-config/reference/">
-  Spring Cloud Config
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-consul/reference/">
-  Spring Cloud Consul
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-contract/reference/">
-  Spring Cloud Contract
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-function/reference/">
-  Spring Cloud Function
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
-  Spring Cloud Gateway
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
-  Spring Cloud Kubernetes
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
-  Spring Cloud Netflix
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
-  Spring Cloud OpenFeign
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-stream/reference/">
-  Spring Cloud Stream
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-task/reference/">
-  Spring Cloud Task
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-vault/reference/">
-  Spring Cloud Vault
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
-  Spring Cloud Zookeeper
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Data
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-data/cassandra/reference/">
-  Spring Data Cassandra
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/commons/reference/">
-  Spring Data Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/couchbase/reference/">
-  Spring Data Couchbase
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
-  Spring Data Elasticsearch
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/jpa/reference/">
-  Spring Data JPA
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
-  Spring Data KeyValue
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/ldap/reference/">
-  Spring Data LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/mongodb/reference/">
-  Spring Data MongoDB
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/neo4j/reference/">
-  Spring Data Neo4j
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/redis/reference/">
-  Spring Data Redis
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/relational/reference/">
-  Spring Data JDBC &amp; R2DBC
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/rest/reference/">
-  Spring Data REST
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-integration/reference/">
-  Spring Integration
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-batch/reference/">
-  Spring Batch
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-<a href="https://docs.spring.io/spring-security/reference/">
-  Spring Security
-</a>
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-authorization-server/reference/">
-  Spring Authorization Server
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-ldap/reference/">
-  Spring LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-security-kerberos/reference/">
-  Spring Security Kerberos
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-session/reference/">
-  Spring Session
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-vault/reference/">
-  Spring Vault
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-ai/reference/">
-  Spring AI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-amqp/reference/">
-  Spring AMQP
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-cli/reference/">
-  Spring CLI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-graphql/reference/">
-  Spring GraphQL
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-kafka/reference/">
-  Spring for Apache Kafka
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-modulith/reference/">
-  Spring Modulith
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-pulsar/reference/">
-  Spring for Apache Pulsar
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-shell/reference/">
-  Spring Shell
-</a>
-</li>
-    </ul>
-  </li
-  <li><a href="../../spring-projects.html">All Docs...</a></li>
-</ul>
-                </div>
-              </div>
             </main>
         </div>
     </div>

@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
+    <meta name="antora-ui-version" content="3f4ce2c51445edcfc62ee1f59ab97fffc218fb79"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -91,10 +91,7 @@
     <a class="nav-link"  href="../unpriv/rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv32.html">RV64I Base Integer Instruction Set</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="../unpriv/rv64.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
@@ -172,9 +169,6 @@
     <a class="nav-link"  href="../unpriv/b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -190,13 +184,7 @@
     <a class="nav-link"  href="../unpriv/rv-32-64g.html">RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/extending.html">Extending RISC-V</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/naming.html">ISA Extension Naming Conventions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/history.html">History and Acknowledgments</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -307,12 +295,28 @@
             version="1.1"
             viewBox="0 0 512 512"
             width="512px"
-          ><style type="text/css"><![CDATA[
+          ><style type="text/css"><
               .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
                 class="st0"
                 d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
               ></path></g></svg>
           GitHub Project
+        </a>
+
+      <a href="" title="PDF">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          Download PDF
         </a>
     </div>
   </div>
@@ -327,7 +331,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="smcdeleg"><a class="anchor" href="#smcdeleg"></a>"Smcdeleg" Counter Delegation Extension, Version 1.0</h2>
+<h2 id="smcdeleg"><a class="anchor" href="#smcdeleg"></a>"Smcdeleg/Ssccfg" Counter Delegation Extensions, Version 1.0</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In modern “Rich OS” environments, hardware performance monitoring
@@ -351,10 +355,10 @@ machines</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>This extension provides a means for M-mode to allow writing select
+<p>These extensions provide a means for M-mode to allow writing select
 counters and event selectors from S/HS-mode. The purpose is to avert
 transitions to and from M-mode that add latency to these performance
-critical supervisor/hypervisor code sections. This extension also
+critical supervisor/hypervisor code sections. These extensions also
 defines one new CSR, scountinhibit.</p>
 </div>
 <div class="paragraph">
@@ -365,14 +369,15 @@ modifications for a hart, over all privilege levels. For a
 Supervisor-level environment, extension <strong>Ssccfg</strong> (‘Ss’ for Privileged
 architecture and Supervisor-level extension, ‘ccfg’ for Counter
 Configuration) provides access to delegated counters, and to new
-supervisor-level state.</p>
+supervisor-level state.  For a RISC-V hardware platform, Smcdeleg and
+Ssccfg must always be implemented in tandem.</p>
 </div>
 <div class="sect2">
 <h3 id="counter-delegation"><a class="anchor" href="#counter-delegation"></a>Counter Delegation</h3>
 <div class="paragraph">
 <p>The <code>mcounteren</code> register allows M-mode to provide the next-lower
 privilege mode with read access to select counters. When the Smcdeleg/Ssccfg
-extension is enabled (<code>menvcfg</code>.CDE=1), it further allows M-mode to delegate select
+extensions are enabled (<code>menvcfg</code>.CDE=1), it further allows M-mode to delegate select
 counters to S-mode.</p>
 </div>
 <div class="paragraph">
@@ -449,22 +454,16 @@ the table below.</p>
 <sup>3</sup> Depends on Sscofpmf support<br>
 <sup>4</sup> Depends on Smcntrpmf support</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
 <div class="paragraph">
-<p><code><em>hpmevent</em>i</code> <em>represents a subset of the state accessed by the</em> <code><em>mhpmevent</em>i</code> <em>register. Likewise, <code>cyclecfg</code> and <code>instretcfg</code> represent a subset of the state accessed by the <code>mcyclecfg</code> and <code>minstretcfg</code> registers, respectively. See below for subset details.</em></p>
-</div>
-</td>
-</tr>
-</table>
+<p><code>hpmevent<em>i</em></code> may represent a subset of the state accessed by the <code>mhpmevent<em>i</em></code> register. Specifically, if Sscofpmf is implemented, event selector bit
+62 (MINH) is read-only 0 when accessed through <code>sireg*</code>.</p>
 </div>
 <div class="paragraph">
-<p>If extension Smstateen is implemented, refer to extension Smcsrind/Sscsrind (<a href="#indirect-csr">[indirect-csr]</a>) for how setting bit 60 of CSR
+<p>Likewise, <code>cyclecfg</code> and <code>instretcfg</code> may represent a subset of the state accessed by the <code>mcyclecfg</code> and <code>minstretcfg</code> registers, respectively. If
+Smcntrpmf is implemented, counter configuration register bit 62 (MINH) is read-only 0 when accessed through <code>sireg*</code>.</p>
+</div>
+<div class="paragraph">
+<p>If extension Smstateen is implemented, refer to extensions Smcsrind/Sscsrind (<a href="#indirect-csr">[indirect-csr]</a>) for how setting bit 60 of CSR
 <code>mstateen0</code> to zero prevents access to registers <code>siselect</code>, <code>sireg*</code>,
 <code>vsiselect</code>, and <code>vsireg*</code> from privileged modes less privileged than
 M-mode, and likewise how setting bit 60 of <code>hstateen0</code> to zero prevents
@@ -477,7 +476,7 @@ not blocked by <code>mstateen0</code>[60] = 0 or <code>hstateen0</code>[60] = 0.
 </div>
 <div class="paragraph">
 <p>While the privilege mode is M or S and <code>siselect</code> holds a value in the
-range 0x40-0x5F, illegal instruction exceptions are raised for the
+range 0x40-0x5F, illegal-instruction exceptions are raised for the
 following cases:</p>
 </div>
 <div class="ulist">
@@ -517,33 +516,24 @@ treatment of <code>siselect</code> value 0x41 described above.</em>
 further indicates the extensions upon which the underlying counter state
 depends. If any extension upon which the underlying state depends is not
 implemented, an attempt from M or S mode to access the given state
-through <code>sireg*</code> raises an illegal instruction exception.</p>
+through <code>sireg*</code> raises an illegal-instruction exception.</p>
 </div>
 <div class="paragraph">
 <p>If the hypervisor (H) extension is also implemented, then as specified
-by extension Smcsrind/Sscsrind, a virtual instruction exception is
+by extensions Smcsrind/Sscsrind, a virtual-instruction  exception is
 raised for attempts from VS-mode or VU-mode to directly access <code>vsiselect</code>
 or <code>vsireg*</code>, or attempts from VU-mode to access <code>siselect</code> or <code>sireg*</code>. Furthermore, while <code>vsiselect</code> holds a value in the range 0x40-0x5F:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>An attempt to access any <code>vsireg*</code> from M or S mode raises an illegal
-instruction exception.</p>
+<p>An attempt to access any <code>vsireg*</code> from M or S mode raises an illegal-instruction exception.</p>
 </li>
 <li>
-<p>An attempt from VS-mode to access any <code>sireg*</code> (really <code>vsireg*</code>) raises an illegal instruction exception if <code>menvcfg</code>.CDE = 0, or a virtual
-instruction exception if <code>menvcfg</code>.CDE = 1.</p>
+<p>An attempt from VS-mode to access any <code>sireg*</code> (really <code>vsireg*</code>) raises an illegal-instruction exception if <code>menvcfg</code>.CDE = 0, or a
+virtual-instruction exception if <code>menvcfg</code>.CDE = 1.</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>If Sscofpmf is implemented, <code>sireg2</code> and <code>sireg5</code> provide access only to a
-subset of the event selector registers. Specifically, event selector bit
-62 (MINH) is read-only 0 when accessed through <code>sireg*</code>. Similarly, if
-Smcntrpmf is implemented, <code>sireg2</code> and <code>sireg5</code> provide access only to a
-subset of the counter configuration registers. Counter configuration
-register bit 62 (MINH) is read-only 0 when accessed through <code>sireg*</code>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -556,10 +546,10 @@ delegated to S-mode, the associated bits in <code>scountinhibit</code> are read-
 zero.</p>
 </div>
 <div class="paragraph">
-<p>When <code>menvcfg</code>.CDE=0, attempts to access <code>scountinhibit</code> raise an illegal
-instruction exception. When the Supervisor Counter Delegation extension
+<p>When <code>menvcfg</code>.CDE=0, attempts to access <code>scountinhibit</code> raise an illegal-instruction
+exception. When Supervisor Counter Delegation
 is enabled, attempts to access <code>scountinhibit</code> from VS-mode or VU-mode
-raise a virtual instruction exception.</p>
+raise a virtual-instruction  exception.</p>
 </div>
 </div>
 <div class="sect2">
@@ -567,14 +557,14 @@ raise a virtual instruction exception.</p>
 <div class="paragraph">
 <p>For implementations that support Smcdeleg/Ssccfg, Sscofpmf, and the H
 extension, when <code>menvcfg</code>.CDE=1, attempts to read <code>scountovf</code> from VS-mode
-or VU-mode raise a virtual instruction exception.</p>
+or VU-mode raise a virtual-instruction  exception.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="virtualizing-local-counter-overflow-interrupts"><a class="anchor" href="#virtualizing-local-counter-overflow-interrupts"></a>Virtualizing Local Counter Overflow Interrupts</h3>
+<h3 id="virtualizing-local-counter-overflow-interrupts"><a class="anchor" href="#virtualizing-local-counter-overflow-interrupts"></a>Virtualizing Local-Counter-Overflow Interrupts</h3>
 <div class="paragraph">
 <p>For implementations that support Smcdeleg, Sscofpmf, and Smaia, the
-local counter overflow interrupt (LCOFI) bit (bit 13) in each of CSRs
+local-counter-overflow interrupt (LCOFI) bit (bit 13) in each of CSRs
 <code>mvip</code> and <code>mvien</code> is implemented and writable.</p>
 </div>
 <div class="paragraph">
@@ -590,7 +580,7 @@ and <code>hvien</code> is implemented and writable.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p><em>The <code>hvip</code> register is defined by the hypervisor (H) extension, while the <code>mvien</code> and <code>hvien</code> registers are defined by the Smaia/Ssaia extension.</em></p>
+<p><em>The <code>hvip</code> register is defined by the hypervisor (H) extension, while the <code>mvien</code> and <code>hvien</code> registers are defined by the Smaia/Ssaia extensions.</em></p>
 </div>
 <div class="paragraph">
 <p><em>By virtue of implementing <code>hvip</code>.LCOFI, it is implicit that the LCOFI bit (bit 13) in each of <code>vsie</code> and <code>vsip</code> is also implemented.</em></p>
@@ -618,9 +608,6 @@ and <code>hvien</code> is implemented and writable.</p>
               <button data-micromodal-close class="modal-versions-close">
                 <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
               </button>
-              <div class="colset">
-                <div class="col-left">
-
                   <ul class="nav-versions">
                       <li class="component">
                         <div>
@@ -813,263 +800,6 @@ and <code>hvien</code> is implemented and writable.</p>
                         
                       </li>
                   </ul>
-                </div>
-                <div class="col-right">
-                  <ul class="projects">
-  <li>
-    Related Spring Documentation
-    <ul class="projects-list">
-        <li>
-<a href="https://docs.spring.io/spring-boot/">
-  Spring Boot
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-framework/reference/">
-  Spring Framework
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Cloud
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-build/reference/">
-  Spring Cloud Build
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-bus/reference/">
-  Spring Cloud Bus
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
-  Spring Cloud Circuit Breaker
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-commons/reference/">
-  Spring Cloud Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-config/reference/">
-  Spring Cloud Config
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-consul/reference/">
-  Spring Cloud Consul
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-contract/reference/">
-  Spring Cloud Contract
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-function/reference/">
-  Spring Cloud Function
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
-  Spring Cloud Gateway
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
-  Spring Cloud Kubernetes
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
-  Spring Cloud Netflix
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
-  Spring Cloud OpenFeign
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-stream/reference/">
-  Spring Cloud Stream
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-task/reference/">
-  Spring Cloud Task
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-vault/reference/">
-  Spring Cloud Vault
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
-  Spring Cloud Zookeeper
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Data
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-data/cassandra/reference/">
-  Spring Data Cassandra
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/commons/reference/">
-  Spring Data Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/couchbase/reference/">
-  Spring Data Couchbase
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
-  Spring Data Elasticsearch
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/jpa/reference/">
-  Spring Data JPA
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
-  Spring Data KeyValue
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/ldap/reference/">
-  Spring Data LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/mongodb/reference/">
-  Spring Data MongoDB
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/neo4j/reference/">
-  Spring Data Neo4j
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/redis/reference/">
-  Spring Data Redis
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/relational/reference/">
-  Spring Data JDBC &amp; R2DBC
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/rest/reference/">
-  Spring Data REST
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-integration/reference/">
-  Spring Integration
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-batch/reference/">
-  Spring Batch
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-<a href="https://docs.spring.io/spring-security/reference/">
-  Spring Security
-</a>
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-authorization-server/reference/">
-  Spring Authorization Server
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-ldap/reference/">
-  Spring LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-security-kerberos/reference/">
-  Spring Security Kerberos
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-session/reference/">
-  Spring Session
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-vault/reference/">
-  Spring Vault
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-ai/reference/">
-  Spring AI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-amqp/reference/">
-  Spring AMQP
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-cli/reference/">
-  Spring CLI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-graphql/reference/">
-  Spring GraphQL
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-kafka/reference/">
-  Spring for Apache Kafka
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-modulith/reference/">
-  Spring Modulith
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-pulsar/reference/">
-  Spring for Apache Pulsar
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-shell/reference/">
-  Spring Shell
-</a>
-</li>
-    </ul>
-  </li
-  <li><a href="../../spring-projects.html">All Docs...</a></li>
-</ul>
-                </div>
-              </div>
             </main>
         </div>
     </div>

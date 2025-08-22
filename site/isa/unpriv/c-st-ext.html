@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
+    <meta name="antora-ui-version" content="3f4ce2c51445edcfc62ee1f59ab97fffc218fb79"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -91,10 +91,7 @@
     <a class="nav-link"  href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">RV64I Base Integer Instruction Set</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="rv64.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
@@ -172,9 +169,6 @@
     <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -190,13 +184,7 @@
     <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Extending RISC-V</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">History and Acknowledgments</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -307,12 +295,28 @@
             version="1.1"
             viewBox="0 0 512 512"
             width="512px"
-          ><style type="text/css"><![CDATA[
+          ><style type="text/css"><
               .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
                 class="st0"
                 d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
               ></path></g></svg>
           GitHub Project
+        </a>
+
+      <a href="" title="PDF">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          Download PDF
         </a>
     </div>
   </div>
@@ -333,7 +337,7 @@
 <p>This chapter describes the RISC-V standard compressed instruction-set
 extension, named "C", which reduces static and dynamic code size by
 adding short 16-bit instruction encodings for common operations. The C
-extension can be added to any of the base ISAs (RV32, RV64, RV128), and
+extension can be added to any of the base ISAs (RV32I, RV32E, RV64I, RV64E), and
 we use the generic term "RVC" to cover any of these. Typically,
 50%-60% of the RISC-V instructions in a program can be replaced with RVC
 instructions, resulting in a 25%-30% code-size reduction.</p>
@@ -385,21 +389,19 @@ instructions allows significantly greater code density.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>The compressed instruction encodings are mostly common across RV32C,
-RV64C, and RV128C, but as shown in <a href="#rvc-instr-table0">Table 34</a>, a few opcodes are used for
+<p>The compressed instruction encodings are mostly common across RV32C and
+RV64C, but as shown in <a href="#rvc-instr-table0">Instruction listing for RVC, Quadrant 0</a>, a few opcodes are used for
 different purposes depending on base ISA. For example, the wider
-address-space RV64C and RV128C variants require additional opcodes to
+address-space RV64C variant requires additional opcodes to
 compress loads and stores of 64-bit integer values, while RV32C uses the
 same opcodes to compress loads and stores of single-precision
-floating-point values. Similarly, RV128C requires additional opcodes to
-capture loads and stores of 128-bit integer values, while these same
-opcodes are used for loads and stores of double-precision floating-point
-values in RV32C and RV64C. If the C extension is implemented, the
+floating-point values.
+If the C extension is implemented, the
 appropriate compressed floating-point load and store instructions must
 be provided whenever the relevant standard floating-point extension (F
 and/or D) is also implemented. In addition, RV32C includes a compressed
 jump and link instruction to compress short-range subroutine calls,
-where the same opcode is used to compress ADDIW for RV64C and RV128C.</p>
+where the same opcode is used to compress ADDIW for RV64C.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -441,8 +443,8 @@ integer loads and stores.</p>
 </div>
 <div class="paragraph">
 <p>RVC was designed under the constraint that each RVC instruction expands
-into a single 32-bit instruction in either the base ISA (RV32I/E, RV64I/E,
-or RV128I) or the F and D standard extensions where present. Adopting
+into a single 32-bit instruction in either the base ISA (RV32I/E or RV64I/E)
+or the F and D standard extensions where present. Adopting
 this constraint has two main benefits:</p>
 </div>
 <div class="ulist">
@@ -626,7 +628,7 @@ register field can move. When the full 5-bit destination register
 specifier is present, it is in the same place as in the 32-bit RISC-V
 encoding. Where immediates are sign-extended, the sign extension is
 always from bit 12. Immediate fields have been scrambled, as in the base
-specification, to reduce the number of immediate muxes required.</p>
+specification, to reduce the number of immediate multiplexers required.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -904,9 +906,9 @@ registers.</p>
 </div>
 <div class="sect3">
 <h4 id="stack-pointer-based-loads-and-stores"><a class="anchor" href="#stack-pointer-based-loads-and-stores"></a>Stack-Pointer-Based Loads and Stores</h4>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUQCBxJKSIqAadSN1HXVn7ERsrQ7CCFO4EZm5uRAzYEaYApXnp6UVp5ZEm1gZ1ZhbmcUCFSCEjGss0IRqLNHV4NaGwxVFKWgeAbkiJbW45FHnAgOQOfjYcBrFcEPcXjREeNE0lmQ2ii3GcFvSSvOSS4yBFsFsMQaFu55PeHAAyIFAlgucFQhjuSGk3cDyIMNjdRSS8_PSMoGxDvOLWW0tAHBqlSU=" alt="svg">
+<img src="wavedrom/c-sp-load-store.svg" alt="c sp load store">
 </div>
 </div>
 <div id="c-sp-load-store" class="paragraph">
@@ -916,23 +918,15 @@ registers.</p>
 <p>C.LWSP loads a 32-bit value from memory into register <em>rd</em>. It computes
 an effective address by adding the <em>zero</em>-extended offset, scaled by 4,
 to the stack pointer, <code>x2</code>. It expands to <code>lw rd, offset(x2)</code>. C.LWSP is
-only valid when <em>rd</em>&#x2260;x0 the code points with <em>rd</em>=x0 are reserved.</p>
+valid only when <em>rd</em>≠<code>x0</code>; the code points with <em>rd</em>=<code>x0</code> are reserved.</p>
 </div>
 <div class="paragraph">
-<p>C.LDSP is an RV64C/RV128C-only instruction that loads a 64-bit value
+<p>C.LDSP is an RV64C-only instruction that loads a 64-bit value
 from memory into register <em>rd</em>. It computes its effective address by
 adding the zero-extended offset, scaled by 8, to the stack pointer,
-<code>x2</code>. It expands to <code>ld rd, offset(x2)</code>. C.LDSP is only valid when
-<em>rd</em>&#x2260;x0 the code points with
-<em>rd</em>=x0 are reserved.</p>
-</div>
-<div class="paragraph">
-<p>C.LQSP is an RV128C-only instruction that loads a 128-bit value from
-memory into register <em>rd</em>. It computes its effective address by adding
-the zero-extended offset, scaled by 16, to the stack pointer, <code>x2</code>. It
-expands to <code>lq rd, offset(x2)</code>. C.LQSP is only valid when
-<em>rd</em>&#x2260;x0 the code points with
-<em>rd</em>=x0 are reserved.</p>
+<code>x2</code>. It expands to <code>ld rd, offset(x2)</code>. C.LDSP is valid only when
+<em>rd</em>≠<code>x0</code>; the code points with
+<em>rd</em>=<code>x0</code> are reserved.</p>
 </div>
 <div class="paragraph">
 <p>C.FLWSP is an RV32FC-only instruction that loads a single-precision
@@ -948,9 +942,9 @@ register <em>rd</em>. It computes its effective address by adding the
 <em>zero</em>-extended offset, scaled by 8, to the stack pointer, <code>x2</code>. It
 expands to <code>fld rd, offset(x2)</code>.</p>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNp1kDEPgjAQhXd_xW1dGhNbqdoVw6xhcCAMSKhhAExbJ-C_e1VbAmqH9uXd3deX63V1k5CtAPprbY0ERqEtmkoC6e6EgjuFtRp7CCOUxL-vfKQTIgoIbdib4RERthtdovn_mbFEYNVNM2cJZHVKmcpmkWTDTorcIYLFh_3S2g6HpeUHv-ZmMXiIoR5taTkifAzuNrBOL-nJcVEdgzp7lUzl5FV38JxC2bWqxv1_ftmIcXwCyX9t5A==" alt="svg">
+<img src="wavedrom/c-sp-load-store-css.svg" alt="c sp load store css">
 </div>
 </div>
 <div id="c-sp-load-store-css" class="paragraph">
@@ -962,16 +956,10 @@ effective address by adding the <em>zero</em>-extended offset, scaled by 4, to
 the stack pointer, <code>x2</code>. It expands to <code>sw rs2, offset(x2)</code>.</p>
 </div>
 <div class="paragraph">
-<p>C.SDSP is an RV64C/RV128C-only instruction that stores a 64-bit value in
+<p>C.SDSP is an RV64C-only instruction that stores a 64-bit value in
 register <em>rs2</em> to memory. It computes an effective address by adding the
 <em>zero</em>-extended offset, scaled by 8, to the stack pointer, <code>x2</code>. It
 expands to <code>sd rs2, offset(x2)</code>.</p>
-</div>
-<div class="paragraph">
-<p>C.SQSP is an RV128C-only instruction that stores a 128-bit value in
-register <em>rs2</em> to memory. It computes an effective address by adding the
-<em>zero</em>-extended offset, scaled by 16, to the stack pointer, <code>x2</code>. It
-expands to <code>sq rs2, offset(x2)</code>.</p>
 </div>
 <div class="paragraph">
 <p>C.FSWSP is an RV32FC-only instruction that stores a single-precision
@@ -1022,11 +1010,12 @@ mechanism for partially executed instructions.</p>
 Load Multiple and Store Multiple.</p>
 </li>
 <li>
-<p>Unlike the rest of the RVC instructions, the compiler would have to be
-aware of these instructions to both generate the instructions and to
-allocate registers in an order to maximize the chances of the them being
-saved and stored, since they would be saved and restored in sequential
-order.</p>
+<p>Unlike the rest of the RVC instructions, the compiler would have to be aware
+of these load-multiple and store-multiple instructions to both allocate
+registers in the expected order and also to schedule the loads and
+stores contiguously and in the proper order, to maximize the chances of them
+being detected and replaced by an assembler or linker with the equivalent
+load-multiple or store-multiple compressed instruction.</p>
 </li>
 <li>
 <p>Simple microarchitectural implementations will constrain how other
@@ -1057,9 +1046,9 @@ attain the greatest code size reduction.</p>
 </div>
 <div class="sect3">
 <h4 id="register-based-loads-and-stores"><a class="anchor" href="#register-based-loads-and-stores"></a>Register-Based Loads and Stores</h4>
-<div id="reg-based-ldnstr" class="imageblock kroki">
+<div id="reg-based-ldnstr" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUUgsKSkCyqsbAdnqzgY4ydhaHYQZxnAzilJO7QSqgBtjDFKeklpcgqCxUSimIVyUmZsLcxLURflpacWpJdFGNWaxSFxzK3xcbIpxOb_YEOx-FOcnJRanEqRxGAjxAap5UHeYWhnH4uHWmNRYxBJQjsPStNK85BJjDHud9XzCobQLlA6E0G4wCTegDMjQWB2F5Py8tExgUoGabmhWWwsAcj2iYg==?id=reg-based-ldnstr" alt="svg">
+<img src="wavedrom/reg-based-ldnstr.svg" alt="reg based ldnstr">
 </div>
 </div>
 <div class="paragraph">
@@ -1073,18 +1062,11 @@ These instructions use the CL format.</p>
 <code><em>rs1′</em></code>. It expands to <code>lw rd′, offset(rs1′)</code>.</p>
 </div>
 <div class="paragraph">
-<p>C.LD is an RV64C/RV128C-only instruction that loads a 64-bit value from
+<p>C.LD is an RV64C-only instruction that loads a 64-bit value from
 memory into register <code><em>rd′</em></code>. It computes an effective
 address by adding the <em>zero</em>-extended offset, scaled by 8, to the base
 address in register <code><em>rs1′</em></code>. It expands to
 <code>ld rd′, offset(rs1′)</code>.</p>
-</div>
-<div class="paragraph">
-<p>C.LQ is an RV128C-only instruction that loads a 128-bit value from
-memory into register <code><em>rd′</em></code>. It computes an effective
-address by adding the <em>zero</em>-extended offset, scaled by 16, to the base
-address in register <code><em>rs1′</em></code>. It expands to
-<code>lq rd′, offset(rs1′)</code>.</p>
 </div>
 <div class="paragraph">
 <p>C.FLW is an RV32FC-only instruction that loads a single-precision
@@ -1102,9 +1084,9 @@ floating-point value from memory into floating-point register
 <code><em>rs1′</em></code>. It expands to
 <code>fld rd′, offset(rs1′)</code>.</p>
 </div>
-<div id="c-cs-format-ls" class="imageblock kroki">
+<div id="c-cs-format-ls" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUQCBxJKSIqAadSMgX93ZQF0HCxFbq4MwwxhuRlGx0amdYGNghhiDDCkuSgZqw06imIRwTWZuLsQ5KK7JT0srTi2JNqoxiwVqh_LMrXDzsKjE6XRDbE5PSixOBRqAm8JhHIb7jZHcb2pljOQqNF6NSY0FblkQD4eVaaV5ySUga1CsdNYLDgfFmV6wC4QKBFNuUFE3oDDIvFgdheT8vLRMYOqAGmxoVlsLAJbsn54=?id=c-cs-format-ls" alt="svg">
+<img src="wavedrom/c-cs-format-ls.svg" alt="c cs format ls">
 </div>
 </div>
 <div class="paragraph">
@@ -1120,18 +1102,11 @@ scaled by 4, to the base address in register <code><em>rs1′</em></code>. It
 expands to <code>sw rs2′, offset(rs1′)</code>.</p>
 </div>
 <div class="paragraph">
-<p>C.SD is an RV64C/RV128C-only instruction that stores a 64-bit value in
+<p>C.SD is an RV64C-only instruction that stores a 64-bit value in
 register <code><em>rs2′</em></code> to memory. It computes an effective
 address by adding the <em>zero</em>-extended offset, scaled by 8, to the base
 address in register <code><em>rs1′</em></code>. It expands to
 <code>sd rs2′, offset(rs1′)</code>.</p>
-</div>
-<div class="paragraph">
-<p>C.SQ is an RV128C-only instruction that stores a 128-bit value in
-register <code><em>rs2′</em></code> to memory. It computes an effective
-address by adding the <em>zero</em>-extended offset, scaled by 16, to the base
-address in register <code><em>rs1′</em></code>. It expands to
-<code>sq rs2′, offset(rs1′)</code>.</p>
 </div>
 <div class="paragraph">
 <p>C.FSW is an RV32FC-only instruction that stores a single-precision
@@ -1158,9 +1133,9 @@ register <code><em>rs1′</em></code>. It expands to
 instructions. As with base RVI instructions, the offsets of all RVC
 control transfer instructions are in multiples of 2 bytes.</p>
 </div>
-<div id="c-cj-format-ls" class="imageblock kroki">
+<div id="c-cj-format-ls" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUQCBxJKSIqAadSN1HXVnQwgRW6uD0GNoCNeUmZsL1gXTYwhSn5-WVpxaEm1oWGNSY2llUWNoUGNWY15jbGVYYxpLUB7FKmO4TWmlecklxkDLYFYZg1ym5wUhHX3A-mJ1FJLz89IygX6EudWsthYA8P1F0A==?id=c-cj-format-ls" alt="svg">
+<img src="wavedrom/c-cj-format-ls.svg" alt="c cj format ls">
 </div>
 </div>
 <div class="paragraph">
@@ -1181,9 +1156,9 @@ C.J, but additionally writes the address of the instruction following
 the jump (<code>pc+2</code>) to the link register, <code>x1</code>. C.JAL expands to
 <code>jal x1, offset</code>.</p>
 </div>
-<div id="c-cr-format-ls" class="imageblock kroki">
+<div id="c-cr-format-ls" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUUgsKSkCyqsbqeuoOwMJBRAZW6uD0GAK11BUDFIAAjBdpkBdBiBNBrj1GGLRU1yU_KhzAVgnjImi3wSuP600L7nEBGQETL8JyKV6XkFgt-p5OfoEgfXG6igk5-elZQJ9CzXE0Ky2FgDFjkcZ?id=c-cr-format-ls" alt="svg">
+<img src="wavedrom/c-cr-format-ls.svg" alt="c cr format ls">
 </div>
 </div>
 <div class="paragraph">
@@ -1195,16 +1170,16 @@ the jump (<code>pc+2</code>) to the link register, <code>x1</code>. C.JAL expand
 <div class="paragraph">
 <p>C.JR (jump register) performs an unconditional control transfer to the
 address in register <em>rs1</em>. C.JR expands to <code>jalr x0, 0(rs1)</code>. C.JR is
-only valid when \(\textit{rs1}{\neq}\texttt{x0}\); the code
-point with \(\textit{rs1}{=}\texttt{x0}\) is reserved.</p>
+valid only when <em>rs1</em>≠<code>x0</code>; the code
+point with <em>rs1</em>=<code>x0</code> is reserved.</p>
 </div>
 <div class="paragraph">
 <p>C.JALR (jump and link register) performs the same operation as C.JR, but
 additionally writes the address of the instruction following the jump
 (<code>pc</code>+2) to the link register, <code>x1</code>. C.JALR expands to
-<code>jalr x1, 0(rs1)</code>. C.JALR is only valid when
-\(\textit{rs1}{\neq}\texttt{x0}\); the code point with
-\(\textit{rs1}{=}\texttt{x0}\) corresponds to the C.EBREAK
+<code>jalr x1, 0(rs1)</code>. C.JALR is valid only when
+<em>rs1</em>≠<code>x0</code>; the code point with
+<em>rs1</em>=<code>x0</code> corresponds to the C.EBREAK
 instruction.</p>
 </div>
 <div class="admonitionblock note">
@@ -1224,9 +1199,9 @@ bytes is only a very minor change to the base microarchitecture.</p>
 </tr>
 </table>
 </div>
-<div id="c-cb-format-ls" class="imageblock kroki">
+<div id="c-cb-format-ls" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUUgsKSkCyqsbqeuoOxsCBUBkbK0OQoMpXENmbi6SDlOgjvy0tOLUkmhzK7MaIyvDGtNYkAGYgijmGcPNKyo2fNSwCagFBGDGGgONLS5KBhkEonBohTgFTRvUYosaEytjZJdABWJ1sJuVVpqXXGKMaZyznpNrYBQ4SPSc_FyjIAbE6igk5-elZQJDFWqSoVltLQDXAWZJ?id=c-cb-format-ls" alt="svg">
+<img src="wavedrom/c-cb-format-ls.svg" alt="c cb format ls">
 </div>
 </div>
 <div class="paragraph">
@@ -1260,9 +1235,9 @@ generation.</p>
 <p>The two constant-generation instructions both use the CI instruction
 format and can target any integer register.</p>
 </div>
-<div id="c-integer-const-gen" class="imageblock kroki">
+<div id="c-integer-const-gen" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNp1kD0LgzAQhvf-iuuUJYiJ1ULAqZPg2kkyWD-Kg7FoulTy33vRRptCMxzcXd6Hh5vH5i6gOADMt05PAjgFVfaNADI8CIVS6xH3hBNKLgwHtkpD90C8Bbq-L04ilPgLn0vGmNw3RL1swxLBuPwHGusV4THqZtJwTCG0Eq6ZQwrc-BzmCcU_Ouyjs8ydzRlV6Dcj2hjtU1U68hmRPUaQZ8s5gvyarWlJoRpU2-FBnUpizBvPNWDr?id=c-integer-const-gen" alt="svg">
+<img src="wavedrom/c-integer-const-gen.svg" alt="c integer const gen">
 </div>
 </div>
 <div class="paragraph">
@@ -1270,19 +1245,20 @@ format and can target any integer register.</p>
 </div>
 <div class="paragraph">
 <p>C.LI loads the sign-extended 6-bit immediate, <em>imm</em>, into register <em>rd</em>.
-C.LI expands into <code>addi rd, x0, imm</code>. C.LI is only valid when
-<code><em>rd</em>≠x0</code>; the code points with <code><em>rd</em>=x0</code> encode HINTs.</p>
+C.LI expands into <code>addi rd, x0, imm</code>.
+The C.LI code points with <em>rd</em>=<code>x0</code> are HINTs.</p>
 </div>
 <div class="paragraph">
 <p>C.LUI loads the non-zero 6-bit immediate field into bits 17–12 of the
 destination register, clears the bottom 12 bits, and sign-extends bit 17
 into all higher bits of the destination. C.LUI expands into
-<code>lui rd, imm</code>. C.LUI is only valid when
-\(\textit{rd}{\neq}{\left\{\texttt{x0},\texttt{x2}\right\}}\),
+<code>lui rd, imm</code>. C.LUI is valid only when
+<em>rd</em>≠<code>x2</code>,
 and when the immediate is not equal to zero. The code points with
-<em>imm</em>=0 are reserved; the remaining code points with <em>rd</em>=<code>x0</code> are
-HINTs; and the remaining code points with <em>rd</em>=<code>x2</code> correspond to the
-C.ADDI16SP instruction.</p>
+<em>imm</em>=0 are reserved.
+The code points with <em>rd</em>=<code>x2</code> and <em>imm</em>≠0 correspond to the
+C.ADDI16SP instruction.
+The code points with <em>rd</em>=<code>x0</code> and <em>imm</em>≠0 are HINTs.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1291,9 +1267,9 @@ C.ADDI16SP instruction.</p>
 <p>These integer register-immediate operations are encoded in the CI format
 and perform operations on an integer register and a 6-bit immediate.</p>
 </div>
-<div id="c-integer-register-immediate" class="imageblock kroki">
+<div id="c-integer-register-immediate" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNp1kb0OgjAURnef4jp1aZSCRW3iYGRxM3FwIB1QwDBQTKmLwLtL-SnUxA7NbW-_k5PbSiZPBuECoLpnqmTgYhBRnjBAxQthGFaklGyfIRdhdCLt_bTzBk9patJZnocbxjViDNM2LD59w9EdNK-HTu3XO7atKf8HlvFalqRXm5PjpFSwPICjYdbBtVHEcqTcRhEjSY0inQnuf8Q8Q0vf4qE8m-bpea2OQXDuptVVt6kk_vXS4TiGRyHSrP2L0dJvmi_Y4HAl?id=c-integer-register-immediate" alt="svg">
+<img src="wavedrom/c-int-reg-immed.svg" alt="c int reg immed">
 </div>
 </div>
 <div class="paragraph">
@@ -1302,18 +1278,18 @@ and perform operations on an integer register and a 6-bit immediate.</p>
 <div class="paragraph">
 <p>C.ADDI adds the non-zero sign-extended 6-bit immediate to the value in
 register <em>rd</em> then writes the result to <em>rd</em>. C.ADDI expands into
-<code>addi rd, rd, imm</code>. C.ADDI is only valid when
-<code><em>rd</em>≠x0</code> and <code><em>imm</em>≠0</code>. The code
-points with <code><em>rd</em>=x0</code> encode the C.NOP instruction; the remaining code
-points with <em>imm</em>=0 encode HINTs.</p>
+<code>addi rd, rd, imm</code>.
+The code points with <em>rd</em>≠0 and <em>imm</em>=0 are HINTs.
+The code points with <em>rd</em>=<code>x0</code> encode the C.NOP instruction, of
+which the code points with <em>imm</em>≠0 are HINTs.</p>
 </div>
 <div class="paragraph">
-<p>C.ADDIW is an RV64C/RV128C-only instruction that performs the same
+<p>C.ADDIW is an RV64C-only instruction that performs the same
 computation but produces a 32-bit result, then sign-extends result to 64
 bits. C.ADDIW expands into <code>addiw rd, rd, imm</code>. The immediate can be
 zero for C.ADDIW, where this corresponds to <code>sext.w rd</code>. C.ADDIW is
-only valid when <code><em>rd</em>≠x0</code>; the code points with
-<code><em>rd</em>=x0</code> are reserved.</p>
+valid only when <em>rd</em>≠<code>x0</code>; the code points with
+<em>rd</em>=<code>x0</code> are reserved.</p>
 </div>
 <div class="paragraph">
 <p>C.ADDI16SP (add immediate to stack pointer)
@@ -1322,7 +1298,7 @@ shares the opcode with C.LUI, but has a destination field of
 value in the stack pointer (<code>sp=x2</code>), where the immediate is scaled to
 represent multiples of 16 in the range [-512, 496]. C.ADDI16SP is used to
 adjust the stack pointer in procedure prologues and epilogues. It
-expands into <code>addi x2, x2, nzimm[9:4]</code>. C.ADDI16SP is only valid when
+expands into <code>addi x2, x2, nzimm[9:4]</code>. C.ADDI16SP is valid only when
 <em>nzimm</em>≠0; the code point with <em>nzimm</em>=0 is reserved.</p>
 </div>
 <div class="admonitionblock note">
@@ -1340,9 +1316,9 @@ always 16-byte aligned.</p>
 </tr>
 </table>
 </div>
-<div id="c-ciw" class="imageblock kroki">
+<div id="c-ciw" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUUgsKSkCyqsbqeuoOxuox-rU6iDUGsPVFqU8atgEVA4CMC3GQC0pqcUlaJos4Joyc3MhWmA6LIA68qpKgeLRplYmNZZWZjVGNcax6rHYLU0rzUsuMUY1AmSps56ji4unSXCAH1hnrI5Ccn5eWibQn1AjDM1qawG_eEd5?id=c-ciw" alt="svg">
+<img src="wavedrom/c-ciw.svg" alt="c ciw">
 </div>
 </div>
 <div class="paragraph">
@@ -1352,13 +1328,13 @@ is a CIW-format instruction that adds a <em>zero</em>-extended
 non-zero immediate, scaled by 4, to the stack pointer, <code>x2</code>, and writes
 the result to <code>rd′</code>. This instruction is used to generate
 pointers to stack-allocated variables, and expands to
-<code>addi rd′, x2, nzuimm[9:2]</code>. C.ADDI4SPN is only valid when
+<code>addi rd′, x2, nzuimm[9:2]</code>. C.ADDI4SPN is valid only when
 <em>nzuimm</em>≠0; the code points with <em>nzuimm</em>=0 are
 reserved.</p>
 </div>
-<div id="c-ci" class="imageblock kroki">
+<div id="c-ci" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUUgsKSkCyqsbAdnqzkbqsbU6CLWmcLXFGYm5JdEmVgaxQHVAANNmCtKGJIlDe1GKflGxIUQrqt6U1OISBUVbBQNUrYZoNpui2WuIsNcUzVZjuNa00rzkEmNUjcZgf-oF-_h4grXF1gIAzdVQIg==?id=c-ci" alt="svg">
+<img src="wavedrom/c-ci.svg" alt="c ci">
 </div>
 </div>
 <div class="paragraph">
@@ -1367,21 +1343,19 @@ reserved.</p>
 <div class="paragraph">
 <p>C.SLLI is a CI-format instruction that performs a logical left shift of
 the value in register <em>rd</em> then writes the result to <em>rd</em>. The shift
-amount is encoded in the <em>shamt</em> field. For RV128C, a shift amount of
-zero is used to encode a shift of 64. C.SLLI expands into
-<code>slli rd, rd, shamt[5:0]</code>, except for RV128C with <code>shamt=0</code>, which expands to
-<code>slli rd, rd, 64</code>.</p>
+amount is encoded in the <em>shamt</em> field.
+C.SLLI expands into <code>slli rd, rd, shamt[5:0]</code>.</p>
+</div>
+<div class="paragraph">
+<p>The C.SLLI code points with <em>shamt</em>=0 or with <em>rd</em>=<code>x0</code> are HINTs.</p>
 </div>
 <div class="paragraph">
 <p>For RV32C, <em>shamt[5]</em> must be zero; the code points with <em>shamt[5]</em>=1
-are designated for custom extensions. For RV32C and RV64C, the shift
-amount must be non-zero; the code points with <em>shamt</em>=0 are HINTs. For
-all base ISAs, the code points with <code><em>rd</em>=x0</code> are HINTs, except those
-with <em>shamt[5]</em>=1 in RV32C.</p>
+are designated for custom extensions.</p>
 </div>
-<div id="c-srli-srai" class="imageblock kroki">
+<div id="c-srli-srai" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUUgsKSkCyqsbqeuoOxsCBUBkrE6tDkKHKVxHcUZibkm0iZVBLFAhEMA0mwI1o8gh81ANM4YbVpTyqGGTflGxIZCCGAc3zxhoXkpqcQnIJDCNagbCC2mlecklRqiOAftELzjIxxPsGyDL0RPNAEM0H5mi-ccQ7h9TJN-Y4vYL2B3GqIYY43RHbC0Add1yEw==?id=c-srli-srai" alt="svg">
+<img src="wavedrom/c-srli-srai.svg" alt="c srli srai">
 </div>
 </div>
 <div class="paragraph">
@@ -1391,17 +1365,14 @@ with <em>shamt[5]</em>=1 in RV32C.</p>
 <p>C.SRLI is a CB-format instruction that performs a logical right shift of
 the value in register <em>rd′</em> then writes the result to
 <em>rd′</em>. The shift amount is encoded in the <em>shamt</em> field.
-For RV128C, a shift amount of zero is used to encode a shift of 64.
-Furthermore, the shift amount is sign-extended for RV128C, and so the
-legal shift amounts are 1-31, 64, and 96-127. C.SRLI expands into
-<code>srli rd′, rd′, shamt</code>, except for
-RV128C with <code>shamt=0</code>, which expands to
-<code>srli rd′, rd′, 64</code>.</p>
+C.SRLI expands into <code>srli rd′, rd′, shamt</code>.</p>
+</div>
+<div class="paragraph">
+<p>The C.SRLI code points with <em>shamt</em>=0 are HINTs.</p>
 </div>
 <div class="paragraph">
 <p>For RV32C, <em>shamt[5]</em> must be zero; the code points with <em>shamt[5]</em>=1
-are designated for custom extensions. For RV32C and RV64C, the shift
-amount must be non-zero; the code points with <em>shamt</em>=0 are HINTs.</p>
+are designated for custom extensions.</p>
 </div>
 <div class="paragraph">
 <p>C.SRAI is defined analogously to C.SRLI, but instead performs an
@@ -1419,21 +1390,15 @@ arithmetic right shift. C.SRAI expands to
 <p>Left shifts are usually more frequent than right shifts, as left shifts
 are frequently used to scale address values. Right shifts have therefore
 been granted less encoding space and are placed in an encoding quadrant
-where all other immediates are sign-extended. For RV128, the decision
-was made to have the 6-bit shift-amount immediate also be sign-extended.
-Apart from reducing the decode complexity, we believe right-shift
-amounts of 96-127 will be more useful than 64-95, to allow extraction of
-tags located in the high portions of 128-bit address pointers. We note
-that RV128C will not be frozen at the same point as RV32C and RV64C, to
-allow evaluation of typical usage of 128-bit address-space codes.</p>
+where all other immediates are sign-extended.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div id="c-andi" class="imageblock kroki">
+<div id="c-andi" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUQCCxJKSIqASdSN1HXVnQ_VYnVodhHJTuPLM3NxoEyuDWFRNpkBNcJlYZJ3GcJ1FKY8aNukXFRsCKVTdxkDdKanFJWiWItyYVpqXXGIE0YTqUD1HPxdPNH2GKI41RXOqIdSpQHFUbcao1gEdheJAZKtiawHUi17G?id=c-andi" alt="svg">
+<img src="wavedrom/c-andi.svg" alt="c andi">
 </div>
 </div>
 <div class="paragraph">
@@ -1448,9 +1413,9 @@ expands to <code>andi rd′, rd′, imm</code>.</p>
 </div>
 <div class="sect3">
 <h4 id="integer-register-register-operations"><a class="anchor" href="#integer-register-register-operations"></a>Integer Register-Register Operations</h4>
-<div id="c-cr" class="imageblock kroki">
+<div id="c-cr" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUQCBxJKSIqAadSMgX90ZRsbq1OogtJnCtRUVG0H0wbSZgjQUFyU_6lxggMzEaUCKflGxIVAligEpqcUlMBPgbFQjTOBGpJXmJZeYIBlhAna0nm8YhHZ0cYHojdVRSM7PS8sEhgHUEEOz2loFAP5pUEs=?id=c-cr" alt="svg">
+<img src="wavedrom/c-int-reg-to-reg-cr-format.svg" alt="c int reg to reg cr format">
 </div>
 </div>
 <div class="paragraph">
@@ -1459,8 +1424,8 @@ These instructions use the CR format.</p>
 </div>
 <div class="paragraph">
 <p>C.MV copies the value in register <em>rs2</em> into register <em>rd</em>. C.MV expands
-into <code>add rd, x0, rs2</code>. C.MV is only valid when
-<code>rs2≠x0</code> the code points with <code>rs2=x0</code> correspond to the C.JR instruction. The code points with <code>rs2≠x0</code> and <code>rd=x0</code> are HINTs.</p>
+into <code>add rd, x0, rs2</code>. C.MV is valid only when
+<em>rs2</em>≠<code>x0</code>; the code points with <em>rs2</em>=<code>x0</code> correspond to the C.JR instruction. The code points with <em>rs2</em>≠<code>x0</code> and <em>rd</em>=<code>x0</code> are HINTs.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1483,12 +1448,12 @@ hardware cost.</em></p>
 <div class="paragraph">
 <p>C.ADD adds the values in registers <em>rd</em> and <em>rs2</em> and writes the result
 to register <em>rd</em>. C.ADD expands into <code>add rd, rd, rs2</code>. C.ADD is only
-valid when <code>rs2≠x0</code> the code points with <code>rs2=x0</code> correspond to the C.JALR
-and C.EBREAK instructions. The code points with <code>rs2≠x0</code> and rd=x0 are HINTs.</p>
+valid when <em>rs2</em>≠<code>x0</code>; the code points with <em>rs2</em>=<code>x0</code> correspond to the C.JALR
+and C.EBREAK instructions. The code points with <em>rs2</em>≠<code>x0</code> and <em>rd</em>=<code>x0</code> are HINTs.</p>
 </div>
-<div id="c-ca" class="imageblock kroki">
+<div id="c-ca" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUQCBxJKSIqAadSMgX93ZkAAZq1OrgzDOGG5cUbHRo4ZNECNhJhqD9BQXJRNDoZqLcGZaaV5yCchpqM7Uc_RzgTD8gyB0BIwRHOoEVeLiEg4XCsft8hSgw_WLig0h7kdxfEpqcQnRNKoFZqheMEMy2owiL8TWKgAAWOJ8wg==?id=c-ca" alt="svg">
+<img src="wavedrom/c-int-reg-to-reg-ca-format.svg" alt="c int reg to reg ca format">
 </div>
 </div>
 <div class="paragraph">
@@ -1501,39 +1466,39 @@ and C.EBREAK instructions. The code points with <code>rs2≠x0</code> and rd=x0 
 <p><code>C.AND</code> computes the bitwise <code>AND</code> of the values in registers
 <em>rd′</em> and <em>rs2′</em>, then writes the result
 to register <em>rd′</em>. <code>C.AND</code> expands into
-<strong><code><em>and rd′, rd′, rs2′</em></code></strong>.</p>
+<code>and rd′, rd′, rs2′</code>.</p>
 </div>
 <div class="paragraph">
 <p><code>C.OR</code> computes the bitwise <code>OR</code> of the values in registers
 <em>rd′</em> and <em>rs2′</em>, then writes the result
 to register <em>rd′</em>. <code>C.OR</code> expands into
-<strong><code><em>or rd&#8242;, rd&#8242;, rs2&#8242;</em></code></strong>.</p>
+<code>or rd′, rd′, rs2′</code>.</p>
 </div>
 <div class="paragraph">
 <p><code>C.XOR</code> computes the bitwise <code>XOR</code> of the values in registers
 <em>rd′</em> and <em>rs2′</em>, then writes the result
 to register <em>rd′</em>. <code>C.XOR</code> expands into
-<strong><code><em>xor rd′, rd′, rs2′</em></code></strong>.</p>
+<code>xor rd′, rd′, rs2′</code>.</p>
 </div>
 <div class="paragraph">
 <p><code>C.SUB</code> subtracts the value in register <em>rs2′</em> from the
 value in register <em>rd′</em>, then writes the result to
 register <em>rd′</em>. <code>C.SUB</code> expands into
-<strong><code><em>sub rd′, rd′, rs2′</em></code></strong>.</p>
+<code>sub rd′, rd′, rs2′</code>.</p>
 </div>
 <div class="paragraph">
-<p><code>C.ADDW</code> is an RV64C/RV128C-only instruction that adds the values in
+<p><code>C.ADDW</code> is an RV64C-only instruction that adds the values in
 registers <em>rd′</em> and <em>rs2′</em>, then
 sign-extends the lower 32 bits of the sum before writing the result to
 register <em>rd′</em>. <code>C.ADDW</code> expands into
-<strong><code><em>addw rd′, rd′, rs2′</em></code></strong>.</p>
+<code>addw rd′, rd′, rs2′</code>.</p>
 </div>
 <div class="paragraph">
-<p><code>C.SUBW</code> is an RV64C/RV128C-only instruction that subtracts the value in
+<p><code>C.SUBW</code> is an RV64C-only instruction that subtracts the value in
 register <em>rs2′</em> from the value in register
 <em>rd′</em>, then sign-extends the lower 32 bits of the
 difference before writing the result to register <em>rd′</em>.
-<code>C.SUBW</code> expands into <strong><code><em>subw rd′, rd′, rs2′</em></code></strong>.</p>
+<code>C.SUBW</code> expands into <code>subw rd′, rd′, rs2′</code>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1555,9 +1520,9 @@ improvement in static and dynamic compression.</p>
 </div>
 <div class="sect3">
 <h4 id="defined-illegal-instruction"><a class="anchor" href="#defined-illegal-instruction"></a>Defined Illegal Instruction</h4>
-<div id="c-def-illegal-inst" class="imageblock kroki">
+<div id="c-def-illegal-inst" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlA3UNdRSCwpKQJKqxup6wD5sTq1OgiVplhVmlKk0hCrSkMsKo2xqjRGqIzVUUjOz0vLBHoPZrhZbS0ABoVARg==?id=c-def-illegal-inst" alt="svg">
+<img src="wavedrom/c-def-illegal-inst.svg" alt="c def illegal inst">
 </div>
 </div>
 <div class="paragraph">
@@ -1590,9 +1555,9 @@ non-existent memory regions.</p>
 </div>
 <div class="sect3">
 <h4 id="nop-instruction"><a class="anchor" href="#nop-instruction"></a>NOP Instruction</h4>
-<div id="c-nop-instr" class="imageblock kroki">
+<div id="c-nop-instr" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUUgsKSkCyqsbqeuoOxuqx-rU6iDUmsLVZubmRptYGcQi6TAF6jDAqaEoRb-o2JCAckMU802RTTfEotwYrjytNC-5xBhJuTHI-Xp-_gEQLbG1AGi5RFc=?id=c-nop-instr" alt="svg">
+<img src="wavedrom/c-nop-instr.svg" alt="c nop instr">
 </div>
 </div>
 <div class="paragraph">
@@ -1601,15 +1566,15 @@ non-existent memory regions.</p>
 <div class="paragraph">
 <p><code>C.NOP</code> is a CI-format instruction that does not change any user-visible
 state, except for advancing the <code>pc</code> and incrementing any applicable
-performance counters. <code>C.NOP</code> expands to <code>nop</code>. <code>C.NOP</code> is only valid when
-<em>imm</em>=0; the code points with <em>imm</em>≠0 encode HINTs.</p>
+performance counters. <code>C.NOP</code> expands to <code>nop</code>. The <code>C.NOP</code> code points
+with <em>imm</em>≠0 encode HINTs.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="breakpoint-instruction"><a class="anchor" href="#breakpoint-instruction"></a>Breakpoint Instruction</h4>
-<div id="c-breakpoint-instr" class="imageblock kroki">
+<div id="c-breakpoint-instr" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDSUchLzE21UlDPL1DXUUgsKSkCyqsbqeuoOxupx-rU6iDUGhrAFRsgqTUEcoACqGpN4ErTSvOSS0yQ1JuAzNZzdQpydfSG6IrVUUjOz0vLBDoNZpVZbS0A-aYv3w==?id=c-breakpoint-instr" alt="svg">
+<img src="wavedrom/c-breakpoint-instr.svg" alt="c breakpoint instr">
 </div>
 </div>
 <div class="paragraph">
@@ -1706,7 +1671,7 @@ macro-op fusion.</p>
 </table>
 </div>
 <div class="paragraph">
-<p><a href="#rvc-t-hints">Table 32</a> lists all RVC HINT code points. For RV32C, 78%
+<p><a href="#rvc-t-hints">RVC HINT instructions.</a> lists all RVC HINT code points. For RV32C, 78%
 of the HINT space is reserved for standard HINTs. The remainder of the HINT space is designated for custom HINTs;
 no standard HINTs will ever be defined in this subspace.</p>
 </div>
@@ -1760,34 +1725,24 @@ no standard HINTs will ever be defined in this subspace.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C.ADD</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, <em>rs2</em>≠<code>x2-x5</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, <em>rs2</em>=<code>x2-x5</code></p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(rs2=x2) C.NTL.P1 (rs2=x3) C.NTL.PALL (rs2=x4) C.NTL.S1 (rs2=x5) C.NTL.ALL</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C.SLLI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, <em>imm</em>≠0</p></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock">31 (RV32), 63 (RV64/128)</p></td>
-<td class="tableblock halign-left valign-middle" rowspan="5"><p class="tableblock"><em>Designated for custom use</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code> or <em>imm</em>=0</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">63 (RV32), 95 (RV64)</p></td>
+<td class="tableblock halign-left valign-middle" rowspan="3"><p class="tableblock"><em>Designated for custom use</em></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C.SLLI64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>x0</em></p></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock">1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C.SLLI64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>≠<code>x0</code>, RV32 and RV64 only</p></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock">31</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C.SRLI64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RV32 and RV64 only</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C.SRLI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>imm</em>=0</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C.SRAI64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RV32 and RV64 only</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C.SRAI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>imm</em>=0</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
 </tr>
 </tbody>
@@ -1805,7 +1760,7 @@ valid for certain operands; when invalid, they are marked either <em>RES</em>
 to indicate that the opcode is reserved for future standard extensions;
 <em>Custom</em> to indicate that the opcode is designated for custom
 extensions; or <em>HINT</em> to indicate that the opcode is reserved for
-microarchitectural hints (see <a href="#rvc-hints">Section 18.7</a>).</p>
+microarchitectural hints (see <a href="#rvc-hints">HINT Instructions</a>).</p>
 </div>
 <div style="page-break-after: always;"></div>
 <table id="rvcopcodemap" class="tableblock frame-all grid-all fit-content center">
@@ -1841,29 +1796,23 @@ inst[1:0]</p></td>
 <td class="tableblock halign-right valign-middle" colspan="2"><p class="tableblock">00</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">ADDI4SPN</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">FLD<br>
-FLD<br>
-LQ</p></td>
+FLD</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">LW</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">FLW<br>
-LD<br>
 LD</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock"><em>Reserved</em></p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">FSD<br>
-FSD<br>
-SQ</p></td>
+FSD</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">SW</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">FSW<br>
-SD<br>
 SD</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">RV32<br>
-RV64<br>
-RV128</p></td>
+RV64</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-middle" colspan="2"><p class="tableblock">01</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">ADDI</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">JAL<br>
-ADDIW<br>
 ADDIW</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">LI</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">LUI/ADDI16SP</p></td>
@@ -1872,30 +1821,24 @@ ADDIW</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">BEQZ</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">BNEZ</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">RV32<br>
-RV64<br>
-RV128</p></td>
+RV64</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-middle" colspan="2"><p class="tableblock">10</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">SLLI</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">FLDSP<br>
-FLDSP<br>
-LQSP</p></td>
+FLDSP</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">LWSP</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">FLWSP<br>
-LDSP<br>
 LDSP</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">J[AL]R/MV/ADD</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">FSDSP<br>
-FSDSP<br>
-SQSP</p></td>
+FSDSP</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">SWSP</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">FSWSP<br>
-SDSP<br>
 SDSP</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">RV32<br>
-RV64<br>
-RV128</p></td>
+RV64</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-middle" colspan="2"><p class="tableblock">11</p></td>
@@ -1906,21 +1849,21 @@ RV128</p></td>
 <div class="paragraph">
 <p><a href="#rvc-instr-table0">Instruction listing for RVC, Quadrant 0</a>, <a href="#rvc-instr-table1">Instruction listing for RVC, Quadrant 1</a>, and <a href="#rvc-instr-table2">Instruction listing for RVC, Quadrant 2</a> list the RVC instructions.</p>
 </div>
-<div id="rvc-instr-table0" class="imageblock kroki">
+<div id="rvc-instr-table0" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrdVd1u2jAUvt9THPkKtHnFSQg00i6msUqVumkDab1AXJjEgDUnQbbpzwrSnmmP1CfpMSO0MNC6BiSGlKNI5_fz55-vkogBt1YbiMaKywy6i_9dNMgzSwc8leoWyKfXwMZwxpXq8_g7mfWqrypYCjq_piMhhyMLfh1WnDwRmg4yyKRa-JUYWJpyPcT-tSLX1RbOoPD28xth6BgbYC_wfOfW_JrGuZqk2aK5QZCK94UyUNHiCh0CuoTAhq-GxtA8NB8tQKujhWgNtCbaqcuZJ7pM5lKZy2UumdVJrzorYCA87FnD5LvIjHkGPkQ438qYK8qVHGZAUpkkSpC1mmVFc1vAX5-yjHgrkYoVNxbIuVJiyBXIzFg9ia3MM1JsnrG3SgCRFiHFiKRo1IDIFVOexaNcAzGWa0sg6uf6N60znLR1qav4JjJNu_UomJ5G4dSb-r0tK1zA1cn9z1_k-afshax8ePu-1ToPOl8-47JSbkc40Uz6QNofO2_AYX5XI70yhLC_EPKEiLUEbdicg43RBf55k0YU9h73Uv4QwMLHTfTWuibbmz6DrrOL1hpTlfY33zsJg-p-eQqmzf-LqYuvfxLFvGY5mlht_8fJm-6dJEfPJSlBAzsKGp7cqstNt6rkWTmyp2fTyxMGJ2XvFNuuWZTSZYixf8PbFkboK5EQ2LnKssMTFeOVO_-dvagKO0RVKUlVZw-ywg5PVl7GkuOnhK6ww9OV0hdr98LC2LE9P52dKcsDMNvEAA==?id=rvc-instr-table0" alt="Instruction listing for RVC, Quadrant 0">
+<img src="bytefield/rvc-instr-quad0.svg" alt="rvc instr quad0">
 </div>
 <div class="title">Figure 1. Instruction listing for RVC, Quadrant 0</div>
 </div>
-<div id="rvc-instr-table1" class="imageblock kroki">
+<div id="rvc-instr-table1" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrVWM1u2kAQvucpVj6BihuPMQYc5UB-qiZKSQtNWxVxMNgEq_5BaxMSxUi99i36DD01rxD1KfIknTUumCA7JcZJLDFC2p1Z-_vmmxnbBU0fqJ5HXaKMTNWwSSf8v1YGju3xE904H3qE6zmmxpHZ2kC1DPOKcO9eERiRN6pp9tT-N27aLW4V8DhCnQk_nMVVBLK0qGo65Qc2sQ0zXDf1gcdbKj3Hawr_fFns_cWec6m7_Ajj8SgC9cUyPzE0b0iqgSdVJ3zfMceWHV7ORSim2tNNlxSofoELOulwHAl_AhqgiWhlNAmtgiajVdFqaHXmEzgyT2CuwHyBOUOF6xanxa3w2ng_eKiA3teKO1JtUp4Wo1uGZXUq3fkuLO8uwiqrYZIidOP2BZjviEs7BU-_xPztv26evscEWioy1VHccY9whbdHzY8lgkff_fgpFBHG_J6JwsJ41e4PHUo411Oph9E9h84Yna4NuLhAHN2lLmxTjV0_O-SNg4OjWOi7aYFDEnAAX_LrSs0HwZf9ql9WwI9mH9bFctw4uQ-l9aksZokhXq1PlbzPq5BlaRvE2g5pHbZLhGppswiPrFeq_fm9myH6kxjhbgBxYs7rsYjFRLAo8ppSjUr8UQkHub3SrIJMb6BgY4GHdxCUbTUAMJuAwXBhlZqkgWuhhICSuAFZATGNFM6O4inZIRvSBcQ28vBGxouC-D96IgeKK-3j9gYbyO1NnBTH6Suo3VqtIdYxyf7Y9RyrREJAu5ARb5GZvkFmhHSMyNIqJ7N-itRsy1Igp5cmJHhmITVerJDgmYTUeFYhPTCbIUV5PVoubIA12ePmU-Yf0uQ_gSXx7vuv2LgEBtpnezkiADZPwJfTVn4IgAwUkCv8GQgAe0AmBEAuWsBiQpztJb27semJz7BZjQfIRbuIvvjkiyye59fvKQlBD1HU0l2dXuja_JHR9a5MHYe1p5pGn5vmgRfIGS9P8nWLfddK0S6TP97UfEkpd-M8sOATipbFVxXZF5eBrfEwuHf44WsaaPCCoTUP14P2F7o6ja0=?id=rvc-instr-table1" alt="Instruction listing for RVC, Quadrant 1">
+<img src="bytefield/rvc-instr-quad1.svg" alt="rvc instr quad1">
 </div>
 <div class="title">Figure 2. Instruction listing for RVC, Quadrant 1</div>
 </div>
-<div id="rvc-instr-table2" class="imageblock kroki">
+<div id="rvc-instr-table2" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrNVs1u2kAQvucpRnvCaly8xhjiKAcaiJqWVC2u6AFxWLAJVv2Ddk1JG3iAvkWfrU_SMdgiEAxJbNNIjJBmvx3P9-3M7pQse8TCkAswJi5zfOjF__fGKPBDecQ8x_0J5OYN0AlcMdcdsOF3suhLJyXcCjyYyWPbuR2HUFVgw8ksm8sjH3zHjf2uPQplj_FbjK8k2Ghv4tQS7yC4s4U8wQAYC1R17ZZnjhWOobZEcjaTh4E79fz4ewLzdtnAdgWUuP0DHTb0CIHtn4JG0VS0CpqGVkXT0WpodbSzCLMERkgaQWmEpRGYVklfWkgncRKYGAZVEH1viAnzobKQHiyVQvsuBDJ1PK9X7ZNEXOH8soHqCynZRTd2ES5omVt_f_9Zx61uIpYRNUPppwHoequ6K6XLt2a7fU3A8Biq2jPEdACk9P7609dT4NaFcg6dbkWFy6kIA-8UYgYXVEL6SWAdjCiYzPzhOOBARMh4iCEHAV8dyeLJQpH1wrO1ULJpoGvbKnS6VK2vBCjrGkSinMNamowS0JxrxTpQI5V53dAz1MlVu2l-fizRUpvXJsXhlpmfZRKj_WWXFqtyaZl51AdVji-Koc5r2WT5tkOWnPQ4dr9k1eJqpxjYL69NhyfURda7Y_fVoWvlHDuGvuxRKehF-dDZ3QeC_g-ae8-YC3Xf8mGuN930-aEorjSNa46HidRa7zqtxkdyVAa5F2VUjo125-gsygXXXaPZLKzw0m7Z-H7dvhH1R9QyPBxmQYPWYVZbY1GerMy0iSkbpdQxKaG09YznQCkis3zaX540PXrSD6qriLHkMKUCG8bcM108l9U_Nds6Ew==?id=rvc-instr-table2" alt="Instruction listing for RVC, Quadrant 2">
+<img src="bytefield/rvc-instr-quad2.svg" alt="rvc instr quad2">
 </div>
 <div class="title">Figure 3. Instruction listing for RVC, Quadrant 2</div>
 </div>
@@ -1940,9 +1883,6 @@ RV128</p></td>
               <button data-micromodal-close class="modal-versions-close">
                 <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
               </button>
-              <div class="colset">
-                <div class="col-left">
-
                   <ul class="nav-versions">
                       <li class="component">
                         <div>
@@ -2135,263 +2075,6 @@ RV128</p></td>
                         
                       </li>
                   </ul>
-                </div>
-                <div class="col-right">
-                  <ul class="projects">
-  <li>
-    Related Spring Documentation
-    <ul class="projects-list">
-        <li>
-<a href="https://docs.spring.io/spring-boot/">
-  Spring Boot
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-framework/reference/">
-  Spring Framework
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Cloud
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-build/reference/">
-  Spring Cloud Build
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-bus/reference/">
-  Spring Cloud Bus
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
-  Spring Cloud Circuit Breaker
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-commons/reference/">
-  Spring Cloud Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-config/reference/">
-  Spring Cloud Config
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-consul/reference/">
-  Spring Cloud Consul
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-contract/reference/">
-  Spring Cloud Contract
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-function/reference/">
-  Spring Cloud Function
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
-  Spring Cloud Gateway
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
-  Spring Cloud Kubernetes
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
-  Spring Cloud Netflix
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
-  Spring Cloud OpenFeign
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-stream/reference/">
-  Spring Cloud Stream
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-task/reference/">
-  Spring Cloud Task
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-vault/reference/">
-  Spring Cloud Vault
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
-  Spring Cloud Zookeeper
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Data
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-data/cassandra/reference/">
-  Spring Data Cassandra
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/commons/reference/">
-  Spring Data Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/couchbase/reference/">
-  Spring Data Couchbase
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
-  Spring Data Elasticsearch
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/jpa/reference/">
-  Spring Data JPA
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
-  Spring Data KeyValue
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/ldap/reference/">
-  Spring Data LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/mongodb/reference/">
-  Spring Data MongoDB
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/neo4j/reference/">
-  Spring Data Neo4j
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/redis/reference/">
-  Spring Data Redis
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/relational/reference/">
-  Spring Data JDBC &amp; R2DBC
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/rest/reference/">
-  Spring Data REST
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-integration/reference/">
-  Spring Integration
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-batch/reference/">
-  Spring Batch
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-<a href="https://docs.spring.io/spring-security/reference/">
-  Spring Security
-</a>
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-authorization-server/reference/">
-  Spring Authorization Server
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-ldap/reference/">
-  Spring LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-security-kerberos/reference/">
-  Spring Security Kerberos
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-session/reference/">
-  Spring Session
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-vault/reference/">
-  Spring Vault
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-ai/reference/">
-  Spring AI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-amqp/reference/">
-  Spring AMQP
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-cli/reference/">
-  Spring CLI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-graphql/reference/">
-  Spring GraphQL
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-kafka/reference/">
-  Spring for Apache Kafka
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-modulith/reference/">
-  Spring Modulith
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-pulsar/reference/">
-  Spring for Apache Pulsar
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-shell/reference/">
-  Spring Shell
-</a>
-</li>
-    </ul>
-  </li
-  <li><a href="../../spring-projects.html">All Docs...</a></li>
-</ul>
-                </div>
-              </div>
             </main>
         </div>
     </div>

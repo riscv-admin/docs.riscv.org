@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
+    <meta name="antora-ui-version" content="3f4ce2c51445edcfc62ee1f59ab97fffc218fb79"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -91,10 +91,7 @@
     <a class="nav-link"  href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">RV64I Base Integer Instruction Set</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="rv64.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
@@ -172,9 +169,6 @@
     <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -190,13 +184,7 @@
     <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Extending RISC-V</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">History and Acknowledgments</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -307,12 +295,28 @@
             version="1.1"
             viewBox="0 0 512 512"
             width="512px"
-          ><style type="text/css"><![CDATA[
+          ><style type="text/css"><
               .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
                 class="st0"
                 d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
               ></path></g></svg>
           GitHub Project
+        </a>
+
+      <a href="" title="PDF">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          Download PDF
         </a>
     </div>
   </div>
@@ -588,7 +592,7 @@ constitute forward progress:</p>
 <p>The retirement of an instruction.</p>
 </li>
 <li>
-<p>A trap, as defined in <a href="#trap-defn">Section 1.6</a>.</p>
+<p>A trap, as defined in <a href="#trap-defn">Exceptions, Traps, and Interrupts</a>.</p>
 </li>
 <li>
 <p>Any other event defined by an extension to constitute forward
@@ -657,9 +661,7 @@ the width of an integer register in bits (either 32 or 64).
 <a href="rv32e.html" class="xref page">RV32E and RV64E Base Integer Instruction Sets</a> describes the RV32E and RV64E subset variants of the
 RV32I or RV64I base instruction sets respectively, which have been added to support small
 microcontrollers, and which have half the number of integer registers.
-<a href="rv128.html" class="xref page">RV128I Base Integer Instruction Set</a> sketches a future RV128I variant of the
-base integer instruction set supporting a flat 128-bit address space
-(XLEN=128). The base integer instruction sets use a two&#8217;s-complement
+The base integer instruction sets use a two&#8217;s-complement
 representation for signed integer values.</p>
 </div>
 <div class="admonitionblock note">
@@ -675,8 +677,8 @@ believe 32-bit address spaces will remain adequate for many embedded and
 client devices for decades to come and will be desirable to lower memory
 traffic and energy consumption. In addition, 32-bit address spaces are
 sufficient for educational purposes. A larger flat 128-bit address space
-might eventually be required, so we ensured this could be accommodated
-within the RISC-V ISA framework.</p>
+might eventually be required and could be accommodated with a new RV128I
+base ISA within the existing RISC-V ISA framework.</p>
 </div>
 </td>
 </tr>
@@ -773,8 +775,7 @@ extensions. Non-standard extensions are either custom extensions, that
 use only custom encodings, or <em>non-conforming</em> extensions, that use any
 standard or reserved encoding. Instruction-set extensions are generally
 shared but may provide slightly different functionality depending on the
-base ISA. <a href="extending.html" class="xref page">Extending RISC-V</a> describes various ways
-of extending the RISC-V ISA. We have also developed a naming convention
+base ISA. We have also developed a naming convention
 for RISC-V base instructions and instruction-set extensions, described
 in detail in <a href="naming.html" class="xref page">ISA Extension Naming Conventions</a>.</p>
 </div>
@@ -951,94 +952,11 @@ instruction set, ILEN is 32 bits. Implementations supporting longer
 instructions have larger values of ILEN.</p>
 </div>
 <div class="paragraph">
-<p><a href="#instlengthcode">RISC-V instruction length encoding. Only the 16-bit and 32-bit encodings are considered frozen at this time.</a> illustrates the standard
-RISC-V instruction-length encoding convention. All the 32-bit
+<p>All the 32-bit
 instructions in the base ISA have their lowest two bits set to <code>11</code>. The
 optional compressed 16-bit instruction-set extensions have their lowest
 two bits equal to <code>00</code>, <code>01</code>, or <code>10</code>.</p>
 </div>
-<div class="sect3">
-<h4 id="expanded-instruction-length-encoding"><a class="anchor" href="#expanded-instruction-length-encoding"></a>Expanded Instruction-Length Encoding</h4>
-<div class="paragraph">
-<p>A portion of the 32-bit instruction-encoding space has been tentatively
-allocated for instructions longer than 32 bits. The entirety of this
-space is reserved at this time, and the following proposal for encoding
-instructions longer than 32 bits is not considered frozen.
-</p>
-</div>
-<div class="paragraph">
-<p>Standard instruction-set extensions encoded with more than 32 bits have
-additional low-order bits set to <code>1</code>, with the conventions for 48-bit
-and 64-bit lengths shown in
-<a href="#instlengthcode">RISC-V instruction length encoding. Only the 16-bit and 32-bit encodings are considered frozen at this time.</a>. Instruction lengths
-between 80 bits and 176 bits are encoded using a 3-bit field in bits
-[14:12] giving the number of 16-bit words in addition to the first
-5\(\times\)16-bit words. The encoding with bits [14:12] set to
-"111" is reserved for future longer instruction encodings.</p>
-</div>
-<table id="instlengthcode" class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 1. RISC-V instruction length encoding. Only the 16-bit and 32-bit encodings are considered frozen at this time.</caption>
-<colgroup>
-<col>
-<col>
-<col>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-center valign-top"></th>
-<th class="tableblock halign-center valign-top"></th>
-<th class="tableblock halign-center valign-top"></th>
-<th class="tableblock halign-center valign-top">xxxxxxxxxxxxxxaa</th>
-<th class="tableblock halign-left valign-top">16-bit (aa&#8800;11)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">xxxxxxxxxxxxxxxx</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">xxxxxxxxxxxbbb11</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">32-bit (bbb&#8800;111)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">\(\cdot\cdot\cdot\)xxxx</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">xxxxxxxxxxxxxxxx</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">xxxxxxxxxx011111</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">48-bit</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">\(\cdot\cdot\cdot\)xxxx</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">xxxxxxxxxxxxxxxx</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">xxxxxxxxx0111111</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">64-bit</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">\(\cdot\cdot\cdot\)xxxx</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">xxxxxxxxxxxxxxxx</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">xnnnxxxxx1111111</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(80+16*nnn)-bit, nnn&#8800;111</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">\(\cdot\cdot\cdot\)xxxx</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">xxxxxxxxxxxxxxxx</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">x111xxxxx1111111</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Reserved for &#8805;192-bits</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">Byte Address:</p></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock">base+4</p></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock">base+2</p></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock">base</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1069,13 +987,11 @@ storing in the cache to preserve illegal-instruction exception behavior.</p>
 the 32-bit instruction word, we leave more space available for
 non-standard and custom extensions. In particular, the base RV32I ISA
 uses less than 1/8 of the encoding space in the 32-bit instruction word.
-As described in <a href="extending.html" class="xref page">Extending RISC-V</a>, an implementation that does not require support
+An implementation that does not require support
 for the standard compressed instruction extension can map 3 additional non-conforming
 30-bit instruction spaces into the 32-bit fixed-width format, while preserving
 support for standard &#8805;32-bit instruction-set
-extensions. Further, if the implementation also does not need
-instructions &gt;32-bits in length, it can recover a further
-four major opcodes for non-conforming extensions.</p>
+extensions.</p>
 </div>
 </td>
 </tr>
@@ -1188,7 +1104,6 @@ of the instruction format to avoid breaking up opcode fields.</p>
 </table>
 </div>
 </div>
-</div>
 <div class="sect2">
 <h3 id="trap-defn"><a class="anchor" href="#trap-defn"></a>Exceptions, Traps, and Interrupts</h3>
 <div class="paragraph">
@@ -1278,7 +1193,7 @@ reported to an external environment.</p>
 <p><a href="#trapcharacteristics">Characteristics of traps</a> shows the characteristics of each kind of trap.</p>
 </div>
 <table id="trapcharacteristics" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 2. Characteristics of traps</caption>
+<caption class="title">Table 1. Characteristics of traps</caption>
 <colgroup>
 <col>
 <col>
@@ -1383,9 +1298,6 @@ extensions, platform standards, or implementations.</p>
               <button data-micromodal-close class="modal-versions-close">
                 <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
               </button>
-              <div class="colset">
-                <div class="col-left">
-
                   <ul class="nav-versions">
                       <li class="component">
                         <div>
@@ -1578,263 +1490,6 @@ extensions, platform standards, or implementations.</p>
                         
                       </li>
                   </ul>
-                </div>
-                <div class="col-right">
-                  <ul class="projects">
-  <li>
-    Related Spring Documentation
-    <ul class="projects-list">
-        <li>
-<a href="https://docs.spring.io/spring-boot/">
-  Spring Boot
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-framework/reference/">
-  Spring Framework
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Cloud
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-build/reference/">
-  Spring Cloud Build
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-bus/reference/">
-  Spring Cloud Bus
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
-  Spring Cloud Circuit Breaker
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-commons/reference/">
-  Spring Cloud Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-config/reference/">
-  Spring Cloud Config
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-consul/reference/">
-  Spring Cloud Consul
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-contract/reference/">
-  Spring Cloud Contract
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-function/reference/">
-  Spring Cloud Function
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
-  Spring Cloud Gateway
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
-  Spring Cloud Kubernetes
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
-  Spring Cloud Netflix
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
-  Spring Cloud OpenFeign
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-stream/reference/">
-  Spring Cloud Stream
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-task/reference/">
-  Spring Cloud Task
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-vault/reference/">
-  Spring Cloud Vault
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
-  Spring Cloud Zookeeper
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Data
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-data/cassandra/reference/">
-  Spring Data Cassandra
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/commons/reference/">
-  Spring Data Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/couchbase/reference/">
-  Spring Data Couchbase
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
-  Spring Data Elasticsearch
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/jpa/reference/">
-  Spring Data JPA
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
-  Spring Data KeyValue
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/ldap/reference/">
-  Spring Data LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/mongodb/reference/">
-  Spring Data MongoDB
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/neo4j/reference/">
-  Spring Data Neo4j
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/redis/reference/">
-  Spring Data Redis
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/relational/reference/">
-  Spring Data JDBC &amp; R2DBC
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/rest/reference/">
-  Spring Data REST
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-integration/reference/">
-  Spring Integration
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-batch/reference/">
-  Spring Batch
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-<a href="https://docs.spring.io/spring-security/reference/">
-  Spring Security
-</a>
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-authorization-server/reference/">
-  Spring Authorization Server
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-ldap/reference/">
-  Spring LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-security-kerberos/reference/">
-  Spring Security Kerberos
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-session/reference/">
-  Spring Session
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-vault/reference/">
-  Spring Vault
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-ai/reference/">
-  Spring AI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-amqp/reference/">
-  Spring AMQP
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-cli/reference/">
-  Spring CLI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-graphql/reference/">
-  Spring GraphQL
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-kafka/reference/">
-  Spring for Apache Kafka
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-modulith/reference/">
-  Spring Modulith
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-pulsar/reference/">
-  Spring for Apache Pulsar
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-shell/reference/">
-  Spring Shell
-</a>
-</li>
-    </ul>
-  </li
-  <li><a href="../../spring-projects.html">All Docs...</a></li>
-</ul>
-                </div>
-              </div>
             </main>
         </div>
     </div>

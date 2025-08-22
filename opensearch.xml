@@ -4,8 +4,8 @@
   <ShortName>RISC-V Developer Portal</ShortName>
   <Description>Search RISC-V Developer Portal</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://docs.riscv.org/docs.riscv.org/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://docs.riscv.org/docs.riscv.org/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.riscv.org/docs.riscv.org/opensearch.xml" />
-  <moz:SearchForm>https://docs.riscv.org/docs.riscv.org/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://developer.riscv.org/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://developer.riscv.org/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://developer.riscv.org/opensearch.xml" />
+  <moz:SearchForm>https://developer.riscv.org/</moz:SearchForm>
 </OpenSearchDescription>

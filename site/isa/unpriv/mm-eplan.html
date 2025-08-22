@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
-    <link rel="prev" href="history.html">
+    <link rel="prev" href="naming.html">
     <link rel="next" href="mm-formal.html">
     <meta name="generator" content="Antora 3.1.12">
     <script>
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
+    <meta name="antora-ui-version" content="3f4ce2c51445edcfc62ee1f59ab97fffc218fb79"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -91,10 +91,7 @@
     <a class="nav-link"  href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">RV64I Base Integer Instruction Set</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="rv64.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
@@ -172,9 +169,6 @@
     <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -190,13 +184,7 @@
     <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Extending RISC-V</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">History and Acknowledgments</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -307,12 +295,28 @@
             version="1.1"
             viewBox="0 0 512 512"
             width="512px"
-          ><style type="text/css"><![CDATA[
+          ><style type="text/css"><
               .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
                 class="st0"
                 d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
               ></path></g></svg>
           GitHub Project
+        </a>
+
+      <a href="" title="PDF">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          Download PDF
         </a>
     </div>
   </div>
@@ -1053,7 +1057,8 @@ atomic in the slightly different sense that the memory location in
 question will not be modified by another hart during the time the
 original hart holds the reservation.</p>
 </div>
-<table class="tableblock frame-none grid-all stretch">
+<table id="litmus_lrsdsc" class="tableblock frame-none grid-all stretch">
+<caption class="title">Table 5. In all four (independent) instances, the final  store-conditional instruction is permitted but not guaranteed to succeed.</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -1089,9 +1094,6 @@ original hart holds the reservation.</p>
 </tr>
 </tbody>
 </table>
-<div id="litmus_lrsdsc" class="paragraph">
-<p><a href="#litmus_lrsdsc">Figure 4</a>: In all four (independent) instances, the final  store-conditional instruction is permitted but not guaranteed to succeed.</p>
-</div>
 <div class="paragraph">
 <p>The atomicity axiom forbids stores from other harts from being
 interleaved in global memory order between an LR and the SC paired with
@@ -1100,13 +1102,13 @@ interleaved between the paired operations in program order or in the
 global memory order, nor does it forbid stores from the same hart or
 stores to non-overlapping locations from appearing between the paired
 operations in either program order or in the global memory order. For
-example, the SC instructions in <a href="#litmus_lrsdsc">[litmus_lrsdsc]</a> may (but are not
+example, the SC instructions in <a href="#litmus_lrsdsc">In all four (independent) instances, the final  store-conditional instruction is permitted but not guaranteed to succeed.</a> may (but are not
 guaranteed to) succeed. None of those successes would violate the
 atomicity axiom, because the intervening non-conditional stores are from
 the same hart as the paired load-reserved and store-conditional
 instructions. This way, a memory system that tracks memory accesses at
 cache line granularity (and which therefore will see the four snippets
-of <a href="#litmus_lrsdsc">[litmus_lrsdsc]</a> as identical) will not
+of <a href="#litmus_lrsdsc">In all four (independent) instances, the final  store-conditional instruction is permitted but not guaranteed to succeed.</a> as identical) will not
 be forced to fail a store-conditional instruction that happens to
 (falsely) share another portion of the same cache line as the memory
 location being held by the reservation.</p>
@@ -1215,7 +1217,7 @@ requirements in terms of the global memory order requires a bit of
 indirection.</p>
 </div>
 <table id="frirfi" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 5. Litmus test MP+fence.w.w+fre-rfi-addr (outcome permitted)</caption>
+<caption class="title">Table 6. Litmus test MP+fence.w.w+fre-rfi-addr (outcome permitted)</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1350,7 +1352,7 @@ that the two loads return the same value, since two different stores may
 write the same value.</p>
 </div>
 <table id="litmus-rsw" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 6. Litmus test RSW (outcome permitted)</caption>
+<caption class="title">Table 7. Litmus test RSW (outcome permitted)</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1553,8 +1555,8 @@ memory model.</p>
 <div class="paragraph">
 <p>Finally, we note that since RISC-V uses a multi-copy atomic memory
 model, programmers can reason about fences bits in a thread-local
-manner. There is no complex notion of "fence cumulativity" as found in
-memory models that are not multi-copy atomic.</p>
+manner. Fences in RISC-V are not cumulative, as they are in some
+non-multi-copy-atomic memory models.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1672,8 +1674,8 @@ not enforced. This facilitates the porting of code written under the TSO
 and/or RCpc memory models. To enforce store-release-to-load-acquire
 ordering, the code must use store-release-RCsc and load-acquire-RCsc
 operations so that PPO rule 7 applies. RCpc alone is
-sufficient for many use cases in C/C but is insufficient for many
-other use cases in C/C, Java, and Linux, to name just a few examples;
+sufficient for many use cases in C/C++ but is insufficient for many
+other use cases in C/C++, Java, and Linux, to name just a few examples;
 see <a href="#memory_porting">Memory Porting</a> for details.</p>
 </div>
 <div class="paragraph">
@@ -1685,8 +1687,8 @@ rule 8 also applies even when the value being stored
 does not syntactically depend on the value returned by the paired LR.</p>
 </div>
 <div class="paragraph">
-<p>Lastly, we note that just as with fences, programmers need not worry
-about "cumulativity" when analyzing ordering annotations.</p>
+<p>Lastly, we note that, as with fences, ordering annotations are
+not cumulative.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1846,7 +1848,7 @@ registers to <em>rd</em> only when the SC is successful, an unsuccessful SC has
 no effect on the global memory order.</p>
 </div>
 <table id="litmus_lb_lrsc" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 7. A variant of the LB litmus test (outcome forbidden)</caption>
+<caption class="title">Table 8. A variant of the LB litmus test (outcome forbidden)</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1963,7 +1965,7 @@ b in program order such that m has an address dependency on a</p>
 </table>
 </div>
 <table id="litmus_datarfi" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 8. Because of PPO <a href="#overlapping-ordering">rule 12</a> and the data dependency from (d) to (e), (d) must also precede (f) in the global memory order (outcome forbidden)</caption>
+<caption class="title">Table 9. Because of PPO <a href="#overlapping-ordering">rule 12</a> and the data dependency from (d) to (e), (d) must also precede (f) in the global memory order (outcome forbidden)</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2046,11 +2048,11 @@ data for that store are known. Consider <a href="#litmus_datarfi">Because of PPO
 executed until the data for (e) has been resolved, because (f) must
 return the value written by (e) (or by something even later in the
 global memory order), and the old value must not be clobbered by the
-writeback of (e) before (d) has had a chance to perform. Therefore, (f)
+write-back of (e) before (d) has had a chance to perform. Therefore, (f)
 will never perform before (d) has performed.</p>
 </div>
 <table class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 9. Because of the extra store between (e) and (g), (d) no longer necessarily precedes (g) (outcome permitted)</caption>
+<caption class="title">Table 10. Because of the extra store between (e) and (g), (d) no longer necessarily precedes (g) (outcome permitted)</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2143,7 +2145,7 @@ and hence the dependency of (f) on (d), which produces the data for (e),
 would be broken.</p>
 </div>
 <div class="paragraph">
-<p>Rule<a href="#overlapping-ordering">13</a> makes a similar observation to the
+<p>Rule <a href="#overlapping-ordering">13</a> makes a similar observation to the
 previous rule: a store cannot be performed at memory until all previous
 loads that might access the same address have themselves been performed.
 Such a load must appear to execute before the store, but it cannot do so
@@ -2155,7 +2157,7 @@ rule 13 can be seen as somewhat of a special case
 of rule <a href="#overlapping-ordering">11</a>.</p>
 </div>
 <table id="litmus:addrdatarfi_no" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 10. Because of the address dependency from (d) to (e), (d) also precedes (f) (outcome forbidden)</caption>
+<caption class="title">Table 11. Because of the address dependency from (d) to (e), (d) also precedes (f) (outcome forbidden)</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2398,7 +2400,7 @@ those external devices and buses.</p>
 <div class="sect2">
 <h3 id="memory_porting"><a class="anchor" href="#memory_porting"></a>Code Porting and Mapping Guidelines</h3>
 <table id="tsomappings" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 11. Mappings from TSO operations to RISC-V operations</caption>
+<caption class="title">Table 12. Mappings from TSO operations to RISC-V operations</caption>
 <colgroup>
 <col>
 <col>
@@ -2456,7 +2458,7 @@ may also negatively affect performance if it puts more pressure on the
 reservation mechanism than was originally intended.</p>
 </div>
 <table id="powermappings" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 12. Mappings from Power operations to RISC-V operations</caption>
+<caption class="title">Table 13. Mappings from Power operations to RISC-V operations</caption>
 <colgroup>
 <col>
 <col>
@@ -2506,7 +2508,7 @@ ISYNC is used to define a "control+control fence" dependency that is
 not present in RVWMO.</p>
 </div>
 <table id="armmappings" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 13. Mappings from ARM operations to RISC-V operations</caption>
+<caption class="title">Table 14. Mappings from ARM operations to RISC-V operations</caption>
 <colgroup>
 <col>
 <col>
@@ -2584,7 +2586,7 @@ set <em>rl</em> instead. ARM ISB maps on RISC-V to FENCE.I followed by
 FENCE R,R similarly to how ISYNC maps for Power.</p>
 </div>
 <table id="linuxmappings" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 14. Mappings from Linux memory primitives to RISC-V primitives.</caption>
+<caption class="title">Table 15. Mappings from Linux memory primitives to RISC-V primitives.</caption>
 <colgroup>
 <col>
 <col>
@@ -2785,7 +2787,7 @@ strengthened by either adding a second fence or mapping the store
 to <code>amoswap.rl</code> instead.</p>
 </div>
 <table id="c11mappings" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 15. Mappings from C/C++ primitives to RISC-V primitives.</caption>
+<caption class="title">Table 16. Mappings from C/C++ primitives to RISC-V primitives.</caption>
 <colgroup>
 <col>
 <col>
@@ -2916,7 +2918,7 @@ to <code>amoswap.rl</code> instead.</p>
 </tbody>
 </table>
 <table id="c11mappings_hypothetical" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 16. Hypothetical mappings from C/C++ primitives to RISC-V primitives, if native load-acquire and store-release opcodes are introduced.</caption>
+<caption class="title">Table 17. Hypothetical mappings from C/C++ primitives to RISC-V primitives, if native load-acquire and store-release opcodes are introduced.</caption>
 <colgroup>
 <col>
 <col>
@@ -3250,7 +3252,7 @@ does not otherwise violate the memory model semantics.</p>
 example:</p>
 </div>
 <table class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 17. Write subsumption litmus test, allowed execution</caption>
+<caption class="title">Table 18. Write subsumption litmus test, allowed execution</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3370,7 +3372,7 @@ would be compatible with the RVWMO memory model:</p>
 <p>Fences limited to certain addresses</p>
 </li>
 <li>
-<p>Cache writeback/flush/invalidate/etc.instructions</p>
+<p>Cache write-back/flush/invalidate/etc.instructions</p>
 </li>
 </ul>
 </div>
@@ -3381,7 +3383,7 @@ would be compatible with the RVWMO memory model:</p>
 <div class="sect3">
 <h4 id="mixedrsw"><a class="anchor" href="#mixedrsw"></a>Mixed-size RSW</h4>
 <table id="rsw1" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 18. Mixed-size discrepancy (permitted by axiomatic models, forbidden by operational model)</caption>
+<caption class="title">Table 19. Mixed-size discrepancy (permitted by axiomatic models, forbidden by operational model)</caption>
 <colgroup>
 <col>
 <col>
@@ -3447,7 +3449,7 @@ would be compatible with the RVWMO memory model:</p>
 </tbody>
 </table>
 <table id="rsw2" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 19. Mixed-size discrepancy (permitted by axiomatic models, forbidden by operational model)</caption>
+<caption class="title">Table 20. Mixed-size discrepancy (permitted by axiomatic models, forbidden by operational model)</caption>
 <colgroup>
 <col>
 <col>
@@ -3501,7 +3503,7 @@ would be compatible with the RVWMO memory model:</p>
 </tbody>
 </table>
 <table id="rsw3" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 20. Mixed-size discrepancy (permitted by axiomatic models, forbidden by operational model)</caption>
+<caption class="title">Table 21. Mixed-size discrepancy (permitted by axiomatic models, forbidden by operational model)</caption>
 <colgroup>
 <col>
 <col>
@@ -3587,7 +3589,7 @@ of this rule to RVWMO.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="history.html">History and Acknowledgments</a></span>
+  <span class="prev"><a href="naming.html">ISA Extension Naming Conventions</a></span>
   <span class="next"><a href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a></span>
 </nav>
 </article>  </div>
@@ -3599,9 +3601,6 @@ of this rule to RVWMO.</p>
               <button data-micromodal-close class="modal-versions-close">
                 <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
               </button>
-              <div class="colset">
-                <div class="col-left">
-
                   <ul class="nav-versions">
                       <li class="component">
                         <div>
@@ -3794,263 +3793,6 @@ of this rule to RVWMO.</p>
                         
                       </li>
                   </ul>
-                </div>
-                <div class="col-right">
-                  <ul class="projects">
-  <li>
-    Related Spring Documentation
-    <ul class="projects-list">
-        <li>
-<a href="https://docs.spring.io/spring-boot/">
-  Spring Boot
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-framework/reference/">
-  Spring Framework
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Cloud
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-build/reference/">
-  Spring Cloud Build
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-bus/reference/">
-  Spring Cloud Bus
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
-  Spring Cloud Circuit Breaker
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-commons/reference/">
-  Spring Cloud Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-config/reference/">
-  Spring Cloud Config
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-consul/reference/">
-  Spring Cloud Consul
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-contract/reference/">
-  Spring Cloud Contract
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-function/reference/">
-  Spring Cloud Function
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
-  Spring Cloud Gateway
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
-  Spring Cloud Kubernetes
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
-  Spring Cloud Netflix
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
-  Spring Cloud OpenFeign
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-stream/reference/">
-  Spring Cloud Stream
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-task/reference/">
-  Spring Cloud Task
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-vault/reference/">
-  Spring Cloud Vault
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
-  Spring Cloud Zookeeper
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Data
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-data/cassandra/reference/">
-  Spring Data Cassandra
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/commons/reference/">
-  Spring Data Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/couchbase/reference/">
-  Spring Data Couchbase
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
-  Spring Data Elasticsearch
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/jpa/reference/">
-  Spring Data JPA
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
-  Spring Data KeyValue
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/ldap/reference/">
-  Spring Data LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/mongodb/reference/">
-  Spring Data MongoDB
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/neo4j/reference/">
-  Spring Data Neo4j
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/redis/reference/">
-  Spring Data Redis
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/relational/reference/">
-  Spring Data JDBC &amp; R2DBC
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/rest/reference/">
-  Spring Data REST
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-integration/reference/">
-  Spring Integration
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-batch/reference/">
-  Spring Batch
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-<a href="https://docs.spring.io/spring-security/reference/">
-  Spring Security
-</a>
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-authorization-server/reference/">
-  Spring Authorization Server
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-ldap/reference/">
-  Spring LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-security-kerberos/reference/">
-  Spring Security Kerberos
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-session/reference/">
-  Spring Session
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-vault/reference/">
-  Spring Vault
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-ai/reference/">
-  Spring AI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-amqp/reference/">
-  Spring AMQP
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-cli/reference/">
-  Spring CLI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-graphql/reference/">
-  Spring GraphQL
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-kafka/reference/">
-  Spring for Apache Kafka
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-modulith/reference/">
-  Spring Modulith
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-pulsar/reference/">
-  Spring for Apache Pulsar
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-shell/reference/">
-  Spring Shell
-</a>
-</li>
-    </ul>
-  </li
-  <li><a href="../../spring-projects.html">All Docs...</a></li>
-</ul>
-                </div>
-              </div>
             </main>
         </div>
     </div>

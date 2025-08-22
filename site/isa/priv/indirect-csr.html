@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
+    <meta name="antora-ui-version" content="3f4ce2c51445edcfc62ee1f59ab97fffc218fb79"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -91,10 +91,7 @@
     <a class="nav-link"  href="../unpriv/rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv32.html">RV64I Base Integer Instruction Set</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="../unpriv/rv64.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
@@ -172,9 +169,6 @@
     <a class="nav-link"  href="../unpriv/b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -190,13 +184,7 @@
     <a class="nav-link"  href="../unpriv/rv-32-64g.html">RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/extending.html">Extending RISC-V</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/naming.html">ISA Extension Naming Conventions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/history.html">History and Acknowledgments</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -307,12 +295,28 @@
             version="1.1"
             viewBox="0 0 512 512"
             width="512px"
-          ><style type="text/css"><![CDATA[
+          ><style type="text/css"><
               .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
                 class="st0"
                 d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
               ></path></g></svg>
           GitHub Project
+        </a>
+
+      <a href="" title="PDF">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          Download PDF
         </a>
     </div>
   </div>
@@ -527,8 +531,8 @@ value that is not implemented, is UNSPECIFIED.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>It is expected that implementations will typically raise an illegal
-instruction exception for such accesses, so that, for example, they can
+<p>It is expected that implementations will typically raise an illegal-instruction
+exception for such accesses, so that, for example, they can
 be identified as software bugs. Platform specs, profile specs, and/or
 the Privileged ISA spec may place more restrictions on behavior for such
 accesses.</p>
@@ -552,7 +556,7 @@ which the <code>miselect</code> value is allocated.</p>
 <td class="content">
 <div class="paragraph">
 <p>Ordinarily, each <code>mireg</code><strong><em>i</em></strong> will access register state, access
-read-only 0 state, or raise an illegal instruction exception.</p>
+read-only 0 state, or raise an illegal-instruction exception.</p>
 </div>
 <div class="paragraph">
 <p>For RV32, if an extension defines an indirectly accessed register as 64 bits wide, it is recommended that the lower 32 bits of the register are accessed through one of <code>mireg</code>, <code>mireg2</code>, or <code>mireg3</code>, while the upper 32 bits are accessed through <code>mireg4</code>, <code>mireg5</code>, or <code>mireg6</code>, respectively.</p>
@@ -694,7 +698,7 @@ holds a value that is not implemented at supervisor level, is UNSPECIFIED.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>It is recommended that implementations raise an illegal instruction
+<p>It is recommended that implementations raise an illegal-instruction
 exception for such accesses, to facilitate possible emulation (by
 M-mode) of these accesses.</p>
 </div>
@@ -735,7 +739,7 @@ allocated.</p>
 <div class="paragraph">
 <p>Ordinarily, each <code>sireg</code><strong><em>i</em></strong> will access register state, access
 read-only 0 state, or, unless executing in a virtual machine (covered in
-the next section), raise an illegal instruction exception.</p>
+the next section), raise an illegal-instruction exception.</p>
 </div>
 </td>
 </tr>
@@ -867,7 +871,7 @@ its value from before.</p>
 </div>
 <div class="paragraph">
 <p>For alias CSRs <code>sireg*</code> and <code>vsireg*</code>, the hypervisor extension’s usual
-rules for when to raise a virtual instruction exception (based on
+rules for when to raise a virtual-instruction  exception (based on
 whether an instruction is HS-qualified) are not applicable. The
 rules given in this section for <code>sireg</code> and <code>vsireg</code> apply instead, unless
 overridden by the requirements specified in the section below, which
@@ -875,7 +879,7 @@ take precedence over this section when extension Smstateen is also
 implemented.</p>
 </div>
 <div class="paragraph">
-<p>A virtual instruction exception is raised for attempts from VS-mode or VU-mode to directly access <code>vsiselect</code> or <code>vsireg*</code>, or attempts from VU-mode to access <code>siselect</code> or <code>sireg*</code>.</p>
+<p>A virtual-instruction  exception is raised for attempts from VS-mode or VU-mode to directly access <code>vsiselect</code> or <code>vsireg*</code>, or attempts from VU-mode to access <code>siselect</code> or <code>sireg*</code>.</p>
 </div>
 <div class="paragraph">
 <p>The behavior upon accessing <code>vsireg*</code> from M-mode or HS-mode, or accessing <code>sireg*</code> (really <code>vsireg*</code>) from VS-mode, while <code>vsiselect</code> holds a value that is not implemented at HS level, is UNSPECIFIED.</p>
@@ -888,7 +892,7 @@ implemented.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>It is recommended that implementations raise an illegal instruction exception for such accesses, to facilitate possible emulation (by M-mode) of these accesses.</p>
+<p>It is recommended that implementations raise an illegal-instruction exception for such accesses, to facilitate possible emulation (by M-mode) of these accesses.</p>
 </div>
 </td>
 </tr>
@@ -910,7 +914,7 @@ allocated.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Ordinarily, each <code>vsireg</code><strong><em>i</em></strong> will access register state, access read-only 0 state, or raise an exception (either an illegal instruction exception or, for select accesses from VS-mode, a virtual instruction exception).  When <code>vsiselect</code> holds a value that is implemented at HS level but not at VS level, attempts to access <code>sireg*</code> (really <code>vsireg*</code>) from VS-mode will typically raise a virtual instruction exception.  But there may be cases specific to an extension where different behavior is more appropriate.</p>
+<p>Ordinarily, each <code>vsireg</code><strong><em>i</em></strong> will access register state, access read-only 0 state, or raise an exception (either an illegal-instruction exception or, for select accesses from VS-mode, a virtual-instruction  exception).  When <code>vsiselect</code> holds a value that is implemented at HS level but not at VS level, attempts to access <code>sireg*</code> (really <code>vsireg*</code>) from VS-mode will typically raise a virtual-instruction  exception.  But there may be cases specific to an extension where different behavior is more appropriate.</p>
 </div>
 </td>
 </tr>
@@ -931,7 +935,7 @@ VS-mode (RV32 code).</p>
 state-enable register <code>mstateen0</code> controls access to <code>siselect</code>, <code>sireg*</code>,
 <code>vsiselect</code>, and <code>vsireg*</code>. When <code>mstateen0</code>[60]=0, an attempt to access one
 of these CSRs from a privilege mode less privileged than M-mode results
-in an illegal instruction exception. As always, the state-enable CSRs do
+in an illegal-instruction exception. As always, the state-enable CSRs do
 not affect the accessibility of any state when in M-mode, only in less
 privileged modes. For more explanation, see the documentation for
 extension
@@ -941,7 +945,7 @@ extension
 <p>Other extensions may specify that certain mstateen bits control access
 to registers accessed indirectly through <code>siselect</code> + <code>sireg*</code>, and/or
 <code>vsiselect</code> + <code>vsireg*</code>. However, regardless of any other mstateen bits, if
-<code>mstateen0</code>[60] = 1, a virtual instruction exception is raised as
+<code>mstateen0</code>[60] = 1, a virtual-instruction  exception is raised as
 described in the previous section for all attempts from VS-mode or
 VU-mode to directly access <code>vsiselect</code> or <code>vsireg*</code>, and for all attempts
 from VU-mode to access <code>siselect</code> or <code>sireg*</code>.</p>
@@ -952,8 +956,8 @@ in hypervisor CSR <code>hstateen0</code>, but controls access to only <code>sise
 (really <code>vsiselect</code> and <code>vsireg*</code>), which is the state potentially
 accessible to a virtual machine executing in VS or VU-mode. When
 <code>hstateen0</code>[60]=0 and <code>mstateen0</code>[60]=1, all attempts from VS or VU-mode to
-access <code>siselect</code> or <code>sireg*</code> raise a virtual instruction exception, not an
-illegal instruction exception, regardless of the value of <code>vsiselect</code> or
+access <code>siselect</code> or <code>sireg*</code> raise a virtual-instruction  exception, not an
+illegal-instruction exception, regardless of the value of <code>vsiselect</code> or
 any other mstateen bit.</p>
 </div>
 <div class="paragraph">
@@ -992,9 +996,6 @@ incorporates the bit defined above for <code>hstateen0</code> but not that for
               <button data-micromodal-close class="modal-versions-close">
                 <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
               </button>
-              <div class="colset">
-                <div class="col-left">
-
                   <ul class="nav-versions">
                       <li class="component">
                         <div>
@@ -1187,263 +1188,6 @@ incorporates the bit defined above for <code>hstateen0</code> but not that for
                         
                       </li>
                   </ul>
-                </div>
-                <div class="col-right">
-                  <ul class="projects">
-  <li>
-    Related Spring Documentation
-    <ul class="projects-list">
-        <li>
-<a href="https://docs.spring.io/spring-boot/">
-  Spring Boot
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-framework/reference/">
-  Spring Framework
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Cloud
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-build/reference/">
-  Spring Cloud Build
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-bus/reference/">
-  Spring Cloud Bus
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
-  Spring Cloud Circuit Breaker
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-commons/reference/">
-  Spring Cloud Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-config/reference/">
-  Spring Cloud Config
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-consul/reference/">
-  Spring Cloud Consul
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-contract/reference/">
-  Spring Cloud Contract
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-function/reference/">
-  Spring Cloud Function
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
-  Spring Cloud Gateway
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
-  Spring Cloud Kubernetes
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
-  Spring Cloud Netflix
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
-  Spring Cloud OpenFeign
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-stream/reference/">
-  Spring Cloud Stream
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-task/reference/">
-  Spring Cloud Task
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-vault/reference/">
-  Spring Cloud Vault
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
-  Spring Cloud Zookeeper
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Data
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-data/cassandra/reference/">
-  Spring Data Cassandra
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/commons/reference/">
-  Spring Data Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/couchbase/reference/">
-  Spring Data Couchbase
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
-  Spring Data Elasticsearch
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/jpa/reference/">
-  Spring Data JPA
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
-  Spring Data KeyValue
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/ldap/reference/">
-  Spring Data LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/mongodb/reference/">
-  Spring Data MongoDB
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/neo4j/reference/">
-  Spring Data Neo4j
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/redis/reference/">
-  Spring Data Redis
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/relational/reference/">
-  Spring Data JDBC &amp; R2DBC
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/rest/reference/">
-  Spring Data REST
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-integration/reference/">
-  Spring Integration
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-batch/reference/">
-  Spring Batch
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-<a href="https://docs.spring.io/spring-security/reference/">
-  Spring Security
-</a>
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-authorization-server/reference/">
-  Spring Authorization Server
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-ldap/reference/">
-  Spring LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-security-kerberos/reference/">
-  Spring Security Kerberos
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-session/reference/">
-  Spring Session
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-vault/reference/">
-  Spring Vault
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-ai/reference/">
-  Spring AI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-amqp/reference/">
-  Spring AMQP
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-cli/reference/">
-  Spring CLI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-graphql/reference/">
-  Spring GraphQL
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-kafka/reference/">
-  Spring for Apache Kafka
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-modulith/reference/">
-  Spring Modulith
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-pulsar/reference/">
-  Spring for Apache Pulsar
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-shell/reference/">
-  Spring Shell
-</a>
-</li>
-    </ul>
-  </li
-  <li><a href="../../spring-projects.html">All Docs...</a></li>
-</ul>
-                </div>
-              </div>
             </main>
         </div>
     </div>

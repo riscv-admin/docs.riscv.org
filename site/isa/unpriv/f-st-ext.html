@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="24b0ea9bb868390e1ef3290e476fd66788c083d5"> 
+    <meta name="antora-ui-version" content="3f4ce2c51445edcfc62ee1f59ab97fffc218fb79"> 
     <meta name="version" content="">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -91,10 +91,7 @@
     <a class="nav-link"  href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">RV64I Base Integer Instruction Set</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="rv64.html">RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
@@ -172,9 +169,6 @@
     <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="p-st-ext.html">"P" Extension for Packed-SIMD Instructions, Version 0.2</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -190,13 +184,7 @@
     <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Extending RISC-V</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">History and Acknowledgments</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -307,12 +295,28 @@
             version="1.1"
             viewBox="0 0 512 512"
             width="512px"
-          ><style type="text/css"><![CDATA[
+          ><style type="text/css"><
               .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
                 class="st0"
                 d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
               ></path></g></svg>
           GitHub Project
+        </a>
+
+      <a href="" title="PDF">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          Download PDF
         </a>
     </div>
   </div>
@@ -361,7 +365,7 @@ values between registers and memory. Instructions to transfer values to and from
 floating-point values as this simplifies software register allocation
 and calling conventions, and reduces total user state. However, a split
 organization increases the total number of registers accessible with a
-given instruction width, simplifies provision of enough regfile ports
+given instruction width, simplifies provision of enough register file ports
 for wide superscalar issue, supports decoupled floating-point-unit
 architectures, and simplifies use of internal floating-point encoding
 techniques. Compiler support and calling conventions for split register
@@ -508,9 +512,9 @@ control and status register (CSR). It is a 32-bit read/write register
 that selects the dynamic rounding mode for floating-point arithmetic
 operations and holds the accrued exception flags, as shown in <a href="#fcsr">Floating-Point Control and Status Register</a>.</p>
 </div>
-<div id="fcsr" class="imageblock kroki">
+<div id="fcsr" class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDUUVDIS8xNtVJQ94tQ11FILCkpAipQN1SPrdXBqizUjShl_sQpc4kiSplfGG5lxghlQfmleSmZeekKvvkpqTAd0erGqBqMTHTgGlKLU4vKUlMQao1MwIpjdRSS8_PSMoGhVZ2Wn1dSnFkFVG9oUFsLAOmfXK0=?id=fcsr&reftext=Floating-Point%20Control%20and%20Status%20Register" alt="Floating-point control and status register">
+<img src="wavedrom/float-csr.svg" alt="float csr">
 </div>
 <div class="title">Figure 1. Floating-point control and status register</div>
 </div>
@@ -719,7 +723,7 @@ Moreover, since this feature is optional in the standard, it cannot be
 used in portable code.</p>
 </div>
 <div class="paragraph">
-<p>Implementors are free to provide a NaN payload propagation scheme as a
+<p>Implementers are free to provide a NaN payload propagation scheme as a
 nonstandard extension enabled by a nonstandard operating mode. However, the canonical NaN scheme described above must always be supported and should be the default mode.</p>
 </div>
 </td>
@@ -781,14 +785,9 @@ signals.</p>
 <div class="paragraph">
 <p>Floating-point loads and stores use the same base+offset addressing mode as the integer base ISAs, with a base address in register <em>rs1</em> and a 12-bit signed byte offset. The FLW instruction loads a single-precision floating-point value from memory into floating-point register <em>rd</em>. FSW stores a single-precision value from floating-point register <em>rs2</em> to memory.</p>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56j7-ji66bgHqsbU6CI2mCI1FKRBNyBpNQRpTUotLUHUZI3SVZ6aUZEA1wnQZg3SF47ao2BBuE4pFSYnFqai6DI10YLoyc3OjDQ2tDGKBKmG6DI1A2vLT0opTS6CSIO2xtQATj03u" alt="svg">
-</div>
-</div>
-<div class="imageblock kroki">
-<div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56sEh_kGuum4B6rG1Ogidpgidmbm50SZWBrEgvTCdpiCd-WlpxaklEDkUzcYIzeWZKSUZEFvhmo1BmsNx2ldUbAjVgGZfUmJxKh5dRth1FRclo2oCBgqSzwwNrUxBXkMJE6jPIHIgzbG1AAeNXvY=" alt="svg">
+<img src="wavedrom/sp-load-store-2.svg" alt="sp load store 2">
 </div>
 </div>
 <div id="sp-ldst" class="paragraph">
@@ -873,7 +872,7 @@ Signaling NaN inputs set the invalid operation exception flag, even when the res
 <div class="paragraph">
 <p>Note that in version 2.2 of the F extension, the FMIN.S and FMAX.S
 instructions were amended to implement the proposed IEEE 754-201x
-minimumNumber and maximumNumber operations, rather than the IEEE
+<code>minimumNumber</code> and <code>maximumNumber</code> operations, rather than the IEEE
 754-2008 minNum and maxNum operations. These operations differ in their
 handling of signaling NaNs.</p>
 </div>
@@ -881,9 +880,9 @@ handling of signaling NaNs.</p>
 </tr>
 </table>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNp1kcELgjAUxu_9Fbu9y8RSRPBmyEDIMs0IwoPpjA5q6DqJ_3ubpU7QHd7b99j34-OtrenTQvcNQu3jxRoLmRiVSUEtBNU7rTIKGCWM1fwNmIDh5CvEX-1xhyeSMZLqjFPEGUgGd2S0YcttRtEnSiEoA0LnrwOPT6QKnntUPfu2mqPZ_YLIOZo6FVO5j3KVoy1ytL-x79tRzCjaSMkLNqdwG4TCJZeVCPmnTJkhfY64A7EdRyVhtO-FFx1U4rjXXoTn4ML5hK9IGVYUd1_oFoe_" alt="svg">
+<img src="wavedrom/spfloat.svg" alt="spfloat">
 </div>
 </div>
 <div id="spfloat" class="paragraph">
@@ -931,9 +930,9 @@ compared to ARM.</p>
 </tr>
 </table>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUXeL9ov1dXRx0QczgkOd1GNrdRC6TeG6i1KAOkEAptsUqDsltbgEVYMxQkMumgZjoIYgX5zmFxtC1CObX1yUbIhbgxFWDUaoGozgGtJyS1A1APWrB-M23hgpqKBmG4NVx9YCAOtaYsI=" alt="svg">
+<img src="wavedrom/spfloat2.svg" alt="spfloat2">
 </div>
 </div>
 <div id="fnmaddsub" class="admonitionblock note">
@@ -1068,9 +1067,9 @@ FCVT.S.W <em>rd</em>, <code>x0</code>, which will never set any exception flags.
 flag if the rounded result differs from the operand value and the
 Invalid exception flag is not set.</p>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNp1kLsKgzAUhvc-xdmypJYqIri2OLVUeh3EwWosDmpJ0kl8955j6o1i4Fw53_9DGilePkQrgOZZaOWDx6FKSuEDq99pnQnGIdFa4g3zGGencB2EuPs1cctH1B1QmeEJvR51Ec2E0kR2dQY6I1gS2FMOUuejSUtOamuspk5KpmREZRGz_7FHdIs3B0x7oodprmEPGnmp5xooyS5dLLjmnyrV7uRHyTXY3a9WUWnL6JkZe9p1QnH7BXTVdGc=" alt="svg">
+<img src="wavedrom/spfloat-cn-cmp.svg" alt="spfloat cn cmp">
 </div>
 </div>
 <div id="fcvt" class="paragraph">
@@ -1086,9 +1085,9 @@ FSGNJN.S <em>rx, ry, ry</em> moves the negation of <em>ry</em> to <em>rx</em> (a
 pseudoinstruction FNEG.S <em>rx, ry</em>); and FSGNJX.S <em>rx, ry, ry</em> moves the absolute value of <em>ry</em> to <em>rx</em> (assembler pseudoinstruction FABS.S <em>rx,
 ry</em>).</p>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5TIF89JbW4BFWHMUJHLkgHTLkx0AKvaL9Yfa8InFYUG0LsQLJCvbgo2RC3BiOsGoxQNRjBNaTllqBqAOpXD8ZlfFppXnKJKVIggYx3C3b38wLriK0FAN_rYYw=" alt="svg">
+<img src="wavedrom/spfloat-sign-inj.svg" alt="spfloat sign inj">
 </div>
 </div>
 <div id="inj" class="admonitionblock note">
@@ -1100,7 +1099,7 @@ ry</em>).</p>
 <td class="content">
 <div class="paragraph">
 <p>The sign-injection instructions provide floating-point MV, ABS, and NEG, as well as supporting a few other operations, including the IEEE
-copySign operation and sign manipulation in transcendental math function libraries. Although MV, ABS, and NEG only need a single register operand, whereas FSGNJ instructions need two, it is unlikely most microarchitectures would add optimizations to benefit from the reduced number of register reads for these relatively infrequent instructions. Even in this case, a microarchitecture can simply detect when both source registers are the same for FSGNJ instructions and only read a single copy.</p>
+<code>copySign</code> operation and sign manipulation in transcendental math function libraries. Although MV, ABS, and NEG only need a single register operand, whereas FSGNJ instructions need two, it is unlikely most microarchitectures would add optimizations to benefit from the reduced number of register reads for these relatively infrequent instructions. Even in this case, a microarchitecture can simply detect when both source registers are the same for FSGNJ instructions and only read a single copy.</p>
 </div>
 </td>
 </tr>
@@ -1131,9 +1130,9 @@ preserved.</p>
 </tr>
 </table>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULgNOxtToInaZwnUUpQF0gANNpCtSRklpcAqNQ9Bkj9OWi6TMGajAwMACKgilc1hUbQvQhW1dclAwlceoywtRlAMYoOozgOtJyS1B1AA1QDwZjHHakleYll5giBSHIDjffML0IvXAoK1wvAqw7thYA4ghqEw==" alt="svg">
+<img src="wavedrom/spfloat-mv.svg" alt="spfloat mv">
 </div>
 </div>
 <div id="spfloat-mv" class="admonitionblock note">
@@ -1170,9 +1169,9 @@ condition holds, and 0 otherwise.</p>
 exception flag if either input is NaN. FEQ.S performs a <em>quiet</em>
 comparison: it only sets the invalid operation exception flag if either input is a signaling NaN. For all three instructions, the result is 0 if either operand is NaN.</p>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5ToI6U1OISVA3GCA25IA0w1cZA1a6BQBF1nxAw6YrTomJDiE3IFhUXJRvi1mCEVYMRqgYjuIa03BJUDUD96sG4jE8rzUsuMUUKKpDxbs6-kJCKrQUAFNNh9A==" alt="svg">
+<img src="wavedrom/spfloat-comp.svg" alt="spfloat comp">
 </div>
 </div>
 <div id="spfloat-comp" class="admonitionblock note">
@@ -1206,9 +1205,9 @@ be set if the property is true and clear otherwise. All other bits in
 FCLASS.S does not set the floating-point exception flags.
 </p>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5ToI6U1OISVA3GCA25aBqMgRoMDAxxWlBsCNGAbEFxUTJu9UaY6g1QVRvBVafllqCqBmpWD8ZldlppXnKJKVLwgMx2c_ZxDIZoia0FAD87XwU=" alt="svg">
+<img src="wavedrom/spfloat-classify.svg" alt="spfloat classify">
 </div>
 </div>
 <table id="fclass" class="tableblock frame-all grid-all fit-content center">
@@ -1282,9 +1281,6 @@ FCLASS.S does not set the floating-point exception flags.
               <button data-micromodal-close class="modal-versions-close">
                 <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
               </button>
-              <div class="colset">
-                <div class="col-left">
-
                   <ul class="nav-versions">
                       <li class="component">
                         <div>
@@ -1477,263 +1473,6 @@ FCLASS.S does not set the floating-point exception flags.
                         
                       </li>
                   </ul>
-                </div>
-                <div class="col-right">
-                  <ul class="projects">
-  <li>
-    Related Spring Documentation
-    <ul class="projects-list">
-        <li>
-<a href="https://docs.spring.io/spring-boot/">
-  Spring Boot
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-framework/reference/">
-  Spring Framework
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Cloud
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-build/reference/">
-  Spring Cloud Build
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-bus/reference/">
-  Spring Cloud Bus
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
-  Spring Cloud Circuit Breaker
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-commons/reference/">
-  Spring Cloud Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-config/reference/">
-  Spring Cloud Config
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-consul/reference/">
-  Spring Cloud Consul
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-contract/reference/">
-  Spring Cloud Contract
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-function/reference/">
-  Spring Cloud Function
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
-  Spring Cloud Gateway
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
-  Spring Cloud Kubernetes
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
-  Spring Cloud Netflix
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
-  Spring Cloud OpenFeign
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-stream/reference/">
-  Spring Cloud Stream
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-task/reference/">
-  Spring Cloud Task
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-vault/reference/">
-  Spring Cloud Vault
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
-  Spring Cloud Zookeeper
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  Spring Data
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-data/cassandra/reference/">
-  Spring Data Cassandra
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/commons/reference/">
-  Spring Data Commons
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/couchbase/reference/">
-  Spring Data Couchbase
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
-  Spring Data Elasticsearch
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/jpa/reference/">
-  Spring Data JPA
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
-  Spring Data KeyValue
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/ldap/reference/">
-  Spring Data LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/mongodb/reference/">
-  Spring Data MongoDB
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/neo4j/reference/">
-  Spring Data Neo4j
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/redis/reference/">
-  Spring Data Redis
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/relational/reference/">
-  Spring Data JDBC &amp; R2DBC
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-data/rest/reference/">
-  Spring Data REST
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-integration/reference/">
-  Spring Integration
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-batch/reference/">
-  Spring Batch
-</a>
-</li>
-        <li>
-<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-<a href="https://docs.spring.io/spring-security/reference/">
-  Spring Security
-</a>
-<ul>
-    <li>
-<a href="https://docs.spring.io/spring-authorization-server/reference/">
-  Spring Authorization Server
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-ldap/reference/">
-  Spring LDAP
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-security-kerberos/reference/">
-  Spring Security Kerberos
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-session/reference/">
-  Spring Session
-</a>
-</li>
-    <li>
-<a href="https://docs.spring.io/spring-vault/reference/">
-  Spring Vault
-</a>
-</li>
-</ul>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-ai/reference/">
-  Spring AI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-amqp/reference/">
-  Spring AMQP
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-cli/reference/">
-  Spring CLI
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-graphql/reference/">
-  Spring GraphQL
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-kafka/reference/">
-  Spring for Apache Kafka
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-modulith/reference/">
-  Spring Modulith
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-pulsar/reference/">
-  Spring for Apache Pulsar
-</a>
-</li>
-        <li>
-<a href="https://docs.spring.io/spring-shell/reference/">
-  Spring Shell
-</a>
-</li>
-    </ul>
-  </li
-  <li><a href="../../spring-projects.html">All Docs...</a></li>
-</ul>
-                </div>
-              </div>
             </main>
         </div>
     </div>
