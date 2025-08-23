@@ -3,7 +3,7 @@ site:
     #url: https://docs.riscv.org
 
 output:
-  dir: ./build/reference
+  dir: ./build/docs/reference
 
 content:
   sources:
@@ -76,7 +76,7 @@ asciidoc:
     incimage: ../images/
 
 # Temp disable for local build speedup. Re-enable for deployment. 
-# runtime:
+runtime:
   fetch: true
 
 # antora:
